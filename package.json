@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "description": "marketing wabsite",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "dev": "webpack-dev-server --progress --colors --port 8282",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "webpack": "webpack --progress --colors"
   },
   "repository": {
     "type": "git",
@@ -14,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/opsee/ferengi/issues"
   },
-  "homepage": "https://github.com/opsee/ferengi#readme"
+  "homepage": "https://github.com/opsee/ferengi#readme",
+  "devDependencies": {
+    "webpack": "^1.12.13",
+    "webpack-dev-server": "^1.14.1"
+  }
 }
