@@ -1,6 +1,5 @@
 import React from 'react';
-import css from './header.css';
-import style from './header.css.json';
+import style from './header.css';
 
 module.exports = React.createClass({
   render() {

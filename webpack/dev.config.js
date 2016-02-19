@@ -10,8 +10,6 @@ const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin'
 const CONTEXT_DIR = path.resolve(__dirname, '..', 'src');
 const NODE_MODULES_DIR = path.resolve(__dirname, '..', 'node_modules');
 
-console.log(CONTEXT_DIR);
-
 const PATHS = [
   '/'
 ];
@@ -46,7 +44,10 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader'),
+        loader: ExtractTextPlugin.extract(
+          'style-loader',
+          'css-loader?modules&importLoaders=1&sourceMap&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
+        ),
         include: [CONTEXT_DIR]
       }
 
@@ -77,7 +78,7 @@ module.exports = {
        * Adds in support for CSS modules: local scoping for CSS
        * @see https://github.com/outpunk/postcss-modules
        */
-      require('postcss-modules')
+      // require('postcss-modules')
     ];
   }
 };

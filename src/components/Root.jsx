@@ -1,6 +1,6 @@
 import React from 'react';
 import css from './root.css';
-import style from './root.css.json';
+import style from './root.css';
 
 import Header from './Header.jsx';
 
@@ -16,6 +16,7 @@ module.exports = React.createClass({
 
         <body>
           <Header />
+
           <div className={style.welcome}>
             Welcome to the filet zone.
           </div>
