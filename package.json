@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "description": "marketing wabsite",
   "scripts": {
-    "dev": "webpack-dev-server --progress --colors --port 8282",
+    "dev": "webpack-dev-server --content-base dist/ --progress --colors --port 9876",
+    "start": "npm run dev",
     "test": "echo \"Error: no test specified\" && exit 0",
     "webpack": "webpack --progress --colors"
   },
@@ -25,6 +26,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "babel-preset-es2015": "^6.5.0"
+    "babel-preset-es2015": "^6.5.0",
+    "static-site-generator-webpack-plugin": "^2.0.1"
   }
 }
