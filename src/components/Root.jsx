@@ -1,6 +1,9 @@
 import React from 'react';
 
+import style from './root.css';
+
 module.exports = React.createClass({
+
   render() {
     return (
       <html>
@@ -9,7 +12,9 @@ module.exports = React.createClass({
         </head>
 
         <body>
-          Welcome to the filet zone.
+          <div className="welcome">
+            Welcome to the filet zone.
+          </div>
 
           <script src={this.props.assets.main} />
         </body>
