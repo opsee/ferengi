@@ -9,6 +9,8 @@ const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin'
 
 const CONTEXT_DIR = path.resolve(__dirname, '..', 'src');
 const NODE_MODULES_DIR = path.resolve(__dirname, '..', 'node_modules');
+const EMISSARY_DIR = path.join(NODE_MODULES_DIR, 'emissary');
+const INCLUDE_DIRS = [CONTEXT_DIR, EMISSARY_DIR];
 
 const PATHS = [
   '/'
@@ -40,7 +42,7 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         },
-        include: [CONTEXT_DIR]
+        include: INCLUDE_DIRS
       },
       {
         test: /\.css$/,
@@ -48,7 +50,10 @@ module.exports = {
           'style-loader',
           'css-loader?modules&importLoaders=1&sourceMap&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
         ),
-        include: [CONTEXT_DIR]
+        include: INCLUDE_DIRS
+      }, {
+        test: /\.(png|jpg|svg)$/,
+        loader: 'url-loader?limit=8192'
       }
 
     ]
