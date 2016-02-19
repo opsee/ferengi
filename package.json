@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "description": "marketing wabsite",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "dev": "webpack-dev-server --content-base dist/ --progress --colors --port 9876",
+    "start": "npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "webpack": "webpack --progress --colors"
   },
   "repository": {
     "type": "git",
@@ -14,5 +17,16 @@
   "bugs": {
     "url": "https://github.com/opsee/ferengi/issues"
   },
-  "homepage": "https://github.com/opsee/ferengi#readme"
+  "homepage": "https://github.com/opsee/ferengi#readme",
+  "devDependencies": {
+    "babel-core": "^6.5.2",
+    "babel-loader": "^6.2.3",
+    "babel-preset-react": "^6.5.0",
+    "webpack": "^1.12.13",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "babel-preset-es2015": "^6.5.0",
+    "static-site-generator-webpack-plugin": "^2.0.1"
+  }
 }
