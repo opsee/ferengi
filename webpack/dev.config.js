@@ -4,6 +4,7 @@
  * @see http://jxnblk.com/writing/posts/static-site-generation-with-react-and-webpack/
  */
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
 const CONTEXT_DIR = path.resolve(__dirname, '..', 'src');
@@ -32,6 +33,10 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
+      {
         test: /\.js$|\.jsx$/,
         loader: 'babel-loader',
         query: {
@@ -41,7 +46,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'css-loader!postcss-loader',
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader'),
         include: [CONTEXT_DIR]
       }
 
@@ -49,6 +54,10 @@ module.exports = {
   },
 
   plugins: [
+
+    new ExtractTextPlugin('style.css', {
+        allChunks: true
+    }),
     /*
      * Provide a series of paths to be rendered, and a matching set of index.html
      * files will be rendered in your output directory by executing your own
