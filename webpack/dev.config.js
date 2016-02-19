@@ -75,15 +75,5 @@ module.exports = {
   resolve: {
     extensions: ['', '.jsx', '.js', '.json', '.svg', '.png', '.jpg'],
     modulesDirectories: [NODE_MODULES_DIR]
-  },
-
-  postcss() {
-    return [
-      /**
-       * Adds in support for CSS modules: local scoping for CSS
-       * @see https://github.com/outpunk/postcss-modules
-       */
-      // require('postcss-modules')
-    ];
   }
 };
