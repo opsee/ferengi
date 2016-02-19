@@ -1,0 +1,30 @@
+import React from 'react';
+import style from './root.css';
+
+import Header from './Header.jsx';
+import LogoColor from 'emissary/src/js/components/global/LogoColor.jsx';
+
+module.exports = React.createClass({
+
+  render() {
+    return (
+      <html>
+        <head>
+          <title>Opsee</title>
+          <link rel="stylesheet" type="text/css" href="style.css" />
+        </head>
+
+        <body>
+          <LogoColor />
+          <Header />
+
+          <div className={style.welcome}>
+            Welcome to the filet zone.
+          </div>
+
+          <script src={this.props.assets.main} />
+        </body>
+      </html>
+    );
+  }
+});

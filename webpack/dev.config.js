@@ -4,10 +4,13 @@
  * @see http://jxnblk.com/writing/posts/static-site-generation-with-react-and-webpack/
  */
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
-const CONTEXT_DIR = path.join(__dirname, '/src');
-const NODE_MODULES_DIR = path.resolve(__dirname, 'node_modules');
+const CONTEXT_DIR = path.resolve(__dirname, '..', 'src');
+const NODE_MODULES_DIR = path.resolve(__dirname, '..', 'node_modules');
+const EMISSARY_DIR = path.join(NODE_MODULES_DIR, 'emissary');
+const INCLUDE_DIRS = [CONTEXT_DIR, EMISSARY_DIR];
 
 const PATHS = [
   '/'
@@ -30,18 +33,37 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
+      {
         test: /\.js$|\.jsx$/,
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react']
         },
-        include: [CONTEXT_DIR]
+        include: INCLUDE_DIRS
+      },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract(
+          'style-loader',
+          'css-loader?modules&importLoaders=1&sourceMap&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
+        ),
+        include: INCLUDE_DIRS
+      }, {
+        test: /\.(png|jpg|svg)$/,
+        loader: 'url-loader?limit=8192'
       }
 
     ]
   },
 
   plugins: [
+
+    new ExtractTextPlugin('style.css', {
+        allChunks: true
+    }),
     /*
      * Provide a series of paths to be rendered, and a matching set of index.html
      * files will be rendered in your output directory by executing your own
