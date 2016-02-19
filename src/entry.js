@@ -12,6 +12,8 @@ if (typeof document !== 'undefined') {
  * This is the render function used by the static site generator plugin.
  */
 module.exports = function render(locals, callback) {
-  const html = ReactDOMServer.renderToStaticMarkup(<Root />);
-  callback(null, html);
+  const html = ReactDOMServer.renderToStaticMarkup(
+    <Root assets={locals.assets} />
+  );
+  callback(null, `<!DOCTYPE html>${html}`);
 };
