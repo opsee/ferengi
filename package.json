@@ -9,7 +9,7 @@
     "dev": "webpack-dev-server --content-base dist/ --progress --colors --port 9876 --config webpack/dev.config.js",
     "lint": "./node_modules/eslint/bin/eslint.js --max-warnings 0 --ext .js --ext .jsx src/ ",
     "start": "npm run dev",
-    "test": "npm run lint"
+    "test": "npm run build"
   },
   "repository": {
     "type": "git",

@@ -31,6 +31,13 @@ module.exports = {
   },
 
   module: {
+    preLoaders:[
+      {
+        test: /\.js$|\.jsx$/,
+        loaders: ['eslint-loader'],
+        exclude: [NODE_MODULES_DIR]
+      },
+    ],
     loaders: [
       {
         test: /\.json$/,
@@ -60,6 +67,8 @@ module.exports = {
   },
 
   plugins: [
+    // Make webpack return a non-zero exit code when build fails
+    require('webpack-fail-plugin'),
 
     new ExtractTextPlugin('style.css', {
         allChunks: true

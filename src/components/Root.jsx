@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import style from './root.css';
 
-import Header from './Header.jsx';
+// import Header from './Header.jsx';
 import LogoColor from 'emissary/src/js/components/global/LogoColor.jsx';
 
 module.exports = React.createClass({
+  propTypes: {
+    assets: PropTypes.shape({
+      main: PropTypes.string.isRequired
+    }).isRequired
+  },
 
   render() {
     return (
