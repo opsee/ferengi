@@ -13,8 +13,8 @@ npm run build
 // Build the static site and watch for any changes
 npm run build:watch
 
-// Run the tests. At the moment, this is only linting.
-// Tests must pass before the the build can be merged to master.
+// Run the tests. Everything must lint and build before it can get
+// merged onto master.
 npm run test
 
 ```
