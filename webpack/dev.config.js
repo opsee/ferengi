@@ -6,8 +6,10 @@
 const path = require('path');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
-const CONTEXT_DIR = path.join(__dirname, '/src');
-const NODE_MODULES_DIR = path.resolve(__dirname, 'node_modules');
+const CONTEXT_DIR = path.resolve(__dirname, '..', 'src');
+const NODE_MODULES_DIR = path.resolve(__dirname, '..', 'node_modules');
+
+console.log(CONTEXT_DIR);
 
 const PATHS = [
   '/'
