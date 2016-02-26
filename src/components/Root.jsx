@@ -2,7 +2,10 @@ import React, { PropTypes } from 'react';
 import style from './root.css';
 
 import Header from './Header.jsx';
-import LogoColor from 'emissary/src/js/components/global/LogoColor.jsx';
+
+/* eslint-disable no-unused-vars */
+import reset from './layout/reset.css';
+/* eslint-enable no-unused-vars */
 
 module.exports = React.createClass({
   propTypes: {
@@ -20,7 +23,6 @@ module.exports = React.createClass({
         </head>
 
         <body>
-          <LogoColor />
           <Header />
 
           <div className={style.welcome}>

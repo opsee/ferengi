@@ -1,5 +1,20 @@
 .header {
-  background-color: lime;
-  padding: 24px;
-  text-align: center;
+  background-color: white;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links,
+.cta {
+  display: inline;
+}
+
+.links {
+  padding: 0 16px;
+}
+
+@media (max-width: 640px) {
+  .links { display: none; }
 }

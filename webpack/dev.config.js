@@ -6,6 +6,7 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
+const seedling = require('seedling');
 
 const CONTEXT_DIR = path.resolve(__dirname, '..', 'src');
 const NODE_MODULES_DIR = path.resolve(__dirname, '..', 'node_modules');
@@ -84,5 +85,22 @@ module.exports = {
   resolve: {
     extensions: ['', '.jsx', '.js', '.json', '.svg', '.png', '.jpg'],
     modulesDirectories: [NODE_MODULES_DIR]
+  },
+
+  postcss(webpack) {
+    return [
+      require('postcss-import')({
+        addDependencyTo: webpack
+      }),
+      require('postcss-cssnext')({
+        browsers: 'last 1 version, > 10%',
+        features: {
+          customProperties: {
+            variables: seedling.flat
+          }
+        }
+      }),
+      require('postcss-url')()
+    ];
   }
 };
