@@ -6,6 +6,7 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
+const seedling = require('seedling');
 
 const CONTEXT_DIR = path.resolve(__dirname, '..', 'src');
 const NODE_MODULES_DIR = path.resolve(__dirname, '..', 'node_modules');
@@ -96,7 +97,7 @@ module.exports = {
         browsers: 'last 1 version, > 10%',
         features: {
           customProperties: {
-            variables: require('../src/modules/css')
+            variables: seedling.flat
           }
         }
       }),
