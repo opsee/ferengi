@@ -84,5 +84,23 @@ module.exports = {
   resolve: {
     extensions: ['', '.jsx', '.js', '.json', '.svg', '.png', '.jpg'],
     modulesDirectories: [NODE_MODULES_DIR]
+  },
+
+  postcss(webpack) {
+    console.log(require('../src/modules/css'));
+    return [
+      require('postcss-import')({
+        addDependencyTo: webpack
+      }),
+      require('postcss-cssnext')({
+        browsers: 'last 1 version, > 10%',
+        features: {
+          customProperties: {
+            variables: require('../src/modules/css')
+          }
+        }
+      }),
+      require('postcss-url')()
+    ];
   }
 };
