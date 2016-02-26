@@ -88,7 +88,6 @@ module.exports = {
   },
 
   postcss(webpack) {
-    console.log(require('../src/modules/css'));
     return [
       require('postcss-import')({
         addDependencyTo: webpack
