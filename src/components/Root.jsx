@@ -5,8 +5,6 @@ import Header from './Header.jsx';
 
 /* eslint-disable no-unused-vars */
 import reset from './layout/reset.css';
-import grid from './layout/grid.css';
-import responsiveness from './layout/responsiveness.css';
 /* eslint-enable no-unused-vars */
 
 module.exports = React.createClass({
