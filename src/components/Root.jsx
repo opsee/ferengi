@@ -29,6 +29,10 @@ module.exports = React.createClass({
             Welcome to the filet zone.
           </div>
 
+          <div>
+            {this.props.children}
+          </div>
+
           <script src={this.props.assets.main} />
         </body>
       </html>
