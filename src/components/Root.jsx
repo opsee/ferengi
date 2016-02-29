@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import style from './root.css';
 
+import Footer from './Footer.jsx';
 import Header from './Header.jsx';
 
 /* eslint-disable no-unused-vars */
@@ -20,22 +21,26 @@ module.exports = React.createClass({
       <html>
         <head>
           <title>Opsee</title>
-          <link rel="stylesheet" type="text/css" href="style.css" />
+          <link rel="stylesheet" type="text/css" href="/style.css" />
         </head>
 
         <body>
-          <Header />
+          <div className={style.root}>
+            <header className={style.header}>
+              <Header />
+            </header>
 
-          <div className={style.welcome}>
-            Welcome to the filet zone.
-          </div>
+            <main className={style.content}>
+              {this.props.children}
+            </main>
 
-          <div>
-            {this.props.children}
+            <footer className={style.footer}>
+              <Footer />
+            </footer>
           </div>
 
           {/* TODO: use this.props.assets.main */}
-          <script src="bundle.js" />
+          <script src="/bundle.js" />
         </body>
       </html>
     );

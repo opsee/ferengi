@@ -4,7 +4,7 @@ export default React.createClass({
   render() {
     return (
       <div>
-        About component
+        Features component
       </div>
     );
   }
