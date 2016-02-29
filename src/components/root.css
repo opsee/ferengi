@@ -1,3 +1,5 @@
+@import './layout/reset.css';
+
 /**
  * A bit of cruft in here to deal with various browsers, etc. so the cruft has
  * been annotated with the corresponding :bug:
@@ -10,12 +12,12 @@
  *    minimum size. See http://bit.ly/1Mn35US for details.
  * 3. Use `%` instead of `vh` since `vh` is buggy in older mobile Safari.
  */
-html, body, .root {
+html, body, :global(#app) {
   height: 100%;
   line-height: normal;
 }
 
-.root {
+.app {
   display: flex;
   height: 100%; /* 1, 3 */
   flex-direction: column;

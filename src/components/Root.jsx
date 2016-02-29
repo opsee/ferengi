@@ -1,12 +1,7 @@
 import React, { PropTypes } from 'react';
+
+import App from './App.jsx';
 import style from './root.css';
-
-import Footer from './Footer.jsx';
-import Header from './Header.jsx';
-
-/* eslint-disable no-unused-vars */
-import reset from './layout/reset.css';
-/* eslint-enable no-unused-vars */
 
 module.exports = React.createClass({
   propTypes: {
@@ -25,18 +20,8 @@ module.exports = React.createClass({
         </head>
 
         <body>
-          <div className={style.root}>
-            <header className={style.header}>
-              <Header />
-            </header>
-
-            <main className={style.content}>
-              {this.props.children}
-            </main>
-
-            <footer className={style.footer}>
-              <Footer />
-            </footer>
+          <div id="app">
+            <App children={this.props.children} />
           </div>
 
           {/* TODO: use this.props.assets.main */}
