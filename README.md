@@ -17,4 +17,7 @@ npm run build:watch
 // merged onto master.
 npm run test
 
+// Deploy to production
+grunt deploy
 ```
+

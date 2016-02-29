@@ -1,0 +1,13 @@
+{
+  "aws": {
+    // AWS credentials can either be stored in your config/local.json
+    // or as environment variables (see custom-environment-variables.json
+    // for the mapping)
+    "access_key_id": null,
+    "secret_access_key": null,
+    "region": "us-west-2",
+    "buckets": {
+      "prod": "opsee-ferengi"
+    }
+  }
+}
