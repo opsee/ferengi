@@ -14,7 +14,7 @@ const EMISSARY_DIR = path.join(NODE_MODULES_DIR, 'emissary');
 const INCLUDE_DIRS = [CONTEXT_DIR, EMISSARY_DIR];
 
 const PATHS = [
-  '/', '/about'
+  '/', '/about', '/how', '/features'
 ];
 
 module.exports = {
