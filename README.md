@@ -16,11 +16,11 @@ npm install
 grunt build
 
 // Build the static site and watch for any changes
-grunt build:watch
+grunt watch
 
 // Run the tests. Everything must lint and build before it can get
 // merged onto master.
-npm run test
+grunt test
 
 // Deploy to production
 grunt deploy

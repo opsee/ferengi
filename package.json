@@ -3,13 +3,8 @@
   "version": "0.0.0",
   "description": "marketing wabsite",
   "scripts": {
-    "build": "webpack --progress --colors --config webpack/dev.config.js",
-    "build:watch": "npm run clean && webpack --progress --watch --colors --config webpack/dev.config.js",
-    "clean": "rimraf dist",
-    "dev": "webpack-dev-server --content-base dist/ --progress --colors --port 9876 --config webpack/dev.config.js",
-    "lint": "./node_modules/eslint/bin/eslint.js --max-warnings 0 --ext .js --ext .jsx src/ ",
-    "start": "npm run dev",
-    "test": "npm run build"
+    "start": "grunt watch",
+    "test": "grunt test"
   },
   "repository": {
     "type": "git",
@@ -51,7 +46,6 @@
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-router": "^2.0.0",
-    "rimraf": "^2.5.2",
     "seedling": "github:opsee/seedling",
     "static-site-generator-webpack-plugin": "^2.0.1",
     "style-loader": "^0.13.0",

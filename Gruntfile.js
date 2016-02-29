@@ -38,5 +38,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', 'Builds the static site once (to dist/)', ['webpack:build']);
   grunt.registerTask('watch', 'Build the static site, rebuild on changes', ['webpack:watch']);
+  grunt.registerTask('test', 'Builds the static site, failing on any errors', ['webpack:build']);
   grunt.registerTask('deploy', 'Deploy the site to production s3', ['build', 'aws_s3:prod']);
 };
