@@ -1,13 +1,11 @@
-const React = require('react');
+import React from 'react';
 
-const About = React.createClass({
-  render: function() {
+export default React.createClass({
+  render() {
     return (
-      <div>
-        <h1>Index</h1>
-      </div>
+      <main>
+        Index component
+      </main>
     );
   }
 });
-
-module.exports = About;

@@ -1,9 +1,7 @@
 import React from 'react';
-import ReactDOMServer from 'react-dom/server';
 import { createMemoryHistory, match, RouterContext } from 'react-router';
 
 import routes from './routes';
-import Root from './components/Root.jsx';
 
 // Client render (optional):
 if (typeof document !== 'undefined') {

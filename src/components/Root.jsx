@@ -11,10 +11,13 @@ module.exports = React.createClass({
   propTypes: {
     assets: PropTypes.shape({
       main: PropTypes.string.isRequired
-    }).isRequired
+    }).isRequired,
+    children: PropTypes.object
   },
 
   render() {
+    console.log(this.props.children);
+
     return (
       <html>
         <head>
@@ -34,7 +37,7 @@ module.exports = React.createClass({
           </div>
 
           {/* TODO: use this.props.assets.main */}
-          <script src='bundle.js' />
+          <script src="bundle.js" />
         </body>
       </html>
     );
