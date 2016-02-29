@@ -17,7 +17,8 @@ import About from './components/pages/About.jsx';
 module.exports = (
   <Router>
     <Route component={Root} path='/'>
-
+      <IndexRoute component={Index} />
+      <Route path="about" component={About} />
     </Route>
   </Router>
 );

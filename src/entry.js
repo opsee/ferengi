@@ -18,9 +18,10 @@ module.exports = function render(locals, callback) {
   const location = history.createLocation(locals.path);
 
   match({ routes, location }, (error, redirectLocation, renderProps) => {
-    const html = ReactDOMServer.renderToStaticMarkup(
-      <Root assets={locals.assets} />
-    );
+    // TODO: pass locals.assets to RouterContext
+    const context =  <RouterContext {...renderProps} />;
+
+    const html = React.renderToStaticMarkup(context);
     callback(null, `<!DOCTYPE html>${html}`);
   });
 };

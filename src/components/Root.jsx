@@ -33,7 +33,8 @@ module.exports = React.createClass({
             {this.props.children}
           </div>
 
-          <script src={this.props.assets.main} />
+          {/* TODO: use this.props.assets.main */}
+          <script src='bundle.js' />
         </body>
       </html>
     );
