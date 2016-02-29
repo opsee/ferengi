@@ -13,14 +13,14 @@ marketing wabsite
 npm install
 
 // Build the static site. Output will be in dist/
-npm run build
+grunt build
 
 // Build the static site and watch for any changes
-npm run build:watch
+grunt watch
 
 // Run the tests. Everything must lint and build before it can get
 // merged onto master.
-npm run test
+grunt test
 
 // Deploy to production
 grunt deploy
