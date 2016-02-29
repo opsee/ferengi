@@ -1,6 +1,11 @@
-![latinum-hog](http://i.imgur.com/2y8QKAE.jpg)
+<p align="center">
+  <img src="http://i.imgur.com/2y8QKAE.jpg">
+</p>
 
 # ferengi
+
+[![Circle CI](https://circleci.com/gh/opsee/ferengi.svg?style=badge&circle-token=e6bf9dbd148aecb25807ad154244710458a14999)](https://circleci.com/gh/opsee/ferengi)
+
 marketing wabsite
 
 ```
