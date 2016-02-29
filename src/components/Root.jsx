@@ -21,7 +21,7 @@ module.exports = React.createClass({
       <html>
         <head>
           <title>Opsee</title>
-          <link rel="stylesheet" type="text/css" href="style.css" />
+          <link rel="stylesheet" type="text/css" href="/style.css" />
         </head>
 
         <body>
@@ -40,7 +40,7 @@ module.exports = React.createClass({
           </div>
 
           {/* TODO: use this.props.assets.main */}
-          <script src="bundle.js" />
+          <script src="/bundle.js" />
         </body>
       </html>
     );
