@@ -11,7 +11,8 @@ module.exports = React.createClass({
   propTypes: {
     assets: PropTypes.shape({
       main: PropTypes.string.isRequired
-    }).isRequired
+    }).isRequired,
+    children: PropTypes.object
   },
 
   render() {
@@ -29,7 +30,12 @@ module.exports = React.createClass({
             Welcome to the filet zone.
           </div>
 
-          <script src={this.props.assets.main} />
+          <div>
+            {this.props.children}
+          </div>
+
+          {/* TODO: use this.props.assets.main */}
+          <script src="bundle.js" />
         </body>
       </html>
     );
