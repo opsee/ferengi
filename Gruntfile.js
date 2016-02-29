@@ -33,11 +33,26 @@ module.exports = function(grunt) {
         watch: true,
         keepalive: true
       })
+    },
+
+    "webpack-dev-server": {
+      options: {
+        webpack: require('./webpack/dev.config'),
+        contentBase: 'dist/',
+        progress: true,
+        colors: true,
+        port: 9876
+      },
+      start: {
+        keepAlive: true
+      }
     }
   });
 
   grunt.registerTask('build', 'Builds the static site once (to dist/)', ['webpack:build']);
   grunt.registerTask('watch', 'Build the static site, rebuild on changes', ['webpack:watch']);
+  grunt.registerTask('dev', 'Build the static site & put a devserver on it', ['webpack-dev-server:start'] )
+
   grunt.registerTask('test', 'Builds the static site, failing on any errors', ['webpack:build']);
   grunt.registerTask('deploy', 'Deploy the site to production s3', ['build', 'aws_s3:prod']);
 };
