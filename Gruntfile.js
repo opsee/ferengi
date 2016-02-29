@@ -24,8 +24,13 @@ module.exports = function(grunt) {
           { expand: true, cwd: 'dist/', src: ['**'], dest: '/' }
         ]
       }
+    },
+
+    webpack: {
+      dev: require('./webpack/dev.config')
     }
   });
 
-  grunt.registerTask('deploy', 'deploy the site to production s3', ['aws_s3:prod']);
+  grunt.registerTask('build', ['webpack'])
+  grunt.registerTask('deploy', 'deploy the site to production s3', ['build', 'aws_s3:prod']);
 };
