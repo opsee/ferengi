@@ -1,3 +1,4 @@
+const _ = require('lodash');
 const config = require('config');
 
 module.exports = function(grunt) {
@@ -27,10 +28,15 @@ module.exports = function(grunt) {
     },
 
     webpack: {
-      dev: require('./webpack/dev.config')
+      build: require('./webpack/dev.config'),
+      watch: _.assign({}, require('./webpack/dev.config'), {
+        watch: true,
+        keepalive: true
+      })
     }
   });
 
-  grunt.registerTask('build', ['webpack'])
-  grunt.registerTask('deploy', 'deploy the site to production s3', ['build', 'aws_s3:prod']);
+  grunt.registerTask('build', 'Builds the static site once (to dist/)', ['webpack:build']);
+  grunt.registerTask('watch', 'Build the static site, rebuild on changes', ['webpack:watch']);
+  grunt.registerTask('deploy', 'Deploy the site to production s3', ['build', 'aws_s3:prod']);
 };
