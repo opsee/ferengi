@@ -3,9 +3,9 @@ import React from 'react';
 export default React.createClass({
   render() {
     return (
-      <main>
+      <div>
         Features component
-      </main>
+      </div>
     );
   }
 });
