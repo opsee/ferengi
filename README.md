@@ -4,7 +4,7 @@
 
 # ferengi
 
-[![Circle CI](https://circleci.com/gh/opsee/ferengi.svg?style=badge&circle-token=e6bf9dbd148aecb25807ad154244710458a14999)](https://circleci.com/gh/opsee/ferengi)
+[![Circle CI](https://circleci.com/gh/opsee/ferengi.svg?style=shield&circle-token=e6bf9dbd148aecb25807ad154244710458a14999)](https://circleci.com/gh/opsee/ferengi)
 
 marketing wabsite
 
