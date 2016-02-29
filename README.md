@@ -24,5 +24,8 @@ grunt test
 
 // Deploy to production
 grunt deploy
+
+// List all the other cool stuff you can do with: 
+grunt --help
 ```
 
