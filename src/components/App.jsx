@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 
 import Container from './layout/Container.jsx';
@@ -7,6 +7,10 @@ import Header from './Header.jsx';
 import style from './app.css';
 
 const App = React.createClass({
+  propTypes: {
+    children: PropTypes.node
+  },
+
   render() {
     return (
       <div className={style.app}>
