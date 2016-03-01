@@ -1,3 +1,5 @@
-footer {
-  background-color: lime;
+.footer {
+  background-color: var(--colorGray2);
+  text-align: center;
+  padding: 24px 0;
 }
