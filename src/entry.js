@@ -1,25 +1,16 @@
-import React from 'react';
-import { createMemoryHistory, match, RouterContext } from 'react-router';
+import renderServer from './modules/render-server';
+import renderClient from './modules/render-client';
 
-import routes from './routes';
-
-// Client render (optional):
+/*
+ * This rendering happens on the client-side
+ */
 if (typeof document !== 'undefined') {
-  // Client render code goes here...
+  renderClient();
 }
 
 /*
  * This is the render function used by the static site generator plugin.
+ * It will get called once per route, generating the corresponding static
+ * HTML for that route (e.g., /about will generate about.html).
  */
-module.exports = function render(locals, callback) {
-  const history = createMemoryHistory();
-  const location = history.createLocation(locals.path);
-
-  match({ routes, location }, (error, redirectLocation, renderProps) => {
-    // TODO: pass locals.assets to RouterContext
-    const context =  <RouterContext {...renderProps} />;
-
-    const html = React.renderToStaticMarkup(context);
-    callback(null, `<!DOCTYPE html>${html}`);
-  });
-};
+module.exports = (locals, callback) => renderServer(locals, callback);

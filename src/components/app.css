@@ -12,7 +12,7 @@
  *    minimum size. See http://bit.ly/1Mn35US for details.
  * 3. Use `%` instead of `vh` since `vh` is buggy in older mobile Safari.
  */
-html, body, :global(#app) {
+html, body, :global(#root) {
   height: 100%;
   line-height: normal;
 }
