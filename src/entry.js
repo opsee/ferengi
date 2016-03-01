@@ -1,7 +1,7 @@
 import React from 'react';
-import {createStore} from 'redux';
-import {Provider} from 'react-redux';
-import { createMemoryHistory } from 'history';
+import { createStore, compose } from 'redux';
+import { Provider } from 'react-redux';
+import { createMemoryHistory, createBrowserHistory } from 'history';
 import { ReduxRouter } from 'redux-router';
 import { reduxReactRouter, match } from 'redux-router/server';
 import serialize from 'serialize-javascript';
@@ -48,7 +48,20 @@ const getMarkup = (store) => {
  * This rendering happens on the client-side
  */
 if (typeof document !== 'undefined') {
-  // Client render code goes here...
+  const store = compose(
+    reduxReactRouter({ createBrowserHistory })
+  )(createStore)(reducer, window.__initialState);
+
+  const rootComponent = (
+    <Provider store={store}>
+      <ReduxRouter routes={routes} />
+    </Provider>
+  );
+
+  ReactDOM.render(
+    rootComponent,
+    document.getElementById('root')
+  );
 }
 
 /*
