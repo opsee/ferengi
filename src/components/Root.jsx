@@ -13,21 +13,9 @@ module.exports = React.createClass({
 
   render() {
     return (
-      <html>
-        <head>
-          <title>Opsee</title>
-          <link rel="stylesheet" type="text/css" href="/style.css" />
-        </head>
-
-        <body>
-          <div id="app">
-            <App children={this.props.children} />
-          </div>
-
-          {/* TODO: use this.props.assets.main */}
-          <script src="/bundle.js" />
-        </body>
-      </html>
+      <div id="app">
+        <App children={this.props.children} />
+      </div>
     );
   }
 });
