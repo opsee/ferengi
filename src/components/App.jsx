@@ -1,10 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import Footer from './Footer.jsx';
 import Header from './Header.jsx';
 import style from './root.css';
 
-export default React.createClass({
+const App = React.createClass({
   render() {
     return (
       <div className={style.app}>
@@ -22,4 +23,11 @@ export default React.createClass({
       </div>
     );
   }
-})
+});
+
+export default connect(
+  // Use a selector to describe state
+  state => ({
+    routerState: state.router
+  })
+)(App);
