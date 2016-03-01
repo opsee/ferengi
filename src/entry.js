@@ -1,23 +1,24 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+
 import { createStore, compose } from 'redux';
 import { Provider } from 'react-redux';
-import { createMemoryHistory, createBrowserHistory } from 'history';
-import { ReduxRouter } from 'redux-router';
-import { reduxReactRouter, match } from 'redux-router/server';
+import { createMemoryHistory, createHistory } from 'history';
+import { ReduxRouter, reduxReactRouter } from 'redux-router';
 import serialize from 'serialize-javascript';
 
 import reducer from './reducers/app';
 import routes from './routes';
 import renderServer from './modules/render-server';
 
-
 /*
  * This rendering happens on the client-side
  */
 if (typeof document !== 'undefined') {
+  const initialState = window.__initialState;
   const store = compose(
-    reduxReactRouter({ createBrowserHistory })
-  )(createStore)(reducer, window.__initialState);
+    reduxReactRouter({ createHistory })
+  )(createStore)(reducer, initialState);
 
   const rootComponent = (
     <Provider store={store}>
