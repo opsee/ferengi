@@ -1,35 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-import { createStore, compose } from 'redux';
-import { Provider } from 'react-redux';
-import { createMemoryHistory, createHistory } from 'history';
-import { ReduxRouter, reduxReactRouter } from 'redux-router';
-import serialize from 'serialize-javascript';
-
-import reducer from './reducers/app';
-import routes from './routes';
 import renderServer from './modules/render-server';
+import renderClient from './modules/render-client';
 
 /*
  * This rendering happens on the client-side
  */
 if (typeof document !== 'undefined') {
-  const initialState = window.__initialState;
-  const store = compose(
-    reduxReactRouter({ createHistory })
-  )(createStore)(reducer, initialState);
-
-  const rootComponent = (
-    <Provider store={store}>
-      <ReduxRouter routes={routes} />
-    </Provider>
-  );
-
-  ReactDOM.render(
-    rootComponent,
-    document.getElementById('root')
-  );
+  renderClient();
 }
 
 /*

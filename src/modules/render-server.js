@@ -1,7 +1,7 @@
 import React from 'react';
-import { createStore, compose } from 'redux';
+import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { createMemoryHistory, createBrowserHistory } from 'history';
+import { createMemoryHistory } from 'history';
 import { ReduxRouter } from 'redux-router';
 import { reduxReactRouter, match } from 'redux-router/server';
 import serialize from 'serialize-javascript';
