@@ -11,7 +11,9 @@ module.exports = React.createClass({
       <Container>
         <div className={style.header}>
           <div className={style.logo}>
-            <LogoColor />
+            <Link to="/">
+              <LogoColor />
+            </Link>
           </div>
 
           <div className={style.nav}>
