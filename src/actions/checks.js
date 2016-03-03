@@ -1,17 +1,30 @@
 import { CHECK_URL } from './constants';
 import request from '../modules/request';
+import testRequest from '../data/testRequest.json';
+
+function getToken() {
+  return request
+    .post('https://stinkbait.in.opsee.com/token')
+    .then(res => {
+      return res.body.token;
+    });
+}
 
 export function checkURL(url) {
   return dispatch => {
     dispatch({
       type: CHECK_URL,
-      payload: request
-          .post('https://stinkbait.in.opsee.com/token')
+      payload: getToken().then(token => {
+        return request
+          .post('https://stinkbait.in.opsee.com/check')
+          .set('Authorization', `Bearer ${token}`)
+          .send(testRequest)
           .then(res => {
-            const token = res.body.token;
-            console.log('got token', token);
-            return { data: { token } }
+            if (res.error) return console.error(res.error);
+            const responses = res.body.responses;
+            return { data: { token, responses } };
           })
+      })
     });
   };
 }

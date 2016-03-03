@@ -12,8 +12,10 @@ export default handleActions({
   [CHECK_URL]: {
     next(state, action) {
       const token = action.payload.data.token;
+      const responses = action.payload.data.responses;
+
       return _.assign({}, state, {
-        catfish: { token }
+        catfish: { token, responses }
       });
     }
   }
