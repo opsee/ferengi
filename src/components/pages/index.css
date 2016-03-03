@@ -1,0 +1,12 @@
+.heroPanel {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.subHeader {
+  font-size: 1.2rem;
+}
+

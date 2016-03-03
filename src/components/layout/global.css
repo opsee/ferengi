@@ -11,6 +11,11 @@ body {
   line-height: 1.42857;
 }
 
+/* Header typography */
+h1 {
+  font-size: 2rem;
+}
+
 /* Link styling */
 a {
   color: var(--colorPrimary);
