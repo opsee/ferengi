@@ -41,7 +41,7 @@ module.exports = function(grunt) {
         contentBase: 'dist/',
         progress: true,
         colors: true,
-        port: 9876
+        port: 8080
       },
       start: {
         keepAlive: true
