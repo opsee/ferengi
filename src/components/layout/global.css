@@ -14,10 +14,12 @@ body {
 /* Header typography */
 h1 {
   font-size: 2rem;
+  color: var(--colorGray9);
 }
 
 h2 {
   font-size: 1.6rem;
+  color: var(--colorGray9);
 }
 
 /* Link styling */

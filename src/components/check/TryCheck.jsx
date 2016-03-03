@@ -1,11 +1,12 @@
 import React, { PropTypes } from 'react';
 import style from './tryCheck.css';
+import URLInput from './URLInput';
 
 export default React.createClass({
   render() {
     return (
       <div>
-        <input className={style.input} type="text" placeholder="https://pepe.therarest.com:8420" />
+        <URLInput />
       </div>
     );
   }

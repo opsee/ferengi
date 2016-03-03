@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-import TryCheck from '../widgets/TryCheck';
+import TryCheck from '../check/TryCheck';
 import Panel from './Panel.jsx';
 import style from './heroPanel.css';
 

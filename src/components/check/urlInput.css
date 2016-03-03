@@ -1,0 +1,33 @@
+.wrapInput,
+.wrapButton {
+  display: inline-block;
+  float:left;
+}
+
+.wrapInput {
+  width:75%;
+}
+.wrapButton {
+  width:25%;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.button {
+  padding: 14px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .wrapInput,
+  .wrapButton {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+}
