@@ -1,17 +1,29 @@
 .heroPanel {
-  height: 60vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.heroContent {
+  max-width: 496px;
+  margin: 0 auto;
+  padding: 16px;
   text-align: center;
 }
 
+.heading {
+  margin: 48px 0;
+}
+
 .subHeader {
-  font-size: 1.2rem;
+  color: var(--colorGray6);
+  font-size: 1rem;
+  line-height: 1.6rem;
+  padding: 16px;
 }
 
 .widgetWrap {
   margin: 0 auto;
-  padding: 24px 0;
-  width: 60vw;
+  padding: 24px 0 48px 0;
 }
