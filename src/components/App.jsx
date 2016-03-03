@@ -19,9 +19,7 @@ const App = React.createClass({
         </header>
 
         <main className={style.content}>
-          <Container>
-            {this.props.children}
-          </Container>
+          {this.props.children}
         </main>
 
         <footer className={style.footer}>
