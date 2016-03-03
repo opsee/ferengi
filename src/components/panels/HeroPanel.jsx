@@ -1,4 +1,6 @@
 import React, { PropTypes } from 'react';
+
+import TryCheck from '../widgets/TryCheck';
 import Panel from './Panel.jsx';
 import style from './heroPanel.css';
 
@@ -16,8 +18,8 @@ export default React.createClass({
               that your services are always responding the way you expect.
             </p>
 
-            <div className={style.cta}>
-              <button>Sign up</button>
+            <div className={style.widgetWrap}>
+              <TryCheck />
             </div>
           </div>
         </div>

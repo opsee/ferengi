@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import style from './tryCheck.css';
 
 export default React.createClass({

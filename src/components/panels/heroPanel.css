@@ -10,6 +10,8 @@
   font-size: 1.2rem;
 }
 
-.cta {
+.widgetWrap {
+  margin: 0 auto;
   padding: 24px 0;
+  width: 60vw;
 }
