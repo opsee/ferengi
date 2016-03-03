@@ -1,11 +1,11 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import style from './urlInput.css';
 
 export default React.createClass({
   getInitialState() {
     return {
       url: 'https://pepe.therarest.com:8420'
-    }
+    };
   },
 
   handleChange(e) {
@@ -18,7 +18,7 @@ export default React.createClass({
   },
 
   render() {
-    return(
+    return (
       <div className={style.urlInput}>
         <form onSubmit={this.handleSubmit}>
           <div className={style.wrapInput}>
@@ -33,4 +33,4 @@ export default React.createClass({
       </div>
     );
   }
-})
+});

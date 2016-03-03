@@ -1,5 +1,4 @@
-import React, { PropTypes } from 'react';
-import style from './tryCheck.css';
+import React from 'react';
 import URLInput from './URLInput';
 
 export default React.createClass({

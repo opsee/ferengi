@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
 import TryCheck from '../check/TryCheck';
 import Panel from './Panel.jsx';
