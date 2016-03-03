@@ -1,7 +1,10 @@
 .tryCheckPanel {
-  min-height: 30vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: solid 1px var(--colorGray2);
+  padding: 24px;
+}
+
+.widgetWrap {
+  width: 60vw;
 }
