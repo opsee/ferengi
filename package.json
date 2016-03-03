@@ -50,6 +50,8 @@
     "react-redux": "^4.4.0",
     "react-router": "^1.0.3",
     "redux": "^3.3.1",
+    "redux-actions": "^0.9.1",
+    "redux-promise-middleware": "^2.3.3",
     "redux-router": "^1.0.0-beta7",
     "seedling": "github:opsee/seedling",
     "serialize-javascript": "^1.2.0",

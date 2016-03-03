@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import style from './urlInput.css';
 
 export default React.createClass({
+  propTypes: {
+    handleSubmit: PropTypes.func.isRequired,
+    isLoading: PropTypes.bool
+  },
+
   getInitialState() {
     return {
       url: 'https://pepe.therarest.com:8420'
@@ -14,7 +19,15 @@ export default React.createClass({
 
   handleSubmit(e) {
     e.preventDefault();
-    alert('i dare one more motherfucker 2 aks me that');
+    this.props.handleSubmit(this.state.url);
+  },
+
+  renderButton() {
+    return (
+      <button className={style.button} onClick={this.handleSubmit} disabled={this.props.isLoading}>
+        Monitor this!
+      </button>
+    );
   },
 
   render() {
@@ -27,7 +40,7 @@ export default React.createClass({
           </div>
 
           <div className={style.wrapButton}>
-            <button className={style.button} onClick={this.handleSubmit}>Monitor this!</button>
+            {this.renderButton()}
           </div>
         </form>
       </div>
