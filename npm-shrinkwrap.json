@@ -4615,11 +4615,6 @@
         }
       }
     },
-    "redux-promise-middleware": {
-      "version": "2.3.3",
-      "from": "redux-promise-middleware@*",
-      "resolved": "https://registry.npmjs.org/redux-promise-middleware/-/redux-promise-middleware-2.3.3.tgz"
-    },
     "redux-router": {
       "version": "1.0.0-beta7",
       "from": "redux-router@1.0.0-beta7",
@@ -4627,7 +4622,7 @@
     },
     "redux-thunk": {
       "version": "1.0.3",
-      "from": "redux-thunk@>=1.0.0 <2.0.0",
+      "from": "redux-thunk@*",
       "resolved": "https://registry.npmjs.org/redux-thunk/-/redux-thunk-1.0.3.tgz"
     },
     "regenerate": {
