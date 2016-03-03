@@ -23,6 +23,11 @@
   width: 100%;
 }
 
+.input,
+.button {
+  height: 45px;
+}
+
 @media (max-width: 640px) {
   .wrapInput,
   .wrapButton {
