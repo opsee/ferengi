@@ -32,8 +32,12 @@ const TryCheck = React.createClass({
   }
 });
 
+const mapStateToProps = (state) => ({
+  redux: state
+});
+
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators(actions, dispatch)
 });
 
-export default connect(null, mapDispatchToProps)(TryCheck);
+export default connect(mapStateToProps, mapDispatchToProps)(TryCheck);

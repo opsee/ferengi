@@ -7,7 +7,7 @@ import { createHistory } from 'history';
 import { ReduxRouter, reduxReactRouter } from 'redux-router';
 import { promiseMiddleware } from 'emissary/src/js/modules/promiseMiddleware';
 
-import reducer from '../reducers/app';
+import reducer from '../reducers';
 import routes from '../routes';
 
 export default () => {

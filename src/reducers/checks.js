@@ -4,7 +4,8 @@ import { CHECK_URL } from '../actions/constants';
 
 const initial = {
   catfish: {
-    token: null
+    token: null,
+    responses: []
   }
 };
 
