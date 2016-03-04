@@ -1,4 +1,5 @@
 import request from './request';
+import URL from 'url';
 
 export function getToken() {
   return request
@@ -9,18 +10,19 @@ export function getToken() {
 }
 
 export function makeRequest(url) {
+  const parsedURL = URL.parse(url);
   return {
     check: {
       target: {
-        address: 'www.reddit.com'
+        address: parsedURL.hostname,
       },
       http_check: {
+        path: parsedURL.path,
+        protocol: parsedURL.protocol.slice(0, -1), // FIXME gross
+        port: parseInt(parsedURL.port),
         name: '',
-        path: '/r/pepe',
-        protocol: 'https',
-        port: 443,
-        verb: 'GET',
-        body: ''
+        body: '',
+        verb: 'GET'
       }
     }
   };
