@@ -7,6 +7,7 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 const seedling = require('seedling');
+const HotModuleReplacementPlugin = require('webpack').HotModuleReplacementPlugin;
 
 const CONTEXT_DIR = path.resolve(__dirname, '..', 'src');
 const NODE_MODULES_DIR = path.resolve(__dirname, '..', 'node_modules');
@@ -18,7 +19,11 @@ const PATHS = [
 ];
 
 module.exports = {
-  entry: './src/entry.js',
+  entry: {
+    app: [
+     './src/entry.js'
+    ]
+  },
 
   output: {
     filename: 'bundle.js',
@@ -68,6 +73,8 @@ module.exports = {
   },
 
   plugins: [
+    new HotModuleReplacementPlugin(),
+
     // Make webpack return a non-zero exit code when build fails
     require('webpack-fail-plugin'),
 
@@ -79,7 +86,7 @@ module.exports = {
      * files will be rendered in your output directory by executing your own
      * custom, webpack-compiled render function defined in the entry file.
      */
-    new StaticSiteGeneratorPlugin('bundle.js', PATHS, {})
+    // new StaticSiteGeneratorPlugin('bundle.js', PATHS, {})
   ],
 
   resolve: {

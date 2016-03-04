@@ -40,6 +40,9 @@ module.exports = function(grunt) {
         webpack: require('./webpack/dev.config'),
         contentBase: 'dist/',
         progress: true,
+        host: 'localhost', // Required for hot reload (http://stackoverflow.com/a/35152862)
+        inline: true,
+        hot: true,
         colors: true,
         port: 8080
       },
