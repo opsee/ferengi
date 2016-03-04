@@ -14,6 +14,11 @@ const TryCheck = React.createClass({
     redux: PropTypes.shape({
       asyncActions: PropTypes.shape({
         checkUrl: PropTypes.object
+      }),
+      checks: PropTypes.shape({
+        catfish: PropTypes.shape({
+          responses: PropTypes.array
+        })
       })
     })
   },

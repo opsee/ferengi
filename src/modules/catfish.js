@@ -14,12 +14,12 @@ export function makeRequest(url) {
   return {
     check: {
       target: {
-        address: parsedURL.hostname,
+        address: parsedURL.hostname
       },
       http_check: {
         path: parsedURL.path,
         protocol: parsedURL.protocol.slice(0, -1), // FIXME gross
-        port: parseInt(parsedURL.port),
+        port: parseInt(parsedURL.port, 10),
         name: '',
         body: '',
         verb: 'GET'
