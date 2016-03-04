@@ -112,7 +112,7 @@ const webpackConfig = {
   }
 };
 
-if (config.util.getEnv() === 'production') {
+if (process.env.NODE_ENV === 'production') {
   /*
    * Provide a series of paths to be rendered, and a matching set of index.html
    * files will be rendered in your output directory by executing your own
