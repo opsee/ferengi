@@ -74,19 +74,12 @@ const webpackConfig = {
   },
 
   plugins: [
-
     // Make webpack return a non-zero exit code when build fails
     require('webpack-fail-plugin'),
 
     new ExtractTextPlugin('style.css', {
         allChunks: true
-    }),
-    /*
-     * Provide a series of paths to be rendered, and a matching set of index.html
-     * files will be rendered in your output directory by executing your own
-     * custom, webpack-compiled render function defined in the entry file.
-     */
-    // new StaticSiteGeneratorPlugin('bundle.js', PATHS, {})
+    })
   ],
 
   resolve: {
