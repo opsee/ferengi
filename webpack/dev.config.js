@@ -3,10 +3,12 @@
  *
  * @see http://jxnblk.com/writing/posts/static-site-generation-with-react-and-webpack/
  */
+const config = require('config');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 const seedling = require('seedling');
+const HotModuleReplacementPlugin = require('webpack').HotModuleReplacementPlugin;
 
 const CONTEXT_DIR = path.resolve(__dirname, '..', 'src');
 const NODE_MODULES_DIR = path.resolve(__dirname, '..', 'node_modules');
@@ -17,8 +19,12 @@ const PATHS = [
   '/', '/about', '/how', '/features'
 ];
 
-module.exports = {
-  entry: './src/entry.js',
+const webpackConfig = {
+  entry: {
+    app: [
+     './src/entry.js'
+    ]
+  },
 
   output: {
     filename: 'bundle.js',
@@ -73,13 +79,7 @@ module.exports = {
 
     new ExtractTextPlugin('style.css', {
         allChunks: true
-    }),
-    /*
-     * Provide a series of paths to be rendered, and a matching set of index.html
-     * files will be rendered in your output directory by executing your own
-     * custom, webpack-compiled render function defined in the entry file.
-     */
-    new StaticSiteGeneratorPlugin('bundle.js', PATHS, {})
+    })
   ],
 
   resolve: {
@@ -104,3 +104,18 @@ module.exports = {
     ];
   }
 };
+
+if (process.env.NODE_ENV === 'production') {
+  /*
+   * Provide a series of paths to be rendered, and a matching set of index.html
+   * files will be rendered in your output directory by executing your own
+   * custom, webpack-compiled render function defined in the entry file.
+   * (This interferes with the webpack hot reload stuff, hence it's prod only.)
+   */
+  webpackConfig.plugins.splice(1, 0, new StaticSiteGeneratorPlugin('bundle.js', PATHS, {}));
+} else {
+  // Enable dat hot module replacement
+  webpackConfig.plugins.splice(1, 0, new HotModuleReplacementPlugin());
+}
+
+module.exports = webpackConfig;
