@@ -11,11 +11,11 @@ const TryCheck = React.createClass({
     actions: PropTypes.shape({
       checkURL: PropTypes.func.isRequired
     }),
-    redux: {
+    redux: PropTypes.shape({
       asyncActions: PropTypes.shape({
         checkUrl: PropTypes.object
       })
-    }
+    })
   },
 
   getInitialState() {
