@@ -3,6 +3,7 @@
  *
  * @see http://jxnblk.com/writing/posts/static-site-generation-with-react-and-webpack/
  */
+const config = require('config');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
@@ -18,7 +19,7 @@ const PATHS = [
   '/', '/about', '/how', '/features'
 ];
 
-module.exports = {
+const webpackConfig = {
   entry: {
     app: [
      './src/entry.js'
@@ -73,7 +74,6 @@ module.exports = {
   },
 
   plugins: [
-    new HotModuleReplacementPlugin(),
 
     // Make webpack return a non-zero exit code when build fails
     require('webpack-fail-plugin'),
@@ -111,3 +111,18 @@ module.exports = {
     ];
   }
 };
+
+if (config.util.getEnv() === 'production') {
+  /*
+   * Provide a series of paths to be rendered, and a matching set of index.html
+   * files will be rendered in your output directory by executing your own
+   * custom, webpack-compiled render function defined in the entry file.
+   * (This interferes with the webpack hot reload stuff, hence it's prod only.)
+   */
+  webpackConfig.plugins.splice(1, 0, new StaticSiteGeneratorPlugin('bundle.js', PATHS, {}));
+} else {
+  // Enable dat hot module replacement
+  webpackConfig.plugins.splice(1, 0, new HotModuleReplacementPlugin());
+}
+
+module.exports = webpackConfig;
