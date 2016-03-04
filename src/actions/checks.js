@@ -4,7 +4,7 @@ import testRequest from '../data/testRequest.json';
 
 function getToken() {
   return request
-    .post('https://stinkbait.in.opsee.com/token')
+    .post('https://catfish.opsee.com/token')
     .then(res => {
       return res.body.token;
     });
@@ -16,7 +16,7 @@ export function checkURL(url) {
       type: CHECK_URL,
       payload: getToken().then(token => {
         return request
-          .post('https://stinkbait.in.opsee.com/check')
+          .post('https://catfish.opsee.com/check')
           .set('Authorization', `Bearer ${token}`)
           .send(testRequest)
           .then(res => {
