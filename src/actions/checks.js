@@ -10,7 +10,10 @@ function getToken() {
     });
 }
 
-export function checkURL(url) {
+/**
+ * @param {string} url
+ */
+export function checkURL() {
   return dispatch => {
     dispatch({
       type: CHECK_URL,
@@ -20,10 +23,12 @@ export function checkURL(url) {
           .set('Authorization', `Bearer ${token}`)
           .send(testRequest)
           .then(res => {
-            if (res.error) return console.error(res.error);
+            if (res.error) {
+              return console.error(res.error);
+            }
             const responses = res.body.responses;
             return { data: { token, responses } };
-          })
+          });
       })
     });
   };

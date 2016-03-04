@@ -11,21 +11,21 @@ export default function asyncActions(state, action = {type: null}) {
       history: []
     };
   });
-  if (typeof state  === 'undefined'){
+  if (typeof state  === 'undefined') {
     return initial;
   }
-  if (typeof action.type === 'string' && action.type.match('_ASYNC$')){
+  if (typeof action.type === 'string' && action.type.match('_ASYNC$')) {
     const stripped = _.camelCase(action.type.replace(/_ASYNC$/, ''));
     const history = (state[stripped] && state[stripped].history) || [];
     let obj = {};
-    if (action.payload.status !== 'pending'){
+    if (action.payload.status !== 'pending') {
       //this allows the most recent pending request to trump all previous if the service is slow for some reason
       if (state[stripped] && state[stripped].id === action.payload.id){
         obj[stripped] = _.assign({}, action.payload, {
           history: history.concat([action.payload])
         });
       }
-    }else {
+    } else {
       obj[stripped] = _.assign({}, action.payload, {
         history
       });

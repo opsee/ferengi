@@ -10,7 +10,12 @@ const TryCheck = React.createClass({
   propTypes: {
     actions: PropTypes.shape({
       checkURL: PropTypes.func.isRequired
-    })
+    }),
+    redux: {
+      asyncActions: PropTypes.shape({
+        checkUrl: PropTypes.object
+      })
+    }
   },
 
   getInitialState() {
@@ -19,9 +24,10 @@ const TryCheck = React.createClass({
     };
   },
 
-  handleSubmit(url) {
-    this.setState({ isLoading: true });
-    this.props.actions.checkURL(url);
+  getResponses() {
+    const isSuccess = this.props.redux.asyncActions.checkUrl.status === 'success';
+    const responses = this.props.redux.checks.catfish.responses;
+    return isSuccess ? responses : null;
   },
 
   isLoading() {
@@ -29,15 +35,16 @@ const TryCheck = React.createClass({
     return requestStatus === 'pending';
   },
 
-  getResponses() {
-    const isSuccess = this.props.redux.asyncActions.checkUrl.status === 'success';
-    const responses = this.props.redux.checks.catfish.responses;
-    return isSuccess ? responses : null;
+  handleSubmit(url) {
+    this.setState({ isLoading: true });
+    this.props.actions.checkURL(url);
   },
 
   renderResponses() {
     const responses = this.getResponses();
-    if (!responses) return null;
+    if (!responses) {
+      return null;
+    }
 
     return (
       <div className={style.response}>
