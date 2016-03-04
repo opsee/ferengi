@@ -1,0 +1,1 @@
+export const CHECK_URL = 'CHECK_URL';

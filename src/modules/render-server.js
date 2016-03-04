@@ -6,7 +6,7 @@ import { ReduxRouter } from 'redux-router';
 import { reduxReactRouter, match } from 'redux-router/server';
 import serialize from 'serialize-javascript';
 
-import reducer from '../reducers/app';
+import reducer from '../reducers';
 import routes from '../routes';
 
 /**

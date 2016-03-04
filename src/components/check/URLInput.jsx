@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import style from './urlInput.css';
 
 export default React.createClass({
+  propTypes: {
+    handleSubmit: PropTypes.func.isRequired,
+    isLoading: PropTypes.bool
+  },
+
   getInitialState() {
     return {
-      url: 'https://pepe.therarest.com:8420'
+      url: 'http://jsonplaceholder.typicode.com:80/users'
     };
   },
 
@@ -14,21 +19,33 @@ export default React.createClass({
 
   handleSubmit(e) {
     e.preventDefault();
-    alert('i dare one more motherfucker 2 aks me that');
+    this.props.handleSubmit(this.state.url);
+  },
+
+  renderButton() {
+    const text = this.props.isLoading ? 'Loading...' : 'Monitor this!';
+    return (
+      <button className={style.button} onClick={this.handleSubmit} disabled={this.props.isLoading}>
+        {text}
+      </button>
+    );
   },
 
   render() {
     return (
       <div className={style.urlInput}>
         <form onSubmit={this.handleSubmit}>
+
           <div className={style.wrapInput}>
             <input className={style.input} type="text" value={this.state.url}
               onChange={this.handleChange} />
           </div>
 
           <div className={style.wrapButton}>
-            <button className={style.button} onClick={this.handleSubmit}>Monitor this!</button>
+            {this.renderButton()}
           </div>
+
+          <div style={{clear: 'both'}} />
         </form>
       </div>
     );
