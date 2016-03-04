@@ -23,9 +23,10 @@ export default React.createClass({
   },
 
   renderButton() {
+    const text = this.props.isLoading ? 'Loading...' : 'Monitor this!';
     return (
       <button className={style.button} onClick={this.handleSubmit} disabled={this.props.isLoading}>
-        Monitor this!
+        {text}
       </button>
     );
   },
@@ -34,6 +35,7 @@ export default React.createClass({
     return (
       <div className={style.urlInput}>
         <form onSubmit={this.handleSubmit}>
+
           <div className={style.wrapInput}>
             <input className={style.input} type="text" value={this.state.url}
               onChange={this.handleChange} />
@@ -42,6 +44,8 @@ export default React.createClass({
           <div className={style.wrapButton}>
             {this.renderButton()}
           </div>
+
+          <div style={{clear: 'both'}} />
         </form>
       </div>
     );

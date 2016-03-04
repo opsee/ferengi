@@ -1,0 +1,14 @@
+.response {
+  text-align: left;
+  font-size: 0.8rem;
+  background-color: var(--colorGray2);
+  padding: 16px;
+  max-height: 6rem;
+  overflow: auto;
+}
+
+.response pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+}

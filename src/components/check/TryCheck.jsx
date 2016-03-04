@@ -4,6 +4,7 @@ import {bindActionCreators} from 'redux';
 
 import * as actions from '../../actions/checks';
 import URLInput from './URLInput';
+import style from './tryCheck.css';
 
 const TryCheck = React.createClass({
   propTypes: {
@@ -23,10 +24,37 @@ const TryCheck = React.createClass({
     this.props.actions.checkURL(url);
   },
 
+  isLoading() {
+    const requestStatus = this.props.redux.asyncActions.checkUrl.status;
+    return requestStatus === 'pending';
+  },
+
+  getResponses() {
+    const isSuccess = this.props.redux.asyncActions.checkUrl.status === 'success';
+    const responses = this.props.redux.checks.catfish.responses;
+    return isSuccess ? responses : null;
+  },
+
+  renderResponses() {
+    const responses = this.getResponses();
+    if (!responses) return null;
+
+    return (
+      <div className={style.response}>
+        <pre>{JSON.stringify(responses)}</pre>
+      </div>
+    );
+  },
+
   render() {
     return (
       <div>
-        <URLInput handleSubmit={this.handleSubmit} isLoading={this.state.isLoading} />
+        <div>
+          <URLInput handleSubmit={this.handleSubmit} isLoading={this.isLoading()} />
+        </div>
+        <div>
+          { this.renderResponses() }
+        </div>
       </div>
     );
   }

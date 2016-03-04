@@ -1,3 +1,7 @@
+.urlInput {
+  clear: both;
+}
+
 .wrapInput,
 .wrapButton {
   display: inline-block;
