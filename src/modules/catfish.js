@@ -10,24 +10,17 @@ export function getToken() {
 
 export function makeRequest(url) {
   return {
-    "max_hosts": 1,
-    "check": {
-      "id": "www.reddit.com",
-      "interval": 0,
-      "target": {
-        "name": "www.reddit.com",
-        "type": "url",
-        "id": "www.reddit.com",
-        "address": "www.reddit.com"
+    check: {
+      target: {
+        address: 'www.reddit.com'
       },
-      "name": "www.reddit.com",
-      "http_check": {
-        "name": "",
-        "path": "/r/pepe",
-        "protocol": "https",
-        "port": 443,
-        "verb": "GET",
-        "body": ""
+      http_check: {
+        name: '',
+        path: '/r/pepe',
+        protocol: 'https',
+        port: 443,
+        verb: 'GET',
+        body: ''
       }
     }
   };
