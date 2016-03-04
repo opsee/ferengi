@@ -13,17 +13,17 @@ marketing wabsite
 npm install
 
 // Build the static site. Output will be in dist/
-grunt build
+NODE_ENV='production' grunt build
 
 // Build the static site and watch for any changes
-grunt watch
+NODE_ENV='production' grunt watch
 
 // Run the tests. Everything must lint and build before it can get
 // merged onto master.
 grunt test
 
 // Deploy to production
-grunt deploy
+NODE_ENV='production' grunt deploy
 
 // List all the other cool stuff you can do
 grunt --help
