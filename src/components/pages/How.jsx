@@ -16,6 +16,13 @@ export default React.createClass({
           <Grid>
             <div className={style.panel}>
               <Row>
+                <Col xs={12}>
+                  <h1 className={style.header}>How Opsee works</h1>
+                </Col>
+              </Row>
+            </div>
+            <div className={style.panel}>
+              <Row>
                 <Col xs={12} sm={6}>
                   <div className={style.heading}>
                     <h2>Add Opsee to your AWS environment</h2>
