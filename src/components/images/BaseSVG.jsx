@@ -2,7 +2,8 @@ import React, { PropTypes } from 'react';
 
 export default React.createClass({
   propTypes: {
-    svg: PropTypes.string,
+    svg: PropTypes.string.isRequired,
+    alt: PropTypes.string,
     style: PropTypes.object
   },
 

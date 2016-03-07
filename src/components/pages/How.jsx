@@ -2,7 +2,6 @@ import React from 'react';
 import {Grid, Row, Col} from 'emissary/src/js/modules/bootstrap';
 
 import Container from '../layout/Container';
-import Panel from '../panels/Panel';
 import BaseSVG from '../images/BaseSVG';
 import howBastion from '../images/how-bastion.svg';
 import howChecks from '../images/how-checks.svg';
