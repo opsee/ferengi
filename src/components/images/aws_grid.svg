@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="499px" height="290px" viewBox="0 0 499 290" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.1 (25234) - http://www.bohemiancoding.com/sketch -->
+    <title>random</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Landing---hybrid" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="aws_grid" sketch:type="MSArtboardGroup" transform="translate(-10.000000, -10.000000)">
+            <g id="random" sketch:type="MSLayerGroup" transform="translate(10.000000, 11.000000)">
+                <g id="grid" stroke-width="0.5" stroke="#3E2723" sketch:type="MSShapeGroup">
+                    <g id="Layer_1">
+                        <g id="Group">
+                            <path d="M248.7016,0.16831643 L499,144.498377 L250.2984,287.831684 L0,143.501623 L248.7016,0.16831643 Z" id="Shape"></path>
+                            <path d="M11.8762,136.723692 L262.1746,281.053753" id="Shape"></path>
+                            <path d="M23.6526,129.846085 L273.951,274.176146" id="Shape"></path>
+                            <path d="M35.5288,123.068154 L285.8272,267.398215" id="Shape"></path>
+                            <path d="M47.405,116.190548 L297.7034,260.520609" id="Shape"></path>
+                            <path d="M59.1814,109.412617 L309.4798,253.742677" id="Shape"></path>
+                            <path d="M71.0576,102.53501 L321.356,246.865071" id="Shape"></path>
+                            <path d="M82.9338,95.7570791 L333.2322,240.08714" id="Shape"></path>
+                            <path d="M94.7102,88.8794726 L345.0086,233.209533" id="Shape"></path>
+                            <path d="M106.5864,82.1015416 L356.8848,226.431602" id="Shape"></path>
+                            <path d="M118.4626,75.2239351 L368.761,219.553996" id="Shape"></path>
+                            <path d="M130.239,68.4460041 L380.5374,212.776065" id="Shape"></path>
+                            <path d="M142.1152,61.5683976 L392.4136,205.898458" id="Shape"></path>
+                            <path d="M153.9914,54.7904665 L404.2898,199.120527" id="Shape"></path>
+                            <path d="M165.7678,47.91286 L416.0662,192.242921" id="Shape"></path>
+                            <path d="M177.644,41.134929 L427.9424,185.46499" id="Shape"></path>
+                            <path d="M189.5202,34.2573225 L439.8186,178.587383" id="Shape"></path>
+                            <path d="M201.2966,27.4793915 L451.595,171.809452" id="Shape"></path>
+                            <path d="M213.1728,20.601785 L463.4712,164.931846" id="Shape"></path>
+                            <path d="M225.049,13.823854 L475.3474,158.153915" id="Shape"></path>
+                            <path d="M236.8254,6.94624746 L487.1238,151.276308" id="Shape"></path>
+                            <path d="M487.1238,137.620771 L238.3224,280.954077" id="Shape"></path>
+                            <path d="M475.1478,130.743164 L226.4462,274.076471" id="Shape"></path>
+                            <path d="M463.2716,123.865558 L214.57,267.29854" id="Shape"></path>
+                            <path d="M451.2956,116.987951 L202.594,260.420933" id="Shape"></path>
+                            <path d="M439.4194,110.110345 L190.7178,253.543327" id="Shape"></path>
+                            <path d="M427.4434,103.232738 L178.7418,246.66572" id="Shape"></path>
+                            <path d="M415.5672,96.3551318 L166.8656,239.788114" id="Shape"></path>
+                            <path d="M403.691,89.4775254 L154.8896,232.910507" id="Shape"></path>
+                            <path d="M391.715,82.5999189 L143.0134,226.032901" id="Shape"></path>
+                            <path d="M379.8388,75.7223124 L131.1372,219.155294" id="Shape"></path>
+                            <path d="M367.8628,68.8447059 L119.1612,212.277688" id="Shape"></path>
+                            <path d="M355.9866,61.9670994 L107.285,205.400081" id="Shape"></path>
+                            <path d="M344.1104,55.0894929 L95.309,198.522475" id="Shape"></path>
+                            <path d="M332.1344,48.2118864 L83.4328,191.644868" id="Shape"></path>
+                            <path d="M320.2582,41.3342799 L71.5566,184.767262" id="Shape"></path>
+                            <path d="M308.2822,34.4566734 L59.5806,177.889655" id="Shape"></path>
+                            <path d="M296.406,27.5790669 L47.7044,171.012049" id="Shape"></path>
+                            <path d="M284.43,20.7014604 L35.7284,164.134442" id="Shape"></path>
+                            <path d="M272.5538,13.9235294 L23.8522,157.256836" id="Shape"></path>
+                            <path d="M260.6776,7.04592292 L11.8762,150.379229" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+                <g id="aws-logo" transform="translate(160.062367, 73.788546)" fill="#FCB316" sketch:type="MSShapeGroup">
+                    <polygon id="Polygon-1" points="267.226454 14 291.452907 27.9838419 291.452907 55.9515256 267.226454 69.9353675 243 55.9515256 243 27.9838419 "></polygon>
+                    <polygon id="Polygon-1" points="124.908782 26.0352423 143.976773 37.0415486 143.976773 59.0541612 124.908782 70.0604674 105.840792 59.0541612 105.840792 37.0415486 "></polygon>
+                    <polygon id="Polygon-1" points="21.8061095 0.872246696 43.6122189 13.4590327 43.6122189 38.6326047 21.8061095 51.2193907 4.33345338e-14 38.6326047 2.91175061e-14 13.4590327 "></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

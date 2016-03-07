@@ -5,6 +5,8 @@ import { Block, BlockGroup } from '../layout/Grid';
 import Padding from 'emissary/src/js/components/layout/Padding';
 import Panel from './Panel.jsx';
 import style from './summaryPanels.css';
+import AWSGrid from '../images/AWSGrid';
+import DeviceGroup from '../images/DeviceGroup';
 
 export default React.createClass({
   render() {
@@ -27,14 +29,14 @@ export default React.createClass({
                 </Block>
 
                 <Block width={50} gutter={16}>
-                  pic
+                  <AWSGrid />
                 </Block>
               </BlockGroup>
             </div>
             <div className={style.panel}>
               <BlockGroup gutter={16}>
                 <Block gutter={16}width={50}>
-                  pic
+                  <DeviceGroup />
                 </Block>
 
                 <Block gutter={16} width={50}>
