@@ -20,6 +20,7 @@ h1 {
 h2 {
   font-size: 1.6rem;
   color: var(--colorGray9);
+  line-height: 2rem;
 }
 
 /* Link styling */

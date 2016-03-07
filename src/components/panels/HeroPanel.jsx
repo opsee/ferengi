@@ -13,12 +13,13 @@ export default React.createClass({
             <div className={style.heading}>
               <h1>Health checks have you covered</h1>
               <p className={style.subHeader}>
-                Whether you're watching 1 instance or 1000, Opsee lets you be sure
-                that your services are always responding the way you expect.
+                How do you know when your services are working? The only way to
+                be sure is health checks. Make a request against your service,
+                and ensure that it's responding properly.
               </p>
             </div>
 
-            <h2>Try it for yourself. Run a check:</h2>
+            <h2>Go ahead and try it out</h2>
             <div className={style.widgetWrap}>
               <TryCheck />
             </div>

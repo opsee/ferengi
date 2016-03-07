@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router';
 
 import Container from './layout/Container.jsx';
-import LogoColor from 'emissary/src/js/components/global/LogoColor.jsx';
+import BaseSVG from './images/BaseSVG';
+import logoLight from './images/logos/opseelogo-screen-light-full.svg';
 import style from './header.css';
 
 module.exports = React.createClass({
@@ -12,7 +13,7 @@ module.exports = React.createClass({
         <div className={style.header}>
           <div className={style.logo}>
             <Link to="/">
-              <LogoColor />
+              <BaseSVG svg={logoLight} style={{height: 80}} />
             </Link>
           </div>
 
