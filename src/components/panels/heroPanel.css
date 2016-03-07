@@ -1,5 +1,5 @@
 .heroPanel {
-  min-height: 80vh;
+  min-height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,6 +25,5 @@
 }
 
 .widgetWrap {
-  margin: 0 auto;
-  padding: 24px 0 48px 0;
+  margin: 24px auto 12px 0;
 }

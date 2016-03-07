@@ -12,8 +12,8 @@ export default React.createClass({
       <Panel>
         <Container>
           <div className={style.panel}>
-            <BlockGroup>
-              <Block width={50}>
+            <BlockGroup gutter={16}>
+              <Block width={50} gutter={16}>
                 <h2>Your team loves AWS. So do we.</h2>
                 <p>We seamlessly integrate with AWS to do all the hard work for you.
                 There's no software to install, no shell scripts to cURL and no
@@ -23,18 +23,18 @@ export default React.createClass({
                 wave goodbye to false alarms and blind spots.</p>
               </Block>
 
-              <Block width={50}>
+              <Block width={50} gutter={16}>
                 pic
               </Block>
             </BlockGroup>
           </div>
           <div className={style.panel}>
-            <BlockGroup>
-              <Block width={50}>
+            <BlockGroup gutter={16}>
+              <Block gutter={16}width={50}>
                 pic
               </Block>
 
-              <Block width={50}>
+              <Block gutter={16} width={50}>
                 <h2>1999 called, and they want their monitoring system back.</h2>
                 <p>You've adopted the cloud, you've embraced devops and your team
                 is continously delivering software. So why are you using monitoring
