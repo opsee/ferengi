@@ -8,6 +8,7 @@ import style from './summaryPanels.css';
 import AWSGrid from '../images/AWSGrid';
 import DeviceGroup from '../images/DeviceGroup';
 
+
 export default React.createClass({
   render() {
     return (
