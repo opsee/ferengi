@@ -1,10 +1,13 @@
 import React from 'react';
+import Container from '../layout/Container';
 
 export default React.createClass({
   render() {
     return (
       <div>
-        Features component
+        <Container>
+          Features component
+        </Container>
       </div>
     );
   }
