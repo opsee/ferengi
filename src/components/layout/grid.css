@@ -1,0 +1,10 @@
+/*! PocketGrid 1.1.0
+* Copyright 2013 Arnaud Leray
+* MIT License
+*/.blockGroup,.block,.blockGroup:after,.block:after,.blockGroup:before,.block:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.blockGroup{*zoom:1}
+.blockGroup:before,.blockGroup:after{display:table;content:"";line-height:0}
+.blockGroup:after{clear:both}
+.blockGroup{list-style-type:none;padding:0;margin:0}
+.blockGroup>.blockGroup{clear:none;float:left;margin:0 !important}
+.block{float:left;width:100%}
