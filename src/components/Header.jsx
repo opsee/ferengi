@@ -13,7 +13,7 @@ module.exports = React.createClass({
         <div className={style.header}>
           <div className={style.logo}>
             <Link to="/">
-              <BaseSVG svg={logoLight} />
+              <BaseSVG svg={logoLight} style={{height: 80}} />
             </Link>
           </div>
 
