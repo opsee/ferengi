@@ -8,6 +8,8 @@ export default React.createClass({
   },
 
   render() {
+    // FIXME this is pretty gross; investigate a better way that works on both
+    // client and server.
     const isEncoded = this.props.svg.substring(0, 10) === 'data:image';
     const src = isEncoded ? this.props.svg : `/${this.props.svg}`;
 

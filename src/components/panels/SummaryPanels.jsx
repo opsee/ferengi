@@ -22,7 +22,7 @@ export default React.createClass({
                       <h2>Your team loves AWS. So do we.</h2>
                     </div>
                     <p className={style.prose}>We seamlessly integrate with AWS to do all the hard work for you.
-                    There's no software to install, no shell scripts to cURL and no
+                    There's no software to install, no shell scripts to cURL, and no
                     configuration management to run. Just give us a set of AWS keys
                     and we'll take care of the rest. As EC2 instances come and go we'll
                     automatically manage the targets of your health checks, so you can
@@ -40,11 +40,14 @@ export default React.createClass({
                   </Col>
                   <Col xs={12} sm={6}>
                     <div className={style.heading}>
-                      <h2>1999 called, and they want their monitoring system back.</h2>
+                      <h2>Finally, monitoring designed for the developer on call.</h2>
                     </div>
-                    <p className={style.prose}>You've adopted the cloud, you've embraced devops and your team
-                    is continously delivering software. So why are you using monitoring
-                    software that's old enough to drive a car? Ditch the perl scripts and...</p>
+                    <p className={style.prose}>You've adopted the cloud, you've
+                    embraced devops and your team is continously delivering
+                    software. You've even (begrudgingly) agreed to go on call.
+                    Wouldn't it be better to have monitoring software specifically
+                    designed for your needs? Opsee has your back with capabilities
+                    like restarting servers right from the alert.</p>
                   </Col>
                 </Row>
               </div>
