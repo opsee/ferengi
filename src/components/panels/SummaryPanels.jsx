@@ -4,13 +4,14 @@ import Container from '../layout/Container';
 import { Block, BlockGroup } from '../layout/Grid';
 import Padding from 'emissary/src/js/components/layout/Padding';
 import Panel from './Panel.jsx';
+import style from './summaryPanels.css';
 
 export default React.createClass({
   render() {
     return (
       <Panel>
         <Container>
-
+          <div className={style.panel}>
             <BlockGroup>
               <Block width={50}>
                 <h2>Your team loves AWS. So do we.</h2>
@@ -26,21 +27,21 @@ export default React.createClass({
                 pic
               </Block>
             </BlockGroup>
+          </div>
+          <div className={style.panel}>
+            <BlockGroup>
+              <Block width={50}>
+                pic
+              </Block>
 
-
-
-          <BlockGroup>
-            <Block width={50}>
-              pic
-            </Block>
-
-            <Block width={50}>
-              <h2>1999 called, and they want their monitoring system back.</h2>
-              <p>You've adopted the cloud, you've embraced devops and your team
-              is continously delivering software. So why are you using monitoring
-              software that's old enough to drive a car? Ditch the perl scripts and...</p>
-            </Block>
-          </BlockGroup>
+              <Block width={50}>
+                <h2>1999 called, and they want their monitoring system back.</h2>
+                <p>You've adopted the cloud, you've embraced devops and your team
+                is continously delivering software. So why are you using monitoring
+                software that's old enough to drive a car? Ditch the perl scripts and...</p>
+              </Block>
+            </BlockGroup>
+          </div>
         </Container>
       </Panel>
     );
