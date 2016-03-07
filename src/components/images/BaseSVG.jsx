@@ -7,8 +7,11 @@ export default React.createClass({
   },
 
   render() {
+    const isEncoded = this.props.svg.substring(0, 10) === 'data:image';
+    const src = isEncoded ? this.props.svg : `/${this.props.svg}`;
+
     return (
-      <img src={this.props.svg} alt={this.props.alt} style={this.props.style}/>
+      <img src={src} alt={this.props.alt} style={this.props.style}/>
     );
   }
 });
