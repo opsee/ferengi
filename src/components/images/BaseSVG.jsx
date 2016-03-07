@@ -8,7 +8,7 @@ export default React.createClass({
 
   render() {
     return (
-      <img src={this.props.svg} alt="Opsee devices" style={this.props.style}/>
+      <img src={this.props.svg} alt={this.props.alt} style={this.props.style}/>
     );
   }
 });
