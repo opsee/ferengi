@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 export default React.createClass({
   propTypes: {
-
+    svg: PropTypes.string
   },
 
   render() {

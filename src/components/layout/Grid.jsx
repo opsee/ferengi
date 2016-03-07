@@ -7,16 +7,19 @@ export const BlockGroup = React.createClass({
     gutter: PropTypes.number
   },
 
-  calculateStyle() {
-    if (!this.props.gutter) return {};
+  getStyle() {
+    if (!this.props.gutter) {
+      return {};
+    }
+
     return {
       margin: `-${this.props.gutter}px 0 0 -${this.props.gutter}px`
-    }
+    };
   },
 
   render() {
     return (
-      <div className={style.blockGroup} style={this.calculateStyle()}>
+      <div className={style.blockGroup} style={this.getStyle()}>
         {this.props.children}
       </div>
     );
@@ -30,17 +33,17 @@ export const Block = React.createClass({
     width: PropTypes.number
   },
 
-  calculateStyle() {
-    const style = {width: `${this.props.width}%`};
+  getStyle() {
+    const styleSpec = {width: `${this.props.width}%`};
     if (this.props.gutter) {
-      style.padding = `${this.props.gutter}px 0 0 ${this.props.gutter}px`;
+      styleSpec.padding = `${this.props.gutter}px 0 0 ${this.props.gutter}px`;
     }
-    return style;
+    return styleSpec;
   },
 
   render() {
     return (
-      <div className={style.block} style={this.calculateStyle()}>
+      <div className={style.block} style={this.getStyle()}>
         {this.props.children}
       </div>
     );
