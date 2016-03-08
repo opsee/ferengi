@@ -42,7 +42,8 @@ module.exports = {
     loaders: [
       {
         test: /\.json$/,
-        loader: 'json-loader'
+        loader: 'json-loader',
+        include: INCLUDE_DIRS
       },
       {
         test: /\.js$|\.jsx$/,
@@ -61,7 +62,8 @@ module.exports = {
         include: INCLUDE_DIRS
       }, {
         test: /\.(png|jpg|svg)$/,
-        loader: 'url-loader?limit=8192'
+        loader: 'url-loader?limit=8192',
+        include: INCLUDE_DIRS
       }
 
     ]
