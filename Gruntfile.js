@@ -28,8 +28,8 @@ module.exports = function(grunt) {
     },
 
     webpack: {
-      build: require('./webpack/dev.config'),
-      watch: _.assign({}, require('./webpack/dev.config'), {
+      build: require('./webpack/build.config'),
+      watch: _.assign({}, require('./webpack/build.config'), {
         watch: true,
         keepalive: true
       })
@@ -54,7 +54,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', 'Builds the static site once (to dist/)', ['webpack:build']);
   grunt.registerTask('watch', 'Build the static site, rebuild on changes', ['webpack:watch']);
-  grunt.registerTask('dev', 'Build the static site & put a devserver on it', ['webpack-dev-server:start'] )
+  grunt.registerTask('dev', 'Build the static site & put a devserver on it', ['build', 'webpack-dev-server:start'] )
 
   grunt.registerTask('test', 'Builds the static site, failing on any errors', ['webpack:build']);
   grunt.registerTask('deploy', 'Deploy the site to production s3', ['build', 'aws_s3:prod']);
