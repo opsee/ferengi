@@ -13,9 +13,9 @@ export default React.createClass({
             <div className={style.heading}>
               <h1>Health checks have you covered</h1>
               <p className={style.subHeader}>
-                How do you know when your services are working? The only way to
-                be sure is health checks. Make a request against your service,
-                and ensure that it's responding properly.
+                Health checks are the best way to know your services are working
+                as you expect. Make a request, and ensure that it's responding
+                properly. Go ahead and try it out.
               </p>
             </div>
 
