@@ -26,7 +26,10 @@ grunt test
 
 // Deploy to production. You'll want to make sure that $AWS_ACCESS_KEY_ID,
 // $AWS_DEFAULT_REGION, and $AWS_SECRET_ACCESS_KEY are set in your env.
-NODE_ENV='production' grunt deploy
+NODE_ENV='production' grunt deploy:prod
+
+// Deploy to staging
+NODE_ENV='production' grunt deploy:staging
 
 // List all the other cool stuff you can do
 grunt --help
