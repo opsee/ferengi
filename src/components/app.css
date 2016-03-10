@@ -23,6 +23,7 @@
 
 .header, .footer {
   flex: none;
+  z-index: 50;
 }
 
 .content {
