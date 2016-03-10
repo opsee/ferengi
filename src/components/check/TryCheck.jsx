@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
+import _ from 'lodash';
 
 import * as actions from '../../actions/checks';
 import URLInput from './URLInput';
@@ -47,17 +48,16 @@ const TryCheck = React.createClass({
 
   renderResponses() {
     const responses = this.getResponses();
-    if (!responses) {
-      return null;
+    const first = _.chain(responses).head().get('http_response');
+    if (first){
+      return (
+        <div className={style.response}>
+            {JSON.stringify(first, null, ' ')}
+        </div>
+      );
     }
-
-    return (
-      <div className={style.response}>
-        <pre>{JSON.stringify(responses)}</pre>
-      </div>
-    );
+    return null;
   },
-
   render() {
     return (
       <div>

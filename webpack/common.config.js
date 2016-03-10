@@ -19,7 +19,6 @@ module.exports = {
      './src/entry.js'
     ]
   },
-
   output: {
     filename: 'bundle.js',
     path: 'dist',
@@ -36,14 +35,14 @@ module.exports = {
       {
         test: /\.js$|\.jsx$/,
         loaders: ['eslint-loader'],
-        exclude: [NODE_MODULES_DIR]
+        include: INCLUDE_DIRS
       },
     ],
     loaders: [
       {
         test: /\.json$/,
-        loader: 'json-loader',
-        include: INCLUDE_DIRS
+        loader: 'json-loader'
+        // include: INCLUDE_DIRS
       },
       {
         test: /\.js$|\.jsx$/,
