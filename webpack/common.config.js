@@ -3,6 +3,7 @@
  *
  * @see http://jxnblk.com/writing/posts/static-site-generation-with-react-and-webpack/
  */
+const _ = require('lodash');
 const config = require('config');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -83,6 +84,8 @@ module.exports = {
   },
 
   postcss(webpack) {
+    const styleConstants = require(`${CONTEXT_DIR}/constants/styleConstants`);
+
     return [
       require('postcss-import')({
         addDependencyTo: webpack
@@ -91,7 +94,7 @@ module.exports = {
         browsers: 'last 1 version, > 10%',
         features: {
           customProperties: {
-            variables: seedling.flat
+            variables: _.assign({}, seedling.flat, styleConstants.flat)
           }
         }
       }),
