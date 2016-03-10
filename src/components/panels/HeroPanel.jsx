@@ -18,11 +18,6 @@ export default React.createClass({
                 properly. Go ahead and try it out.
               </p>
             </div>
-
-            <h2>Go ahead and try it out</h2>
-            <div className={style.widgetWrap}>
-              <TryCheck />
-            </div>
           </div>
         </div>
       </Panel>
