@@ -15,6 +15,16 @@ module.exports = function(grunt) {
         uploadConcurrency: 5, // 5 simultaneous uploads
         downloadConcurrency: 5 // 5 simultaneous downloads
       },
+      staging: {
+        options: {
+          bucket: config.aws.buckets.staging,
+          differential: true,
+          gzipRename: 'ext' // when uploading a gz file, keep the original extension
+        },
+        files: [
+          { expand: true, cwd: 'dist/', src: ['**'], dest: '/' }
+        ]
+      },
       prod: {
         options: {
           bucket: config.aws.buckets.prod,
@@ -59,5 +69,6 @@ module.exports = function(grunt) {
   grunt.registerTask('dev', 'Build the static site & put a devserver on it', ['build', 'webpack-dev-server:start']);
 
   grunt.registerTask('test', 'Builds the static site, failing on any errors', ['build']);
-  grunt.registerTask('deploy', 'Deploy the site to production s3', ['build', 'aws_s3:prod']);
+  grunt.registerTask('deploy:prod', 'Deploy the site to production s3', ['build', 'aws_s3:prod']);
+  grunt.registerTask('deploy:staging', 'Deploy the site to production s3', ['build', 'aws_s3:staging']);
 };

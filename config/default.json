@@ -7,7 +7,8 @@
     "secret_access_key": null,
     "region": "us-west-2",
     "buckets": {
-      "prod": "opsee-ferengi"
+      "prod": "opsee-ferengi",
+      "staging": "opsee-ferengi-staging0"
     }
   }
 }
