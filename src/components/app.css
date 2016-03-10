@@ -1,6 +1,11 @@
+@import './layout/fonts.css';
 @import './layout/reset.css';
 @import './layout/global.css';
 @import 'emissary/src/js/components/layout/grid.css';
+
+* {
+  font-family: 'Dosis', monospace !important;
+}
 
 /**
  * A bit of cruft in here to deal with various browsers, etc. so the cruft has
