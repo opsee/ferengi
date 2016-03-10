@@ -61,12 +61,8 @@ module.exports = {
         ),
         include: INCLUDE_DIRS
       }, {
-        test: /\.(png|jpg|svg)$/,
+        test: /\.(png|jpg|svg|ttf|eot|svg|woff(2)?)$/,
         loader: 'url-loader?limit=8192',
-        include: INCLUDE_DIRS
-      }, {
-        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-        loader: 'file-loader',
         include: INCLUDE_DIRS
       }
     ]
