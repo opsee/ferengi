@@ -15,19 +15,12 @@
   width:25%;
 }
 
-.input {
-  width: 100%;
-  padding: 12px;
-  box-sizing: border-box;
-}
-
 .button {
   padding: 14px;
   box-sizing: border-box;
   width: 100%;
 }
 
-.input,
 .button {
   height: 45px;
 }

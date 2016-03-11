@@ -1,0 +1,8 @@
+.input {
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 2rem;
+  border: solid 1px var(--colorGray4);
+  padding: 1rem;
+  width: 100%;
+}

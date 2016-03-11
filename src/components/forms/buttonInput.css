@@ -1,0 +1,21 @@
+.group {
+
+}
+
+.input,
+.button {
+  float: left;
+}
+
+.input {
+  width: 75%;
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.button {
+  width: 25%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
