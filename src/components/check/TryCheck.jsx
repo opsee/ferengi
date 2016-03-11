@@ -6,6 +6,8 @@ import _ from 'lodash';
 import * as actions from '../../actions/checks';
 import URLInput from './URLInput';
 import style from './tryCheck.css';
+import CheckResponseSingle from './CheckResponseSingle';
+import AssertionSelection from './AssertionSelection';
 
 const TryCheck = React.createClass({
   propTypes: {
@@ -26,33 +28,50 @@ const TryCheck = React.createClass({
 
   getInitialState() {
     return {
-      isLoading: false
+      isLoading: false,
+      assertions: []
     };
   },
 
   getResponses() {
     const isSuccess = this.props.redux.asyncActions.checkUrl.status === 'success';
     const responses = this.props.redux.checks.catfish.responses;
+    console.log(isSuccess ? responses : null);
     return isSuccess ? responses : null;
   },
-
+  getFirstResponse(){
+    const res = _.chain(this.getResponses()).head().get('http_response').value();
+    if (res && res.headers){
+      let headers = {};
+      res.headers.forEach(h => {
+        headers[h.name] = h.values.join('; ');
+      });
+      return _.assign({}, res, {headers});
+    }
+    return null;
+  },
   isLoading() {
     const requestStatus = this.props.redux.asyncActions.checkUrl.status;
     return requestStatus === 'pending';
   },
-
   handleSubmit(url) {
     this.setState({ isLoading: true });
     this.props.actions.checkURL(url);
   },
-
+  handleAssertionsChange(data){
+    console.log(data);
+  },
   renderResponses() {
-    const responses = this.getResponses();
-    const first = _.chain(responses).head().get('http_response');
+    const first = this.getFirstResponse();
     if (first){
       return (
-        <div className={style.response}>
-            {JSON.stringify(first, null, ' ')}
+        <div>
+          <div className={style.response}>
+            <CheckResponseSingle {...first}/>
+          </div>
+          <form ref="form">
+            <AssertionSelection assertions={this.state.assertions} onChange={this.handleAssertionsChange} response={this.getFirstResponse()} responseFormatted={this.getFirstResponse()}/>
+          </form>
         </div>
       );
     }

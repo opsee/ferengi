@@ -1,3 +1,8 @@
+html {
+  font-size: 62.5%;
+  line-height: 1.4;
+}
+
 html, body, :global(#root) {
   height: 100%;
   line-height: normal;
@@ -5,7 +10,7 @@ html, body, :global(#root) {
 
 body {
   /* Base typography */
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 300;
   font-family: var(--fontGotham);
   line-height: 1.42857;
@@ -13,12 +18,12 @@ body {
 
 /* Header typography */
 h1 {
-  font-size: 2rem;
+  font-size: 4rem;
   color: var(--colorGray9);
 }
 
 h2 {
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: var(--colorGray9);
   line-height: 2rem;
 }

@@ -9,7 +9,7 @@ export default React.createClass({
 
   getInitialState() {
     return {
-      url: 'http://jsonplaceholder.typicode.com:80/users'
+      url: 'http://jsonplaceholder.typicode.com/users/1'
     };
   },
 

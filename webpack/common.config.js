@@ -3,6 +3,7 @@
  *
  * @see http://jxnblk.com/writing/posts/static-site-generation-with-react-and-webpack/
  */
+const webpack = require('webpack');
 const config = require('config');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -12,6 +13,10 @@ const CONTEXT_DIR = path.resolve(__dirname, '..', 'src');
 const NODE_MODULES_DIR = path.resolve(__dirname, '..', 'node_modules');
 const EMISSARY_DIR = path.join(NODE_MODULES_DIR, 'emissary');
 const INCLUDE_DIRS = [CONTEXT_DIR, EMISSARY_DIR];
+
+var definePlugin = new webpack.DefinePlugin({
+  'FormData': JSON.stringify(null)
+});
 
 module.exports = {
   entry: {
@@ -71,7 +76,7 @@ module.exports = {
   plugins: [
     // Make webpack return a non-zero exit code when build fails
     require('webpack-fail-plugin'),
-
+    definePlugin,
     new ExtractTextPlugin('style.css', {
         allChunks: true
     }),

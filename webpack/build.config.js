@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const baseConfig = require('./common.config.js');
 const merge = require('webpack-merge');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
@@ -8,6 +9,9 @@ const PATHS = [
 
 module.exports = merge(baseConfig, {
   plugins: [
-    new StaticSiteGeneratorPlugin('bundle.js', PATHS, {})
+    new StaticSiteGeneratorPlugin('bundle.js', PATHS, {}),
+    new webpack.DefinePlugin({
+      'window': JSON.stringify({XMLHttpRequest: true})
+    })
   ]
 });
