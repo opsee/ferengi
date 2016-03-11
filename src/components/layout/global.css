@@ -16,3 +16,22 @@
 :global .text-accent {
   color: var(--colorAccent);
 }
+
+/* @see https://css-tricks.com/snippets/css/clear-fix/ */
+:global(.clearfix):after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+:global .clearfix {
+  display: inline-block;
+}
+
+/* start commented backslash hack \*/
+* html :global(.clearfix) { height: 1%; }
+:global(.clearfix) { display: block; }
+/* close commented backslash hack */
