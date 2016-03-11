@@ -1,9 +1,10 @@
 .button {
-  background-color: var(--colorPrimary);
+  background-color: var(--colorAccent);
   background-image: none;
   border: 1px solid transparent;
   border-radius: 2rem;
   box-shadow: none;
+  color: white;
   cursor: pointer;
   display: inline-block;
   font-family: 'Dosis';
@@ -20,5 +21,5 @@
 }
 
 .button:hover {
-  background: color(var(--colorPrimary) shade(20%));
+  background: color(var(--colorAccent) shade(20%));
 }

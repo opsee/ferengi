@@ -12,3 +12,7 @@
   line-height: 1.6rem;
   padding: 16px 0;
 }
+
+:global .text-accent {
+  color: var(--colorAccent);
+}

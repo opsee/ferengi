@@ -24,7 +24,7 @@ export default React.createClass({
   },
 
   renderButton() {
-    const text = this.props.isLoading ? 'Loading...' : 'Monitor this!';
+    const text = this.props.isLoading ? 'Loading...' : 'Show me';
     return (
       <Button className={style.button} onClick={this.handleSubmit} disabled={this.props.isLoading}>
         {text}
