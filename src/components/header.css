@@ -10,6 +10,8 @@
 .links,
 .cta {
   display: inline;
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
 .links {
@@ -18,13 +20,26 @@
 
 .links li {
   display: inline;
-  margin: 0 6px;
+  margin: 0 12px;
 }
 
 .links a {
   color: var(--colorGray4);
 }
 
-@media (max-width: 640px) {
-  .links { display: none; }
+.navLinks {
+  composes: links;
+}
+
+@media (max-width: 720px) {
+  .navLinks { display: none; }
+}
+
+.cta {
+  color: white;
+  background-color: var(--colorWarm2);
+}
+
+.cta:hover {
+  background-color: color(var(--colorWarm2) shade(20%));
 }
