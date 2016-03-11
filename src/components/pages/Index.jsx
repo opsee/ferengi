@@ -1,11 +1,13 @@
 import React from 'react';
 
+import SkewPanel from '../panels/SkewPanel';
 import HeroPanel from '../panels/HeroPanel';
 import SignUpPanel from '../panels/SignUpPanel';
 import SummaryPanels from '../panels/SummaryPanels';
 import AssertionsPanel from '../panels/AssertionsPanel';
 
 import style from './index.css';
+import styleConstants from '../../constants/styleConstants';
 
 export default React.createClass({
   render() {
@@ -15,13 +17,9 @@ export default React.createClass({
           <HeroPanel />
         </div>
 
-        <div className={style.panel}>
-          <div className={style.skewLight}>
-            <div className={style.panelContent}>
-              <AssertionsPanel/>
-            </div>
-          </div>
-        </div>
+        <SkewPanel backgroundColor={styleConstants.plain.color.accent}>
+          <AssertionsPanel/>
+        </SkewPanel>
 
         <div>
           <SummaryPanels />
