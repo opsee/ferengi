@@ -15,7 +15,7 @@ export default React.createClass({
               <p className={style.subHeader}>
                 Health checks are the best way to know your services are working
                 as you expect. Make a request, and ensure that it's responding
-                properly. Go ahead and try it out.
+                properly.
               </p>
             </div>
           </div>

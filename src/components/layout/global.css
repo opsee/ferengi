@@ -1,39 +1,7 @@
-html, body, :global(#root) {
-  height: 100%;
-  line-height: normal;
+:global .width-full {
+  width: 100%;
 }
 
-body {
-  /* Base typography */
-  font-size: 16px;
-  font-weight: 300;
-  font-family: var(--fontGotham);
-  line-height: 1.42857;
-}
-
-/* Header typography */
-h1 {
-  font-size: 2rem;
-  color: var(--colorGray9);
-}
-
-h2 {
-  font-size: 1.6rem;
-  color: var(--colorGray9);
-  line-height: 2rem;
-}
-
-/* Link styling */
-a {
-  color: var(--colorPrimary);
-  text-decoration: none;
-}
-a:hover, a:focus {
-  color: #0c80df;
-  text-decoration: underline;
-}
-a:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+:global .text-center {
+  text-align: center;
 }
