@@ -1,29 +1,33 @@
 /* TODO: use relative calculations instead of magic numbers */
+:root {
+  --angle: -3deg;
+  --offset: -40px;
+  --height: 80px;
+}
+
 .panel {
   position: relative;
   z-index: 10;
 }
 
-.skewTop {
+.skew {
   content: '';
   position: absolute;
   left: 0;
-  top: -29px;
   width: 100%;
-  height: 60px;
   z-index: 10;
-  transform: skewY(-2.5deg);
+  transform: skewY(var(--angle));
+  height: var(--height);
+}
+
+.skewTop {
+  composes: skew;
+  top: var(--offset);
 }
 
 .skewBottom {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -29px;
-  width: 100%;
-  height: 60px;
-  z-index: 10;
-  transform: skewY(-2.5deg);
+  composes: skew;
+  bottom: var(--offset);
 }
 
 .contents {
