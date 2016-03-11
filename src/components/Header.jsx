@@ -26,7 +26,7 @@ module.exports = React.createClass({
               <li><Link to="/blog">Blog</Link></li>
             </ul>
 
-            <ul className={style.links}>
+            <ul className={style.authLinks}>
               <li><Link to="https://app.opsee.com/login">Log In</Link></li>
               <li>
                 <Button className={style.cta}>

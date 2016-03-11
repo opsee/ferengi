@@ -27,6 +27,16 @@
   color: var(--colorGray4);
 }
 
+.authLinks {
+  composes: links;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.authLinks li:last-child {
+  margin-right: 0;
+}
+
 .navLinks {
   composes: links;
 }
