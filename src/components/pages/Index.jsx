@@ -6,7 +6,6 @@ import SignUpPanel from '../panels/SignUpPanel';
 import SummaryPanels from '../panels/SummaryPanels';
 import AssertionsPanel from '../panels/AssertionsPanel';
 
-import style from './index.css';
 import styleConstants from '../../constants/styleConstants';
 
 export default React.createClass({
@@ -17,7 +16,7 @@ export default React.createClass({
           <HeroPanel />
         </div>
 
-        <SkewPanel backgroundColor={styleConstants.plain.color.accent}>
+        <SkewPanel backgroundColor={styleConstants.plain.color.neutral2}>
           <AssertionsPanel/>
         </SkewPanel>
 
@@ -25,13 +24,9 @@ export default React.createClass({
           <SummaryPanels />
         </div>
 
-        <div className={style.panel}>
-          <div className={style.skewAccent}>
-            <div className={style.panelContent}>
-              <SignUpPanel />
-            </div>
-          </div>
-        </div>
+        <SkewPanel backgroundColor={styleConstants.plain.color.accent} skewBottom={false}>
+          <SignUpPanel />
+        </SkewPanel>
       </div>
     );
   }

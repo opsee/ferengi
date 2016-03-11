@@ -16,9 +16,16 @@ export default React.createClass({
     };
   },
 
+  getPanelStyle() {
+    return {
+      backgroundColor: this.props.backgroundColor,
+      marginBottom: this.props.skewBottom ? 55 : null
+    };
+  },
+
   render() {
     return (
-      <div className={style.panel} style={{backgroundColor: this.props.backgroundColor}}>
+      <div className={style.panel} style={this.getPanelStyle()}>
 
         { this.props.skewTop ?
           <div className={style.skewTop} style={{backgroundColor: this.props.backgroundColor}} />
