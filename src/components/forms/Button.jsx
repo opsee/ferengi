@@ -14,23 +14,19 @@ const Button = React.createClass({
     icon: PropTypes.bool,
     block: PropTypes.bool,
     secondary: PropTypes.bool,
-    noPad: PropTypes.bool,
-    fab: PropTypes.bool,
     color: PropTypes.string,
     type: PropTypes.string,
     text: PropTypes.string,
     className: PropTypes.string,
     target: PropTypes.string,
     to: PropTypes.string,
-    params: PropTypes.object,
     chevron: PropTypes.bool,
     disabled: PropTypes.bool,
     children: PropTypes.node,
     title: PropTypes.string,
     href: PropTypes.string,
     onClick: PropTypes.func,
-    style: PropTypes.object,
-    sm: PropTypes.bool
+    style: PropTypes.object
   },
   getDefaultProps(){
     return {

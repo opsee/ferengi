@@ -58,8 +58,8 @@ const TryCheck = React.createClass({
     this.setState({ isLoading: true });
     this.props.actions.checkURL(url);
   },
-  handleAssertionsChange(data){
-    console.log(data);
+  handleAssertionsChange(){
+    return true;
   },
   renderResponses() {
     const first = this.getFirstResponse();
