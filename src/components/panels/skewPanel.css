@@ -1,0 +1,37 @@
+/* TODO: use relative calculations instead of magic numbers */
+:root {
+  --angle: -3deg;
+  --offset: -40px;
+  --height: 80px;
+}
+
+.panel {
+  position: relative;
+  z-index: 10;
+}
+
+.skew {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  transform: skewY(var(--angle));
+  height: var(--height);
+}
+
+.skewTop {
+  composes: skew;
+  top: var(--offset);
+}
+
+.skewBottom {
+  composes: skew;
+  bottom: var(--offset);
+}
+
+.contents {
+  position: relative;
+  z-index: 20;
+  min-height: 50px;
+}

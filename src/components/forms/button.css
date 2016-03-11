@@ -1,0 +1,25 @@
+.button {
+  background-color: var(--colorAccent);
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  box-shadow: none;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Dosis';
+  outline: 0;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.button:hover {
+  background: color(var(--colorAccent) shade(20%));
+}

@@ -3,4 +3,5 @@
   color: var(--colorGray4);
   text-align: center;
   padding: 24px 0;
+  z-index: 20;
 }

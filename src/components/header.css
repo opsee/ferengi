@@ -3,11 +3,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Dosis';
+  text-transform: uppercase;
 }
 
 .links,
 .cta {
   display: inline;
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
 .links {
@@ -16,9 +20,36 @@
 
 .links li {
   display: inline;
-  margin: 0 6px;
+  margin: 0 12px;
 }
 
-@media (max-width: 640px) {
-  .links { display: none; }
+.links a {
+  color: var(--colorGray4);
+}
+
+.authLinks {
+  composes: links;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.authLinks li:last-child {
+  margin-right: 0;
+}
+
+.navLinks {
+  composes: links;
+}
+
+@media (max-width: 720px) {
+  .navLinks { display: none; }
+}
+
+.cta {
+  color: white;
+  background-color: var(--colorWarm2);
+}
+
+.cta:hover {
+  background-color: color(var(--colorWarm2) shade(20%));
 }

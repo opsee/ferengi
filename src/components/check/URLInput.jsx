@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import Button from '../forms/Button';
 import style from './urlInput.css';
 
 export default React.createClass({
@@ -23,11 +24,11 @@ export default React.createClass({
   },
 
   renderButton() {
-    const text = this.props.isLoading ? 'Loading...' : 'Monitor this!';
+    const text = this.props.isLoading ? 'Loading...' : 'Show me';
     return (
-      <button className={style.button} onClick={this.handleSubmit} disabled={this.props.isLoading}>
+      <Button className={style.button} onClick={this.handleSubmit} disabled={this.props.isLoading}>
         {text}
-      </button>
+      </Button>
     );
   },
 
