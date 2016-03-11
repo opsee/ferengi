@@ -3,6 +3,7 @@ import React from 'react';
 import HeroPanel from '../panels/HeroPanel';
 import SignUpPanel from '../panels/SignUpPanel';
 import SummaryPanels from '../panels/SummaryPanels';
+import AssertionsPanel from '../panels/AssertionsPanel';
 
 import style from './index.css';
 
@@ -17,7 +18,7 @@ export default React.createClass({
         <div className={style.panel}>
           <div className={style.skewLight}>
             <div className={style.panelContent}>
-              skew light
+              <AssertionsPanel/>
             </div>
           </div>
         </div>
