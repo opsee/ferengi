@@ -1,0 +1,38 @@
+/* TODO: use relative calculations instead of magic numbers */
+:root {
+  --angle: -5deg;
+  --offset: -40px;
+  --height: 80px;
+  --sin: 0.08715;
+}
+
+.panel {
+  position: relative;
+  z-index: 10;
+}
+
+.skew {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  transform: skewY(var(--angle));
+  height: calc(var(--sin) * 100vw);
+}
+
+.skewTop {
+  composes: skew;
+  top: calc(var(--sin) * -50vw);
+}
+
+.skewBottom {
+  composes: skew;
+  bottom: calc(var(--sin) * -50vw);
+}
+
+.contents {
+  position: relative;
+  z-index: 20;
+  min-height: 50px;
+}

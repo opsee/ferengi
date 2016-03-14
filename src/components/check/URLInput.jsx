@@ -1,5 +1,8 @@
 import React, { PropTypes } from 'react';
+import Button from '../forms/Button';
+import Input from '../forms/Input';
 import style from './urlInput.css';
+import ButtonInput from '../forms/ButtonInput';
 
 export default React.createClass({
   propTypes: {
@@ -22,30 +25,13 @@ export default React.createClass({
     this.props.handleSubmit(this.state.url);
   },
 
-  renderButton() {
-    const text = this.props.isLoading ? 'Loading...' : 'Monitor this!';
-    return (
-      <button className={style.button} onClick={this.handleSubmit} disabled={this.props.isLoading}>
-        {text}
-      </button>
-    );
-  },
-
   render() {
+    const buttonText = this.props.isLoading ? 'Loading...' : 'Show me';
     return (
       <div className={style.urlInput}>
         <form onSubmit={this.handleSubmit}>
-
-          <div className={style.wrapInput}>
-            <input className={style.input} type="text" value={this.state.url}
-              onChange={this.handleChange} />
-          </div>
-
-          <div className={style.wrapButton}>
-            {this.renderButton()}
-          </div>
-
-          <div style={{clear: 'both'}} />
+          <ButtonInput onChange={this.handleChange} type="text" value={this.state.url}
+            buttonText={buttonText} />
         </form>
       </div>
     );

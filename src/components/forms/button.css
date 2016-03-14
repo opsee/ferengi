@@ -1,25 +1,25 @@
-.btn {
+.button {
+  background-color: var(--colorAccent);
   background-image: none;
   border: 1px solid transparent;
-  border-radius: 0.25em;
+  border-radius: 2rem;
   box-shadow: none;
+  color: white;
   cursor: pointer;
   display: inline-block;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.42857;
-  margin:0;
-  padding: 0.5em;
+  font-family: 'Dosis';
+  outline: 0;
+  padding: 1rem 1.5rem;
   text-align: center;
-  text-transform: capitalize;
+  text-transform: uppercase;
   touch-action: manipulation;
-  transition: background var(--transitionEaseOut), color var(--transitionEaseOut), border-color var(--transitionEaseOut), width var(--transitionEaseOut);
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
   position: relative;
   overflow: hidden;
 }
+
 .btn svg {
   transition: fill var(--transitionEaseOut)
 }
@@ -384,4 +384,8 @@
 .progressWarningPressing {
   composes: progressWarning;
   composes: progressPressing;
+}
+
+.button:hover {
+  background: color(var(--colorAccent) shade(20%));
 }

@@ -1,6 +1,5 @@
 .heroPanel {
-  min-height: 75vh;
-  background-color: var(--colorGray2);
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,6 +15,12 @@
 
 .heading {
   margin: 48px 0;
+}
+
+.heading h1 {
+  color: var(--colorGray8);
+  font-family: 'Dosis';
+  text-transform: uppercase;
 }
 
 .subHeader {

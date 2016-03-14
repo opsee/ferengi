@@ -35,7 +35,7 @@ const Button = React.createClass({
     };
   },
   getClass(){
-    let arr = [];
+    let arr = [style.button];
     for (const prop in this.props){
       if (this.props[prop]){
         const selector = prop.match('color|text') ? this.props[prop] : prop;
@@ -98,3 +98,32 @@ const Button = React.createClass({
 });
 
 export default Button;
+// =======
+// import React, { PropTypes } from 'react';
+// import style from './button.css';
+
+// export default React.createClass({
+//   propTypes: {
+//     children: PropTypes.node,
+//     className: PropTypes.string
+//   },
+
+//   getDefaultProps() {
+//     return {
+//       className: '',
+//     };
+//   },
+
+//   getClass() {
+//     return [this.props.className, style.button].join(' ');
+//   },
+
+//   render() {
+//     return (
+//       <button className={this.getClass()}>
+//         {this.props.children}
+//       </button>
+//     );
+//   }
+// });
+// >>>>>>> master

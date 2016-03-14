@@ -11,17 +11,12 @@ export default React.createClass({
         <div className={style.heroPanel}>
           <div className={style.heroContent}>
             <div className={style.heading}>
-              <h1>Health checks have you covered</h1>
+              <h1>Health checks have you <span className='text-accent'>covered</span></h1>
               <p className={style.subHeader}>
                 Health checks are the best way to know your services are working
                 as you expect. Make a request, and ensure that it&rsquo;s responding
-                properly. Go ahead and try it out.
+                properly.
               </p>
-            </div>
-
-            <h2>Go ahead and try it out</h2>
-            <div className={style.widgetWrap}>
-              <TryCheck />
             </div>
           </div>
         </div>

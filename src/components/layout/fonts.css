@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Dosis';
+  src: url('../../fonts/dosis-bold-webfont.eot');
+  src: url('../../fonts/dosis-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/dosis-bold-webfont.woff2') format('woff2'),
+  url('../../fonts/dosis-bold-webfont.woff') format('woff'),
+  url('../../fonts/dosis-bold-webfont.ttf') format('truetype'),
+  url('../../fonts/dosis-bold-webfont.svg#dosisbold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dosis';
+  src: url('../../fonts/dosis-semibold-webfont.eot');
+  src: url('../../fonts/dosis-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/dosis-semibold-webfont.woff2') format('woff2'),
+       url('../../fonts/dosis-semibold-webfont.woff') format('woff'),
+       url('../../fonts/dosis-semibold-webfont.ttf') format('truetype'),
+       url('../../fonts/dosis-semibold-webfont.svg#dosissemibold') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+

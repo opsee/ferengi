@@ -79,7 +79,7 @@ const TryCheck = React.createClass({
   },
   render() {
     return (
-      <div>
+      <div className='width-full'>
         <div>
           <URLInput handleSubmit={this.handleSubmit} isLoading={this.isLoading()} />
         </div>
