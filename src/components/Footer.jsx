@@ -8,7 +8,9 @@ export default React.createClass({
     return (
       <div className={style.footer}>
         <Container>
-          I'm a footer
+          <div className='text-center'>
+            Made with &hearts; by Opsee Co.
+          </div>
         </Container>
       </div>
     );

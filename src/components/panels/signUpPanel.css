@@ -6,3 +6,13 @@
   justify-content: center;
   flex-direction: column;
 }
+
+.heading {
+  color: white;
+  margin: 1.6rem;
+}
+
+.prose {
+  color: white;
+  max-width: 496px;
+}

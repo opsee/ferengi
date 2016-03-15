@@ -23,9 +23,9 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: var(--colorGray9);
-  line-height: 2rem;
+  line-height: 3.2rem;
 }
 
 :global .width-full {
@@ -45,6 +45,10 @@ h2 {
 
 :global .text-accent {
   color: var(--colorAccent);
+}
+
+:global .text-accent-light {
+  color: #FFF;
 }
 
 /* @see https://css-tricks.com/snippets/css/clear-fix/ */
