@@ -1,0 +1,42 @@
+:global .width-full {
+  width: 100%;
+}
+
+:global .text-center {
+  text-align: center;
+}
+
+:global .prose {
+  color: #757575;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  padding: 16px 0;
+}
+
+:global .text-accent {
+  color: var(--colorAccent);
+}
+
+:global .text-accent-light {
+  color: #FFF;
+}
+
+/* Clearfix fix */
+/* @see https://css-tricks.com/snippets/css/clear-fix/ */
+:global(.clearfix):after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+:global .clearfix {
+  display: inline-block;
+}
+
+/* start commented backslash hack \*/
+* html :global(.clearfix) { height: 1%; }
+:global(.clearfix) { display: block; }
+/* close commented backslash hack */

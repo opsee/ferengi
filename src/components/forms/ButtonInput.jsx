@@ -6,8 +6,10 @@ import Input from './Input';
 export default React.createClass({
   propTypes: {
     onChange: PropTypes.func,
+    onClick: PropTypes.func,
     type: PropTypes.string,
-    value: PropTypes.string
+    value: PropTypes.string,
+    buttonText: PropTypes.string
   },
 
   render() {
