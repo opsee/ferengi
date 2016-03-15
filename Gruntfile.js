@@ -7,6 +7,9 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    /**
+     * Deploy the website to production or staging S3 buckets.
+     */
     aws_s3: {
       options: {
         accessKeyId: config.aws.access_key_id,
@@ -37,6 +40,10 @@ module.exports = function(grunt) {
       }
     },
 
+    /**
+     * Removes the build directory. Typically run before rebuilding everything,
+     * useful for ensuring no weird cruft is left behind.
+     */
     clean: ['dist'],
 
     webpack: {

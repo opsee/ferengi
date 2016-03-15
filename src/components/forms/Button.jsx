@@ -10,9 +10,6 @@ import style from './button.css';
 const Button = React.createClass({
   mixins: [History],
   propTypes: {
-    flat: PropTypes.bool,
-    icon: PropTypes.bool,
-    block: PropTypes.bool,
     secondary: PropTypes.bool,
     color: PropTypes.string,
     type: PropTypes.string,
@@ -31,15 +28,17 @@ const Button = React.createClass({
   getDefaultProps(){
     return {
       color: 'default',
-      type: 'button'
+      type: 'button',
+      fill: true
     };
   },
   getClass(){
-    let arr = [style.button];
+    let arr = [style.btn];
     for (const prop in this.props){
       if (this.props[prop]){
         const selector = prop.match('color|text') ? this.props[prop] : prop;
-        arr.push(style[`btn${ _.startCase(selector).split(' ').join('')}`]);
+        const styleName = `btn${ _.startCase(selector).split(' ').join('')}`;
+        arr.push(style[styleName]);
       }
     }
     arr.push(this.props.className);
