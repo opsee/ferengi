@@ -65,8 +65,6 @@
     "slate": "git+ssh://git@github.com/opsee/slate.git#2.2.2",
     "static-site-generator-webpack-plugin": "^2.0.1",
     "style-loader": "^0.13.0",
-    "superagent": "^1.8.0",
-    "superagent-promise": "^1.1.0",
     "url": "^0.11.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.13",
