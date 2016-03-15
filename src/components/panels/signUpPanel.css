@@ -14,5 +14,6 @@
 
 .prose {
   color: white;
+  margin: 0 auto;
   max-width: 496px;
 }
