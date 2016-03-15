@@ -48,8 +48,10 @@
 .cta {
   color: white;
   background-color: var(--colorWarm2);
+  border-color: var(--colorWarm2);
 }
 
 .cta:hover {
   background-color: color(var(--colorWarm2) shade(20%));
+  border-color: color(var(--colorWarm2) shade(20%));
 }

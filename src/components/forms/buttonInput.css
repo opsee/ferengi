@@ -1,21 +1,14 @@
-.group {
-
-}
-
 .input,
 .button {
   float: left;
 }
 
 .input {
+  /* FIXME importants r gross */
   width: 75% !important;
-  border-right: 0 !important;
-  border-top-right-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
 }
 
 .button {
   width: 25%;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  margin-right: -25%;
 }

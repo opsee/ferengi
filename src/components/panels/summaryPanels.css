@@ -1,7 +1,13 @@
-.summaryPanels {
-  padding: 48px 0;
+.panel {
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.panel {
-  padding: 75px 0;
+.button {
+  font-size: 1.4rem;
+  padding: 2rem;
+  border-radius: 4rem;
 }

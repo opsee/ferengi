@@ -17,13 +17,6 @@
   align-items: center;
 }
 
-@media (min-width: 768px) {
-  :global .flex-vertical-align-sm {
-    display: flex;
-    align-items: center;
-  }
-}
-
 :global .flex-1 {
   flex: 1;
 }
@@ -90,3 +83,27 @@
 :global .flex-grow-1 {
   flex-grow: 1;
 }
+
+@media (max-width: 768px) {
+  :global .flex-vertical-align-sm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  :global .flex-order-1-sm {
+    -webkit-order: 1;
+    order: 1;
+  }
+
+  :global .flex-order-2-sm {
+    -webkit-order: 2;
+    order: 2;
+  }
+
+  :global .flex-order-3-sm {
+    -webkit-order: 3;
+    order: 3;
+  }
+}
+
