@@ -17,8 +17,8 @@ export default React.createClass({
           <Container>
             <Grid>
               <div className={style.panel}>
-                <Row>
-                  <Col xs={12} sm={6}>
+                <Row className='flex-vertical-align-sm'>
+                  <Col xs={12} sm={6} className='align-self-start flex-order-2-sm'>
                     <div className={style.heading}>
                       <h2>Your team loves AWS. <span className='text-accent'>So do we.</span></h2>
                     </div>
@@ -33,17 +33,21 @@ export default React.createClass({
                       Learn more about AWS
                     </Button>
                   </Col>
-                  <Col xs={12} sm={6}>
+
+                  <Col xs={12} sm={6} className='align-self-start flex-order-1-sm'>
                     <BaseSVG svg={awsGridSVG} style={{maxWidth: '100%'}} />
                   </Col>
                 </Row>
               </div>
+
               <div className={style.panel}>
-                <Row>
-                  <Col xs={12} sm={6}>
+                <Row className='flex-vertical-align-sm'>
+
+                  <Col xs={12} sm={6} className='align-self-start flex-order-1-sm'>
                     <BaseSVG svg={deviceGroupSVG} style={{maxWidth: '100%'}} />
                   </Col>
-                  <Col xs={12} sm={6}>
+
+                  <Col xs={12} sm={6} className='align-self-start flex-order-2-sm'>
                     <div className={style.heading}>
                       <h2>Finally, monitoring <span className='text-accent'>designed</span> for the developer on call.</h2>
                     </div>
