@@ -27,7 +27,7 @@ export default React.createClass({
           <SummaryPanels />
         </div>
 
-        <SkewPanel backgroundColor={styleConstants.plain.color.accent} skewBottom={false}>
+        <SkewPanel backgroundColor='#333' skewBottom={false}>
           <SignUpPanel />
         </SkewPanel>
       </div>

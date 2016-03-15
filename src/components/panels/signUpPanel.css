@@ -5,6 +5,12 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 2.4rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .heading {
@@ -13,7 +19,15 @@
 }
 
 .prose {
-  color: white;
+  color: var(--colorGray4);
   margin: 0 auto;
   max-width: 496px;
+}
+
+.input {
+  width: 50%;
+}
+
+.button {
+  width: 100%;
 }
