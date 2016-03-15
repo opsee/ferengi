@@ -14,6 +14,12 @@ module.exports = merge(baseConfig, {
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV)
       }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      mangle: false,
+      compress: {
+        warnings: false
+      }
     })
   ]
 });
