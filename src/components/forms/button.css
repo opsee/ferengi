@@ -1,5 +1,4 @@
 .button {
-  background-color: var(--colorAccent);
   background-image: none;
   border: 1px solid transparent;
   border-radius: 2rem;
@@ -52,17 +51,17 @@
 .btnDefault {
   composes: btn;
   color: white;
-  background: var(--colorText2);
+  background: var(--colorAccent);
 }
 .btnDefault:hover {
   color: white;
-  background: color(var(--colorText2) shade(20%));
+  background: color(var(--colorAccent) shade(20%));
 }
 .btnDefault:active {
-  background: color(var(--colorText2) shade(40%));
+  background: color(var(--colorAccent) shade(40%));
 }
 .btnDefault[disabled], .btnDefault[disabled]:hover, .btnDefault[disabled]:focus, .btnDefault[disabled]:active {
-  background: var(--colorText2);
+  background: var(--colorAccent);
 }
 
 .btnPrimary {
