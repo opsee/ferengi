@@ -32,10 +32,6 @@ const AssertionsSelection = React.createClass({
       checks: PropTypes.shape({
         responses: PropTypes.object
       }),
-      integrations: PropTypes.shape({
-        slackChannels: PropTypes.object,
-        tests: PropTypes.array
-      }).isRequired,
       asyncActions: PropTypes.shape({
         checkCreate: PropTypes.object
       })

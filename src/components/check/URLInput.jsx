@@ -1,6 +1,4 @@
 import React, { PropTypes } from 'react';
-import Button from '../forms/Button';
-import Input from '../forms/Input';
 import style from './urlInput.css';
 import ButtonInput from '../forms/ButtonInput';
 
@@ -21,7 +19,9 @@ export default React.createClass({
   },
 
   handleSubmit(e) {
-    if (e) e.preventDefault();
+    if (e){
+      e.preventDefault();
+    }
     this.props.handleSubmit(this.state.url);
   },
 

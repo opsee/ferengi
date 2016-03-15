@@ -1,12 +1,12 @@
-import _ from 'lodash';
-
-import request from './request';
 import URL from 'url';
+import fetch from './fetch';
 
 export function getToken() {
-  return request
-    .post('https://catfish.opsee.com/token')
-    .then(res => _.get(res, 'body.token'));
+  return fetch('https://catfish.opsee.com/token', {
+    method: 'post'
+  })
+  .then(res => res.json())
+  .then(json => json.token);
 }
 
 export function makeRequest(url) {
@@ -34,16 +34,20 @@ export function check(url) {
   const requestData = makeRequest(url);
 
   return getToken().then(token => {
-    return request
-      .post('https://catfish.opsee.com/check')
-      .set('Authorization', `Bearer ${token}`)
-      .send(requestData)
-      .then(res => {
-        if (res.error) {
-          return console.error(res.error);
-        }
-        const responses = res.body.responses;
-        return { data: { token, responses } };
-      });
+    return fetch('https://catfish.opsee.com/check', {
+      method: 'post',
+      headers: {
+        Authorization: `Bearer ${token}`
+      },
+      body: JSON.stringify(requestData)
+    })
+    .then(res => res.json())
+    .then(json => {
+      if (json.error) {
+        return console.error(json.error);
+      }
+      const responses = json.responses;
+      return { data: { token, responses } };
+    });
   });
 }

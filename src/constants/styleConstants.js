@@ -13,10 +13,10 @@ const constants = {
 function flatten(obj){
   const data = {};
   Object.keys(obj).forEach(key => {
-    var parent = obj[key];
-    var childKeys = Object.keys(parent);
+    const parent = obj[key];
+    const childKeys = Object.keys(parent);
     childKeys.forEach(ck => {
-      var capitalized = ck.charAt(0).toUpperCase() + ck.slice(1);
+      const capitalized = ck.charAt(0).toUpperCase() + ck.slice(1);
       data[key + capitalized] = parent[ck];
     });
   });

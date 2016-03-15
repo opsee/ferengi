@@ -11,7 +11,9 @@ module.exports = merge(baseConfig, {
   plugins: [
     new StaticSiteGeneratorPlugin('bundle.js', PATHS, {}),
     new webpack.DefinePlugin({
-      'window': JSON.stringify({XMLHttpRequest: true})
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+      }
     })
   ]
 });

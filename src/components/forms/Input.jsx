@@ -1,14 +1,15 @@
-import _ from 'lodash';
 import React, { PropTypes } from 'react';
+import cx from 'classnames';
+
 import style from './input.css';
 
 export default React.createClass({
   propTypes: {
-
+    className: PropTypes.string
   },
 
   getClassName() {
-    return [this.props.className, style.input].join(' ');
+    return cx([style.input, this.props.className]);
   },
 
   render() {
