@@ -1,16 +1,17 @@
+import _ from 'lodash';
+
 import request from './request';
 import URL from 'url';
 
 export function getToken() {
   return request
     .post('https://catfish.opsee.com/token')
-    .then(res => {
-      return res.body.token;
-    });
+    .then(res => _.get(res, 'body.token'));
 }
 
 export function makeRequest(url) {
   const parsedURL = URL.parse(url);
+  const protocol = parsedURL.protocol.slice(0, -1);
   return {
     check: {
       target: {
@@ -18,8 +19,8 @@ export function makeRequest(url) {
       },
       http_check: {
         path: parsedURL.path,
-        protocol: parsedURL.protocol.slice(0, -1), // FIXME gross
-        port: parseInt(parsedURL.port, 10),
+        protocol,
+        port: parseInt(parsedURL.port, 10) || (protocol === 'https' ? 443 : 80),
         name: '',
         body: '',
         verb: 'GET'

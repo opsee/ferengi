@@ -1,3 +1,33 @@
+html {
+  font-size: 62.5%;
+  line-height: 1.4;
+}
+
+html, body, :global(#root) {
+  height: 100%;
+  line-height: normal;
+}
+
+body {
+  /* Base typography */
+  font-size: 1.6rem;
+  font-weight: 300;
+  font-family: var(--fontGotham);
+  line-height: 1.42857;
+}
+
+/* Header typography */
+h1 {
+  font-size: 4rem;
+  color: var(--colorGray9);
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--colorGray9);
+  line-height: 2rem;
+}
+
 :global .width-full {
   width: 100%;
 }
@@ -8,8 +38,8 @@
 
 :global .prose {
   color: #757575;
-  font-size: 1rem;
-  line-height: 1.6rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
   padding: 16px 0;
 }
 

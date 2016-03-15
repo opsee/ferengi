@@ -1,2 +1,3 @@
-import request from 'emissary/src/js/modules/request';
-export default request;
+import superagentPromise from 'superagent-promise';
+import superagent from 'superagent';
+export default superagentPromise(superagent, Promise);

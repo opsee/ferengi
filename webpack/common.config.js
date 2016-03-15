@@ -3,6 +3,7 @@
  *
  * @see http://jxnblk.com/writing/posts/static-site-generation-with-react-and-webpack/
  */
+const webpack = require('webpack');
 const _ = require('lodash');
 const config = require('config');
 const path = require('path');
@@ -14,13 +15,16 @@ const NODE_MODULES_DIR = path.resolve(__dirname, '..', 'node_modules');
 const EMISSARY_DIR = path.join(NODE_MODULES_DIR, 'emissary');
 const INCLUDE_DIRS = [CONTEXT_DIR, EMISSARY_DIR];
 
+var definePlugin = new webpack.DefinePlugin({
+  'FormData': JSON.stringify(null)
+});
+
 module.exports = {
   entry: {
     app: [
      './src/entry.js'
     ]
   },
-
   output: {
     filename: 'bundle.js',
     path: 'dist',
@@ -37,14 +41,14 @@ module.exports = {
       {
         test: /\.js$|\.jsx$/,
         loaders: ['eslint-loader'],
-        exclude: [NODE_MODULES_DIR]
+        include: INCLUDE_DIRS
       },
     ],
     loaders: [
       {
         test: /\.json$/,
-        loader: 'json-loader',
-        include: INCLUDE_DIRS
+        loader: 'json-loader'
+        // include: INCLUDE_DIRS
       },
       {
         test: /\.js$|\.jsx$/,
@@ -72,7 +76,7 @@ module.exports = {
   plugins: [
     // Make webpack return a non-zero exit code when build fails
     require('webpack-fail-plugin'),
-
+    definePlugin,
     new ExtractTextPlugin('style.css', {
         allChunks: true
     }),
@@ -83,12 +87,12 @@ module.exports = {
     modulesDirectories: [NODE_MODULES_DIR]
   },
 
-  postcss(webpack) {
+  postcss(wp) {
     const styleConstants = require(`${CONTEXT_DIR}/constants/styleConstants`);
 
     return [
       require('postcss-import')({
-        addDependencyTo: webpack
+        addDependencyTo: wp
       }),
       require('postcss-cssnext')({
         browsers: 'last 1 version, > 10%',

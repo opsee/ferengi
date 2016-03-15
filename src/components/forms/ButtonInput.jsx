@@ -15,7 +15,7 @@ export default React.createClass({
       <div className={`${style.group} clearfix`}>
         <Input className={style.input} onChange={this.props.onChange}
                value={this.props.value} />
-        <Button className={style.button}>
+        <Button className={style.button} onClick={this.props.onClick}>
           {this.props.buttonText}
         </Button>
       </div>

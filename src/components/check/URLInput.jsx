@@ -12,7 +12,7 @@ export default React.createClass({
 
   getInitialState() {
     return {
-      url: 'http://jsonplaceholder.typicode.com:80/users'
+      url: 'http://jsonplaceholder.typicode.com/users/1'
     };
   },
 
@@ -21,7 +21,7 @@ export default React.createClass({
   },
 
   handleSubmit(e) {
-    e.preventDefault();
+    if (e) e.preventDefault();
     this.props.handleSubmit(this.state.url);
   },
 
@@ -31,7 +31,7 @@ export default React.createClass({
       <div className={style.urlInput}>
         <form onSubmit={this.handleSubmit}>
           <ButtonInput onChange={this.handleChange} type="text" value={this.state.url}
-            buttonText={buttonText} />
+            buttonText={buttonText} onClick={this.handleSubmit} />
         </form>
       </div>
     );
