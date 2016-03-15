@@ -3,12 +3,13 @@ import style from './staticHeader.css';
 
 export default React.createClass({
   propTypes: {
-    children: PropTypes.node
+    children: PropTypes.node,
+    className: PropTypes.string
   },
 
   render() {
     return (
-      <div className={style.header}>
+      <div className={[this.props.className, style.header].join(' ')}>
         {this.props.children}
       </div>
     );
