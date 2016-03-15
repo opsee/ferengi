@@ -7,7 +7,7 @@ export default React.createClass({
   },
 
   getClassName() {
-    return [this.props.className, style.input].join(' ');
+    return [style.input, this.props.className].join(' ');
   },
 
   render() {

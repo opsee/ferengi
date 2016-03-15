@@ -8,10 +8,11 @@
 }
 
 .input {
-  width: 75%;
-  border-right: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  /* FIXME importants r gross */
+  width: 75% !important;
+  border-right: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 }
 
 .button {
