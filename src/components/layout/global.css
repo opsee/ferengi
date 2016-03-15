@@ -17,8 +17,14 @@ body {
 }
 
 /* Header typography */
+h1, h2 {
+  font-family: 'Dosis';
+  text-transform: uppercase;
+}
+
 h1 {
   font-size: 4rem;
+  line-height: 6.2rem;
   color: var(--colorGray9);
 }
 
