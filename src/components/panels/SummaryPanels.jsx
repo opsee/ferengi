@@ -8,6 +8,7 @@ import BaseSVG from '../images/BaseSVG';
 import awsGridSVG from '../images/aws_grid.svg';
 import deviceGroupSVG from '../images/device_group.svg';
 import {Grid, Row, Col} from 'emissary/src/js/modules/bootstrap';
+import Padding from '../layout/Padding';
 
 export default React.createClass({
   render() {
@@ -19,23 +20,27 @@ export default React.createClass({
               <div className={style.panel}>
                 <Row className='flex-vertical-align-sm'>
                   <Col xs={12} sm={6} className='align-self-start flex-order-2-sm'>
-                    <div className={style.heading}>
-                      <h2>Your team loves AWS. <span className='text-accent'>So do we.</span></h2>
-                    </div>
-                    <p className='prose'>
-                      We auto scale with your AWS infrastructure & services, and
-                      there are no agents to install or shell scripts to cURL.
-                      Just give us a set of AWS keys and we'll take care of the
-                      rest. Wave goodbye to false alarms and blind spots.
-                    </p>
+                    <Padding a='2'>
+                      <div className={style.heading}>
+                        <h2>Your team loves AWS. <span className='text-accent'>So do we.</span></h2>
+                      </div>
+                      <p className='prose'>
+                        We auto scale with your AWS infrastructure & services, and
+                        there are no agents to install or shell scripts to cURL.
+                        Just give us a set of AWS keys and we'll take care of the
+                        rest. Wave goodbye to false alarms and blind spots.
+                      </p>
 
-                    <Button className={style.button} secondary={true} chevron={true}>
-                      Learn more about AWS
-                    </Button>
+                      <Button className={style.button} secondary={true} chevron={true}>
+                        Learn more about AWS
+                      </Button>
+                    </Padding>
                   </Col>
 
                   <Col xs={12} sm={6} className='align-self-start flex-order-1-sm'>
-                    <BaseSVG svg={awsGridSVG} style={{maxWidth: '100%'}} />
+                    <Padding a='2'>
+                      <BaseSVG svg={awsGridSVG} style={{maxWidth: '100%'}} />
+                    </Padding>
                   </Col>
                 </Row>
               </div>
@@ -44,23 +49,27 @@ export default React.createClass({
                 <Row className='flex-vertical-align-sm'>
 
                   <Col xs={12} sm={6} className='align-self-start flex-order-1-sm'>
-                    <BaseSVG svg={deviceGroupSVG} style={{maxWidth: '100%'}} />
+                    <Padding a='2'>
+                      <BaseSVG svg={deviceGroupSVG} style={{maxWidth: '100%'}} />
+                    </Padding>
                   </Col>
 
                   <Col xs={12} sm={6} className='align-self-start flex-order-2-sm'>
-                    <div className={style.heading}>
-                      <h2>Finally, monitoring <span className='text-accent'>designed</span> for the developer on call.</h2>
-                    </div>
-                    <p className='prose'>
-                      You moved to the cloud and broke up the monolith, and
-                      you’re even trying out devs in your on-call rotation.
-                      Opsee has your back, with tools to resolve incidents from
-                      anywhere. Time to go on call?  It's time to get Opsee.
-                    </p>
+                    <Padding a='2'>
+                      <div className={style.heading}>
+                        <h2>Finally, monitoring <span className='text-accent'>designed</span> for the developer on call.</h2>
+                      </div>
+                      <p className='prose'>
+                        You moved to the cloud and broke up the monolith, and
+                        you’re even trying out devs in your on-call rotation.
+                        Opsee has your back, with tools to resolve incidents from
+                        anywhere. Time to go on call?  It's time to get Opsee.
+                      </p>
 
-                    <Button className={style.button} secondary={true} chevron={true}>
-                      Get Opsee
-                    </Button>
+                      <Button className={style.button} secondary={true} chevron={true}>
+                        Get Opsee
+                      </Button>
+                    </Padding>
                   </Col>
                 </Row>
               </div>
