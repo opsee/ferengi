@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Button from '../forms/Button';
 import Container from '../layout/Container';
 import Panel from './Panel.jsx';
 import style from './summaryPanels.css';
@@ -27,6 +28,10 @@ export default React.createClass({
                       Just give us a set of AWS keys and we'll take care of the
                       rest. Wave goodbye to false alarms and blind spots.
                     </p>
+
+                    <Button className={style.button} secondary={true} chevron={true}>
+                      Learn more about AWS
+                    </Button>
                   </Col>
                   <Col xs={12} sm={6}>
                     <BaseSVG svg={awsGridSVG} style={{maxWidth: '100%'}} />
@@ -48,6 +53,10 @@ export default React.createClass({
                       Opsee has your back, with tools to resolve incidents from
                       anywhere. Time to go on call?  It's time to get Opsee.
                     </p>
+
+                    <Button className={style.button} secondary={true} chevron={true}>
+                      Get Opsee
+                    </Button>
                   </Col>
                 </Row>
               </div>

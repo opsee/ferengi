@@ -3,5 +3,12 @@
 }
 
 .panel {
+  min-height: 60vh;
   padding: 75px 0;
+}
+
+.button {
+  font-size: 1.4rem;
+  padding: 2rem;
+  border-radius: 4rem;
 }
