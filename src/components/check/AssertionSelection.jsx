@@ -1,18 +1,16 @@
 import React, {PropTypes} from 'react';
 import _ from 'lodash';
-import forms from 'newforms';
+import Form from 'newforms/Form';
+import CharField from 'newforms/CharField';
 import {connect} from 'react-redux';
 import {plain as seed} from 'seedling';
 import Autosuggest from 'react-autosuggest';
 
-import BoundField from '../forms/BoundField';
-import Button from '../forms/Button';
+import {BoundField, Button} from '../forms';
 import {Add, Delete} from 'emissary/src/js/components/icons';
-import Padding from '../layout/Padding';
+import {Padding, Expandable} from '../layout';
 import Rule from 'emissary/src/js/components/layout/Rule';
-import Color from '../type/Color';
-import Heading from '../type/Heading';
-import Expandable from '../layout/Expandable';
+import {Color, Heading} from '../type';
 import Highlight from '../global/Highlight';
 import validate from 'emissary/src/js/modules/validate';
 import getKeys from 'emissary/src/js/modules/getKeys';
@@ -63,8 +61,8 @@ const AssertionsSelection = React.createClass({
     let obj = null;
     switch (type){
     case 'code':
-      obj = forms.Form.extend({
-        operand: forms.CharField({
+      obj = Form.extend({
+        operand: CharField({
           widgetAttrs: {
             noLabel: true
           }
@@ -72,8 +70,8 @@ const AssertionsSelection = React.createClass({
       });
       break;
     case 'header':
-      obj = forms.Form.extend({
-        operand: forms.CharField({
+      obj = Form.extend({
+        operand: CharField({
           widgetAttrs: {
             noLabel: true
           }
@@ -81,13 +79,13 @@ const AssertionsSelection = React.createClass({
       });
       break;
     case 'json':
-      obj = forms.Form.extend({
-        operand: forms.CharField({
+      obj = Form.extend({
+        operand: CharField({
           widgetAttrs: {
             noLabel: true
           }
         }),
-        value: forms.CharField({
+        value: CharField({
           label: 'JSON path (optional) <a target="_blank" href="/docs/checks#json">Learn More</a>',
           required: false,
           widgetAttrs: {
@@ -97,8 +95,8 @@ const AssertionsSelection = React.createClass({
       });
       break;
     default:
-      obj = forms.Form.extend({
-        operand: forms.CharField({
+      obj = Form.extend({
+        operand: CharField({
           label: 'Value',
           widgetAttrs: {
             noLabel: true
