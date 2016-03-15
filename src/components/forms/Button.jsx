@@ -33,7 +33,7 @@ const Button = React.createClass({
     };
   },
   getClass(){
-    let arr = [style.button];
+    let arr = [style.btn];
     for (const prop in this.props){
       if (this.props[prop]){
         const selector = prop.match('color|text') ? this.props[prop] : prop;

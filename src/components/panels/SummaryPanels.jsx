@@ -63,7 +63,7 @@ export default React.createClass({
                         You moved to the cloud and broke up the monolith, and
                         you’re even trying out devs in your on-call rotation.
                         Opsee has your back, with tools to resolve incidents from
-                        anywhere. Time to go on call?  It"s time to get Opsee.
+                        anywhere. Time to go on call?  It&apos;s time to get Opsee.
                       </p>
 
                       <Button className={style.button} secondary chevron>

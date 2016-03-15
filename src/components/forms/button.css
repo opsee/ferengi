@@ -1,7 +1,10 @@
-.button {
-  background-image: none;
+.btn {
+  /* Defaults */
   background-color: var(--colorAccent);
   border: 1px solid var(--colorAccent);
+
+
+  background-image: none;
   border-radius: 2rem;
   box-shadow: none;
   color: white;
@@ -18,9 +21,14 @@
   white-space: nowrap;
   position: relative;
   overflow: hidden;
+  transition: background var(--transitionEaseOut), color var(--transitionEaseOut), border-color var(--transitionEaseOut), width var(--transitionEaseOut);
 }
 
-.button:hover {
+.btn svg {
+  transition: fill var(--transitionEaseOut)
+}
+
+.btn:hover {
   background: color(var(--colorAccent) shade(20%));
 }
 
@@ -45,3 +53,6 @@
 .btnSecondary:hover svg {
   fill: #FFF;
 }
+
+
+
