@@ -20,7 +20,7 @@ export default React.createClass({
                 <Row>
                   <Col xs={12} sm={6}>
                     <div className={style.heading}>
-                      <h2>Your team loves AWS. So do we.</h2>
+                      <h2>Your team loves AWS. <span className='text-accent'>So do we.</span></h2>
                     </div>
                     <p className='prose'>
                       We auto scale with your AWS infrastructure & services, and
@@ -45,7 +45,7 @@ export default React.createClass({
                   </Col>
                   <Col xs={12} sm={6}>
                     <div className={style.heading}>
-                      <h2>Finally, monitoring designed for the developer on call.</h2>
+                      <h2>Finally, monitoring <span className='text-accent'>designed</span> for the developer on call.</h2>
                     </div>
                     <p className='prose'>
                       You moved to the cloud and broke up the monolith, and
