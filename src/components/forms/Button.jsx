@@ -45,8 +45,9 @@ const Button = React.createClass({
     arr.push(this.props.className);
     return cx(arr);
   },
-  handleClick(){
+  handleClick(e){
     if (typeof this.props.onClick === 'function'){
+      e.preventDefault();
       this.props.onClick();
     }
   },
