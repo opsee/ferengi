@@ -1,10 +1,9 @@
-import _ from 'lodash';
 import React, { PropTypes } from 'react';
 import style from './input.css';
 
 export default React.createClass({
   propTypes: {
-
+    className: PropTypes.string
   },
 
   getClassName() {

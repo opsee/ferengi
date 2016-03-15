@@ -4,10 +4,6 @@ import { connect } from 'react-redux';
 import Footer from './Footer.jsx';
 import Header from './Header.jsx';
 import style from './app.css';
-/* eslint-disable no-unused-vars */
-// need this to be in our bundle yo
-import layout from './layout/layout.css';
-/* eslint-enable no-unused-vars */
 
 const App = React.createClass({
   propTypes: {

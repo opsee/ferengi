@@ -1,3 +1,5 @@
+/* This needs to worth for both es6 and vanilla Node */
+/* eslint-disable no-var */
 const constants = {
   color: {
     accent: '#5D89FB',
@@ -22,6 +24,7 @@ function flatten(obj){
   });
   return data;
 }
+/* eslint-enable no-var */
 
 module.exports = {
   flat: flatten(constants),

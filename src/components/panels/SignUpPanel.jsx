@@ -10,7 +10,7 @@ export default React.createClass({
       <Panel>
         <div className={style.panel}>
           <Container>
-            <div className='text-center'>
+            <div className="text-center">
               <h2 className={style.heading}>Ready to try a new kind of monitoring?</h2>
               <div className={['prose', style.prose].join(' ')}>Get powerful health checks, rich notifications, and
               deep AWS integration. Track your services and take action anywhere and get

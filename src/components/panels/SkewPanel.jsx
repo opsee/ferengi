@@ -12,7 +12,7 @@ export default React.createClass({
   getDefaultProps() {
     return {
       skewTop: true,
-      skewBottom :true
+      skewBottom: true
     };
   },
 
@@ -20,14 +20,13 @@ export default React.createClass({
     return {
       backgroundColor: this.props.backgroundColor,
       marginBottom: this.props.skewBottom ? 55 : null, // FIXME
-      marginTop: this.props.skewTop ? 55 : null, // FIXME
+      marginTop: this.props.skewTop ? 55 : null // FIXME
     };
   },
 
   render() {
     return (
       <div className={style.panel} style={this.getPanelStyle()}>
-
         { this.props.skewTop ?
           <div className={style.skewTop} style={{backgroundColor: this.props.backgroundColor}} />
         : null }
