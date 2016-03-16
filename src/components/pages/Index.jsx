@@ -17,12 +17,6 @@ export default React.createClass({
           <HeroPanel />
         </div>
 
-        <SkewPanel backgroundColor={styleConstants.plain.color.neutral2}>
-          <div className={style.assertionsPanel}>
-            <AssertionsPanel/>
-          </div>
-        </SkewPanel>
-
         <div>
           <SummaryPanels />
         </div>

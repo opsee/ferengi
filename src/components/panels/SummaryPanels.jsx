@@ -26,7 +26,7 @@ export default React.createClass({
                       <p className="prose">
                         We auto scale with your AWS infrastructure & services, and
                         there are no agents to install or shell scripts to cURL.
-                        Just give us a set of AWS keys and we&rsquo;ll take care of the
+                        Just give us a set of AWS keys and we&apos;ll take care of the
                         rest. Wave goodbye to false alarms and blind spots.
                       </p>
 

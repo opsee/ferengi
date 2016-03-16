@@ -26,7 +26,7 @@ module.exports = function(grunt) {
       staging: {
         options: {
           bucket: config.aws.buckets.staging,
-          differential: true,
+          differential: false,
           gzipRename: 'ext' // when uploading a gz file, keep the original extension
         },
         files: [
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
       prod: {
         options: {
           bucket: config.aws.buckets.prod,
-          differential: true,
+          differential: false,
           gzipRename: 'ext' // when uploading a gz file, keep the original extension
         },
         files: [
@@ -81,5 +81,5 @@ module.exports = function(grunt) {
   grunt.registerTask('dev', 'Build the static site & put a devserver on it', ['env', 'build', 'webpack-dev-server:start']);
 
   grunt.registerTask('deploy:prod', 'Deploy the site to production s3', ['env', 'aws_s3:prod']);
-  grunt.registerTask('deploy:staging', 'Deploy the site to production s3', ['env', 'aws_s3:staging']);
+  grunt.registerTask('deploy:staging', 'Deploy the site to production s3', ['env', 'build', 'aws_s3:staging']);
 };

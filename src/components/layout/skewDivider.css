@@ -1,0 +1,5 @@
+.divider {
+  border-top: solid 1px var(--colorGray2);
+  transform: skewY(-5deg);
+  background: white;
+}

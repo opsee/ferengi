@@ -2,6 +2,7 @@ import React from 'react';
 
 import Panel from './Panel.jsx';
 import style from './heroPanel.css';
+import TryCheck from '../check/TryCheck';
 
 export default React.createClass({
   render() {
@@ -16,6 +17,10 @@ export default React.createClass({
                 as you expect. Make a request, and ensure that it&rsquo;s responding
                 properly.
               </p>
+            </div>
+
+            <div>
+              <TryCheck />
             </div>
           </div>
         </div>
