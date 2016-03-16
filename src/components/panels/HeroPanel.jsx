@@ -11,7 +11,7 @@ export default React.createClass({
         <div className={style.heroPanel}>
           <div className={style.heroContent}>
             <div className={style.heading}>
-              <h1>Health checks <span className="text-accent">cut throught the noisecovered</span></h1>
+              <h1><span className="text-accent">Health checks</span> cut through the noise</h1>
               <p className={style.subHeader}>
                 Continuously test your services and deploy with confidence
               </p>

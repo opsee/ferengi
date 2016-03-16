@@ -7,7 +7,7 @@
 }
 
 :global .prose {
-  color: #757575;
+  color: var(--colorGray9);
   font-size: 1.6rem;
   line-height: 2.4rem;
   padding: 16px 0;

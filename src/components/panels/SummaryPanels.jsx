@@ -54,7 +54,7 @@ export default React.createClass({
                   <Col xs={12} sm={6} className="align-self-start flex-order-2-sm">
                     <Padding a={2}>
                       <div className={style.heading}>
-                        <h2>Be <span className="text-accent">sure</span> your services respond the way you coded them</h2>
+                        <h2>Be sure your services respond <span className="text-accent">the way you expect them to</span></h2>
                       </div>
                       <p className="prose">
                         Verify every part of the response – health is more than
@@ -76,7 +76,7 @@ export default React.createClass({
                   <Col xs={12} sm={6} className="align-self-start flex-order-2-sm">
                     <Padding a={2}>
                       <div className={style.heading}>
-                        <h2>Built for <span className="text-accent">AWS</span></h2>
+                        <h2>Built for your <span className="text-accent">AWS ecosystem</span></h2>
                       </div>
                       <p className="prose">
                         Designed to work with your favorite tools.
