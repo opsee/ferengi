@@ -8,6 +8,9 @@ import howChecks from '../images/how-checks.svg';
 import howDiscovery from '../images/how-discovery.svg';
 import StaticHeader from '../panels/StaticHeader';
 import style from './how.css';
+import SkewDivider from '../layout/SkewDivider';
+import SkewPanel from '../panels/SkewPanel';
+import SignUpPanel from '../panels/SignUpPanel'
 
 export default React.createClass({
   render() {
@@ -37,6 +40,9 @@ export default React.createClass({
                 </Col>
               </Row>
             </div>
+
+            <SkewDivider />
+
             <div className={style.panel}>
               <Row>
                 <Col xs={12} sm={6}>
@@ -51,6 +57,9 @@ export default React.createClass({
                 </Col>
               </Row>
             </div>
+
+            <SkewDivider />
+
             <div className={style.panel}>
               <Row>
                 <Col xs={12} sm={6}>
@@ -67,6 +76,10 @@ export default React.createClass({
             </div>
           </Grid>
         </Container>
+
+        <SkewPanel backgroundColor="#333" skewBottom={false}>
+          <SignUpPanel />
+        </SkewPanel>
       </div>
     );
   }
