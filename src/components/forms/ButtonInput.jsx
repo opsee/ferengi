@@ -6,9 +6,9 @@ import Input from './Input';
 export default React.createClass({
   propTypes: {
     onChange: PropTypes.func,
-    onClick: PropTypes.func,
     type: PropTypes.string,
     value: PropTypes.string,
+    onClick: PropTypes.func,
     buttonText: PropTypes.string
   },
 

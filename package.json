@@ -5,8 +5,9 @@
   "scripts": {
     "start": "./node_modules/grunt-cli/bin/grunt watch",
     "test": "./node_modules/grunt-cli/bin/grunt test",
-    "dev": "NODE_ENV='production' ./node_modules/grunt-cli/bin/grunt build && ./node_modules/grunt-cli/bin/grunt dev"
-  },
+    "dev": "./node_modules/grunt-cli/bin/grunt dev",
+    "build": "NODE_ENV='production' ./node_modules/grunt-cli/bin/grunt build"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/opsee/ferengi.git"
@@ -65,13 +66,15 @@
     "slate": "git+ssh://git@github.com/opsee/slate.git#2.2.2",
     "static-site-generator-webpack-plugin": "^2.0.1",
     "style-loader": "^0.13.0",
-    "superagent": "^1.8.0",
-    "superagent-promise": "^1.1.0",
     "url": "^0.11.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.13",
     "webpack-dev-server": "^1.14.1",
     "webpack-fail-plugin": "^1.0.4",
-    "webpack-merge": "^0.8.3"
+    "webpack-merge": "^0.8.3",
+    "whatwg-fetch": "^0.11.0"
+  },
+  "devDependencies": {
+    "grunt-env": "^0.4.4"
   }
 }

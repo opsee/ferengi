@@ -19,7 +19,7 @@ export default React.createClass({
   },
 
   handleSubmit(e) {
-    if (e) {
+    if (e){
       e.preventDefault();
     }
     this.props.handleSubmit(this.state.url);

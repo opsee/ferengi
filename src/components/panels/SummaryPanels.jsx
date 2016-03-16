@@ -27,7 +27,7 @@ export default React.createClass({
                       <p className="prose">
                         We auto scale with your AWS infrastructure & services, and
                         there are no agents to install or shell scripts to cURL.
-                        Just give us a set of AWS keys and we"ll take care of the
+                        Just give us a set of AWS keys and we&rsquo;ll take care of the
                         rest. Wave goodbye to false alarms and blind spots.
                       </p>
 
@@ -53,7 +53,6 @@ export default React.createClass({
                       <BaseSVG svg={deviceGroupSVG} style={{maxWidth: '100%'}} />
                     </Padding>
                   </Col>
-
                   <Col xs={12} sm={6} className="align-self-start flex-order-2-sm">
                     <Padding a={2}>
                       <div className={style.heading}>

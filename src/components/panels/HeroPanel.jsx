@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Panel from './Panel.jsx';
 import style from './heroPanel.css';
 

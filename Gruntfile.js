@@ -6,6 +6,11 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    env: {
+      options: {
+        NODE_ENV: process.env.NODE_ENV
+      }
+    },
 
     /**
      * Deploy the website to production or staging S3 buckets.
@@ -71,11 +76,11 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('build', 'Builds the static site once (to dist/)', ['clean', 'webpack:build']);
-  grunt.registerTask('watch', 'Build the static site, rebuild on changes', ['clean', 'webpack:watch']);
-  grunt.registerTask('dev', 'Build the static site & put a devserver on it', ['build', 'webpack-dev-server:start']);
+  grunt.registerTask('build', 'Builds the static site once (to dist/)', ['env', 'clean', 'webpack:build']);
+  grunt.registerTask('watch', 'Build the static site, rebuild on changes', ['env', 'clean', 'webpack:watch']);
+  grunt.registerTask('dev', 'Build the static site & put a devserver on it', ['env', 'build', 'webpack-dev-server:start']);
 
-  grunt.registerTask('test', 'Builds the static site, failing on any errors', ['build']);
-  grunt.registerTask('deploy:prod', 'Deploy the site to production s3', ['build', 'aws_s3:prod']);
-  grunt.registerTask('deploy:staging', 'Deploy the site to production s3', ['build', 'aws_s3:staging']);
+  grunt.registerTask('test', 'Builds the static site, failing on any errors', ['env', 'build']);
+  grunt.registerTask('deploy:prod', 'Deploy the site to production s3', ['env', 'build', 'aws_s3:prod']);
+  grunt.registerTask('deploy:staging', 'Deploy the site to production s3', ['env', 'build', 'aws_s3:staging']);
 };
