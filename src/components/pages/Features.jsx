@@ -40,9 +40,11 @@ export default React.createClass({
 
             <SplitPanel>
               <SplitColumn order={2}>
-                <h2 className='text-accent'>Solution:</h2>
-                <h2>Deep integration with AWS</h2>
-                <h3>Health checks update automatically when your environment changes.</h3>
+                <Padding tb={1}>
+                  <h2 className='text-accent'>Solution:</h2>
+                  <h2>Deep integration with AWS</h2>
+                </Padding>
+                  <h3>Health checks update automatically when your environment changes.</h3>
 
                 <p className="prose">
                   You never need to maintain Opsee health checks. When you create a
@@ -78,8 +80,11 @@ export default React.createClass({
                 </SplitColumn>
 
                 <SplitColumn order={2}>
-                  <h2 className='text-accent'>Solution:</h2>
-                  <h2>Rich notifications help you solve problems faster</h2>
+                  <Padding tb={1}>
+                    <h2 className='text-accent'>Solution:</h2>
+                    <h2>Rich notifications help you solve problems faster</h2>
+                  </Padding>
+
                   <h3>Health checks update automatically when your environment changes.</h3>
 
                   <p className="prose">
@@ -96,8 +101,11 @@ export default React.createClass({
             <Padding t={4}>
               <SplitPanel>
                 <SplitColumn order={2}>
-                  <h2 className='text-accent'>Solution:</h2>
-                  <h2>Assertions: more than status codes</h2>
+                  <Padding tb={1}>
+                    <h2 className='text-accent'>Solution:</h2>
+                    <h2>Assertions: more than status codes</h2>
+                  </Padding>
+
                   <h3>Be sure your services are responding as expected.</h3>
 
                   <p className="prose">
@@ -134,8 +142,11 @@ export default React.createClass({
               </SplitColumn>
 
               <SplitColumn order={2}>
-                <h2 className='text-accent'>Solution:</h2>
-                <h2>Complete coverage with just AWS keys</h2>
+                <Padding tb={1}>
+                  <h2 className='text-accent'>Solution:</h2>
+                  <h2>Complete coverage with just AWS keys</h2>
+                </Padding>
+
                 <h3>Deep integration with your environment, zero effort.</h3>
 
                 <p className="prose">
@@ -162,8 +173,11 @@ export default React.createClass({
 
             <SplitPanel>
               <SplitColumn order={2}>
-                <h2 className='text-accent'>Solution:</h2>
-                <h2>Opsee is monitoring for on-call dev teams</h2>
+                <Padding tb={1}>
+                  <h2 className='text-accent'>Solution:</h2>
+                  <h2>Opsee is monitoring for on-call dev teams</h2>
+                </Padding>
+
                 <h3>Effortless integration and rich notifications so you can get back to coding.</h3>
 
                 <p className="prose">

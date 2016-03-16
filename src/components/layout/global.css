@@ -30,6 +30,12 @@ h1 {
 
 h2 {
   font-size: 2.4rem;
-  color: var(--colorGray9);
-  line-height: 3.2rem;
+  color: var(--colorGray7);
+  line-height: 3.4rem;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 2.8rem;
+  color: var(--colorGray7);
 }
