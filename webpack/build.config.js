@@ -23,8 +23,7 @@ module.exports = merge(baseConfig, {
       }
     }),
     new compression({
-      algorithm: 'gzip',
-      test: /\.js$|\.html$/
+      algorithm: 'gzip'
     })
   ]
 });
