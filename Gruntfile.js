@@ -26,7 +26,7 @@ module.exports = function(grunt) {
       staging: {
         options: {
           bucket: config.aws.buckets.staging,
-          differential: true,
+          differential: false,
           gzipRename: 'ext' // when uploading a gz file, keep the original extension
         },
         files: [
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
       prod: {
         options: {
           bucket: config.aws.buckets.prod,
-          differential: true,
+          differential: false,
           gzipRename: 'ext' // when uploading a gz file, keep the original extension
         },
         files: [

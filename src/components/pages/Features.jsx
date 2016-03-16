@@ -25,7 +25,6 @@ export default React.createClass({
           </div>
         </StaticHeader>
 
-          {/* PROBLEMO */}
           <div className={style.section}>
             <div className='text-center'>
               <Padding tb={4}>
@@ -70,47 +69,51 @@ export default React.createClass({
               </Padding>
             </div>
 
-            <SplitPanel>
-              <SplitColumn order={1}>
-                <BaseSVG svg={notificationsSVG} style={{maxWidth: '100%'}} />
-              </SplitColumn>
+            <Padding tb={4}>
+              <SplitPanel>
+                <SplitColumn order={1}>
+                  <BaseSVG svg={notificationsSVG} style={{maxWidth: '100%'}} />
+                </SplitColumn>
 
-              <SplitColumn order={2}>
-                <h2 className='text-accent'>Solution:</h2>
-                <h2>Rich notifications help you solve problems faster</h2>
-                <h3>Health checks update automatically when your environment changes.</h3>
+                <SplitColumn order={2}>
+                  <h2 className='text-accent'>Solution:</h2>
+                  <h2>Rich notifications help you solve problems faster</h2>
+                  <h3>Health checks update automatically when your environment changes.</h3>
 
-                <p className="prose">
-                  We do more with notifications. Opsee can send
-                  notifications to email, Slack, and webhooks with ease. We show
-                  you failing responses in notifications, and if the failure
-                  happened in a group, we tell you where the problem occurred.
-                  We even have tools to take action on problem instances in the Opsee app.
-                </p>
-              </SplitColumn>
-            </SplitPanel>
+                  <p className="prose">
+                    We do more with notifications. Opsee can send
+                    notifications to email, Slack, and webhooks with ease. We show
+                    you failing responses in notifications, and if the failure
+                    happened in a group, we tell you where the problem occurred.
+                    We even have tools to take action on problem instances in the Opsee app.
+                  </p>
+                </SplitColumn>
+              </SplitPanel>
+            </Padding>
 
-            <SplitPanel>
-              <SplitColumn order={2}>
-                <h2 className='text-accent'>Solution:</h2>
-                <h2>Assertions: more than status codes</h2>
-                <h3>Be sure your services are responding as expected.</h3>
+            <Padding t={4}>
+              <SplitPanel>
+                <SplitColumn order={2}>
+                  <h2 className='text-accent'>Solution:</h2>
+                  <h2>Assertions: more than status codes</h2>
+                  <h3>Be sure your services are responding as expected.</h3>
 
-                <p className="prose">
-                  Your services can return a 200 status code even if they’re
-                  broken or misconfigured. Assertions let you dig deep into the
-                  response and ensure that everything is working exactly as
-                  expected, from headers to JSON keys in the response body.
-                </p>
-              </SplitColumn>
+                  <p className="prose">
+                    Your services can return a 200 status code even if they’re
+                    broken or misconfigured. Assertions let you dig deep into the
+                    response and ensure that everything is working exactly as
+                    expected, from headers to JSON keys in the response body.
+                  </p>
+                </SplitColumn>
 
-              <SplitColumn order={1}>
-                <BaseSVG svg={checksSVG} style={{maxWidth: '100%'}} />
-              </SplitColumn>
-            </SplitPanel>
+                <SplitColumn order={1}>
+                  <BaseSVG svg={checksSVG} style={{maxWidth: '100%'}} />
+                </SplitColumn>
+              </SplitPanel>
+            </Padding>
           </div>
 
-          <SkewDivider />
+          <SkewDivider className={style.divider} />
 
           <div className={style.section}>
             <div className='text-center'>
@@ -142,7 +145,7 @@ export default React.createClass({
             </SplitPanel>
           </div>
 
-          <SkewDivider />
+          <SkewDivider className={style.divider} />
 
           <div className={style.section}>
             <div className='text-center'>
