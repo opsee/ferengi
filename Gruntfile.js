@@ -17,8 +17,8 @@ module.exports = function(grunt) {
      */
     aws_s3: {
       options: {
-        accessKeyId: config.aws.access_key_id || process.env.AWS_ACCESS_KEY_ID,
-        secretAccessKey: config.aws.secret_access_key || process.env.AWS_SECRET_KEY_ID,
+        accessKeyId: config.aws.access_key_id,
+        secretAccessKey: config.aws.secret_access_key,
         region: config.aws.region,
         uploadConcurrency: 5, // 5 simultaneous uploads
         downloadConcurrency: 5 // 5 simultaneous downloads
