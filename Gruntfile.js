@@ -49,7 +49,11 @@ module.exports = function(grunt) {
      * Removes the build directory. Typically run before rebuilding everything,
      * useful for ensuring no weird cruft is left behind.
      */
-    clean: ['dist'],
+    clean: {
+      dist: ['dist'],
+      //this removes all source files that can be gzipped for later upload by s3
+      gzip: ['dist/**/*.css', 'dist/**/*.svg', 'dist/**/*.js']
+    },
 
     webpack: {
       build: require('./webpack/build.config'),
@@ -76,8 +80,8 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('build', 'Builds the static site once (to dist/)', ['env', 'clean', 'webpack:build']);
-  grunt.registerTask('watch', 'Build the static site, rebuild on changes', ['env', 'clean', 'webpack:watch']);
+  grunt.registerTask('build', 'Builds the static site once (to dist/)', ['env', 'clean:dist', 'webpack:build', 'clean:gzip']);
+  grunt.registerTask('watch', 'Build the static site, rebuild on changes', ['env', 'clean:dist', 'webpack:watch']);
   grunt.registerTask('dev', 'Build the static site & put a devserver on it', ['env', 'build', 'webpack-dev-server:start']);
 
   grunt.registerTask('deploy:prod', 'Deploy the site to production s3', ['env', 'aws_s3:prod']);

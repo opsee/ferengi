@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const baseConfig = require('./common.config.js');
 const merge = require('webpack-merge');
+const compression = require('compression-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
 const PATHS = [
@@ -20,6 +21,9 @@ module.exports = merge(baseConfig, {
       compress: {
         warnings: false
       }
+    }),
+    new compression({
+      algorithm: 'gzip'
     })
   ]
 });
