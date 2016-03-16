@@ -11,11 +11,9 @@ export default React.createClass({
         <div className={style.heroPanel}>
           <div className={style.heroContent}>
             <div className={style.heading}>
-              <h1>Health checks have you <span className="text-accent">covered</span></h1>
+              <h1>Health checks <span className="text-accent">cut throught the noisecovered</span></h1>
               <p className={style.subHeader}>
-                Health checks are the best way to know your services are working
-                as you expect. Make a request, and ensure that it&rsquo;s responding
-                properly.
+                Continuously test your services and deploy with confidence
               </p>
             </div>
 
