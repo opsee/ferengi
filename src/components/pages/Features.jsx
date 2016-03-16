@@ -49,7 +49,7 @@ export default React.createClass({
             </SplitPanel>
           </div>
 
-          <SkewDivider className={style.divider} />
+          <SkewDivider className={style.offsetDivider} />
 
           <div className={style.section}>
             <Padding tb={4}>
@@ -75,7 +75,11 @@ export default React.createClass({
                 </SplitColumn>
               </SplitPanel>
             </Padding>
+          </div>
 
+          <SkewDivider className={style.offsetDivider} />
+
+          <div className={style.section}>
             <Padding t={4}>
               <SplitPanel>
                 <SplitColumn order={2}>
