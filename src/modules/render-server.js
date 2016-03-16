@@ -18,6 +18,26 @@ function renderFullPage(html, initialState = {}) {
     <!DOCTYPE html>
     <html>
       <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+        <meta name="copyright" content="Copyright ${new Date().getUTCFullYear()} Opsee, Inc. All rights reserved." />
+        <meta name="description" content="" />
+        <meta name="title" content="Opsee" />
+
+        <meta content="Opsee - Effortless Monitoring" property="og:site_name">
+        <meta content="Health Checks Have You Covered" property="og:title">
+        <meta content="website" property="og:type">
+        <meta content="Health and performance checks for your services with no software to install" property="og:description">
+        <meta content="https://opsee.com" property="og:url">
+        <meta content="https://s3-us-west-1.amazonaws.com/opsee-public-images/opsee_logo_blue_400px.png" property="og:image">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@opseeco">
+        <meta name="twitter:title" content="Health Checks Have You Covered">
+        <meta name="twitter:description" content="Health and performance checks for your services with no software to install">
+        <meta name="twitter:url" content="https://opsee.com">
+        <meta name="twitter:creator" content="@opseeco">
+        <meta content="https://s3-us-west-1.amazonaws.com/opsee-public-images/opsee_logo_blue_400px.png" property="twitter:image">
         <title>Opsee</title>
         <link rel="stylesheet" type="text/css" href="/style.css" />
       </head>
