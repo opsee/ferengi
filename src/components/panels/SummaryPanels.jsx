@@ -7,8 +7,7 @@ import style from './summaryPanels.css';
 import BaseSVG from '../images/BaseSVG';
 import awsGridSVG from '../images/aws_grid.svg';
 import deviceGroupSVG from '../images/device_group.svg';
-import {Grid, Row, Col} from 'emissary/src/js/modules/bootstrap';
-import Padding from '../layout/Padding';
+import {Grid, Row, Col, Padding} from '../layout';
 
 export default React.createClass({
   render() {
