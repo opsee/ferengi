@@ -5,6 +5,7 @@ import style from './features.css';
 import SplitPanel from '../panels/SplitPanel';
 import SplitColumn from '../panels/SplitColumn';
 import Padding from '../layout/Padding';
+import SkewDivider from '../layout/SkewDivider';
 
 import BaseSVG from '../images/BaseSVG';
 import actionsSVG from '../images/home-actions.svg';
@@ -24,7 +25,6 @@ export default React.createClass({
           </div>
         </StaticHeader>
 
-        <Container>
           {/* PROBLEMO */}
           <div className={style.section}>
             <div className='text-center'>
@@ -57,7 +57,8 @@ export default React.createClass({
             </SplitPanel>
           </div>
 
-          {/* PROBLEMO */}
+          <SkewDivider />
+
           <div className={style.section}>
             <div className='text-center'>
               <Padding tb={4}>
@@ -109,7 +110,8 @@ export default React.createClass({
             </SplitPanel>
           </div>
 
-          {/* PROBLEMO */}
+          <SkewDivider />
+
           <div className={style.section}>
             <div className='text-center'>
               <Padding tb={4}>
@@ -140,7 +142,8 @@ export default React.createClass({
             </SplitPanel>
           </div>
 
-          {/* PROBLEMO */}
+          <SkewDivider />
+
           <div className={style.section}>
             <div className='text-center'>
               <Padding tb={4}>
@@ -169,7 +172,6 @@ export default React.createClass({
               </SplitColumn>
             </SplitPanel>
           </div>
-        </Container>
       </div>
     );
   }
