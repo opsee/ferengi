@@ -28,21 +28,10 @@ export default React.createClass({
         </StaticHeader>
 
           <div className={style.section}>
-            <div className='text-center'>
-              <Padding tb={4}>
-                <Padding tb={1}>
-                  <h2 className='text-danger'>Problem:</h2>
-                  <h2>My AWS environment is dynamic</h2>
-                </Padding>
-                <h3>I need monitoring that can keep up and auto scale with me.</h3>
-              </Padding>
-            </div>
-
             <SplitPanel>
               <SplitColumn order={2}>
                 <Padding tb={1}>
-                  <h2 className='text-accent'>Solution:</h2>
-                  <h2>Deep integration with AWS</h2>
+                  <h2>Deep integration with <span className='text-accent'>AWS</span></h2>
                 </Padding>
                   <h3>Health checks update automatically when your environment changes.</h3>
 
@@ -63,16 +52,6 @@ export default React.createClass({
           <SkewDivider className={style.divider} />
 
           <div className={style.section}>
-            <div className='text-center'>
-              <Padding tb={4}>
-                <Padding tb={1}>
-                  <h2 className='text-danger'>Problem:</h2>
-                  <h2>When things break, I don't have the context I need</h2>
-                </Padding>
-                <h3>Notifications should do more than tell me there’s a problem, they should help me fix it.</h3>
-              </Padding>
-            </div>
-
             <Padding tb={4}>
               <SplitPanel>
                 <SplitColumn order={1}>
@@ -81,8 +60,7 @@ export default React.createClass({
 
                 <SplitColumn order={2}>
                   <Padding tb={1}>
-                    <h2 className='text-accent'>Solution:</h2>
-                    <h2>Rich notifications help you solve problems faster</h2>
+                    <h2><span className='text-accent'>Rich notifications</span> help you solve problems faster</h2>
                   </Padding>
 
                   <h3>Health checks update automatically when your environment changes.</h3>
@@ -102,8 +80,7 @@ export default React.createClass({
               <SplitPanel>
                 <SplitColumn order={2}>
                   <Padding tb={1}>
-                    <h2 className='text-accent'>Solution:</h2>
-                    <h2>Assertions: more than status codes</h2>
+                    <h2><span className='text-accent'>Assertions:</span> more than status codes</h2>
                   </Padding>
 
                   <h3>Be sure your services are responding as expected.</h3>
@@ -126,16 +103,6 @@ export default React.createClass({
           <SkewDivider className={style.offsetDivider} />
 
           <div className={style.section}>
-            <div className='text-center'>
-              <Padding tb={4}>
-                <Padding tb={1}>
-                  <h2 className='text-danger'>Problem:</h2>
-                  <h2>Setting up monitoring tools like Nagios & Sensu is a pain</h2>
-                </Padding>
-                <h3>It’s a lot of work, and may not be worth the effort right now</h3>
-              </Padding>
-            </div>
-
             <SplitPanel>
               <SplitColumn order={1}>
                 <BaseSVG svg={bastionSVG} style={{maxWidth: '100%'}} />
@@ -143,8 +110,7 @@ export default React.createClass({
 
               <SplitColumn order={2}>
                 <Padding tb={1}>
-                  <h2 className='text-accent'>Solution:</h2>
-                  <h2>Complete coverage with just AWS keys</h2>
+                  <h2><span className='text-accent'>Complete coverage</span> with just AWS keys</h2>
                 </Padding>
 
                 <h3>Deep integration with your environment, zero effort.</h3>
@@ -161,21 +127,10 @@ export default React.createClass({
           <SkewDivider className={style.offsetDivider} />
 
           <div className={style.section}>
-            <div className='text-center'>
-              <Padding tb={4}>
-                <Padding tb={1}>
-                  <h2 className='text-danger'>Problem:</h2>
-                  <h2>We’re developers. We need monitoring, but don’t want to build a NOC.</h2>
-                </Padding>
-                <h3>We need a product that’s easy enough to use every day</h3>
-              </Padding>
-            </div>
-
             <SplitPanel>
               <SplitColumn order={2}>
                 <Padding tb={1}>
-                  <h2 className='text-accent'>Solution:</h2>
-                  <h2>Opsee is monitoring for on-call dev teams</h2>
+                  <h2>Opsee is monitoring for <span className='text-accent'>on-call dev teams</span></h2>
                 </Padding>
 
                 <h3>Effortless integration and rich notifications so you can get back to coding.</h3>
