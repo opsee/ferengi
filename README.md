@@ -13,23 +13,19 @@ marketing wabsite
 npm install
 
 // Build the static site once. Output will be in dist/
-NODE_ENV='production' grunt build
+npm run build
 
 // Start up a webpack dev server (with hot reload) for the site
 // at http://localhost:8080. (Note that this does not actually build any static
 // output to dist/.)
-grunt dev
+npm run dev
 
 // Run the tests. Everything must lint and build before it can get
 // merged onto master.
-grunt test
-
-// Deploy to production. You'll want to make sure that $AWS_ACCESS_KEY_ID,
-// $AWS_DEFAULT_REGION, and $AWS_SECRET_ACCESS_KEY are set in your env.
-NODE_ENV='production' grunt deploy:prod
+npm run build
 
 // Deploy to staging
-NODE_ENV='production' grunt deploy:staging
+npm run staging
 
 // List all the other cool stuff you can do
 grunt --help

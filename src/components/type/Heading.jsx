@@ -5,7 +5,7 @@ import cx from 'classnames';
 import style from './heading.css';
 import {Padding} from '../layout';
 
-const Hyphenate = React.createClass({
+const Heading = React.createClass({
   propTypes: {
     children: PropTypes.node,
     level: PropTypes.oneOf([1, 2, 3, 4, 5]),
@@ -42,4 +42,4 @@ const Hyphenate = React.createClass({
   }
 });
 
-export default Hyphenate;
+export default Heading;

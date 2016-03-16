@@ -7,8 +7,7 @@ import style from './summaryPanels.css';
 import BaseSVG from '../images/BaseSVG';
 import awsGridSVG from '../images/aws_grid.svg';
 import deviceGroupSVG from '../images/device_group.svg';
-import {Grid, Row, Col} from 'emissary/src/js/modules/bootstrap';
-import Padding from '../layout/Padding';
+import {Grid, Row, Col, Padding} from '../layout';
 
 export default React.createClass({
   render() {
@@ -53,7 +52,6 @@ export default React.createClass({
                       <BaseSVG svg={deviceGroupSVG} style={{maxWidth: '100%'}} />
                     </Padding>
                   </Col>
-
                   <Col xs={12} sm={6} className="align-self-start flex-order-2-sm">
                     <Padding a={2}>
                       <div className={style.heading}>

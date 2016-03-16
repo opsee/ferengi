@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid, Row, Col} from 'emissary/src/js/modules/bootstrap';
+import {Grid, Row, Col} from '../layout';
 
 import Container from '../layout/Container';
 import BaseSVG from '../images/BaseSVG';

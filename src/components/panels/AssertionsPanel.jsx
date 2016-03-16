@@ -1,6 +1,6 @@
 import React from 'react';
-import {Grid, Row} from 'emissary/src/js/modules/bootstrap';
-import Container from '../layout/Container';
+
+import {Grid, Row} from '../layout';
 import Panel from './Panel.jsx';
 import TryCheck from '../check/TryCheck';
 

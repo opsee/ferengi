@@ -1,4 +1,6 @@
 import React, { PropTypes } from 'react';
+import cx from 'classnames';
+
 import style from './input.css';
 
 export default React.createClass({
@@ -7,7 +9,7 @@ export default React.createClass({
   },
 
   getClassName() {
-    return [style.input, this.props.className].join(' ');
+    return cx([style.input, this.props.className]);
   },
 
   render() {
