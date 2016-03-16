@@ -1,3 +1,9 @@
 machine:
   node:
     version: 5.4
+deployment:
+  hub:
+    branch: master
+    owner: opsee
+    commands:
+      - npm run deploy

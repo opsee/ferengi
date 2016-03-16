@@ -17,8 +17,8 @@ module.exports = function(grunt) {
      */
     aws_s3: {
       options: {
-        accessKeyId: config.aws.access_key_id,
-        secretAccessKey: config.aws.secret_access_key,
+        accessKeyId: config.aws.access_key_id || process.env.AWS_ACCESS_KEY_ID,
+        secretAccessKey: config.aws.secret_access_key || process.env.AWS_SECRET_KEY_ID,
         region: config.aws.region,
         uploadConcurrency: 5, // 5 simultaneous uploads
         downloadConcurrency: 5 // 5 simultaneous downloads
@@ -80,7 +80,6 @@ module.exports = function(grunt) {
   grunt.registerTask('watch', 'Build the static site, rebuild on changes', ['env', 'clean', 'webpack:watch']);
   grunt.registerTask('dev', 'Build the static site & put a devserver on it', ['env', 'build', 'webpack-dev-server:start']);
 
-  grunt.registerTask('test', 'Builds the static site, failing on any errors', ['env', 'build']);
-  grunt.registerTask('deploy:prod', 'Deploy the site to production s3', ['env', 'build', 'aws_s3:prod']);
-  grunt.registerTask('deploy:staging', 'Deploy the site to production s3', ['env', 'build', 'aws_s3:staging']);
+  grunt.registerTask('deploy:prod', 'Deploy the site to production s3', ['env', 'aws_s3:prod']);
+  grunt.registerTask('deploy:staging', 'Deploy the site to production s3', ['env', 'aws_s3:staging']);
 };

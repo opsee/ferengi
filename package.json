@@ -4,10 +4,12 @@
   "description": "marketing wabsite",
   "scripts": {
     "build": "NODE_ENV='production' ./node_modules/grunt-cli/bin/grunt build",
+    "deploy": "./node_modules/grunt-cli/bin/grunt deploy:prod",
     "dev": "./node_modules/grunt-cli/bin/grunt dev",
+    "staging": "./node_modules/grunt-cli/bin/grunt deploy:staging",
     "start": "./node_modules/grunt-cli/bin/grunt watch",
     "stats": "webpack --config webpack/build.config --profile --json > stats.json",
-    "test": "./node_modules/grunt-cli/bin/grunt test"
+    "test": "./node_modules/grunt-cli/bin/grunt build"
   },
   "repository": {
     "type": "git",
