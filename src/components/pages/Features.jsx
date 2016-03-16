@@ -6,6 +6,8 @@ import SplitPanel from '../panels/SplitPanel';
 import SplitColumn from '../panels/SplitColumn';
 import Padding from '../layout/Padding';
 import SkewDivider from '../layout/SkewDivider';
+import SkewPanel from '../panels/SkewPanel';
+import SignUpPanel from '../panels/SignUpPanel'
 
 import BaseSVG from '../images/BaseSVG';
 import actionsSVG from '../images/home-actions.svg';
@@ -20,8 +22,8 @@ export default React.createClass({
       <div>
         <StaticHeader className={style.header}>
           <div className='text-center'>
-            <h1 className={style.header}>A good heading about features</h1>
-            <p>This is a very cool tagline about features!</p>
+            <h1 className={style.header}>Great monitoring doesn't need to be complicated</h1>
+            <p>Opsee is designed for busy teams who want to get back to doing what they love.</p>
           </div>
         </StaticHeader>
 
@@ -56,7 +58,7 @@ export default React.createClass({
             </SplitPanel>
           </div>
 
-          <SkewDivider />
+          <SkewDivider className={style.divider} />
 
           <div className={style.section}>
             <div className='text-center'>
@@ -113,7 +115,7 @@ export default React.createClass({
             </Padding>
           </div>
 
-          <SkewDivider className={style.divider} />
+          <SkewDivider className={style.offsetDivider} />
 
           <div className={style.section}>
             <div className='text-center'>
@@ -145,7 +147,7 @@ export default React.createClass({
             </SplitPanel>
           </div>
 
-          <SkewDivider className={style.divider} />
+          <SkewDivider className={style.offsetDivider} />
 
           <div className={style.section}>
             <div className='text-center'>
@@ -175,7 +177,13 @@ export default React.createClass({
               </SplitColumn>
             </SplitPanel>
           </div>
+
+        <SkewPanel backgroundColor="#333" skewBottom={false}>
+          <SignUpPanel />
+        </SkewPanel>
       </div>
+
+
     );
   }
 });

@@ -15,5 +15,9 @@
 
 .divider {
   height: 120px;
+}
+
+.offsetDivider {
+  composes: divider;
   margin-top: -60px;
 }
