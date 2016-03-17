@@ -128,7 +128,7 @@ export default React.createClass({
 
                   <Padding tb={2}>
                     <Button className={style.button} secondary chevron>
-                      Learn more about notifcations
+                      Learn more about health checks
                     </Button>
                   </Padding>
                 </SplitColumn>
