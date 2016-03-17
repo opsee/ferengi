@@ -1,5 +1,4 @@
 import React from 'react';
-import Container from '../layout/Container';
 import StaticHeader from '../panels/StaticHeader';
 import style from './features.css';
 import SplitPanel from '../panels/SplitPanel';
@@ -7,11 +6,10 @@ import SplitColumn from '../panels/SplitColumn';
 import Padding from '../layout/Padding';
 import SkewDivider from '../layout/SkewDivider';
 import SkewPanel from '../panels/SkewPanel';
-import SignUpPanel from '../panels/SignUpPanel'
+import SignUpPanel from '../panels/SignUpPanel';
 import Button from '../forms/Button';
 
 import BaseSVG from '../images/BaseSVG';
-import actionsSVG from '../images/home-actions.svg';
 import bastionSVG from '../images/home-bastion3.svg';
 import checksSVG from '../images/home-checks2.svg';
 import checkDiagramSVG from '../images/product-checks.svg';
@@ -19,13 +17,13 @@ import notificationsSVG from '../images/product-notifications.svg';
 import installStepsSVG from '../images/install-steps2.svg';
 import howBastionSVG from '../images/how-bastion.svg';
 
-export default React.createClass({
+const Features = React.createClass({
   render() {
     return (
       <div>
         <StaticHeader className={style.header}>
-          <div className='text-center'>
-            <h1 className={style.header}>Great monitoring doesn't need to be complicated</h1>
+          <div className="text-center">
+            <h1 className={style.header}>Great monitoring doesn&rsquo;t need to be complicated</h1>
             <p>Opsee is designed for busy teams who want to get back to doing what they love.</p>
           </div>
         </StaticHeader>
@@ -34,7 +32,7 @@ export default React.createClass({
             <SplitPanel>
               <SplitColumn order={2}>
                 <Padding tb={1}>
-                  <h2>Deep integration with <span className='text-accent'>AWS</span></h2>
+                  <h2>Deep integration with <span className="text-accent">AWS</span></h2>
                 </Padding>
 
                 <ul>
@@ -64,7 +62,7 @@ export default React.createClass({
 
               <SplitColumn order={2}>
                 <Padding tb={1}>
-                  <h2><span className='text-accent'>Zero</span> maintenance</h2>
+                  <h2><span className="text-accent">Zero</span> maintenance</h2>
                 </Padding>
 
                 <ul>
@@ -93,7 +91,7 @@ export default React.createClass({
 
                 <SplitColumn order={2}>
                   <Padding tb={1}>
-                    <h2>Rich, actionable <span className='text-accent'>notifications</span></h2>
+                    <h2>Rich, actionable <span className="text-accent">notifications</span></h2>
                   </Padding>
 
                   <ul>
@@ -119,7 +117,7 @@ export default React.createClass({
               <SplitPanel>
                 <SplitColumn order={2}>
                   <Padding tb={1}>
-                    <h2><span className='text-accent'>Assertions:</span> more just than status codes</h2>
+                    <h2><span className="text-accent">Assertions:</span> more just than status codes</h2>
                   </Padding>
 
                   <ul>
@@ -150,7 +148,7 @@ export default React.createClass({
 
               <SplitColumn order={2}>
                 <Padding tb={1}>
-                  <h2>Clean & <span className='text-accent'>simple</span></h2>
+                  <h2>Clean & <span className="text-accent">simple</span></h2>
                 </Padding>
 
                 <ul>
@@ -168,7 +166,7 @@ export default React.createClass({
             <SplitPanel>
               <SplitColumn order={2}>
                 <Padding tb={1}>
-                  <h2><span className='text-accent'>Security</span>-minded</h2>
+                  <h2><span className="text-accent">Security</span>-minded</h2>
                 </Padding>
 
                 <ul>
@@ -194,8 +192,8 @@ export default React.createClass({
           <SignUpPanel />
         </SkewPanel>
       </div>
-
-
     );
   }
 });
+
+export default Features;
