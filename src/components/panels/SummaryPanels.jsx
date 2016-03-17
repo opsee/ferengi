@@ -1,22 +1,23 @@
 import React from 'react';
-
 import Button from '../forms/Button';
 import Container from '../layout/Container';
 import Panel from './Panel.jsx';
+import {Grid, Row, Col, Padding} from '../layout';
+import SkewPanel from '../panels/SkewPanel';
+
 import style from './summaryPanels.css';
+
 import BaseSVG from '../images/BaseSVG';
 import awsGridSVG from '../images/aws_grid.svg';
 import deviceGroupSVG from '../images/device_group.svg';
 import installStepsSVG from '../images/install-steps2.svg';
 import integrationLogosSVG from '../images/integration-logos.svg';
 
-import {Grid, Row, Col, Padding} from '../layout';
-
 export default React.createClass({
   render() {
     return (
-      <div className={style.summaryPanels}>
-        <Panel>
+      <div>
+        <SkewPanel backgroundColor='white'>
           <Container>
             <Grid>
               <div className={style.panel}>
@@ -45,9 +46,15 @@ export default React.createClass({
                   </Col>
                 </Row>
               </div>
+            </Grid>
+          </Container>
+        </SkewPanel>
 
+        <SkewPanel backgroundColor='white'>
+          <Container>
+            <Grid>
               <div className={style.panel}>
-                <Row className="flex-vertical-align-sm">
+                 <Row className="flex-vertical-align-sm">
 
                   <Col xs={12} sm={6} className="align-self-start flex-order-1-sm">
                     <Padding a={2}>
@@ -73,7 +80,14 @@ export default React.createClass({
                   </Col>
                 </Row>
               </div>
+            </Grid>
+          </Container>
+        </SkewPanel>
 
+
+        <SkewPanel backgroundColor='white'>
+          <Container>
+            <Grid>
               <div className={style.panel}>
                 <Row className="flex-vertical-align-sm">
                   <Col xs={12} sm={6} className="align-self-start flex-order-2-sm">
@@ -100,10 +114,9 @@ export default React.createClass({
                   </Col>
                 </Row>
               </div>
-
             </Grid>
           </Container>
-        </Panel>
+        </SkewPanel>
       </div>
     );
   }
