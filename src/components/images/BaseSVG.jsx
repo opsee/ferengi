@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import style from './baseSVG.css';
 
 export default React.createClass({
   propTypes: {
@@ -14,7 +15,7 @@ export default React.createClass({
     const src = isEncoded ? this.props.svg : `/${this.props.svg}`;
 
     return (
-      <img src={src} alt={this.props.alt} style={this.props.style}/>
+      <img className={style.svg} src={src} alt={this.props.alt} style={this.props.style}/>
     );
   }
 });
