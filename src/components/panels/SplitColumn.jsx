@@ -1,9 +1,9 @@
 import React, { PropTypes }  from 'react';
-import {Grid, Row, Col} from 'emissary/src/js/modules/bootstrap';
-import style from './splitPanel.css';
+import { Col } from 'emissary/src/js/modules/bootstrap';
 
 export default React.createClass({
   propTypes: {
+    children: PropTypes.node,
     order: PropTypes.number
   },
 

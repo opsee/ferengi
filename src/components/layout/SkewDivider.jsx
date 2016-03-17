@@ -5,9 +5,10 @@ export default React.createClass({
   propTypes: {
     className: PropTypes.string
   },
+
   render() {
     return (
       <div className={[style.divider, this.props.className].join(' ')} />
     );
   }
-})
+});
