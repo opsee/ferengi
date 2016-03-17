@@ -26,3 +26,9 @@
   composes: divider;
   margin-top: -60px;
 }
+
+.button {
+  font-size: 1.4rem;
+  padding: 2rem;
+  border-radius: 4rem;
+}
