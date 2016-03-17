@@ -39,3 +39,8 @@ h3 {
   line-height: 2.8rem;
   color: var(--colorGray7);
 }
+
+li {
+  list-style-type: disc;
+  margin: 0.8rem;
+}
