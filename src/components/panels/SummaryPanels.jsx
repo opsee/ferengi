@@ -5,6 +5,7 @@ import SkewPanel from '../panels/SkewPanel';
 import SplitPanel from '../panels/SplitPanel';
 import SplitColumn from '../panels/SplitColumn';
 import style from './summaryPanels.css';
+import styleConstants from '../../constants/styleConstants';
 
 import BaseSVG from '../images/BaseSVG';
 import installStepsSVG from '../images/install-steps2.svg';
@@ -14,7 +15,7 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <SkewPanel backgroundColor="white">
+        <div className={style.panel0}>
           <SplitPanel>
             <SplitColumn order={1}>
               <Padding a={2}>
@@ -39,9 +40,9 @@ export default React.createClass({
               </Padding>
             </SplitColumn>
           </SplitPanel>
-        </SkewPanel>
+        </div>
 
-        <SkewPanel backgroundColor="white">
+        <div className={style.panel1}>
           <SplitPanel>
             <SplitColumn order={1}>                    <Padding a={2}>
                       <BaseSVG svg={installStepsSVG} style={{maxWidth: '100%'}} />
@@ -66,9 +67,9 @@ export default React.createClass({
                     </Padding>
             </SplitColumn>
           </SplitPanel>
-        </SkewPanel>
+        </div>
 
-        <SkewPanel backgroundColor="white">
+        <SkewPanel skewTop={false} backgroundColor={styleConstants.plain.color.warm0}>
           <SplitPanel>
             <SplitColumn order={1}>
               <Padding a={2}>

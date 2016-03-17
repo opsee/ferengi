@@ -11,3 +11,18 @@
   padding: 2rem;
   border-radius: 4rem;
 }
+
+.panel0 {
+  composes: panel;
+  background-color: var(--colorWarm4);
+}
+
+.panel1 {
+  composes: panel;
+  background-color: var(--colorWarm2);
+}
+
+.panel2 {
+  composes: panel;
+  background-color: var(--colorWarm0);
+}

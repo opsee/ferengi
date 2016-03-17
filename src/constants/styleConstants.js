@@ -5,6 +5,7 @@ const constants = {
     accent: '#5D89FB',
     neutral1: '#FFFFFF',
     neutral2: '#FEFAF3',
+    warm0: '#F2B542',
     warm1: '#EB9450',
     warm2: '#E87B4F',
     warm3: '#DE6752',
