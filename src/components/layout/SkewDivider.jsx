@@ -1,13 +1,17 @@
 import React, { PropTypes } from 'react';
+import cx from 'classnames';
+
 import style from './skewDivider.css';
 
-export default React.createClass({
+const SkewDivider = React.createClass({
   propTypes: {
     className: PropTypes.string
   },
   render() {
     return (
-      <div className={[style.divider, this.props.className].join(' ')} />
+      <div className={cx([style.divider, this.props.className])} />
     );
   }
-})
+});
+
+export default SkewDivider;

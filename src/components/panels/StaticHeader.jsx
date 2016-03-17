@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import style from './staticHeader.css';
 
-export default React.createClass({
+const StaticHeader = React.createClass({
   propTypes: {
     children: PropTypes.node,
     className: PropTypes.string
@@ -14,4 +14,6 @@ export default React.createClass({
       </div>
     );
   }
-})
+});
+
+export default StaticHeader;

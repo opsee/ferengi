@@ -9,6 +9,19 @@ import serialize from 'serialize-javascript';
 import reducer from '../reducers';
 import routes from '../routes';
 
+import iconLarge from '../components/images/favicon/icon_256x256@2x.png';
+import favicon from '../components/images/favicon/icon.ico';
+
+function faviconMeta(){
+  return `
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="${iconLarge}" />
+    <link rel="shortcut icon" href="${favicon}" type="image/x-icon" />
+    <meta name="application-name" content="Opsee"/>
+    <meta name="msapplication-TileColor" content="#00589B" />
+    <meta name="msapplication-TileImage" content="/public/img/favicon/mstile-144x144.png" />
+  `;
+}
+
 /**
  * We do this in order to avoid mounting the entire React app onto the body.
  */
@@ -24,7 +37,7 @@ function renderFullPage(html, initialState = {}) {
         <meta name="copyright" content="Copyright ${new Date().getUTCFullYear()} Opsee, Inc. All rights reserved." />
         <meta name="description" content="" />
         <meta name="title" content="Opsee" />
-
+        ${faviconMeta()}
         <meta content="Opsee - Effortless Monitoring" property="og:site_name">
         <meta content="Health Checks Have You Covered" property="og:title">
         <meta content="website" property="og:type">

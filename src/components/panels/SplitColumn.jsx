@@ -1,10 +1,13 @@
 import React, { PropTypes }  from 'react';
-import {Grid, Row, Col} from 'emissary/src/js/modules/bootstrap';
+import {Col} from 'emissary/src/js/modules/bootstrap';
+/*eslint-disable no-unused-vars*/
 import style from './splitPanel.css';
+/*eslint-enable no-unused-vars*/
 
 export default React.createClass({
   propTypes: {
-    order: PropTypes.number
+    order: PropTypes.number,
+    children: PropTypes.node
   },
 
   getDefaultProps() {
