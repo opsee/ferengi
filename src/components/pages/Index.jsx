@@ -4,10 +4,11 @@ import SkewPanel from '../panels/SkewPanel';
 import HeroPanel from '../panels/HeroPanel';
 import SignUpPanel from '../panels/SignUpPanel';
 import SummaryPanels from '../panels/SummaryPanels';
-import AssertionsPanel from '../panels/AssertionsPanel';
 
+/*eslint-disable no-unused-vars*/
 import style from './index.css';
 import styleConstants from '../../constants/styleConstants';
+/*eslint-enable no-unused-vars*/
 
 export default React.createClass({
   render() {
