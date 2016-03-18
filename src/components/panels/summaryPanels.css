@@ -1,9 +1,8 @@
-.panel {
-  min-height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.section {
+  min-height: 60vh;
+  padding: 4rem;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .button {
@@ -12,17 +11,32 @@
   border-radius: 4rem;
 }
 
-.panel0 {
-  composes: panel;
-  background-color: var(--colorWarm4);
+.panel {
+  width: 50%;
 }
 
-.panel1 {
+.prosePanel {
   composes: panel;
-  background-color: var(--colorWarm2);
+  flex: 1;
+  padding: 2rem;
 }
 
-.panel2 {
+.imagePanel {
   composes: panel;
-  background-color: var(--colorWarm0);
+}
+
+.screenshotPanel {
+  composes: imagePanel;
+  align-self: flex-end;
+}
+
+@media (max-width: 768px) {
+  .imagePanel,
+  .prosePanel {
+    flex: 1 100%;
+    width: 100%;
+  };
+
+  .prosePanel { order: 1 }
+  .imagePanel { order: 2 }
 }

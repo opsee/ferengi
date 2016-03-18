@@ -10,6 +10,10 @@ const constants = {
     warm2: '#E87B4F',
     warm3: '#DE6752',
     warm4: '#D65F54'
+  },
+
+  layout: {
+    containerWidth: '1400px'
   }
 };
 
