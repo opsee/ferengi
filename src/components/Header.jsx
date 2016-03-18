@@ -12,11 +12,9 @@ module.exports = React.createClass({
     return (
       <Container>
         <div className={style.header}>
-          <div className={style.logo}>
-            <Link to="/">
-              <BaseSVG svg={logoLight} style={{height: 80}} />
-            </Link>
-          </div>
+          <Link to="/">
+            <BaseSVG className={style.logo} svg={logoLight} style={{height: 80}} />
+          </Link>
 
           <div className={style.nav}>
             <ul className={style.navLinks}>

@@ -7,6 +7,11 @@
   text-transform: uppercase;
 }
 
+.logo {
+  height: 80px;
+  width: auto;
+}
+
 .links,
 .cta {
   display: inline;
@@ -41,7 +46,7 @@
   composes: links;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 920px) {
   .navLinks { display: none; }
 }
 
