@@ -18,8 +18,7 @@ body {
 
 /* Header typography */
 h1, h2 {
-  font-family: 'Dosis';
-  text-transform: uppercase;
+  font-family: "Bariol", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 h1 {
@@ -48,4 +47,19 @@ li {
 textarea:focus, input:focus{
   outline: none;
   border: solid 1px var(--colorAccent);
+}
+
+/* Link styling */
+a {
+  color: var(--colorPrimary);
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: #0c80df;
+  text-decoration: underline;
+}
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }

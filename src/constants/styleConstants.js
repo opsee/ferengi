@@ -12,6 +12,10 @@ const constants = {
     warm4: '#D65F54'
   },
 
+  font: {
+    display: '"Bariol", sans-serif'
+  },
+
   layout: {
     maxWidth: '1000px'
   }
