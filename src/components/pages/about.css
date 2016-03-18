@@ -2,13 +2,24 @@
   background-color: $gray_800;
   margin: 0 auto;
 }
-.headshot {
-  display: inline-block;
-  margin: 0 3%;
-  position: relative;
-  text-align: center;
-  width: 42%;
+.people {
+  display:flex;
+  flex-wrap: wrap;
 }
+.person {
+  width: 50%;
+  padding: 2rem;
+}
+.headshot {
+  text-align: center;
+  position: relative;
+}
+@media (min-width: 700px) {
+  .person{
+    width: 33%;
+  }
+}
+
 .headshot:active .img:nth-of-type(2), .headshot:focus .img:nth-of-type(2){
   opacity: 1;
   transform: rotate(0);
@@ -19,10 +30,17 @@
   cursor: pointer;
   display: block;
   width: 100%;
+  transition: 250ms transform, 250ms opacity;
 }
-.img:nth-of-type(2) {
+.img:hover + .imgRoll, .imgRoll:hover{
+  opacity: 1;
+  transform: rotate(0);
+  visibility: visible;
+}
+.imgRoll{
+  composes: img;
   opacity: 0;
-  transform: rotate(45deg);
+  transform: rotate(-10deg);
   position: absolute;
   top: 0;
   left: 0;
@@ -30,4 +48,15 @@
 }
 .figcaption {
   margin: 1rem 0;
+}
+
+.icons {
+  display:flex;
+  justify-content: center;
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+  display: block;
 }

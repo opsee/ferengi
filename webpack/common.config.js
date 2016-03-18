@@ -83,7 +83,7 @@ module.exports = {
   ],
 
   resolve: {
-    extensions: ['', '.jsx', '.js', '.json', '.svg', '.png', '.jpg'],
+    extensions: ['', '.jsx', '.js', '.json', '.svg', '.png', '.jpg', '.gif'],
     modulesDirectories: [NODE_MODULES_DIR]
   },
 
