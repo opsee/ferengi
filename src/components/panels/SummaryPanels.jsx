@@ -19,7 +19,7 @@ export default React.createClass({
             <SplitColumn order={1}>
               <Padding a={2}>
                 <div className={style.heading}>
-                  <h2>Complete coverage, <span className="text-accent">right now</span></h2>
+                  <h2>Complete AWS coverage, <span className="text-accent">right now</span></h2>
                 </div>
                 <p className="prose">
                   No software to install, no shell scripts to cURL
@@ -51,7 +51,7 @@ export default React.createClass({
             <SplitColumn order={1}>
              <Padding a={2}>
                       <div className={style.heading}>
-                        <h2>Be sure your services respond <span className="text-accent">the way you expect them to</span></h2>
+                        <h2>Be sure your services respond <span className="text-accent">the way you coded them</span></h2>
                       </div>
                       <p className="prose">
                         Verify every part of the response – health is more than
@@ -73,7 +73,7 @@ export default React.createClass({
             <SplitColumn order={1}>
               <Padding a={2}>
                 <div className={style.heading}>
-                  <h2>Built for your <span className="text-accent">AWS ecosystem</span></h2>
+                  <h2>Part of <span className="text-accent">Your Stack</span></h2>
                 </div>
                 <p className="prose">
                   Designed to work with your favorite tools.
