@@ -13,7 +13,7 @@ const constants = {
   },
 
   layout: {
-    maxWidth: '1200px'
+    maxWidth: '1000px'
   }
 };
 
