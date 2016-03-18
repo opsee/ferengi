@@ -37,6 +37,10 @@
     width: 100%;
   };
 
-  .prosePanel { order: 1 }
-  .imagePanel { order: 2 }
+  .prosePanel { order: 1; }
+  .imagePanel { order: 2; }
+
+  .button {
+    width: 100%;
+  }
 }

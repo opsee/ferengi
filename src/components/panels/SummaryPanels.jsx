@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../forms/Button';
 import { Padding } from '../layout';
+import SkewDivider from '../layout/SkewDivider';
 import style from './summaryPanels.css';
 
 import BaseSVG from '../images/BaseSVG';
@@ -14,6 +15,8 @@ export default React.createClass({
   render() {
     return (
       <div>
+        <SkewDivider />
+
         <SplitContainer className={style.section}>
           <SplitPanel className={style.prosePanel} >
             <div className={style.heading}>
@@ -33,6 +36,8 @@ export default React.createClass({
             <BaseSVG svg={onboardingSVG} />
           </SplitPanel>
         </SplitContainer>
+
+        <SkewDivider />
 
         <SplitContainer className={style.section}>
           <SplitPanel className={style.imagePanel}>
@@ -55,6 +60,8 @@ export default React.createClass({
             </Padding>
           </SplitPanel>
         </SplitContainer>
+
+        <SkewDivider />
 
         <SplitContainer className={style.section}>
           <SplitPanel className={style.prosePanel} >
