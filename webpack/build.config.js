@@ -9,15 +9,18 @@ const PATHS = [
   '/', '/about', '/how', '/features', '/beta-tos'
 ];
 
-module.exports = merge(baseConfig, {
-  plugins: [
-    new StaticSiteGeneratorPlugin('bundle.js', PATHS, {}),
-    new sitemap('https://opsee.com', PATHS, 'sitemap.xml'),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
-      }
-    }),
+const plugins = [
+  new StaticSiteGeneratorPlugin('bundle.js', PATHS, {}),
+  new sitemap('https://opsee.com', PATHS, 'sitemap.xml'),
+  new webpack.DefinePlugin({
+    'process.env': {
+      NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+    }
+  }),
+]
+
+if (process.env.NODE_ENV === 'production'){
+  plugins = plugins.concat([
     new webpack.optimize.UglifyJsPlugin({
       mangle: false,
       compress: {
@@ -27,5 +30,9 @@ module.exports = merge(baseConfig, {
     new compression({
       algorithm: 'gzip'
     })
-  ]
+  ]);
+}
+
+module.exports = merge(baseConfig, {
+  plugins
 });

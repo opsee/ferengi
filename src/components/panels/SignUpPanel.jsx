@@ -14,10 +14,8 @@ export default React.createClass({
           <div className={style.container}>
 
             <div className="text-center">
-              <h1 className={style.heading}>Ready to try a <span className="text-accent">new kind</span> of monitoring?</h1>
-              <div className={['prose', style.prose].join(' ')}>Get powerful health checks, rich notifications, and
-              deep AWS integration. Track your services and take action anywhere and get
-              you to problem resolution.</div>
+              <h1 className={style.heading}>Ready to <span className="text-accent">get opsee?</span></h1>
+              <div className={['prose', style.prose].join(' ')}>Opsee is free during public beta. Join now by giving us your email address below, and we'll send you a link to your very own Opsee account.</div>
            </div>
 
             <div>
