@@ -15,7 +15,7 @@ export default React.createClass({
 
             <div className="text-center">
               <h1 className={style.heading}>Ready to <span className="text-accent">get opsee?</span></h1>
-              <div className={['prose', style.prose].join(' ')}>Opsee is free during public beta. Join now by giving us your email address below, and we'll send you a link to your very own Opsee account.</div>
+              <div className={['prose-darkbg', style.prose].join(' ')}>Opsee is free during public beta. Join now by giving us your email address below, and we'll send you a link to your very own Opsee account.</div>
            </div>
 
             <div>

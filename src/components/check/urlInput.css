@@ -6,7 +6,7 @@
 .urlInput button,
 .urlInput input {
   font-size: 2rem;
-  padding: 2rem;
+  padding: 2rem 4rem;
   border-radius: 6rem;
   box-sizing: border-box;
   height: 7rem;
