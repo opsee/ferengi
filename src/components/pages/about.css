@@ -1,0 +1,33 @@
+.team {
+  background-color: $gray_800;
+  margin: 0 auto;
+}
+.headshot {
+  display: inline-block;
+  margin: 0 3%;
+  position: relative;
+  text-align: center;
+  width: 42%;
+}
+.headshot:active .img:nth-of-type(2), .headshot:focus .img:nth-of-type(2){
+  opacity: 1;
+  transform: rotate(0);
+  visibility: visible;
+}
+.img {
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+.img:nth-of-type(2) {
+  opacity: 0;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+.figcaption {
+  margin: 1rem 0;
+}
