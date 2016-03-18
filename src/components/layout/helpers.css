@@ -47,3 +47,13 @@
 * html :global(.clearfix) { height: 1%; }
 :global(.clearfix) { display: block; }
 /* close commented backslash hack */
+
+@media (max-width: 768px) {
+  :global .block-sm {
+    display: block;
+  }
+
+  :global .hide-sm {
+    display: none;
+  }
+}

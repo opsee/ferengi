@@ -1,13 +1,49 @@
-.panel {
-  min-height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.section {
+  min-height: 60vh;
+  padding: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading h2 {
+  font-size: 3rem;
+  line-height: 4rem;
+  margin: 2rem 0;
 }
 
 .button {
   font-size: 1.4rem;
   padding: 2rem;
   border-radius: 4rem;
+  margin: 2rem 0;
+}
+
+.prosePanel {
+  flex: 1;
+  padding: 2rem;
+  width: 50%;
+}
+
+.imagePanel {
+  width: 50%
+}
+
+.screenshotPanel {
+  composes: imagePanel;
+  align-self: flex-end;
+}
+
+@media (max-width: 768px) {
+  .imagePanel,
+  .prosePanel {
+    flex: 1 100%;
+    width: 100%;
+  };
+
+  .prosePanel { order: 1; }
+  .imagePanel { order: 2; }
+
+  .button {
+    width: 100%;
+  }
 }
