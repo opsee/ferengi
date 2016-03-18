@@ -5,7 +5,8 @@ export default React.createClass({
   propTypes: {
     svg: PropTypes.string.isRequired,
     alt: PropTypes.string,
-    style: PropTypes.object
+    style: PropTypes.object,
+    className: PropTypes.string
   },
 
   render() {
@@ -15,7 +16,8 @@ export default React.createClass({
     const src = isEncoded ? this.props.svg : `/${this.props.svg}`;
 
     return (
-      <img className={style.svg} src={src} alt={this.props.alt} style={this.props.style}/>
+      <img className={[style.svg, this.props.className].join(' ')}
+        src={src} alt={this.props.alt} style={this.props.style} />
     );
   }
 });

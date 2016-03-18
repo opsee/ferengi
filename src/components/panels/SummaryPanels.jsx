@@ -42,7 +42,7 @@ export default React.createClass({
         <SplitContainer className={style.section}>
           <SplitPanel className={style.imagePanel}>
             <Padding a={4}>
-              <BaseSVG svg={passingAssertionsSVG} />
+              <BaseSVG className={style.assertionsSVG} svg={passingAssertionsSVG} />
             </Padding>
           </SplitPanel>
 
