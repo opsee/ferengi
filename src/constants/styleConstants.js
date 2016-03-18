@@ -13,7 +13,7 @@ const constants = {
   },
 
   font: {
-    display: '"Bariol", sans-serif'
+    display: '"Geogrotesque-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif'
   },
 
   layout: {

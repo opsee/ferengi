@@ -18,7 +18,7 @@ body {
 
 /* Header typography */
 h1, h2 {
-  font-family: "Bariol", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: var(--fontDisplay);
 }
 
 h1 {
