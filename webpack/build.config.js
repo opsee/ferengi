@@ -6,7 +6,7 @@ const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin'
 const sitemap =  require('sitemap-webpack-plugin');
 
 const PATHS = [
-  '/', '/about', '/how', '/features'
+  '/', '/about', '/how', '/features', '/beta-tos'
 ];
 
 module.exports = merge(baseConfig, {
