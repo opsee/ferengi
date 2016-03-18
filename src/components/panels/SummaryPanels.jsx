@@ -23,7 +23,7 @@ export default React.createClass({
               <h2>Complete coverage, <span className="text-accent block-sm">right now</span></h2>
             </div>
 
-            <p className="prose">No software to install, no shell scripts to cURL</p>
+            <h3>No software to install, no shell scripts to cURL</h3>
 
             <Padding tb={2}>
               <Button className={style.button} secondary chevron>
@@ -48,10 +48,10 @@ export default React.createClass({
 
           <SplitPanel className={style.prosePanel} >
             <div className={style.heading}>
-              <h2>Be sure your services respond <span className="text-accent">the way you expect them to</span></h2>
+              <h2>Be sure your services respond the way you <span className="text-accent">expect</span> them to</h2>
             </div>
 
-            <p className="prose">Verify every part of the response – health is more than just a status code.</p>
+            <h3>Verify every part of the response – health is more than just a status code.</h3>
 
             <Padding tb={2}>
               <Button className={style.button} secondary chevron>
@@ -69,7 +69,7 @@ export default React.createClass({
               <h2>Built for your <span className="text-accent">AWS ecosystem</span></h2>
             </div>
 
-            <p className="prose">Designed to work with your favorite tools.</p>
+            <h3>Designed to work with your favorite tools.</h3>
 
             <Padding tb={2}>
               <Button className={style.button} secondary chevron>

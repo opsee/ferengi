@@ -1,28 +1,31 @@
 .section {
   min-height: 60vh;
   padding: 4rem;
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+.heading h2 {
+  font-size: 3rem;
+  line-height: 4rem;
+  margin: 2rem 0;
 }
 
 .button {
   font-size: 1.4rem;
   padding: 2rem;
   border-radius: 4rem;
-}
-
-.panel {
-  width: 50%;
+  margin: 2rem 0;
 }
 
 .prosePanel {
-  composes: panel;
   flex: 1;
   padding: 2rem;
+  width: 50%;
 }
 
 .imagePanel {
-  composes: panel;
+  width: 50%
 }
 
 .screenshotPanel {
