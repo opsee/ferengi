@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import { handleActions } from 'redux-actions';
 import { CHECK_URL } from '../actions/constants';
+import {yeller} from '../modules';
 
 const initial = {
   catfish: {
@@ -18,6 +19,7 @@ export default handleActions({
       return _.assign({}, state, {
         catfish: { token, responses }
       });
-    }
+    },
+    throw: yeller.reportAction
   }
 }, initial);
