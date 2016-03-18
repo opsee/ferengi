@@ -80,10 +80,10 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('build', 'Builds the static site once (to dist/)', ['env', 'clean:dist', 'webpack:build', 'clean:gzip']);
+  grunt.registerTask('build', 'Builds the static site once (to dist/)', ['env', 'clean:dist', 'webpack:build']);
   grunt.registerTask('watch', 'Build the static site, rebuild on changes', ['env', 'clean:dist', 'webpack:watch']);
   grunt.registerTask('dev', 'Build the static site & put a devserver on it', ['env', 'build', 'webpack-dev-server:start']);
 
   grunt.registerTask('deploy:prod', 'Deploy the site to production s3', ['env', 'aws_s3:prod']);
-  grunt.registerTask('deploy:staging', 'Deploy the site to production s3', ['env', 'clean:dist', 'build', 'aws_s3:staging']);
+  grunt.registerTask('deploy:staging', 'Deploy the site to production s3', ['env', 'build', 'aws_s3:staging']);
 };
