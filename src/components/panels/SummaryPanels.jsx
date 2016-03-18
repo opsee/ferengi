@@ -21,7 +21,7 @@ export default React.createClass({
         <SplitContainer className={style.section}>
           <SplitPanel className={style.prosePanel} >
             <div className={style.heading}>
-              <h2>Complete AWS coverage, <span className="text-accent block-sm">right now</span></h2>
+              <h2>Complete AWS coverage, <div className="text-accent block">right now</div></h2>
             </div>
 
             <h3>No software to install, no shell scripts to cURL</h3>

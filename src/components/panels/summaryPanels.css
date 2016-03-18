@@ -39,14 +39,14 @@
 }
 
 @media (max-width: 768px) {
+  .prosePanel { order: 2; }
+  .imagePanel { order: 1; }
+
   .imagePanel,
   .prosePanel {
     flex: 1 100%;
     width: 100%;
   };
-
-  .prosePanel { order: 1; }
-  .imagePanel { order: 2; }
 
   .button {
     width: 100%;
