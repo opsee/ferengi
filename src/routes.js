@@ -6,6 +6,7 @@ import App from './components/App.jsx';
 import Index from './components/pages/Index.jsx';
 import Features from './components/pages/Features.jsx';
 import How from './components/pages/How.jsx';
+import BetaTOS from './components/pages/BetaTOS.jsx';
 
 module.exports = (
   <Router>
@@ -14,6 +15,7 @@ module.exports = (
       <Route path="features" component={Features} />
       <Route path="how" component={How} />
       <Route path="about" component={About} />
+      <Route path="beta-tos" component={BetaTOS} />
     </Route>
   </Router>
 );
