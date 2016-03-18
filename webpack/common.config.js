@@ -66,7 +66,7 @@ module.exports = {
         ),
         include: INCLUDE_DIRS
       }, {
-        test: /\.(png|jpg|svg|ttf|eot|svg|ico|woff(2)?)$/,
+        test: /\.(png|jpg|svg|gif|ttf|eot|svg|ico|woff(2)?)$/,
         loader: 'url-loader?limit=8192',
         include: INCLUDE_DIRS
       }
@@ -83,7 +83,7 @@ module.exports = {
   ],
 
   resolve: {
-    extensions: ['', '.jsx', '.js', '.json', '.svg', '.png', '.jpg'],
+    extensions: ['', '.jsx', '.js', '.json', '.svg', '.png', '.jpg', '.gif'],
     modulesDirectories: [NODE_MODULES_DIR]
   },
 
