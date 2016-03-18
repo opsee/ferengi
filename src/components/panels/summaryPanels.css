@@ -33,6 +33,11 @@
   align-self: flex-end;
 }
 
+.assertionsSVG {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 @media (max-width: 768px) {
   .imagePanel,
   .prosePanel {
