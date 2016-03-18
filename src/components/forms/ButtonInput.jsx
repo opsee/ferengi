@@ -25,7 +25,7 @@ export default React.createClass({
         <Input className={style.input} onChange={this.props.onChange}
                value={this.props.value} />
         <span className={style.buttonWrapper}>
-          <Button className={style.button} onClick={this.props.onClick}>
+          <Button className={style.button} onClick={this.props.onClick} chevron={this.props.chevron}>
             {this.props.buttonText}
           </Button>
         </span>

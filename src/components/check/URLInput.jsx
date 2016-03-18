@@ -31,7 +31,7 @@ export default React.createClass({
       <div className={style.urlInput}>
         <form onSubmit={this.handleSubmit}>
           <ButtonInput onChange={this.handleChange} type="text" value={this.state.url}
-            buttonText={buttonText} onClick={this.handleSubmit} />
+            buttonText={buttonText} onClick={this.handleSubmit} chevron />
         </form>
       </div>
     );

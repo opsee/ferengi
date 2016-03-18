@@ -44,3 +44,8 @@ li {
   list-style-type: disc;
   margin: 0.8rem;
 }
+
+textarea:focus, input:focus{
+  outline: none;
+  border: solid 1px var(--colorAccent);
+}
