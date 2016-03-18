@@ -39,8 +39,6 @@ export const SplitPanel = React.createClass({
   },
 
   getClass() {
-    console.log(this.props);
-
     return classnames(
       style.splitPanel,
       this.props.className,
@@ -51,7 +49,6 @@ export const SplitPanel = React.createClass({
   },
 
   render() {
-    console.log(this.getClass());
     return (
       <div className={this.getClass()}>
         {this.props.children}

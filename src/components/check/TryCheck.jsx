@@ -36,7 +36,6 @@ const TryCheck = React.createClass({
   getResponses() {
     const isSuccess = this.props.redux.asyncActions.checkUrl.status === 'success';
     const responses = this.props.redux.checks.catfish.responses;
-    console.log(isSuccess ? responses : null);
     return isSuccess ? responses : null;
   },
   getFirstResponse(){
