@@ -1,6 +1,6 @@
 .section {
   min-height: 60vh;
-  padding: 4rem;
+  padding: 2rem;
   max-width: var(--layoutMaxWidth);
   margin: 0 auto;
 }
@@ -20,7 +20,7 @@
 
 .prosePanel {
   flex: 1;
-  padding: 2rem;
+  padding: 2rem 0;
   width: 50%;
 }
 

@@ -9,7 +9,7 @@
 .heroContent {
   max-width: var(--layoutMaxWidth);
   margin: 0 auto;
-  padding: 16px;
+  padding: 2rem;
   text-align: center;
 }
 
@@ -20,10 +20,6 @@
 .heading h1 {
   color: var(--colorGray8);
   margin: 2rem 0;
-}
-
-.subHeader {
-
 }
 
 .widgetWrap {
