@@ -20,7 +20,7 @@ export default React.createClass({
         <SplitContainer className={style.section}>
           <SplitPanel className={style.prosePanel} >
             <div className={style.heading}>
-              <h2>Complete coverage, <span className="text-accent block-sm">right now</span></h2>
+              <h2>Complete AWS coverage, <span className="text-accent block-sm">right now</span></h2>
             </div>
 
             <h3>No software to install, no shell scripts to cURL</h3>
@@ -48,7 +48,7 @@ export default React.createClass({
 
           <SplitPanel className={style.prosePanel} >
             <div className={style.heading}>
-              <h2>Be sure your services respond the way you <span className="text-accent">expect</span> them to</h2>
+              <h2>Be sure your services respond the way you <span className="text-accent">coded</span> them</h2>
             </div>
 
             <h3>Verify every part of the response – health is more than just a status code.</h3>
@@ -66,7 +66,7 @@ export default React.createClass({
         <SplitContainer className={style.section}>
           <SplitPanel className={style.prosePanel} >
             <div className={style.heading}>
-              <h2>Built for your <span className="text-accent">AWS ecosystem</span></h2>
+              <h2>Built for your <span className="text-accent">your stack</span></h2>
             </div>
 
             <h3>Designed to work with your favorite tools.</h3>
