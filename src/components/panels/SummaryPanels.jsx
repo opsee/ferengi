@@ -1,14 +1,9 @@
 import React from 'react';
 import Button from '../forms/Button';
 import { Padding } from '../layout';
-import SkewPanel from '../panels/SkewPanel';
-// import SplitPanel from '../panels/SplitPanel';
-import SplitColumn from '../panels/SplitColumn';
 import style from './summaryPanels.css';
-import styleConstants from '../../constants/styleConstants';
 
 import BaseSVG from '../images/BaseSVG';
-import installStepsSVG from '../images/install-steps2.svg';
 import integrationLogosSVG from '../images/integration-logos.svg';
 import onboardingSVG from '../images/onboarding.svg';
 import passingAssertionsSVG from '../images/passing-assertions.svg';
