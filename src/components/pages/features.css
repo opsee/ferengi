@@ -2,15 +2,50 @@
   color: white;
 }
 
-.section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
 .button {
   font-size: 1.4rem;
   padding: 2rem;
   border-radius: 4rem;
+}
+
+.offsetDivider {
+  margin-top: -5rem;
+  padding-bottom: 10rem
+}
+
+.section {
+  min-height: 50vh;
+  max-width: var(--layoutMaxWidth);
+  margin: 0 auto;
+}
+
+.prosePanel {
+  flex: 1;
+  width: 50%;
+}
+
+.imagePanel {
+  width: 50%;
+  text-align: center;
+}
+
+.svg {
+  width: 100%;
+
+}
+
+
+@media (max-width: 768px) {
+  .prosePanel { order: 1; }
+  .imagePanel { order: 2; }
+
+  .imagePanel,
+  .prosePanel {
+    flex: 1 100%;
+    width: 100%;
+  };
+
+  .button {
+    width: 100%;
+  }
 }
