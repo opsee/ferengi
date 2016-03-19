@@ -9,7 +9,6 @@ import Autosuggest from 'react-autosuggest';
 import {BoundField, Button} from '../forms';
 import {Add, Delete} from 'emissary/src/js/components/icons';
 import {Padding, Expandable} from '../layout';
-import Rule from 'emissary/src/js/components/layout/Rule';
 import {Color, Heading} from '../type';
 import Highlight from '../global/Highlight';
 import validate from 'emissary/src/js/modules/validate';
@@ -504,7 +503,6 @@ const AssertionsSelection = React.createClass({
   renderAssertionPickType(){
     return (
       <div>
-        <Rule/>
         <Padding t={1}>
           <Heading level={3}>Add an Assertion</Heading>
         </Padding>
