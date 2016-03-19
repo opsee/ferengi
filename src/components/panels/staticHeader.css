@@ -11,13 +11,17 @@
     var(--colorWarm1 ) 90%,
     var(--colorWarm1 ) 100%
   );
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .header h1,
 .header h2,
 .header h3 {
   color: white;
+}
+
+.content {
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

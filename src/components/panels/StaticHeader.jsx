@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import Header from '../Header';
 import style from './staticHeader.css';
 
 const StaticHeader = React.createClass({
@@ -10,7 +11,11 @@ const StaticHeader = React.createClass({
   render() {
     return (
       <div className={[this.props.className, style.header].join(' ')}>
-        {this.props.children}
+        <Header theme='light' />
+
+        <div className={style.content}>
+          {this.props.children}
+        </div>
       </div>
     );
   }

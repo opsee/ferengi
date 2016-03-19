@@ -24,7 +24,7 @@ const Features = React.createClass({
         <StaticHeader className={style.header}>
           <div className="text-center">
             <h1 className={style.header}>Great monitoring doesn&rsquo;t need to be complicated</h1>
-            <p>Opsee is designed for busy teams who want to get back to doing what they love.</p>
+            <h3>Opsee is designed for busy teams who want to get back to doing what they love.</h3>
           </div>
         </StaticHeader>
 
