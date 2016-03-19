@@ -12,14 +12,23 @@ export default React.createClass({
     buttonText: PropTypes.string
   },
 
+  getClass() {
+    return [
+      style.group,
+      this.props.className,
+    ].join(' ');
+  },
+
   render() {
     return (
-      <div className={`${style.group} clearfix`}>
+      <div className={this.getClass()}>
         <Input className={style.input} onChange={this.props.onChange}
                value={this.props.value} />
-        <Button className={style.button} onClick={this.props.onClick}>
-          {this.props.buttonText}
-        </Button>
+        <span className={style.buttonWrapper}>
+          <Button className={style.button} onClick={this.props.onClick} chevron={this.props.chevron}>
+            {this.props.buttonText}
+          </Button>
+        </span>
       </div>
     );
   }

@@ -8,6 +8,7 @@ import BaseSVG from '../images/BaseSVG';
 import integrationLogosSVG from '../images/integration-logos.svg';
 import onboardingSVG from '../images/onboarding.svg';
 import passingAssertionsSVG from '../images/passing-assertions.svg';
+import landingLogosSVG from '../images/landing-logos.svg';
 
 import { SplitContainer, SplitPanel } from '../panels/SplitPanels';
 
@@ -20,7 +21,7 @@ export default React.createClass({
         <SplitContainer className={style.section}>
           <SplitPanel className={style.prosePanel} >
             <div className={style.heading}>
-              <h2>Complete AWS coverage, <span className="text-accent block-sm">right now</span></h2>
+              <h2>Complete AWS coverage, <div className="text-accent">right now</div></h2>
             </div>
 
             <h3>No software to install, no shell scripts to cURL</h3>
@@ -33,7 +34,9 @@ export default React.createClass({
           </SplitPanel>
 
           <SplitPanel className={style.imagePanel}>
-            <BaseSVG svg={onboardingSVG} />
+            <Padding l={4}>
+              <BaseSVG svg={onboardingSVG} />
+            </Padding>
           </SplitPanel>
         </SplitContainer>
 
@@ -79,7 +82,7 @@ export default React.createClass({
           </SplitPanel>
 
           <SplitPanel className={style.imagePanel}>
-            <BaseSVG svg={integrationLogosSVG} />
+            <BaseSVG svg={landingLogosSVG} />
           </SplitPanel>
         </SplitContainer>
       </div>

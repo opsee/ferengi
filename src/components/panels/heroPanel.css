@@ -1,5 +1,5 @@
 .heroPanel {
-  min-height: 30vh;
+  min-height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,9 +7,9 @@
 }
 
 .heroContent {
-  max-width: 496px;
+  max-width: var(--layoutMaxWidth);
   margin: 0 auto;
-  padding: 16px;
+  padding: 1.6rem;
   text-align: center;
 }
 
@@ -19,15 +19,12 @@
 
 .heading h1 {
   color: var(--colorGray8);
-  font-family: 'Dosis';
-  text-transform: uppercase;
+  margin: 2rem 0;
 }
 
-.subHeader {
-  color: var(--colorGray6);
-  font-size: 1.6rem;
-  line-height: 2rem;
-  padding: 16px;
+.heading h3 {
+  font-size: 2.4rem;
+  line-height: 3rem;
 }
 
 .widgetWrap {

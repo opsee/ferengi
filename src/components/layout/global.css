@@ -18,20 +18,19 @@ body {
 
 /* Header typography */
 h1, h2 {
-  font-family: 'Dosis';
-  text-transform: uppercase;
+  font-family: var(--fontDisplay);
 }
 
 h1 {
   font-size: 4rem;
-  line-height: 6.2rem;
+  line-height: 4.8rem;
   color: var(--colorGray9);
 }
 
 h2 {
   font-size: 2.4rem;
   color: var(--colorGray7);
-  line-height: 3.4rem;
+  line-height: 3rem;
 }
 
 h3 {
@@ -43,4 +42,24 @@ h3 {
 li {
   list-style-type: disc;
   margin: 0.8rem;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+  border: solid 1px var(--colorAccent);
+}
+
+/* Link styling */
+a {
+  color: var(--colorPrimary);
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: #0c80df;
+  text-decoration: underline;
+}
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }

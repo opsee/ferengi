@@ -2,19 +2,16 @@
   /* Defaults */
   background-color: var(--colorAccent);
   border: 1px solid var(--colorAccent);
-
-
   background-image: none;
   border-radius: 2rem;
   box-shadow: none;
   color: white;
   cursor: pointer;
   display: inline-block;
-  font-family: 'Dosis';
+  font-family: var(--fontDisplay);
   outline: 0;
   padding: 1rem 1.5rem;
   text-align: center;
-  text-transform: uppercase;
   touch-action: manipulation;
   user-select: none;
   vertical-align: middle;

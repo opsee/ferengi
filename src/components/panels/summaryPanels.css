@@ -1,26 +1,26 @@
-.section {
-  min-height: 60vh;
-  padding: 4rem;
-  max-width: 1200px;
+  .section {
+  min-height: 50vh;
+  padding: 2rem;
+  max-width: var(--layoutMaxWidth);
   margin: 0 auto;
 }
 
 .heading h2 {
-  font-size: 3rem;
+  font-size: 3.6rem;
   line-height: 4rem;
-  margin: 2rem 0;
+  margin: 1.6rem 0;
 }
 
 .button {
-  font-size: 1.4rem;
-  padding: 2rem;
+  font-size: 1.6rem;
+  padding: 2rem 4rem;
   border-radius: 4rem;
   margin: 2rem 0;
 }
 
 .prosePanel {
   flex: 1;
-  padding: 2rem;
+  padding: 2rem 0;
   width: 50%;
 }
 
@@ -34,19 +34,19 @@
 }
 
 .assertionsSVG {
-  max-width: 400px;
+  max-width: 360px;
   margin: 0 auto;
 }
 
 @media (max-width: 768px) {
+  .prosePanel { order: 2; }
+  .imagePanel { order: 1; }
+
   .imagePanel,
   .prosePanel {
     flex: 1 100%;
     width: 100%;
   };
-
-  .prosePanel { order: 1; }
-  .imagePanel { order: 2; }
 
   .button {
     width: 100%;

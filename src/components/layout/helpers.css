@@ -1,3 +1,7 @@
+:global .block {
+  display: block;
+}
+
 :global .width-full {
   width: 100%;
 }

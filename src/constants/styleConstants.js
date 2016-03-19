@@ -12,8 +12,12 @@ const constants = {
     warm4: '#D65F54'
   },
 
+  font: {
+    display: '"Geogrotesque-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif'
+  },
+
   layout: {
-    containerWidth: '1400px'
+    maxWidth: '1000px'
   }
 };
 

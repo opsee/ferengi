@@ -9,7 +9,7 @@ const PATHS = [
   '/', '/about', '/how', '/features', '/beta-tos'
 ];
 
-const plugins = [
+var plugins = [
   new StaticSiteGeneratorPlugin('bundle.js', PATHS, {}),
   new sitemap('https://opsee.com', PATHS, 'sitemap.xml'),
   new webpack.DefinePlugin({

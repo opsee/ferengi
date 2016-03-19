@@ -1,14 +1,47 @@
+
+.group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+  width: 100%;
+}
+
 .input,
 .button {
-  float: left;
+  width: 100%;
+  margin: 0.5rem;
 }
 
-.input {
-  /* FIXME importants r gross */
-  width: 75% !important;
-}
+/* Large sons^H^H^H^Hscreens */
+@media (min-width: 768px) {
+  .input {
+    display: table-cell;
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    background-color: #fff;
+    background-image: none;
+    color: var(--colorGray9);
+    border-right: none !important;
+  }
 
-.button {
-  width: 25%;
-  margin-right: -25%;
+  .buttonWrapper {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+    display: table-cell;
+    border-collapse: separate;
+  }
+
+  .button {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
 }

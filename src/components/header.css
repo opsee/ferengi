@@ -3,8 +3,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Dosis';
-  text-transform: uppercase;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
 }
 
 .links,
@@ -41,7 +44,7 @@
   composes: links;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 920px) {
   .navLinks { display: none; }
 }
 
