@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Header from '../Header';
 import SkewPanel from '../panels/SkewPanel';
 import HeroPanel from '../panels/HeroPanel';
 import SignUpPanel from '../panels/SignUpPanel';
@@ -14,6 +15,8 @@ export default React.createClass({
   render() {
     return (
       <div>
+        <Header theme='dark'/>
+
         <div>
           <HeroPanel />
         </div>

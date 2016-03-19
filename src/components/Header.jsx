@@ -1,19 +1,33 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 
 import Button from './forms/Button';
 import Container from './layout/Container';
 import BaseSVG from './images/BaseSVG';
-import logoLight from './images/logos/opseelogo-screen-light-full.svg';
+import logoDark from './images/logos/opseelogo-screen-light-full.svg';
+import logoLight from './images/logos/opseelogo-screen-dark-one.svg';
+
 import style from './header.css';
 
 module.exports = React.createClass({
+  propTypes: {
+    theme: PropTypes.oneOf(['light', 'dark'])
+  },
+
+  getDefaultProps() {
+    return {
+      theme: 'light'
+    };
+  },
+
   render() {
+    const logoSVG = this.props.theme === 'dark' ? logoDark : logoLight;
+
     return (
-      <Container>
-        <div className={style.header}>
+      <header>
+        <div className={style[this.props.theme]}>
           <Link to="/">
-            <BaseSVG className={style.logo} svg={logoLight} style={{height: 80}} />
+            <BaseSVG className={style.logo} svg={logoSVG} style={{height: 80}} />
           </Link>
 
           <div className={style.nav}>
@@ -34,7 +48,7 @@ module.exports = React.createClass({
             </ul>
           </div>
         </div>
-      </Container>
+      </header>
     );
   }
 });

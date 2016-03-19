@@ -1,13 +1,9 @@
 .header {
-  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.logo {
-  height: 80px;
-  width: auto;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .links,
@@ -19,15 +15,17 @@
 
 .links {
   padding: 0 16px;
+  font-family: var(--fontDisplay);
+}
+
+.logo {
+  height: 80px;
+  width: auto;
 }
 
 .links li {
   display: inline;
   margin: 0 12px;
-}
-
-.links a {
-  color: var(--colorGray4);
 }
 
 .authLinks {
@@ -44,17 +42,49 @@
   composes: links;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 768px) {
   .navLinks { display: none; }
 }
 
-.cta {
+
+/* Light theme */
+.light {
+  composes: header;
+  background-color: transparent;
+}
+
+.light .links a {
+  color: white;
+}
+
+.light .cta {
+  color: white;
+  background-color: transparent;
+  border-color: white;
+}
+
+.light .cta:hover {
+  background: white;
+  color: var(--colorWarm2);
+}
+
+/* Dark theme */
+.dark {
+  composes: header;
+  background-color: white;
+}
+
+.dark .links a {
+  color: var(--colorGray4);
+}
+
+.dark .cta button {
   color: white;
   background-color: var(--colorWarm2);
   border-color: var(--colorWarm2);
 }
 
-.cta:hover {
+.dark .cta:hover button {
   background-color: color(var(--colorWarm2) shade(20%));
   border-color: color(var(--colorWarm2) shade(20%));
 }

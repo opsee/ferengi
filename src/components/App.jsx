@@ -17,10 +17,6 @@ const App = React.createClass({
   render() {
     return (
       <div className={style.app}>
-        <header className={style.header}>
-          <Header />
-        </header>
-
         <main className={style.content}>
           {this.props.children}
         </main>
