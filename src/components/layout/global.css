@@ -16,6 +16,13 @@ body {
   line-height: 1.42857;
 }
 
+p {
+  color: var(--colorGray6);
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  margin: 1.2rem 0;
+}
+
 /* Header typography */
 h1, h2 {
   font-family: var(--fontDisplay);
