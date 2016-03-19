@@ -11,12 +11,17 @@
     var(--colorWarm1 ) 90%,
     var(--colorWarm1 ) 100%
   );
+  color: white;
 }
 
 .header h1,
 .header h2,
 .header h3 {
   color: white;
+}
+
+.header h1 {
+  margin: 1.2rem;
 }
 
 .content {

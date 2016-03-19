@@ -11,7 +11,7 @@
 }
 
 :global .prose {
-  color: var(--colorGray9);
+  color: var(--colorGray6);
   font-size: 1.6rem;
   line-height: 2.4rem;
 }
