@@ -46,9 +46,13 @@ h3 {
   color: var(--colorGray7);
 }
 
-li {
+/* Lists */
+ul {
   list-style-type: disc;
-  margin: 0.8rem;
+}
+
+li {
+  margin-left: 2rem;
 }
 
 textarea:focus, input:focus{

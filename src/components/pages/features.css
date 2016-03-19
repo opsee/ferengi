@@ -2,29 +2,11 @@
   color: white;
 }
 
-.header h1 {
-  margin: 1rem;
-}
-
-.subheader {
-  font-size: 2.4rem;
-  color: var(--colorGray4);
-}
-
 .section {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-.divider {
-  height: 120px;
-}
-
-.offsetDivider {
-  composes: divider;
-  margin-top: -60px;
 }
 
 .button {

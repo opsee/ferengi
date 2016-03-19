@@ -1,6 +1,6 @@
 .panel {
   width: 100%;
   max-width: var(--layoutMaxWidth);
-  margin: 10rem auto;
-  padding: 0 2rem;
+  margin: 0 auto;
+  padding: 4.8 2rem 2rem 2rem;
 }

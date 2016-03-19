@@ -32,6 +32,10 @@
   color: #FFF;
 }
 
+:global .section {
+  padding: 2.4rem 0;
+}
+
 /* Clearfix fix */
 /* @see https://css-tricks.com/snippets/css/clear-fix/ */
 :global(.clearfix):after {
