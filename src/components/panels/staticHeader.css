@@ -15,14 +15,14 @@
   margin-bottom: 4.8rem;
 }
 
-.header h1,
-.header h2,
-.header h3 {
-  color: white;
+.header h1 {
+  color: rgba(255, 255, 255, 1);
+  margin: 1.2rem;
 }
 
-.header h1 {
-  margin: 1.2rem;
+.header h2,
+.header h3 {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .content {

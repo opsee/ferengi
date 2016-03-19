@@ -1,6 +1,5 @@
-  .section {
+.section {
   min-height: 50vh;
-  padding: 2rem;
   max-width: var(--layoutMaxWidth);
   margin: 0 auto;
 }
@@ -25,7 +24,7 @@
 }
 
 .imagePanel {
-  width: 50%
+  width: 50%;
 }
 
 .screenshotPanel {
