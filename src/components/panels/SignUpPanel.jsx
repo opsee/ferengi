@@ -62,11 +62,18 @@ const SignUpPanel = React.createClass({
   },
   renderForm(){
     if (this.getStatus() === 'success'){
+      if (this.state.referrer === 'producthunt'){
+        return (
+          <Padding t={2} b={1}>
+            We&rsquo;ve got your info! Check your email to get started.
+          </Padding>
+        )
+      }
       return (
         <Padding t={2} b={1}>
-          We&rsquo;ve got your info! Check your email to get started.
+          Thanks! We&rsquo;re currently reviewing signups for our private beta, and if you&rsquo;re a good fit you&rsquo;ll get an email from us.
         </Padding>
-      )
+      );
     }
     return (
       <div>
