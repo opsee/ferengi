@@ -1,7 +1,6 @@
 import classnames from 'classnames';
 import React, { PropTypes } from 'react';
 import style from './splitPanels.css';
-import BaseSVG from '../images/BaseSVG';
 
 export const SplitContainer = React.createClass({
   propTypes: {

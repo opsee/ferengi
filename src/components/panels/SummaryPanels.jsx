@@ -5,7 +5,6 @@ import SkewDivider from '../layout/SkewDivider';
 import style from './summaryPanels.css';
 
 import BaseSVG from '../images/BaseSVG';
-import integrationLogosSVG from '../images/integration-logos.svg';
 import onboardingSVG from '../images/onboarding.svg';
 import passingAssertionsSVG from '../images/passing-assertions.svg';
 import landingLogosSVG from '../images/landing-logos.svg';

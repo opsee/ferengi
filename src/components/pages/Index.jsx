@@ -15,7 +15,7 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <Header theme='dark'/>
+        <Header theme="dark"/>
 
         <div>
           <HeroPanel />

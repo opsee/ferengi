@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import peopleJSON from '../../data/people';
 import style from '../pages/about.css';
@@ -63,7 +64,7 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <h2>The Opsee Team</h2>
+        <h2 className="text-accent">The Opsee Team</h2>
         <p>We&rsquo;ve got over 15 years experience developing monitoring tools, and working with developers and ops professionals to build some of the most beloved tools in the space including Boundary and Sensu.</p>
 
         <div className={style.people}>

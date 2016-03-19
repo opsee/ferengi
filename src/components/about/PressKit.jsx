@@ -4,7 +4,7 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <h2 className='text-accent'>Press Kit</h2>
+        <h2 className="text-accent">Press Kit</h2>
         <p>A collection of Opsee brand resources and assets for your use:</p>
 
         <h3>Logo Usage Guidelines</h3>

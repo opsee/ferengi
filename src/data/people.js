@@ -38,4 +38,4 @@ export default [
     name: 'Sara Bee',
     twitter: 'doeg'
   }
-]
+];

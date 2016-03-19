@@ -1,10 +1,7 @@
 import React from 'react';
-import _ from 'lodash';
 
 import Panel from '../panels/Panel';
 import SkewDivider from '../layout/SkewDivider';
-import {Expandable, Grid, Row, Col, Padding} from '../layout';
-import Container from '../layout/Container';
 import StaticHeader from '../panels/StaticHeader';
 import style from './about.css';
 import SkewPanel from '../panels/SkewPanel';

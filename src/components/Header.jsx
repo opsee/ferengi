@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 
 import Button from './forms/Button';
-import Container from './layout/Container';
 import BaseSVG from './images/BaseSVG';
 import logoDark from './images/logos/opseelogo-screen-light-full.svg';
 import logoLight from './images/logos/opseelogo-screen-dark-one.svg';

@@ -5,7 +5,7 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <h2>We&rsquo;re Hiring!</h2>
+        <h2 className="text-accent">We&rsquo;re Hiring!</h2>
       <p>We’re always looking for talented people to join, so even if you don’t see a position listed, reach out to us. Just send an email with your résumé and a little about yourself to <a href="mailto:work@opsee.co?subject=love too work at opsee">work@opsee.co</a>. Every thoughtful application we receive will be replied to, we promise.</p>
 
         <Padding t={1}>
