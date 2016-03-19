@@ -27,7 +27,7 @@ module.exports = React.createClass({
       <header>
         <div className={style[this.props.theme]}>
           <Link to="/">
-            <BaseSVG className={style.logo} svg={logoSVG} style={{height: 80}} />
+            <BaseSVG className={style.logo} svg={logoSVG} />
           </Link>
 
           <div className={style.nav}>

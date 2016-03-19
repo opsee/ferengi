@@ -10,11 +10,10 @@
 .cta {
   display: inline;
   font-size: 1.6rem;
-  font-weight: 500;
 }
 
 .links {
-  padding: 0 16px;
+  padding: 0 1.6rem;
   font-family: var(--fontDisplay);
 }
 
