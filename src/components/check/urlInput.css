@@ -21,3 +21,12 @@
 .urlInput button {
   padding: 2rem 6rem;
 }
+
+@media (max-width: 768px) {
+  .urlInput button,
+  .urlInput input {
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    height: 5rem;
+  }
+}
