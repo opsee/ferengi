@@ -5,9 +5,6 @@ import style from './how.css';
 import SkewDivider from '../layout/SkewDivider';
 import SkewPanel from '../panels/SkewPanel';
 import SignUpPanel from '../panels/SignUpPanel';
-import {Grid, Row, Col, Padding } from '../layout';
-import Container from '../layout/Container';
-import Button from '../forms/Button';
 
 import BaseSVG from '../images/BaseSVG';
 import howBastion from '../images/how-bastion.svg';

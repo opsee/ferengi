@@ -7,7 +7,7 @@ export default React.createClass({
         <h2 className="text-accent">Press Kit</h2>
         <p>A collection of Opsee brand resources and assets for your use:</p>
 
-        <div className='section'>
+        <div className="section">
           <h3>Logo Usage Guidelines</h3>
           <ul>
             <li><p>Do not modify these logos, or use them suggest sponsorship or endorsement by Opsee.</p></li>
@@ -17,7 +17,7 @@ export default React.createClass({
           </ul>
         </div>
 
-        <div className='section'>
+        <div className="section">
           <h3>Logo pack</h3>
 
           <p>All logo variants, available for download as a .ZIP file:</p>

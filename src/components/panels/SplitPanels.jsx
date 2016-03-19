@@ -33,17 +33,14 @@ export const SplitPanel = React.createClass({
 
   getDefaultProps() {
     return {
-      align: null,
+      align: null
     };
   },
 
   getClass() {
-    return classnames(
-      style.splitPanel,
-      this.props.className,
-      {
-        'align-self-start': this.props.align === 'top',
-        'align-self-end': this.props.align === 'bottom',
+    return classnames(style.splitPanel, this.props.className, {
+      'align-self-start': this.props.align === 'top',
+      'align-self-end': this.props.align === 'bottom'
     });
   },
 

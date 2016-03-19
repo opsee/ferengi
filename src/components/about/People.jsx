@@ -67,7 +67,7 @@ export default React.createClass({
         <h2 className="text-accent">The Opsee Team</h2>
         <p>We&rsquo;ve got over 15 years experience developing monitoring tools, and working with developers and ops professionals to build some of the most beloved tools in the space including Boundary and Sensu.</p>
 
-        <div className='section'>
+        <div className="section">
           <div className={style.people}>
             {this.getPeople().map(this.renderPerson)}
           </div>

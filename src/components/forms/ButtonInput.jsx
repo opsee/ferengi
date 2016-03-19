@@ -9,13 +9,15 @@ export default React.createClass({
     type: PropTypes.string,
     value: PropTypes.string,
     onClick: PropTypes.func,
-    buttonText: PropTypes.string
+    buttonText: PropTypes.string,
+    className: PropTypes.string,
+    chevron: PropTypes.bool
   },
 
   getClass() {
     return [
       style.group,
-      this.props.className,
+      this.props.className
     ].join(' ');
   },
 
