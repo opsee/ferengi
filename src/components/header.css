@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1600px;
+  max-width: var(--layoutHeaderWidth);
   margin: 0 auto;
 }
 
@@ -47,7 +47,6 @@
 @media (max-width: 768px) {
   .navLinks { display: none; }
 }
-
 
 /* Light theme */
 .light {
