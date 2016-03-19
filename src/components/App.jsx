@@ -1,9 +1,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-
 import {yeller} from '../modules';
 import Footer from './Footer.jsx';
-import Header from './Header.jsx';
 import style from './app.css';
 import Analytics from './global/Analytics';
 

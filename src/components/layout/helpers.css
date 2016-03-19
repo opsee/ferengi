@@ -11,7 +11,7 @@
 }
 
 :global .prose {
-  color: var(--colorGray9);
+  color: var(--colorGray6);
   font-size: 1.6rem;
   line-height: 2.4rem;
 }
@@ -30,6 +30,10 @@
 
 :global .text-accent-light {
   color: #FFF;
+}
+
+:global .section {
+  padding: 2.4rem 0;
 }
 
 /* Clearfix fix */

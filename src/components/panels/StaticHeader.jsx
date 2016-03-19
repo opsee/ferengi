@@ -11,7 +11,7 @@ const StaticHeader = React.createClass({
   render() {
     return (
       <div className={[this.props.className, style.header].join(' ')}>
-        <Header theme='light' />
+        <Header theme="light" />
 
         <div className={style.content}>
           {this.props.children}

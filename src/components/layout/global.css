@@ -16,6 +16,13 @@ body {
   line-height: 1.42857;
 }
 
+p {
+  color: var(--colorGray6);
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  margin: 1.6rem 0;
+}
+
 /* Header typography */
 h1, h2 {
   font-family: var(--fontDisplay);
@@ -28,9 +35,9 @@ h1 {
 }
 
 h2 {
-  font-size: 2.4rem;
+  font-size: 3.6rem;
   color: var(--colorGray7);
-  line-height: 3rem;
+  line-height: 4.8rem;
 }
 
 h3 {
@@ -39,9 +46,13 @@ h3 {
   color: var(--colorGray7);
 }
 
-li {
+/* Lists */
+ul {
   list-style-type: disc;
-  margin: 0.8rem;
+}
+
+li {
+  margin-left: 2rem;
 }
 
 textarea:focus, input:focus{

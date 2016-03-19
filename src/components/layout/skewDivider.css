@@ -2,5 +2,11 @@
   border-top: solid 1px var(--colorGray2);
   transform: skewY(-5deg);
   background: white;
-  margin: 50px;
+  margin: 10rem 2rem;
+}
+
+@media (max-width: 768px) {
+  .divider {
+    margin: 4.8rem 2rem;
+  }
 }

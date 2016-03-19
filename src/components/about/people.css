@@ -1,0 +1,85 @@
+.team {
+  background-color: $gray_800;
+  margin: 0 auto;
+}
+
+.people {
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.person {
+  width: 50%;
+  padding: 2rem;
+}
+
+.headshot {
+  text-align: center;
+  position: relative;
+}
+
+@media (min-width: 700px) {
+  .person{
+    width: 33%;
+  }
+}
+
+.name {
+  font-family: var(--fontDisplay);
+}
+
+.headshot:active .img:nth-of-type(2), .headshot:focus .img:nth-of-type(2){
+  opacity: 1;
+  transform: rotate(0);
+  visibility: visible;
+}
+
+.img {
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  transition: 250ms transform, 250ms opacity;
+}
+
+.img:hover + .imgRoll, .imgRoll:hover{
+  opacity: 1;
+  transform: rotate(0);
+  visibility: visible;
+}
+
+.imgRoll{
+  composes: img;
+  opacity: 0;
+  transform: rotate(-10deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.figcaption {
+  margin: 1rem 0;
+}
+
+.icons {
+  display:flex;
+  justify-content: center;
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+  display: block;
+  margin: 0.6rem;
+}
+
+.twitterIcon {
+  composes: icon;
+  fill: rgb(106, 171, 233);
+  transition: fill var(--transitionEaseOut);
+}
+
+.twitterIcon:hover {
+  fill: color(rgb(106, 171, 233) shade(20%));
+}

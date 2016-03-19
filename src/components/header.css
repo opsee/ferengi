@@ -2,8 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1600px;
+  max-width: var(--layoutHeaderWidth);
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .links,
@@ -24,7 +25,10 @@
 
 .links li {
   display: inline;
-  margin: 0 12px;
+}
+
+.links li a {
+  padding: 1.6rem 0.6rem;
 }
 
 .authLinks {
@@ -42,9 +46,12 @@
 }
 
 @media (max-width: 768px) {
+  .links li {
+    padding: 0;
+  }
+
   .navLinks { display: none; }
 }
-
 
 /* Light theme */
 .light {

@@ -3,14 +3,12 @@ import Button from '../forms/Button';
 import { Padding } from '../layout';
 import SkewDivider from '../layout/SkewDivider';
 import style from './summaryPanels.css';
+import { SplitContainer, SplitPanel } from '../panels/SplitPanels';
 
 import BaseSVG from '../images/BaseSVG';
-import integrationLogosSVG from '../images/integration-logos.svg';
 import onboardingSVG from '../images/onboarding.svg';
 import passingAssertionsSVG from '../images/passing-assertions.svg';
 import landingLogosSVG from '../images/landing-logos.svg';
-
-import { SplitContainer, SplitPanel } from '../panels/SplitPanels';
 
 export default React.createClass({
   render() {

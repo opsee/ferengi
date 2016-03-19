@@ -1,3 +1,12 @@
 .panel {
   width: 100%;
+  max-width: var(--layoutMaxWidth);
+  margin: 0 auto;
+  padding: 4.8rem 4.8rem 0 4.8rem;
+}
+
+@media (max-width: 768px) {
+  .panel {
+    padding: 2rem 0 2rem 2rem;
+  }
 }

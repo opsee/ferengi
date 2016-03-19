@@ -10,3 +10,38 @@
 .header h1 {
   margin: 1rem;
 }
+
+.svg {
+  height: 360px;
+}
+
+.section {
+  min-height: 50vh;
+  max-width: var(--layoutMaxWidth);
+  margin: 0 auto;
+}
+
+.prosePanel {
+  flex: 1;
+  width: 50%;
+}
+
+.imagePanel {
+  width: 50%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .prosePanel { order: 2; }
+  .imagePanel { order: 1; }
+
+  .imagePanel,
+  .prosePanel {
+    flex: 1 100%;
+    width: 100%;
+  };
+
+  .button {
+    width: 100%;
+  }
+}
