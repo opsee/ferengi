@@ -10,7 +10,8 @@
 
 .offsetDivider {
   margin-top: -6.4rem;
-  height: 10vmax
+  height: 10vmax; /* use height instead of margin/padding to clip phone */
+  margin-bottom: 1rem;
 }
 
 .section {
