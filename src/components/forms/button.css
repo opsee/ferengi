@@ -3,7 +3,7 @@
   background-color: var(--colorAccent);
   border: 1px solid var(--colorAccent);
   background-image: none;
-  border-radius: 2rem;
+  // border-radius: 2rem;
   box-shadow: none;
   color: white;
   cursor: pointer;

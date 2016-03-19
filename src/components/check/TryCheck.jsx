@@ -38,6 +38,7 @@ const TryCheck = React.createClass({
     const responses = this.props.redux.checks.catfish.responses;
     return isSuccess ? responses : null;
   },
+
   getFirstResponse(){
     const res = _.chain(this.getResponses()).head().get('http_response').value();
     if (res && res.headers){
@@ -49,17 +50,21 @@ const TryCheck = React.createClass({
     }
     return null;
   },
+
   isLoading() {
     const requestStatus = this.props.redux.asyncActions.checkUrl.status;
     return requestStatus === 'pending';
   },
+
   handleSubmit(url) {
     this.setState({ isLoading: true });
     this.props.actions.checkURL(url);
   },
+
   handleAssertionsChange(){
     return true;
   },
+
   renderResponses() {
     const first = this.getFirstResponse();
     if (first){
@@ -69,13 +74,15 @@ const TryCheck = React.createClass({
             <CheckResponseSingle {...first}/>
           </div>
           <form ref="form">
-            <AssertionSelection assertions={this.state.assertions} onChange={this.handleAssertionsChange} response={this.getFirstResponse()} responseFormatted={this.getFirstResponse()}/>
+            <AssertionSelection assertions={this.state.assertions} onChange={this.handleAssertionsChange}
+              response={this.getFirstResponse()} responseFormatted={this.getFirstResponse()}/>
           </form>
         </div>
       );
     }
     return null;
   },
+
   render() {
     return (
       <div className="width-full">
