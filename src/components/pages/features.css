@@ -26,6 +26,11 @@
   padding: 2rem;
 }
 
+.screenshotProsePanel {
+  composes: prosePanel;
+  align-self: flex-start;
+}
+
 .imagePanel {
   width: 50%;
   text-align: center;

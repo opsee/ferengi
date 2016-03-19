@@ -4,6 +4,7 @@
   align-items: center;
   max-width: var(--layoutHeaderWidth);
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .links,
@@ -45,6 +46,10 @@
 }
 
 @media (max-width: 768px) {
+  .links li {
+    padding: 0;
+  }
+
   .navLinks { display: none; }
 }
 

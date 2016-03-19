@@ -85,7 +85,7 @@ const Features = React.createClass({
               <BaseSVG svg={notificationsSVG} className={style.svg} />
             </SplitPanel>
 
-            <SplitPanel className={style.prosePanel}>
+            <SplitPanel className={style.screenshotProsePanel}>
               <Padding tb={1}>
                 <h2>Rich, actionable <span className="text-accent">notifications</span></h2>
               </Padding>
@@ -108,7 +108,7 @@ const Features = React.createClass({
           <SkewDivider className={style.offsetDivider} />
 
           <SplitContainer className={style.section}>
-            <SplitPanel className={style.prosePanel}>
+            <SplitPanel className={style.screenshotProsePanel}>
               <Padding tb={1}>
                 <h2><span className="text-accent">Assertions:</span> more just than status codes</h2>
               </Padding>
@@ -137,7 +137,7 @@ const Features = React.createClass({
               <BaseSVG svg={bastionSVG} className={style.svg} />
             </SplitPanel>
 
-            <SplitPanel className={style.prosePanel}>
+            <SplitPanel className={style.screenshotProsePanel}>
               <Padding tb={1}>
                 <h2>Clean & <span className="text-accent">simple</span></h2>
               </Padding>
@@ -147,6 +147,12 @@ const Features = React.createClass({
                 <li><span className="prose">Find problems without staring at graphs</span></li>
                 <li><span className="prose">Responsive UI works on any device</span></li>
               </ul>
+
+              <Padding tb={2}>
+                <Button className={style.button} secondary chevron>
+                  Create assertions against any website
+                </Button>
+              </Padding>
             </SplitPanel>
           </SplitContainer>
 
