@@ -12,7 +12,7 @@ body {
   /* Base typography */
   font-size: 1.6rem;
   font-weight: 300;
-  font-family: var(--fontGotham);
+  font-family: var(--fontMain);
   line-height: 1.42857;
 }
 

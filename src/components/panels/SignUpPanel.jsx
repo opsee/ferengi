@@ -52,11 +52,7 @@ const SignUpPanel = React.createClass({
       if (typeof this.getStatus() === 'object'){
         msg = _.get(this.getStatus(), 'message') || msg;
       }
-      return (
-        <Padding t={1} b={1}>
-          {msg}
-        </Padding>
-      );
+      return msg;
     }
     return null;
   },
@@ -77,10 +73,12 @@ const SignUpPanel = React.createClass({
     }
     return (
       <div>
+        <Padding t={1} b={1}>
+          {this.renderAlert()}
+        </Padding>
         <Padding t={2} b={1}>
           <Input className={style.input} name="email" placeholder="Your email" value={this.state.email} type="email" onChange={this.handleInputChange}/>
         </Padding>
-        {this.renderAlert()}
         <Padding b={1}>
           <Button className={style.button} type="submit" disabled={this.getStatus() === 'pending'}>
             {this.getStatus() === 'pending' ? 'Submitting...' : 'Sign up for Opsee'}
