@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 4rem 2rem;
+  padding-bottom: 8rem;
 }
 
 .container {
@@ -13,21 +13,31 @@
   margin: 0 auto;
 }
 
+.form {
+  max-width: var(--layoutMaxWidth)/2;
+}
+
 .heading {
   color: white;
-  margin: 1.6rem;
+  margin: 2rem;
+}
+
+.subheading {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  color: var(--colorGray4);
 }
 
 .prose {
   color: var(--colorGray4);
-  margin: 0 auto;
-  max-width: 496px;
 }
 
-.input {
-  width: 50%;
-}
-
+.input,
 .button {
   width: 100%;
+  font-family: var(--fontDisplay);
+  text-align: center;
+  font-size: 2rem;
+  line-height: 3.2rem;
+  padding: 2rem 2rem;
 }

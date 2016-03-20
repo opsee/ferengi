@@ -62,13 +62,15 @@ textarea:focus, input:focus{
 
 /* Link styling */
 a {
-  color: var(--colorPrimary);
+  color: var(--colorAccent);
   text-decoration: none;
 }
+
 a:hover, a:focus {
-  color: #0c80df;
+  color: color(var(--colorAccent) shade(20%));
   text-decoration: underline;
 }
+
 a:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
