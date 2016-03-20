@@ -73,7 +73,7 @@
 
 .contents {
   /*border: solid 1px fuchsia;*/
-  padding: 6rem 0;
+  padding: 2rem 0 6rem 0;
 }
 
 .remove {
@@ -82,9 +82,13 @@
   top: 0; right: 0;
 }
 
-/*.remove:hover svg {
-  fill: white;
-}*/
+.remove svg {
+  fill: var(--colorGray3);
+}
+
+.remove:hover svg {
+  fill: red;
+}
 
 .removeButton {
   background-color: transparent;
