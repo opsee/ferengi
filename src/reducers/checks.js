@@ -6,7 +6,8 @@ import {yeller} from '../modules';
 const initial = {
   catfish: {
     token: null,
-    responses: []
+    responses: [],
+    error: undefined
   }
 };
 
@@ -17,9 +18,19 @@ export default handleActions({
       const responses = action.payload.data.responses;
 
       return _.assign({}, state, {
-        catfish: { token, responses }
+        catfish: {
+          token,
+          responses,
+          error: undefined
+        }
       });
     },
-    throw: yeller.reportAction
+    throw(state, action){
+      yeller.reportAction(state, action);
+      const catfish = _.assign(state.catfish, {
+        error: action.payload
+      });
+      return _.assign({}, state, catfish);
+    }
   }
 }, initial);
