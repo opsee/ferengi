@@ -6,6 +6,10 @@ html {
 html, body, :global(#root) {
   height: 100%;
   line-height: normal;
+  -webkit-font-feature-settings:"liga" 0;
+  font-feature-settings:"liga" 0;
+  text-rendering: optimizeSpeed;
+ -webkit-font-variant-ligatures: no-common-ligatures;
 }
 
 body {
