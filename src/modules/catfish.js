@@ -1,4 +1,3 @@
-import URL from 'url';
 import fetch from './fetch';
 
 export function getToken() {
@@ -9,29 +8,40 @@ export function getToken() {
   .then(json => json.token);
 }
 
-export function makeRequest(url) {
-  const parsedURL = URL.parse(url);
-  const protocol = parsedURL.protocol.slice(0, -1);
-  return {
-    check: {
-      target: {
-        address: parsedURL.hostname
-      },
-      http_check: {
-        path: parsedURL.path,
-        protocol,
-        port: parseInt(parsedURL.port, 10) || (protocol === 'https' ? 443 : 80),
-        name: '',
-        body: '',
-        verb: 'GET'
-      }
+export function makeRequest(string) {
+  if (typeof window !== 'undefined'){
+    try {
+      const url = new window.URL(string);
+      let protocol = url.protocol || '';
+      protocol = protocol.replace(':', '');
+      return {
+        check: {
+          target: {
+            address: url.hostname
+          },
+          http_check: {
+            path: url.pathname || '/',
+            protocol,
+            port: parseInt(url.port, 10) || (protocol === 'https' ? 443 : 80),
+            name: '',
+            body: '',
+            verb: 'GET'
+          }
+        }
+      };
+    } catch (err) {
+      return err;
     }
-  };
+  }
+  return false;
 }
 
 // TODO don't need to get the token every time
 export function check(url) {
   const requestData = makeRequest(url);
+  if (requestData instanceof Error){
+    return Promise.reject(requestData);
+  }
 
   return getToken().then(token => {
     return fetch('https://catfish.opsee.com/check', {
