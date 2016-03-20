@@ -32,9 +32,17 @@
   color: var(--colorGray4);
 }
 
+.label {
+  composes: prose;
+}
+
 .tos label,
 .tos input {
   float: left;
+}
+
+.tos input {
+  margin-right: 0.5rem;
 }
 
 .input,
