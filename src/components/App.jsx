@@ -7,10 +7,17 @@ import Analytics from './global/Analytics';
 
 const App = React.createClass({
   propTypes: {
-    children: PropTypes.node
+    children: PropTypes.node,
+    router: PropTypes.shape({
+      location: PropTypes.object
+    })
   },
   componentWillMount(){
     yeller.configure();
+    const ref = this.props.router.location.query.referrer;
+    if (ref && typeof window !== 'undefined'){
+      window.localStorage.setItem('referrer', ref);
+    }
   },
   render() {
     return (
@@ -31,6 +38,6 @@ const App = React.createClass({
 export default connect(
   // Use a selector to describe state
   state => ({
-    routerState: state.router
+    router: state.router
   })
 )(App);
