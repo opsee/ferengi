@@ -54,11 +54,11 @@ const Features = React.createClass({
           <SkewDivider />
 
           <SplitContainer className={style.section}>
-            <SplitPanel className={style.imagePanel}>
+            <SplitPanel className={style.screenshotPanel}>
               <BaseSVG svg={installStepsSVG} />
             </SplitPanel>
 
-            <SplitPanel className={style.prosePanel}>
+            <SplitPanel className={style.screenshotProsePanel}>
               <Padding tb={1}>
                 <h2><span className="text-accent">Zero</span> maintenance</h2>
               </Padding>

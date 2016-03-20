@@ -27,7 +27,7 @@
 
 .content {
   min-height: 30vh;
-  padding: 8rem;
+  padding: 8rem 8rem 12rem 8rem;
   display: flex;
   align-items: center;
   justify-content: center;
