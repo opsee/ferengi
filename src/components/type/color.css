@@ -1,9 +1,9 @@
 .primary, .primary:hover, .primary:focus, .primary:active{
-  color:var(--colorPrimary);
+  color:var(--colorAccent);
 }
 
 .success, .success:hover, .success:focus, .success:active{
-  color:var(--colorSuccess);
+  color: var(--colorCodeAccent);
 }
 
 .info, .info:hover, .info:focus, .info:active{
@@ -30,10 +30,10 @@
   color:var(--colorGray);
 }
 
+
 .gray100, .gray100:hover, .gray100:focus, .gray100:active{
   color:var(--colorGray1);
 }
-
 .gray200, .gray200:hover, .gray200:focus, .gray200:active{
   color:var(--colorGray2);
 }

@@ -36,6 +36,10 @@
   color: #FFF;
 }
 
+:global .font-accent {
+  font-family: var(--fontDisplay);
+}
+
 :global .section {
   padding: 2.4rem 0;
 }

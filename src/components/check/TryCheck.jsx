@@ -26,6 +26,10 @@ const TryCheck = React.createClass({
     })
   },
 
+  componentDidMount() {
+    this.handleSubmit(`http://jsonplaceholder.typicode.com/users/1`);
+  },
+
   getInitialState() {
     return {
       isLoading: false,
