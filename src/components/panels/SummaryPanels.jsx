@@ -26,7 +26,7 @@ export default React.createClass({
 
             <Padding tb={2}>
               <Button className={style.button} secondary chevron>
-                <Link to="/features">Learn more about Opsee</Link>
+                <a href="/features">Learn more about Opsee</a>
               </Button>
             </Padding>
           </SplitPanel>
@@ -56,9 +56,9 @@ export default React.createClass({
 
             <Padding tb={2}>
               <Button className={style.button} secondary chevron>
-                <Link to="https://app.opsee.com/docs/checks" target="_blank">
+                <a href="https://app.opsee.com/docs/checks" target="_blank">
                   Learn more about health checks
-                </Link>
+                </a>
               </Button>
             </Padding>
           </SplitPanel>
@@ -76,7 +76,7 @@ export default React.createClass({
 
             <Padding tb={2}>
               <Button className={style.button} secondary chevron>
-                <Link to="/how">How Opsee works</Link>
+                <a href="/how">How Opsee works</a>
               </Button>
             </Padding>
           </SplitPanel>

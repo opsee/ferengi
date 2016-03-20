@@ -42,7 +42,9 @@ const Features = React.createClass({
               </ul>
 
               <Padding tb={2}>
-                <Button className={style.button} secondary chevron>How it works</Button>
+                <Button className={style.button} secondary chevron>
+                  <a href="/how">How it works</a>
+                </Button>
               </Padding>
             </SplitPanel>
 
@@ -71,7 +73,7 @@ const Features = React.createClass({
 
               <Padding tb={2}>
                 <Button className={style.button} secondary chevron>
-                  Learn more about our AWS instance
+                  <a href="https://app.opsee.com/docs/bastion" target="_blank">Learn more about our AWS instance</a>
                 </Button>
               </Padding>
             </SplitPanel>
@@ -98,7 +100,7 @@ const Features = React.createClass({
 
               <Padding tb={2}>
                 <Button className={style.button} secondary chevron>
-                  Learn more about notifcations
+                  <a href="https://app.opsee.com/docs/notifications" target="_blank">Learn more about notifcations</a>
                 </Button>
               </Padding>
             </SplitPanel>
@@ -119,7 +121,7 @@ const Features = React.createClass({
 
               <Padding tb={2}>
                 <Button className={style.button} secondary chevron>
-                  Learn more about health checks
+                  <a href="https://app.opsee.com/docs/checks" target="_blank">Learn more about assertions</a>
                 </Button>
               </Padding>
             </SplitPanel>
@@ -147,12 +149,6 @@ const Features = React.createClass({
                 <li><span className="prose">Find problems without staring at graphs</span></li>
                 <li><span className="prose">Responsive UI works on any device</span></li>
               </ul>
-
-              <Padding tb={2}>
-                <Button className={style.button} secondary chevron>
-                  Create assertions against any website
-                </Button>
-              </Padding>
             </SplitPanel>
           </SplitContainer>
 
@@ -169,12 +165,6 @@ const Features = React.createClass({
                 <li><span className="prose">No third party software on your systems</span></li>
                 <li><span className="prose">Secure communication between Opsee & our instance</span></li>
               </ul>
-
-              <Padding tb={2}>
-                <Button className={style.button} secondary chevron>
-                  Learn more about our IAM & CloudFormation
-                </Button>
-              </Padding>
             </SplitPanel>
 
             <SplitPanel className={style.imagePanel}>
