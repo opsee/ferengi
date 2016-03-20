@@ -109,7 +109,6 @@
 .relationshipButtons {
   width: 100%;
   padding-top: 1rem;
-  /*background: lime;*/
   flex: 1;
 }
 
@@ -141,6 +140,14 @@
   color: var(--colorGray6);
 }
 
+.assertionDark .jsonPath label {
+  color: var(--colorGray3);
+}
+
+.assertionDark a {
+  color: var(--colorWarm0);
+}
+
 .assertion input {
   width: 100%;
 }
@@ -163,12 +170,9 @@
 }
 
 :global .react-autosuggest__container {
-
 }
 
 :global .react-autosuggest__container--open {
-  background: lime;
-  background: lime;
 }
 
 :global .react-autosuggest__suggestions {
