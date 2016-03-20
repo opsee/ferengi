@@ -27,6 +27,18 @@
 
 .btn:hover {
   background: color(var(--colorAccent) shade(20%));
+  color: white;
+}
+
+.btn a,
+.btn a:hover,
+.btn a:focus {
+  text-decoration: none;
+}
+
+.btn:hover a,
+.btn a:hover {
+  color: white;
 }
 
 .btnFill {
@@ -45,6 +57,12 @@
 .btnSecondary:hover {
   background: var(--colorAccent);
   color: white;
+}
+
+.btnSecondary:hover a,
+.btnSecondary a:hover {
+  color: white;
+  text-decoration: none;
 }
 
 .btnSecondary:hover svg {

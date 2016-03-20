@@ -572,7 +572,7 @@ const AssertionsSelection = React.createClass({
       <div>
         <Padding tb={2}>
           <h3 className="font-accent">Add an Assertion</h3>
-          <div><em className="small text-muted">Learn more about assertions <a target="_blank" href="/docs/checks">in our docs</a>.</em></div>
+          <div><em className="small text-muted">Learn more about assertions <a target="_blank" href="https://app.opsee.com/docs/checks">in our documentation</a>.</em></div>
         </Padding>
         {['code', 'header', 'body'].map(type => {
           let schemaType = type;
