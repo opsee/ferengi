@@ -24,7 +24,6 @@
 
 .assertion {
   background-color: var(--colorGray2);
-  margin: 4rem 0;
   position: relative;
   padding: 6rem;
 }
@@ -171,6 +170,11 @@
   font-family: var(--fontDisplay);
   color: var(--colorGray6);
   position: relative;
+}
+
+.assertion pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 :global .react-autosuggest__container {
