@@ -1,3 +1,22 @@
 .wrapper {
+  background-color: var(--colorCodeBg);
+  color: var(--colorCodeBody);
   text-align: left;
+  padding: 2rem;
+  font-family: var(--fontMono);
+}
+
+.heading {
+  color: var(--colorCodeHeader);
+  font-family: var(--fontDisplay);
+  font-size: 1.8rem;
+  margin: 2rem 0 1rem 0;
+}
+
+.wrapper .section:first-child .heading {
+  margin-top: 0;
+}
+
+.contents {
+  padding-left: 2rem;
 }

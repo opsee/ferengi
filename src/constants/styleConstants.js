@@ -9,11 +9,18 @@ const constants = {
     warm1: '#EB9450',
     warm2: '#E87B4F',
     warm3: '#DE6752',
-    warm4: '#D65F54'
+    warm4: '#D65F54',
+    danger: '#DE6752',
+    codeBody: 'rgb(203, 203, 203)',
+    codeAccent: 'rgb(93, 176, 115)',
+    codeHeader: '#5D89FB',
+    codeBg: 'rgb(25, 25, 25)',
+    codeBgHover: 'rgb(24, 40, 80)'
   },
 
   font: {
-    display: '"Geogrotesque-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif'
+    display: '"Geogrotesque-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif',
+    main: '"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif'
   },
 
   layout: {

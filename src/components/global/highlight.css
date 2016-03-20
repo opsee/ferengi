@@ -44,11 +44,11 @@
   color: #FFA726;
 }
 
-:global .hljs-string, 
+:global .hljs-string,
 :global .hljs-tag .hljs-value,
 :global .hljs-number
 {
-  color: var(--colorPrimary);
+  color: var(--colorCodeAccent);
 }
 
 :global .hljs,

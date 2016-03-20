@@ -23,7 +23,7 @@ const Features = React.createClass({
       <div>
         <StaticHeader className={style.header}>
           <div className="text-center">
-            <h1 className={style.header}>Great monitoring doesn&rsquo;t need to be complicated</h1>
+            <h1 className={style.header}>Great monitoring doesn&rsquo;t need to be <span className='text-accent-static'>complicated</span></h1>
             <h3>Opsee is designed for busy teams who want to get back to doing what they love.</h3>
           </div>
         </StaticHeader>
@@ -54,11 +54,11 @@ const Features = React.createClass({
           <SkewDivider />
 
           <SplitContainer className={style.section}>
-            <SplitPanel className={style.imagePanel}>
+            <SplitPanel className={style.screenshotPanel}>
               <BaseSVG svg={installStepsSVG} />
             </SplitPanel>
 
-            <SplitPanel className={style.prosePanel}>
+            <SplitPanel className={style.screenshotProsePanel}>
               <Padding tb={1}>
                 <h2><span className="text-accent">Zero</span> maintenance</h2>
               </Padding>
@@ -82,7 +82,7 @@ const Features = React.createClass({
 
           <SplitContainer className={style.section}>
             <SplitPanel className={style.screenshotPanel}>
-              <BaseSVG svg={notificationsSVG} className={style.svg} />
+              <BaseSVG className={style.screenshotSVG} svg={notificationsSVG} className={style.svg} />
             </SplitPanel>
 
             <SplitPanel className={style.screenshotProsePanel}>
@@ -125,7 +125,7 @@ const Features = React.createClass({
             </SplitPanel>
 
             <SplitPanel className={style.screenshotPanel}>
-              <BaseSVG svg={checksSVG} className={style.svg} />
+              <BaseSVG svg={checksSVG} className={style.screenshotSVG} />
             </SplitPanel>
           </SplitContainer>
 
@@ -134,7 +134,7 @@ const Features = React.createClass({
 
           <SplitContainer className={style.section}>
             <SplitPanel className={style.imagePanel}>
-              <BaseSVG svg={bastionSVG} className={style.svg} />
+              <BaseSVG svg={bastionSVG} className={style.screenshotSVG} />
             </SplitPanel>
 
             <SplitPanel className={style.screenshotProsePanel}>

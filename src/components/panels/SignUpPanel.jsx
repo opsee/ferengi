@@ -53,9 +53,7 @@ const SignUpPanel = React.createClass({
         msg = _.get(this.getStatus(), 'message') || msg;
       }
       return (
-        <Padding t={1} b={1}>
-          {msg}
-        </Padding>
+        <div className={style.alert}>{msg}</div>
       );
     }
     return null;
@@ -77,10 +75,12 @@ const SignUpPanel = React.createClass({
     }
     return (
       <div>
+        <Padding t={1} b={1}>
+          {this.renderAlert()}
+        </Padding>
         <Padding t={2} b={1}>
           <Input className={style.input} name="email" placeholder="Your email" value={this.state.email} type="email" onChange={this.handleInputChange}/>
         </Padding>
-        {this.renderAlert()}
         <Padding b={1}>
           <Button className={style.button} type="submit" disabled={this.getStatus() === 'pending'}>
             {this.getStatus() === 'pending' ? 'Submitting...' : 'Sign up for Opsee'}
@@ -88,8 +88,10 @@ const SignUpPanel = React.createClass({
         </Padding>
 
         <Padding tb={1}>
-          <input id="js-tos" name="tos" value={this.state.tos} type="checkbox" onChange={this.handleInputChange} required/>
-          <label htmlFor="js-tos">I accept the</label> <a href="/beta-tos" target="_blank">Opsee Terms of Service</a>
+          <div className={[style.tos, 'clearfix'].join(' ')}>
+            <input id="js-tos" name="tos" value={this.state.tos} type="checkbox" onChange={this.handleInputChange} required/>
+            <label className={style.label} htmlFor="js-tos">I accept the <a href="/beta-tos" target="_blank">Opsee Terms of Service</a></label>
+          </div>
         </Padding>
       </div>
     )

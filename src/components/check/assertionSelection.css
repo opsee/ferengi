@@ -1,3 +1,206 @@
 .wrapper {
   text-align: left;
 }
+
+.button {
+  font-size: 1.6rem;
+  padding: 1.2rem 2.4rem;
+  margin: 0 1rem 1rem 0;
+}
+
+.heading {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  font-family: var(--fontDisplay);
+  color: var(--colorGray6);
+}
+
+.divider {
+  color: white;
+  opacity: 0.85;
+  padding: 0 1.6rem;
+}
+
+.assertion {
+  background-color: var(--colorGray2);
+  margin: 4rem 0;
+  position: relative;
+  padding: 4rem;
+}
+
+.assertion:before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  border-top: 9rem solid white;
+  border-left: 9rem solid transparent;
+  width: 0;
+}
+
+.assertion:after {
+  content: '';
+  position: absolute;
+  bottom:0 ; left: 0;
+  border-top: 8rem solid transparent;
+  border-left: 8rem solid white;
+  width: 0;
+}
+
+.assertionDark {
+  composes: assertion;
+  color: white !important;
+}
+
+
+.assertionDark .heading {
+  color: white;
+}
+
+.assertionSuccess {
+  composes: assertionDark;
+  background-color: var(--colorSuccess);
+}
+
+.assertionFailure {
+  composes: assertionDark;
+  background-color: var(--colorDanger);
+}
+
+.assertionFailure .counter {
+  color: var(--colorWarm0);
+}
+
+.contents {
+  /*border: solid 1px fuchsia;*/
+  padding: 2rem 0 6rem 0;
+}
+
+.remove {
+  padding: 0;
+  position: absolute;
+  top: 0; right: 0;
+}
+
+.remove svg {
+  fill: var(--colorGray3);
+}
+
+.remove:hover svg {
+  fill: red;
+}
+
+.removeButton {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.removeButton:hover {
+  background-color: transparent;
+}
+
+.returnedValue {
+  font-size: 2rem;
+  color: #333;
+  font-family: var(--fontDisplay);
+  padding: 2rem 0;
+}
+
+.assertionDark .returnedValue {
+  color: white;
+}
+
+.relationshipButtons {
+  width: 100%;
+  padding-top: 1rem;
+  flex: 1;
+}
+
+.operand {
+  font-family: var(--fontMono);
+}
+
+.operandInput {
+  height: 100%;
+}
+
+/* The body snippet for JSON assertions */
+.bodySnippet {
+  background-color: var(--colorCodeBg);
+  color: var(--colorCodeBody);
+  padding: 1.2rem 2rem;
+  line-height: 1.8rem;
+}
+
+/* JSON path input & heading */
+.jsonPath {
+  padding: 2rem 0;
+}
+
+.jsonPath label {
+  font-family: var(--fontDisplay);
+  padding: 2rem 0;
+  font-size: 2rem;
+  color: var(--colorGray6);
+}
+
+.assertionDark .jsonPath label {
+  color: var(--colorGray3);
+}
+
+.assertionDark a {
+  color: var(--colorWarm0);
+}
+
+.assertion input {
+  width: 100%;
+}
+
+.assertion input,
+.assertion button {
+  font-family: var(--fontDisplay);
+  font-size: 1.6rem;
+  line-height: 2rem;
+  padding: 2rem;
+}
+
+.autosuggest {
+  max-height: 20rem;
+  overflow-y: hidden;
+  background-color: white;
+  font-family: var(--fontDisplay);
+  color: var(--colorGray6);
+  position: relative;
+}
+
+:global .react-autosuggest__container {
+}
+
+:global .react-autosuggest__container--open {
+}
+
+:global .react-autosuggest__suggestions {
+  padding-left: 0;
+  list-style: none;
+  margin-left: 0;
+}
+
+:global .react-autosuggest__suggestion {
+  display: block;
+  padding: 3px 20px;
+}
+
+:global .react-autosuggest__suggestion--focused {
+  background: var(--colorAccent);
+  color: white;
+}
+
+.assertionDark .button {
+  border-color: white;
+  color: white;
+}
+
+.relationshipButton {
+  composes: button;
+  margin: 0 0.5 1rem;
+}

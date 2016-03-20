@@ -10,6 +10,10 @@
   text-align: center;
 }
 
+:global .small {
+  font-size: 1.4rem;
+}
+
 :global .prose {
   color: var(--colorGray6);
   font-size: 1.6rem;
@@ -20,8 +24,16 @@
   padding: 16px 0;
 }
 
+:global .text-muted {
+  opacity: 0.75;
+}
+
 :global .text-accent {
   color: var(--colorAccent);
+}
+
+:global .text-accent-static {
+  color: #FFD15E;
 }
 
 :global .text-danger {
@@ -30,6 +42,10 @@
 
 :global .text-accent-light {
   color: #FFF;
+}
+
+:global .font-accent {
+  font-family: var(--fontDisplay);
 }
 
 :global .section {

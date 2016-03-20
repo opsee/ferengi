@@ -17,7 +17,7 @@ export default React.createClass({
       <div>
         <StaticHeader className={style.header}>
           <div className="text-center">
-            <h1 className={style.header}>Take a look under the hood</h1>
+            <h1 className={style.header}>Take a look <span className='text-accent-static'>under the hood</span></h1>
             <h3>Authenticate with your AWS credentials and Opsee will do the rest.</h3>
           </div>
         </StaticHeader>

@@ -31,6 +31,10 @@
   padding: 1.6rem 0.6rem;
 }
 
+.links li a:hover {
+  text-decoration: none;
+}
+
 .authLinks {
   composes: links;
   margin-right: 0;
@@ -63,6 +67,10 @@
   color: white;
 }
 
+.light .links a:hover {
+  color: #FFD15E;
+}
+
 .light .cta {
   color: white;
   background-color: transparent;
@@ -71,7 +79,7 @@
 
 .light .cta:hover {
   background: white;
-  color: var(--colorWarm2);
+  color: var(--colorAccent);
 }
 
 /* Dark theme */
@@ -82,6 +90,10 @@
 
 .dark .links a {
   color: var(--colorGray4);
+}
+
+.dark .links a:hover {
+  color: var(--colorPrimary);
 }
 
 .dark .cta {

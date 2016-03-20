@@ -36,7 +36,7 @@ const CheckResponseSingle = React.createClass({
         {_.chain(this.props.headers).keys().map((key, i) => {
           return (
             <div key={`header-${i}`}>
-              <code style={{fontSize: '1.4rem'}}>{key}:&nbsp;<Color c="primary">{this.props.headers[key]}</Color></code>
+              <code style={{fontSize: '1.4rem'}}>{key}:&nbsp;<Color c="success">{this.props.headers[key]}</Color></code>
             </div>
           );
         }).value()}
@@ -46,23 +46,29 @@ const CheckResponseSingle = React.createClass({
   render(){
     return (
       <div className={style.wrapper}>
-        <Padding t={1}>
-          <strong>Status Code:</strong>&nbsp;<Color c="primary"><code style={{fontSize: '1.5rem'}}>{this.props.code}</code></Color><br/>
-        </Padding>
-        <Padding t={1} b={1}>
-          <Padding b={0.5}>
-            <strong>Headers</strong>
-          </Padding>
-          {this.renderHeaders()}
-        </Padding>
-        <Padding b={0.5}>
-          <strong>Body</strong>
-        </Padding>
-        <Padding>
-          <Highlight>
-            {this.getBody()}
-          </Highlight>
-        </Padding>
+        <div className={style.section}>
+          <h4 className={style.heading}>Status Code</h4>
+
+          <div className={style.contents}>
+            <strong>Status Code:</strong>&nbsp;<Color c="success"><code style={{fontSize: '1.5rem'}}>{this.props.code}</code></Color><br/>
+          </div>
+        </div>
+
+        <div className={style.section}>
+          <h4 className={style.heading}>Headers</h4>
+
+          <div className={style.contents}>
+            {this.renderHeaders()}
+          </div>
+        </div>
+
+        <div className={style.section}>
+          <h4 className={style.heading}>Body</h4>
+
+          <div className={style.contents}>
+            <Highlight>{this.getBody()}</Highlight>
+          </div>
+        </div>
       </div>
     );
   }

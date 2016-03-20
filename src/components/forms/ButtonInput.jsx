@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import style from './buttonInput.css';
 import Button from './Button';
 import Input from './Input';
+import LoadingDots from '../loaders/LoadingDots';
 
 export default React.createClass({
   propTypes: {
@@ -11,7 +12,8 @@ export default React.createClass({
     onClick: PropTypes.func,
     buttonText: PropTypes.string,
     className: PropTypes.string,
-    chevron: PropTypes.bool
+    chevron: PropTypes.bool,
+    isLoading: PropTypes.bool
   },
 
   getClass() {
@@ -28,7 +30,7 @@ export default React.createClass({
                value={this.props.value} />
         <span className={style.buttonWrapper}>
           <Button className={style.button} onClick={this.props.onClick} chevron={this.props.chevron}>
-            {this.props.buttonText}
+            { this.props.isLoading ? <LoadingDots /> : this.props.buttonText }
           </Button>
         </span>
       </div>

@@ -72,6 +72,11 @@
   height: 3rem;
   display: block;
   margin: 0.6rem;
+  fill: var(--colorGray4);
+}
+
+.icon:hover {
+  fill: color(var(--colorGray4) shade(20%));
 }
 
 .twitterIcon {
