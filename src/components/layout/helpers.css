@@ -24,6 +24,10 @@
   color: var(--colorAccent);
 }
 
+:global .text-accent-static {
+  color: #FFD15E;
+}
+
 :global .text-danger {
   color: var(--colorWarm4);
 }

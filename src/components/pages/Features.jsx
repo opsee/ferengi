@@ -23,7 +23,7 @@ const Features = React.createClass({
       <div>
         <StaticHeader className={style.header}>
           <div className="text-center">
-            <h1 className={style.header}>Great monitoring doesn&rsquo;t need to be complicated</h1>
+            <h1 className={style.header}>Great monitoring doesn&rsquo;t need to be <span className='text-accent-static'>complicated</span></h1>
             <h3>Opsee is designed for busy teams who want to get back to doing what they love.</h3>
           </div>
         </StaticHeader>

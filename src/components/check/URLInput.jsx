@@ -26,12 +26,12 @@ export default React.createClass({
   },
 
   render() {
-    const buttonText = this.props.isLoading ? 'Loading...' : 'Show me';
     return (
       <div className={style.urlInput}>
         <form onSubmit={this.handleSubmit}>
           <ButtonInput onChange={this.handleChange} type="text" value={this.state.url}
-            buttonText={buttonText} onClick={this.handleSubmit} chevron />
+            buttonText="Show me" onClick={this.handleSubmit} isLoading={this.props.isLoading}
+            chevron={!this.props.isLoading} />
         </form>
       </div>
     );
