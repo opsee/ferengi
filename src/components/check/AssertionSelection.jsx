@@ -34,6 +34,7 @@ const AssertionsSelection = React.createClass({
       })
     })
   },
+
   getDefaultProps() {
     return {
       assertions: [],
@@ -44,17 +45,20 @@ const AssertionsSelection = React.createClass({
       }
     };
   },
+
   getInitialState() {
     return {
       assertions: []
     };
   },
+
   componentDidMount(){
     if (this.props.assertions.length){
       const assertions = this.props.assertions.map(this.getNewSchema);
       this.runChange(assertions);
     }
   },
+
   getForm(type = 'code', kwargs){
     const self = this;
     let obj = null;
@@ -106,6 +110,7 @@ const AssertionsSelection = React.createClass({
     }
     return new obj(kwargs);
   },
+
   getNewSchema(assertion = {}, assertionIndex){
     const self = this;
     const opts = {
@@ -125,6 +130,7 @@ const AssertionsSelection = React.createClass({
       form: this.getForm(assertion.key, opts)
     });
   },
+
   getJsonBodyKeys(){
     const json = this.getJsonBody();
     if (json){
@@ -135,30 +141,37 @@ const AssertionsSelection = React.createClass({
     }
     return [];
   },
+
   getFilteredJsonBodyKeys(assertionIndex){
     const assertion = this.state.assertions[assertionIndex];
     return this.getJsonBodyKeys().filter(path => {
       return path.match(`^${_.escapeRegExp(assertion.value)}`);
     });
   },
+
   getJsonPlaceholder(){
     const keys = this.getJsonBodyKeys();
     const last = _.chain(keys).sortBy(keys, k => k.length).last().value();
     return last || 'animals.dogs[0].breed';
   },
+
   getFinalAssertions(assertions = this.state.assertions){
     return assertions.map(n => _.pick(n, ['key', 'value', 'relationship', 'operand']));
   },
+
   getResponse(){
     return this.props.response;
   },
+
   getResponseFormatted(){
     return this.props.responseFormatted;
   },
+
   getResponseBody(){
     const json = this.getJsonBody();
     return json ? JSON.stringify(json) : this.getResponse().body;
   },
+
   getSlateTest(assertion){
     let response = this.getResponse();
     response.body = typeof response.body === 'object' ? JSON.stringify(response.body) : response.body;
@@ -167,6 +180,7 @@ const AssertionsSelection = React.createClass({
     }
     return null;
   },
+
   getJsonBody(){
     try {
       const res = this.getResponse();
@@ -178,6 +192,7 @@ const AssertionsSelection = React.createClass({
       return false;
     }
   },
+
   getJsonPathMeta(assertion){
     const body = this.getJsonBody();
     let data = null;
@@ -198,6 +213,7 @@ const AssertionsSelection = React.createClass({
       scalar
     };
   },
+
   getBodySnippet(assertion){
     const meta = this.getJsonPathMeta(assertion);
     if (meta && meta.data && assertion.value){
@@ -220,6 +236,7 @@ const AssertionsSelection = React.createClass({
       </Expandable>
     );
   },
+
   getAssertionStyle(assertion){
     let border = 'gray7';
     let test = this.getSlateTest(assertion);
@@ -232,6 +249,7 @@ const AssertionsSelection = React.createClass({
       borderLeft: `.8rem solid ${seed.color[border]}`
     };
   },
+
   runSetAssertionsState(iteratee){
     const assertions = this.state.assertions.map(iteratee);
     this.setState({
@@ -239,12 +257,14 @@ const AssertionsSelection = React.createClass({
     });
     return assertions;
   },
+
   runChange(assertions = this.state.assertions){
     this.setState({
       assertions
     });
     this.props.onChange(this.getFinalAssertions(assertions));
   },
+
   runSetType(index, type){
     this.runSetAssertionsState((n, i) => {
       return _.assign({}, n, {
@@ -252,6 +272,7 @@ const AssertionsSelection = React.createClass({
       });
     });
   },
+
   runSetValue(index, data, e){
     if (e){
       e.preventDefault();
@@ -264,6 +285,7 @@ const AssertionsSelection = React.createClass({
     }, true);
     this.props.onChange(this.getFinalAssertions(assertions));
   },
+
   runRemoveType(index){
     this.runSetAssertionsState((n, i) => {
       return _.assign({}, n, {
@@ -271,16 +293,19 @@ const AssertionsSelection = React.createClass({
       });
     });
   },
+
   runNewAssertion(key){
     const assertions = this.state.assertions.concat([
       this.getNewSchema({key}, this.state.assertions.length)
     ]);
     this.runChange(assertions);
   },
+
   runDelete(index){
     const assertions = _.reject(this.state.assertions, (n, i) => i === index);
     this.runChange(assertions);
   },
+
   runSetAssertionData(index, data){
     const assertions = this.state.assertions.map((assertion, i) => {
       let d = {};
@@ -292,6 +317,7 @@ const AssertionsSelection = React.createClass({
     });
     return this.runChange(assertions);
   },
+
   handleInputChange(data, index){
     const assertions = this.runSetAssertionsState((assertion, i) => {
       const d = index === i ? data : {};
@@ -299,15 +325,18 @@ const AssertionsSelection = React.createClass({
     });
     this.props.onChange(this.getFinalAssertions(assertions));
   },
+
   handleJsonSuggestionSelect(assertionIndex, event, data){
     this.runSetAssertionData(assertionIndex, {
       value: data.newValue
     });
   },
+
   handleSubmit(e){
     e.preventDefault();
     return false;
   },
+
   renderRelationshipButtons(assertionIndex){
     const assertion = this.state.assertions[assertionIndex];
     return (
@@ -332,6 +361,7 @@ const AssertionsSelection = React.createClass({
       </Padding>
     );
   },
+
   renderChosenRelationship(assertionIndex){
     const assertion = this.state.assertions[assertionIndex];
     if (assertion.relationship){
@@ -344,6 +374,7 @@ const AssertionsSelection = React.createClass({
     }
     return null;
   },
+
   renderOperand(assertionIndex){
     const assertion = this.state.assertions[assertionIndex];
     if (assertion.relationship && !assertion.relationship.match('empty|notEmpty')){
@@ -355,6 +386,7 @@ const AssertionsSelection = React.createClass({
     }
     return null;
   },
+
   renderReturnedValue(assertion, value){
     return (
       <Padding b={1}>
@@ -362,6 +394,7 @@ const AssertionsSelection = React.createClass({
       </Padding>
     );
   },
+
   renderTitle(assertionIndex, title){
     return (
       <Heading level={3} className="display-flex flex-1 flex-vertical-align" style={{marginBottom: '-1rem'}}>
@@ -372,6 +405,7 @@ const AssertionsSelection = React.createClass({
       </Heading>
     );
   },
+
   renderCode(assertionIndex){
     const assertion = this.state.assertions[assertionIndex];
     let buttons = null;
@@ -392,6 +426,7 @@ const AssertionsSelection = React.createClass({
       </div>
     );
   },
+
   renderHeader(assertionIndex){
     const assertion = this.state.assertions[assertionIndex];
     const selectedHeader = assertion.value;
@@ -434,6 +469,7 @@ const AssertionsSelection = React.createClass({
       </div>
     );
   },
+
   renderJsonInput(assertion){
     const jsonBody = this.getJsonBody();
     if (jsonBody){
@@ -445,6 +481,7 @@ const AssertionsSelection = React.createClass({
     }
     return null;
   },
+
   renderBody(assertionIndex){
     const assertion = this.state.assertions[assertionIndex];
     let buttons = null;
@@ -463,9 +500,11 @@ const AssertionsSelection = React.createClass({
       </div>
     );
   },
+
   renderSuggestion(suggestion){
     return <span>{suggestion}</span>;
   },
+
   renderJson(assertionIndex){
     const assertion = this.state.assertions[assertionIndex];
     let buttons = null;
@@ -492,6 +531,7 @@ const AssertionsSelection = React.createClass({
       </div>
     );
   },
+
   renderAssertion(assertion, index){
     const key = assertion.key || 'code';
     return (
@@ -500,6 +540,7 @@ const AssertionsSelection = React.createClass({
       </Padding>
     );
   },
+
   renderAssertionPickType(){
     return (
       <div>
@@ -524,6 +565,7 @@ const AssertionsSelection = React.createClass({
       </div>
     );
   },
+
   renderAssertionList(){
     if (!this.getResponse().code){
       return null;
@@ -533,6 +575,7 @@ const AssertionsSelection = React.createClass({
     }
     return null;
   },
+
   render(){
     return (
       <div className={style.wrapper}>
