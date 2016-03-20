@@ -54,3 +54,10 @@
   line-height: 3.2rem;
   padding: 2rem 2rem;
 }
+
+.alert {
+  font-family: var(--fontDisplay);
+  color: var(--colorWarm3);
+  text-align: center;
+  font-size: 2rem;
+}

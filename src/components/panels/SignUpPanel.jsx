@@ -52,7 +52,9 @@ const SignUpPanel = React.createClass({
       if (typeof this.getStatus() === 'object'){
         msg = _.get(this.getStatus(), 'message') || msg;
       }
-      return msg;
+      return (
+        <div className={style.alert}>{msg}</div>
+      );
     }
     return null;
   },
