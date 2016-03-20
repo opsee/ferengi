@@ -358,7 +358,11 @@ const AssertionsSelection = React.createClass({
             }
           }
           return (
-            <Button secondary onClick={this.runSetAssertionData.bind(null, assertionIndex, data)} color="text" style={{margin: '0 .5rem 1rem'}} key={`assertion-${assertionIndex}-relationship-${rel.id}`}>{rel.name}</Button>
+            <Button className={style.relationshipButton} secondary
+              onClick={this.runSetAssertionData.bind(null, assertionIndex, data)}
+              key={`assertion-${assertionIndex}-relationship-${rel.id}`}>
+              {rel.name}
+            </Button>
           );
         })}
       </div>
@@ -371,7 +375,7 @@ const AssertionsSelection = React.createClass({
       const obj = _.find(relationships, {id: assertion.relationship}) || {};
       return (
         <div className={style.chosenRelationship}>
-          <Button secondary color="white" onClick={this.runSetAssertionData.bind(null, assertionIndex, {relationship: null})}>{obj.name}</Button>
+          <Button className={style.relationshipButton} secondary color="white" onClick={this.runSetAssertionData.bind(null, assertionIndex, {relationship: null})}>{obj.name}</Button>
         </div>
       );
     }

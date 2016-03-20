@@ -140,6 +140,10 @@
 
 .assertion input {
   width: 100%;
+}
+
+.assertion input,
+.assertion button {
   font-family: var(--fontDisplay);
   font-size: 1.6rem;
   line-height: 2rem;
@@ -180,6 +184,12 @@
   color: white;
 }
 
-.chosenRelationship {
+.assertionDark .button {
+  border-color: white;
+  color: white;
+}
 
+.relationshipButton {
+  composes: button;
+  margin: 0 0.5 1rem;
 }
