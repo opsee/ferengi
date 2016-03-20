@@ -24,9 +24,8 @@
 
 .assertion {
   background-color: var(--colorGray2);
-  margin: 4rem 0;
   position: relative;
-  padding: 4rem;
+  padding: 6rem;
 }
 
 .assertion:before {
@@ -73,7 +72,7 @@
 
 .contents {
   /*border: solid 1px fuchsia;*/
-  padding: 2rem 0 6rem 0;
+  /*padding: 2rem 0 6rem 0;*/
 }
 
 .remove {
@@ -171,6 +170,11 @@
   font-family: var(--fontDisplay);
   color: var(--colorGray6);
   position: relative;
+}
+
+.assertion pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 :global .react-autosuggest__container {
