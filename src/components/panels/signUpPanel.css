@@ -32,6 +32,11 @@
   color: var(--colorGray4);
 }
 
+.tos label,
+.tos input {
+  float: left;
+}
+
 .input,
 .button {
   width: 100%;

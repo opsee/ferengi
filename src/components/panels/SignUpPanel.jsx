@@ -88,8 +88,10 @@ const SignUpPanel = React.createClass({
         </Padding>
 
         <Padding tb={1}>
-          <input id="js-tos" name="tos" value={this.state.tos} type="checkbox" onChange={this.handleInputChange} required/>
-          <label htmlFor="js-tos">I accept the</label> <a href="/beta-tos" target="_blank">Opsee Terms of Service</a>
+          <div className={[style.tos, 'clearfix'].join(' ')}>
+            <input id="js-tos" name="tos" value={this.state.tos} type="checkbox" onChange={this.handleInputChange} required/>
+            <label htmlFor="js-tos">I accept the <a href="/beta-tos" target="_blank">Opsee Terms of Service</a></label>
+          </div>
         </Padding>
       </div>
     )
