@@ -8,6 +8,7 @@ import URLInput from './URLInput';
 import style from './tryCheck.css';
 import CheckResponseSingle from './CheckResponseSingle';
 import AssertionSelection from './AssertionSelection';
+import smoothScroll from 'smoothscroll';
 
 const TryCheck = React.createClass({
   propTypes: {
@@ -31,6 +32,15 @@ const TryCheck = React.createClass({
       isLoading: false,
       assertions: []
     };
+  },
+
+  componentWillReceiveProps(nextProps) {
+    const isCurrentSuccess = this.props.redux.asyncActions.checkUrl.status === 'success';
+    const isNowSuccess = nextProps.redux.asyncActions.checkUrl.status === 'success';
+    if (!isCurrentSuccess && isNowSuccess) {
+      const target = document.querySelector('#scrollAnchor');
+      smoothScroll(target);
+    }
   },
 
   getResponses() {
@@ -78,7 +88,7 @@ const TryCheck = React.createClass({
           </div>
 
           <div className={style.prose}>
-            <h2>Health checks are <span className='text-accent'>more</span> than just a status code</h2>
+            <h2>Health checks are <span className="text-accent">more</span> than just a status code</h2>
             <p>Lots of webservers will happily return a status code of 200 even if the underlying service is broken or misconfigured. Assertions let you dig deep into the health check response to ensure that everything is working exactly how you expect. Pull out headers and parse some JSON. Go on, it's fun.</p>
           </div>
 
@@ -94,7 +104,7 @@ const TryCheck = React.createClass({
 
   render() {
     return (
-      <div className={style.container}>
+      <div id="scrollAnchor" className={style.container}>
         <div>
           <URLInput handleSubmit={this.handleSubmit} isLoading={this.isLoading()} />
         </div>

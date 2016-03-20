@@ -16,6 +16,13 @@ const SignUpPanel = React.createClass({
     actions: PropTypes.shape({
       signup: PropTypes.func.isRequired
     }),
+    redux: PropTypes.shape({
+      asyncActions: PropTypes.shape({
+        signup: PropTypes.shape({
+          status: PropTypes.string
+        })
+      })
+    })
   },
   getInitialState() {
     return {
@@ -35,7 +42,7 @@ const SignUpPanel = React.createClass({
   getStatus(){
     return this.props.redux.asyncActions.signup.status;
   },
-  handleInputChange(e, data){
+  handleInputChange(e){
     if (e && e.target){
       this.setState({
         [e.target.name]: e.target.value
@@ -65,7 +72,7 @@ const SignUpPanel = React.createClass({
           <Padding t={2} b={1}>
             We&rsquo;ve got your info! Check your email to get started.
           </Padding>
-        )
+        );
       }
       return (
         <Padding t={2} b={1}>
@@ -94,7 +101,7 @@ const SignUpPanel = React.createClass({
           </div>
         </Padding>
       </div>
-    )
+    );
   },
   render() {
     return (

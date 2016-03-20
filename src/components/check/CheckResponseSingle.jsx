@@ -2,7 +2,6 @@ import React, {PropTypes} from 'react';
 import _ from 'lodash';
 
 import Highlight from '../global/Highlight';
-import Padding from '../layout/Padding';
 import Color from '../type/Color';
 import style from './checkResponseSingle.css';
 

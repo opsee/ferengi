@@ -16,7 +16,7 @@ const About = React.createClass({
       <div>
         <StaticHeader className={style.header}>
           <div className="text-center">
-            <h1 className={style.header}>About <span className='text-accent-static'>Opsee</span></h1>
+            <h1 className={style.header}>About <span className="text-accent-static">Opsee</span></h1>
             <h3>The company, mission, and team</h3>
           </div>
         </StaticHeader>

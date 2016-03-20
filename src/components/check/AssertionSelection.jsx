@@ -3,13 +3,11 @@ import _ from 'lodash';
 import Form from 'newforms/Form';
 import CharField from 'newforms/CharField';
 import {connect} from 'react-redux';
-import {plain as seed} from 'seedling';
 import Autosuggest from 'react-autosuggest';
 
 import {BoundField, Button} from '../forms';
 import {Add, Delete} from 'emissary/src/js/components/icons';
 import {Padding, Expandable} from '../layout';
-import {Color, Heading} from '../type';
 import Highlight from '../global/Highlight';
 import validate from 'emissary/src/js/modules/validate';
 import getKeys from 'emissary/src/js/modules/getKeys';
@@ -231,9 +229,7 @@ const AssertionsSelection = React.createClass({
           {meta.data}
         </Highlight>
       );
-    }
-
-    else if (!meta.data && assertion.value){
+    } else if (!meta.data && assertion.value){
       return this.renderReturnedValue(assertion, '>> No JSON data selected', 'danger');
     }
 
@@ -447,9 +443,7 @@ const AssertionsSelection = React.createClass({
 
     if (!assertion.relationship && assertion.value){
       buttons = this.renderRelationshipButtons(assertionIndex);
-    }
-
-    else if (!assertion.value){
+    } else if (!assertion.value){
       buttons = (
         <Padding t={1}>
           {headerKeys.map(key => {
@@ -577,7 +571,7 @@ const AssertionsSelection = React.createClass({
     return (
       <div>
         <Padding tb={2}>
-          <h3 className='font-accent'>Add an Assertion</h3>
+          <h3 className="font-accent">Add an Assertion</h3>
           <div><em className="small text-muted">Learn more about assertions <a target="_blank" href="/docs/checks">in our docs</a>.</em></div>
         </Padding>
         {['code', 'header', 'body'].map(type => {
