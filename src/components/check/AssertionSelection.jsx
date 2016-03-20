@@ -544,8 +544,9 @@ const AssertionsSelection = React.createClass({
   renderAssertionPickType(){
     return (
       <div>
-        <Padding t={1}>
-          <Heading level={3}>Add an Assertion</Heading>
+        <Padding tb={2}>
+          <h3 className='font-accent'>Add an Assertion</h3>
+          <div><em className="small text-muted">Learn more about assertions <a target="_blank" href="/docs/checks">in our docs</a>.</em></div>
         </Padding>
         {['code', 'header', 'body'].map(type => {
           let schemaType = type;
@@ -579,11 +580,8 @@ const AssertionsSelection = React.createClass({
   render(){
     return (
       <div className={style.wrapper}>
-        <Padding b={2}>
-          {this.renderAssertionList()}
-          {this.renderAssertionPickType()}
-          <p><em className="small text-muted">Learn more about assertions <a target="_blank" href="/docs/checks">in our docs</a>.</em></p>
-        </Padding>
+        {this.renderAssertionList()}
+        {this.renderAssertionPickType()}
       </div>
     );
   }
