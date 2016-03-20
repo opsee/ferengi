@@ -4,7 +4,7 @@
   align-items: center;
   max-width: var(--layoutHeaderWidth);
   margin: 0 auto;
-  padding: 0 2rem;
+  padding-right: 2rem; /* logos already padded on the left */
 }
 
 .links,
@@ -50,10 +50,8 @@
 }
 
 @media (max-width: 768px) {
-  .links li {
-    padding: 0;
-  }
-
+  .links li { padding: 0; }
+  .hideSm { display: none !important; }
   .navLinks { display: none; }
 }
 

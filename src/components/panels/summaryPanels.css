@@ -49,4 +49,8 @@
   .button {
     width: 100%;
   }
+
+  .imagePanel {
+    padding: 4rem 0;
+  }
 }
