@@ -49,6 +49,11 @@
   composes: links;
 }
 
+.cta a,
+.cta a:hover {
+  color: white !important;
+}
+
 @media (max-width: 768px) {
   .links li { padding: 0; }
   .hideSm { display: none !important; }
@@ -75,9 +80,18 @@
   border-color: white;
 }
 
+.light .cta a {
+  color: white;
+}
+
 .light .cta:hover {
   background: white;
   color: var(--colorAccent);
+}
+
+.light .cta:hover a,
+.light .cta a:hover {
+  color: var(--colorAccent) !important;
 }
 
 /* Dark theme */
