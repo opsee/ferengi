@@ -4,3 +4,8 @@
   max-height: 40vh;
   overflow: auto;
 }
+
+.prose {
+  text-align: left;
+  margin: 4rem 0;
+}
