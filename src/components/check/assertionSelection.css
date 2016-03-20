@@ -33,8 +33,8 @@
   content: '';
   position: absolute;
   top: 0; right: 0;
-  border-top: 80px solid white;
-  border-left: 80px solid transparent;
+  border-top: 9rem solid white;
+  border-left: 9rem solid transparent;
   width: 0;
 }
 
@@ -42,8 +42,8 @@
   content: '';
   position: absolute;
   bottom:0 ; left: 0;
-  border-top: 80px solid transparent;
-  border-left: 80px solid white;
+  border-top: 8rem solid transparent;
+  border-left: 8rem solid white;
   width: 0;
 }
 
@@ -73,23 +73,26 @@
 
 .contents {
   /*border: solid 1px fuchsia;*/
-  padding: 4rem 0;
+  padding: 6rem 0;
 }
 
 .remove {
-  background-color: transparent;
-  border-color: transparent;
-  padding: 1rem;
+  padding: 0;
   position: absolute;
   top: 0; right: 0;
 }
 
-.remove:hover {
-  background: red;
+/*.remove:hover svg {
+  fill: white;
+}*/
+
+.removeButton {
+  background-color: transparent;
+  border-color: transparent;
 }
 
-.remove:hover svg {
-  fill: white;
+.removeButton:hover {
+  background-color: transparent;
 }
 
 .returnedValue {

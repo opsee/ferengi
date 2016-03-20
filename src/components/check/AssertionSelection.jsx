@@ -557,7 +557,7 @@ const AssertionsSelection = React.createClass({
         <div className={this.getAssertionClass(assertion)}>
 
           <div className={style.remove}>
-            <Button className={style.remove} color="danger" title="Remove this Assertion" onClick={this.runDelete.bind(null, index)}>
+            <Button className={style.removeButton} color="danger" title="Remove this Assertion" onClick={this.runDelete.bind(null, index)}>
               <Delete className={style.removeSVG} inline fill="danger"/>
             </Button>
           </div>
