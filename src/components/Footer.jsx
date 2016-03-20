@@ -8,6 +8,10 @@ export default React.createClass({
   render() {
     return (
       <div className={style.footer}>
+        <div className={style.nav}>
+
+        </div>
+
         <div className={style.logoGroup}>
           <BaseSVG className={style.logo} svg={logoSVG} />
 
