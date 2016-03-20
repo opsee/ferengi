@@ -79,16 +79,17 @@ const SignUpPanel = React.createClass({
       <div>
         <Padding t={2} b={1}>
           <Input className={style.input} name="email" placeholder="Your email" value={this.state.email} type="email" onChange={this.handleInputChange}/>
-          <div>
-            <input id="js-tos" name="tos" value={this.state.tos} type="checkbox" onChange={this.handleInputChange} required/>
-            <label htmlFor="js-tos">I accept the</label> <a href="/beta-tos" target="_blank">Opsee Terms of Service</a>
-          </div>
         </Padding>
         {this.renderAlert()}
-        <Padding t={1} b={2}>
+        <Padding b={1}>
           <Button className={style.button} type="submit" disabled={this.getStatus() === 'pending'}>
             {this.getStatus() === 'pending' ? 'Submitting...' : 'Sign up for Opsee'}
           </Button>
+        </Padding>
+
+        <Padding tb={1}>
+          <input id="js-tos" name="tos" value={this.state.tos} type="checkbox" onChange={this.handleInputChange} required/>
+          <label htmlFor="js-tos">I accept the</label> <a href="/beta-tos" target="_blank">Opsee Terms of Service</a>
         </Padding>
       </div>
     )
@@ -98,10 +99,12 @@ const SignUpPanel = React.createClass({
       <Panel>
         <div className={style.panel}>
           <div className={style.container}>
-            <div className="text-center">
+
+            <Padding tb={4} className="text-center">
               <h1 className={style.heading}>Ready to <span className="text-accent">get Opsee?</span></h1>
-              <div className={['prose-darkbg', style.prose].join(' ')}>Opsee is free during public beta. Join now by giving us your email address below, and we&rsquo;ll send you a link to your very own Opsee account.</div>
-             </div>
+              <div className={style.subheading}>Opsee is free during public beta. Join now by giving us your email address below, and we&rsquo;ll send you a link to your very own Opsee account.</div>
+            </Padding>
+
             <form onSubmit={this.handleSubmit}>
               {this.renderForm()}
             </form>

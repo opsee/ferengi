@@ -8,7 +8,7 @@ import { SplitContainer, SplitPanel } from '../panels/SplitPanels';
 import BaseSVG from '../images/BaseSVG';
 import onboardingSVG from '../images/onboarding.svg';
 import passingAssertionsSVG from '../images/passing-assertions.svg';
-import landingLogosSVG from '../images/landing-logos.svg';
+import integrationsSVG from '../images/integrations.svg';
 
 export default React.createClass({
   render() {
@@ -80,7 +80,7 @@ export default React.createClass({
           </SplitPanel>
 
           <SplitPanel className={style.imagePanel}>
-            <BaseSVG svg={landingLogosSVG} />
+            <BaseSVG svg={integrationsSVG} />
           </SplitPanel>
         </SplitContainer>
       </div>
