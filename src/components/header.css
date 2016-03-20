@@ -84,13 +84,13 @@
   color: var(--colorGray4);
 }
 
-.dark .cta button {
+.dark .cta {
   color: white;
   background-color: var(--colorWarm2);
   border-color: var(--colorWarm2);
 }
 
-.dark .cta:hover button {
+.dark .cta:hover {
   background-color: color(var(--colorWarm2) shade(20%));
   border-color: color(var(--colorWarm2) shade(20%));
 }
