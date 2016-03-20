@@ -10,6 +10,7 @@ const constants = {
     warm2: '#E87B4F',
     warm3: '#DE6752',
     warm4: '#D65F54',
+    danger: '#DE6752',
     codeBody: 'rgb(203, 203, 203)',
     codeAccent: 'rgb(93, 176, 115)',
     codeHeader: '#5D89FB',

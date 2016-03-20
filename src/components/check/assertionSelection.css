@@ -72,8 +72,7 @@
 }
 
 .contents {
-  display: flex;
-  border: solid 1px fuchsia;
+  /*border: solid 1px fuchsia;*/
   padding: 4rem 0;
 }
 
@@ -97,12 +96,17 @@
   font-size: 2rem;
   color: #333;
   font-family: var(--fontDisplay);
+  padding: 2rem 0;
+}
+
+.assertionDark .returnedValue {
+  color: white;
 }
 
 .relationshipButtons {
   width: 100%;
   padding-top: 1rem;
-  background: lime;
+  /*background: lime;*/
   flex: 1;
 }
 
@@ -114,6 +118,7 @@
   height: 100%;
 }
 
+/* The body snippet for JSON assertions */
 .bodySnippet {
   background-color: var(--colorCodeBg);
   color: var(--colorCodeBody);
@@ -121,17 +126,18 @@
   line-height: 1.8rem;
 }
 
+/* JSON path input & heading */
 .jsonPath {
   padding: 2rem 0;
 }
 
 .jsonPath label {
   font-family: var(--fontDisplay);
-  padding: 1rem;
+  padding: 2rem 0;
   font-size: 2rem;
 }
 
-.jsonPath input {
+.assertion input {
   width: 100%;
   font-family: var(--fontDisplay);
   font-size: 1.6rem;
@@ -140,5 +146,35 @@
 }
 
 .autosuggest {
-  background-color: fuchsia
+  max-height: 20rem;
+  overflow-y: hidden;
+  background-color: white;
+  font-family: var(--fontDisplay);
+  color: var(--colorGray6);
+  position: relative;
+}
+
+:global .react-autosuggest__container {
+
+}
+
+:global .react-autosuggest__container--open {
+  background: lime;
+  background: lime;
+}
+
+:global .react-autosuggest__suggestions {
+  padding-left: 0;
+  list-style: none;
+  margin-left: 0;
+}
+
+:global .react-autosuggest__suggestion {
+  display: block;
+  padding: 3px 20px;
+}
+
+:global .react-autosuggest__suggestion--focused {
+  background: var(--colorAccent);
+  color: white;
 }
