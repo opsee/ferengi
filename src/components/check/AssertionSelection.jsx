@@ -399,7 +399,7 @@ const AssertionsSelection = React.createClass({
     return (
       <Heading level={3} className="display-flex flex-1 flex-vertical-align" style={{marginBottom: '-1rem'}}>
         <span className="flex-1">#{assertionIndex + 1} {title}</span>
-        <Button flat color="danger" title="Remove this Assertion" onClick={this.runDelete.bind(null, assertionIndex)} style={{padding: '0.2rem'}}>
+        <Button className={style.remove} color="danger" title="Remove this Assertion" onClick={this.runDelete.bind(null, assertionIndex)}>
           <Delete inline fill="danger"/>
         </Button>
       </Heading>
@@ -558,8 +558,8 @@ const AssertionsSelection = React.createClass({
             name = 'Status Code';
           }
           return (
-            <Button flat color="primary" onClick={this.runNewAssertion.bind(null, schemaType)} className="flex-1" style={{margin: '0 1rem 1rem 0'}} key={`assertion-button-${type}`}>
-              <Add inline fill="primary"/>&nbsp;{name}
+            <Button className={style.button} onClick={this.runNewAssertion.bind(null, schemaType)} key={`assertion-button-${type}`}>
+              <Add inline fill="white"/>&nbsp;{name}
             </Button>
           );
         })}

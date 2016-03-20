@@ -1,3 +1,15 @@
 .wrapper {
   text-align: left;
 }
+
+.button {
+  font-size: 1.6rem;
+  padding: 1.2rem 2.4rem;
+  margin: 0 1rem 1rem 0;
+}
+
+.remove {
+  background-color: transparent;
+  border-color: transparent;
+  padding: 1rem;
+}
