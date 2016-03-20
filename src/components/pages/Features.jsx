@@ -82,7 +82,7 @@ const Features = React.createClass({
 
           <SplitContainer className={style.section}>
             <SplitPanel className={style.screenshotPanel}>
-              <BaseSVG svg={notificationsSVG} className={style.svg} />
+              <BaseSVG className={style.screenshotSVG} svg={notificationsSVG} className={style.svg} />
             </SplitPanel>
 
             <SplitPanel className={style.screenshotProsePanel}>
@@ -125,7 +125,7 @@ const Features = React.createClass({
             </SplitPanel>
 
             <SplitPanel className={style.screenshotPanel}>
-              <BaseSVG svg={checksSVG} className={style.svg} />
+              <BaseSVG svg={checksSVG} className={style.screenshotSVG} />
             </SplitPanel>
           </SplitContainer>
 
@@ -134,7 +134,7 @@ const Features = React.createClass({
 
           <SplitContainer className={style.section}>
             <SplitPanel className={style.imagePanel}>
-              <BaseSVG svg={bastionSVG} className={style.svg} />
+              <BaseSVG svg={bastionSVG} className={style.screenshotSVG} />
             </SplitPanel>
 
             <SplitPanel className={style.screenshotProsePanel}>

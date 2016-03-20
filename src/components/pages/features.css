@@ -10,7 +10,7 @@
 
 .offsetDivider {
   margin-top: -6.4rem;
-  height: 10vmax; /* use height instead of margin/padding to clip phone */
+  height: 12vmax; /* use height instead of margin/padding to clip phone */
   margin-bottom: 1rem;
 }
 
@@ -44,6 +44,11 @@
 
 .svg {
   width: 100%;
+  max-width: 420px;
+}
+
+.screenshotSVG {
+  composes: svg;
 }
 
 @media (max-width: 768px) {
