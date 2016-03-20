@@ -186,8 +186,13 @@ const AssertionsSelection = React.createClass({
       const res = this.getResponse();
       const body = _.get(res, 'body');
       const json = JSON.parse(body);
-      const type = _.chain(res).get('headers').get('Content-Type').value();
-      return type && type.match('json', 'gi') && json;
+      const headers = _.get(res, 'headers');
+      if (Array.isArray(headers)){
+        const arr = _.chain(headers).find({name: 'Content-Type'}).get('values').value() || [];
+        const type = arr.join(' ');
+        return type && type.match('json', 'gi') && json;
+      }
+      return false;
     } catch (err){
       return false;
     }

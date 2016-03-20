@@ -39,14 +39,17 @@ const TryCheck = React.createClass({
     return isSuccess ? responses : null;
   },
 
-  getFirstResponse(){
+  getFirstResponse(formatHeaders){
     const res = _.chain(this.getResponses()).head().get('http_response').value();
     if (res && res.headers){
-      let headers = {};
-      res.headers.forEach(h => {
-        headers[h.name] = h.values.join('; ');
-      });
-      return _.assign({}, res, {headers});
+      if (formatHeaders){
+        let headers = {};
+        res.headers.forEach(h => {
+          headers[h.name] = h.values.join('; ');
+        });
+        return _.assign({}, res, {headers});
+      }
+      return res;
     }
     return null;
   },
@@ -66,7 +69,7 @@ const TryCheck = React.createClass({
   },
 
   renderResponses() {
-    const first = this.getFirstResponse();
+    const first = this.getFirstResponse(true);
     if (first){
       return (
         <div>
@@ -81,7 +84,7 @@ const TryCheck = React.createClass({
 
           <form ref="form">
             <AssertionSelection assertions={this.state.assertions} onChange={this.handleAssertionsChange}
-              response={this.getFirstResponse()} responseFormatted={this.getFirstResponse()}/>
+              response={this.getFirstResponse()} responseFormatted={this.getFirstResponse(true)}/>
           </form>
         </div>
       );
