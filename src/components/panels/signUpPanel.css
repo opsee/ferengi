@@ -39,6 +39,7 @@
 .tos label,
 .tos input {
   float: left;
+  cursor: pointer;
 }
 
 .tos input {

@@ -135,6 +135,7 @@
   font-family: var(--fontDisplay);
   padding: 2rem 0;
   font-size: 2rem;
+  color: var(--colorGray6);
 }
 
 .assertion input {
@@ -177,4 +178,8 @@
 :global .react-autosuggest__suggestion--focused {
   background: var(--colorAccent);
   color: white;
+}
+
+.chosenRelationship {
+
 }
