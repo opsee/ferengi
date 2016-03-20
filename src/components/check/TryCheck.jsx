@@ -27,7 +27,7 @@ const TryCheck = React.createClass({
   },
 
   componentDidMount() {
-    this.handleSubmit(`http://jsonplaceholder.typicode.com/users/1`);
+    this.handleSubmit('https://try.opsee.com');
   },
 
   getInitialState() {

@@ -216,6 +216,7 @@ const AssertionsSelection = React.createClass({
 
   getBodySnippet(assertion){
     const meta = this.getJsonPathMeta(assertion);
+
     if (meta && meta.data && assertion.value){
       if (meta.scalar){
         return this.renderReturnedValue(assertion, meta.data);
@@ -225,29 +226,31 @@ const AssertionsSelection = React.createClass({
           {meta.data}
         </Highlight>
       );
-    } else if (!meta.data && assertion.value){
+    }
+
+    else if (!meta.data && assertion.value){
       return this.renderReturnedValue(assertion, '>> No JSON data selected', 'danger');
     }
+
     return (
-      <Expandable style={{width: '100%'}} noFade>
-        <Highlight wrap noBg>
-          {this.getResponseBody()}
-        </Highlight>
-      </Expandable>
+      <div className={style.bodySnippet}>
+        <Expandable style={{width: '100%'}} noFade>
+          <Highlight wrap noBg>
+            {this.getResponseBody()}
+          </Highlight>
+        </Expandable>
+      </div>
     );
   },
 
-  getAssertionStyle(assertion){
-    let border = 'gray7';
+  getAssertionClass(assertion) {
     let test = this.getSlateTest(assertion);
     if (test && test.success){
-      border = 'success';
+      return style.assertionSuccess;
     } else if (test){
-      border = 'danger';
+      return style.assertionFailure;
     }
-    return {
-      borderLeft: `.8rem solid ${seed.color[border]}`
-    };
+    return style.assertion;
   },
 
   runSetAssertionsState(iteratee){
@@ -340,7 +343,7 @@ const AssertionsSelection = React.createClass({
   renderRelationshipButtons(assertionIndex){
     const assertion = this.state.assertions[assertionIndex];
     return (
-      <Padding t={1} style={{width: '100%'}}>
+      <div className={style.relationshipButtons}>
         {relationships.map(rel => {
           let data = {
             relationship: rel.id
@@ -355,10 +358,10 @@ const AssertionsSelection = React.createClass({
             }
           }
           return (
-            <Button flat onClick={this.runSetAssertionData.bind(null, assertionIndex, data)} color="text" style={{margin: '0 .5rem 1rem'}} key={`assertion-${assertionIndex}-relationship-${rel.id}`}>{rel.name}</Button>
+            <Button secondary onClick={this.runSetAssertionData.bind(null, assertionIndex, data)} color="text" style={{margin: '0 .5rem 1rem'}} key={`assertion-${assertionIndex}-relationship-${rel.id}`}>{rel.name}</Button>
           );
         })}
-      </Padding>
+      </div>
     );
   },
 
@@ -379,9 +382,9 @@ const AssertionsSelection = React.createClass({
     const assertion = this.state.assertions[assertionIndex];
     if (assertion.relationship && !assertion.relationship.match('empty|notEmpty')){
       return (
-        <Padding l={1} className="flex-1 align-self-end">
-          <BoundField bf={this.state.assertions[assertionIndex].form.boundField('operand')}/>
-        </Padding>
+        <div className={style.operand}>
+          <BoundField className={style.operandInput} bf={this.state.assertions[assertionIndex].form.boundField('operand')}/>
+        </div>
       );
     }
     return null;
@@ -389,40 +392,37 @@ const AssertionsSelection = React.createClass({
 
   renderReturnedValue(assertion, value){
     return (
-      <Padding b={1}>
-        <code style={{fontSize: '1.4rem'}}><Color c="gray500">{value}</Color></code>
-      </Padding>
+      <div className={style.returnedValue}>
+        <code>{value}</code>
+      </div>
     );
   },
 
   renderTitle(assertionIndex, title){
     return (
-      <Heading level={3} className="display-flex flex-1 flex-vertical-align" style={{marginBottom: '-1rem'}}>
-        <span className="flex-1">#{assertionIndex + 1} {title}</span>
-        <Button className={style.remove} color="danger" title="Remove this Assertion" onClick={this.runDelete.bind(null, assertionIndex)}>
-          <Delete inline fill="danger"/>
-        </Button>
-      </Heading>
+      <h3 className={style.heading}>
+        <span className={style.counter}>#{assertionIndex + 1}</span> <span className={style.divider}>/</span> {title}
+      </h3>
     );
   },
 
   renderCode(assertionIndex){
     const assertion = this.state.assertions[assertionIndex];
-    let buttons = null;
-    if (!assertion.relationship){
-      buttons = this.renderRelationshipButtons(assertionIndex);
-    }
+
     return (
       <div>
         {this.renderTitle(assertionIndex, 'Response Code')}
-        <Padding l={2} t={1} b={1} r={1} style={this.getAssertionStyle(assertion)}>
+
+        <div className={style.contents}>
           {this.renderReturnedValue(assertion, this.getResponse().code)}
+
           <div className="display-flex">
             {this.renderChosenRelationship(assertionIndex)}
             {this.renderOperand(assertionIndex)}
           </div>
-          {buttons}
-        </Padding>
+
+          { assertion.relationship ? null : this.renderRelationshipButtons(assertionIndex) }
+        </div>
       </div>
     );
   },
@@ -433,10 +433,14 @@ const AssertionsSelection = React.createClass({
     const selectedHeaderResult = _.get(this.getResponseFormatted(), `headers.${assertion.value}`);
     const headers = _.get(this.getResponseFormatted(), 'headers') || {};
     const headerKeys = _.keys(headers);
+
     let buttons = null;
+
     if (!assertion.relationship && assertion.value){
       buttons = this.renderRelationshipButtons(assertionIndex);
-    } else if (!assertion.value){
+    }
+
+    else if (!assertion.value){
       buttons = (
         <Padding t={1}>
           {headerKeys.map(key => {
@@ -447,6 +451,7 @@ const AssertionsSelection = React.createClass({
         </Padding>
       );
     }
+
     const helper = assertion.value ? (
       <div>
         <div style={{width: '100%'}}>
@@ -458,14 +463,17 @@ const AssertionsSelection = React.createClass({
         </div>
       </div>
     ) : null;
+
     const title = selectedHeader ? ` - ${selectedHeader}` : '';
+
     return (
       <div>
         {this.renderTitle(assertionIndex, `Response Header${title}`)}
-        <Padding l={2} t={1} b={1} r={1} style={this.getAssertionStyle(assertion)}>
+
+        <div className={style.contents}>
           {helper}
           {buttons}
-        </Padding>
+        </div>
       </div>
     );
   },
@@ -491,12 +499,13 @@ const AssertionsSelection = React.createClass({
     return (
       <div>
         {this.renderTitle(assertionIndex, 'Plaintext Response Body')}
-        <Padding l={2} t={1} b={1} r={1} style={this.getAssertionStyle(assertion)}>
+
+        <div className={style.contents}>
           {this.getBodySnippet(assertion) || 'Select a header below'}
           {this.renderChosenRelationship(assertionIndex)}
           {this.renderOperand(assertionIndex)}
           {buttons}
-        </Padding>
+        </div>
       </div>
     );
   },
@@ -514,14 +523,16 @@ const AssertionsSelection = React.createClass({
     return (
       <div>
         {this.renderTitle(assertionIndex, 'JSON Response Body')}
-        <Padding l={2} t={1} b={1} r={1} style={this.getAssertionStyle(assertion)}>
+        <Padding l={2} t={1} b={1} r={1}>
           {this.getBodySnippet(assertion) || 'Select a header below'}
-          <Padding t={0.5} b={1}>
+
+          <div className={style.jsonPath}>
             <div className="form-group">
               <label className="label" htmlFor={`json-path-${assertionIndex}`}>JSON path (optional) <a target="_blank" href="/docs/checks#json">Learn More</a></label>
-              <Autosuggest suggestions={this.getFilteredJsonBodyKeys(assertionIndex)} inputProps={{onChange: this.handleJsonSuggestionSelect.bind(null, assertionIndex), value: assertion.value || '', placeholder: this.getJsonPlaceholder(), id: `json-path-${assertionIndex}`}} renderSuggestion={this.renderSuggestion} getSuggestionValue={(s) => s} style={{width: '100%'}} shouldRenderSuggestions={() => true}/>
+              <Autosuggest className={style.autosuggest} suggestions={this.getFilteredJsonBodyKeys(assertionIndex)} inputProps={{onChange: this.handleJsonSuggestionSelect.bind(null, assertionIndex), value: assertion.value || '', placeholder: this.getJsonPlaceholder(), id: `json-path-${assertionIndex}`}} renderSuggestion={this.renderSuggestion} getSuggestionValue={(s) => s} shouldRenderSuggestions={() => true}/>
             </div>
-          </Padding>
+          </div>
+
           <div className="display-flex">
             {this.renderChosenRelationship(assertionIndex)}
             {this.renderOperand(assertionIndex)}
@@ -536,7 +547,16 @@ const AssertionsSelection = React.createClass({
     const key = assertion.key || 'code';
     return (
       <Padding key={`assertion-${index}`} b={2}>
-        {this[`render${_.capitalize(key)}`](index)}
+        <div className={this.getAssertionClass(assertion)}>
+
+          <div className={style.remove}>
+            <Button className={style.remove} color="danger" title="Remove this Assertion" onClick={this.runDelete.bind(null, index)}>
+              <Delete className={style.removeSVG} inline fill="danger"/>
+            </Button>
+          </div>
+
+          {this[`render${_.capitalize(key)}`](index)}
+        </div>
       </Padding>
     );
   },

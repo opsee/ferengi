@@ -8,8 +8,137 @@
   margin: 0 1rem 1rem 0;
 }
 
+.heading {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  font-family: var(--fontDisplay);
+  color: var(--colorGray6);
+}
+
+.divider {
+  color: white;
+  opacity: 0.85;
+  padding: 0 1.6rem;
+}
+
+.assertion {
+  background-color: var(--colorGray2);
+  margin: 4rem 0;
+  position: relative;
+  padding: 4rem;
+}
+
+.assertion:before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  border-top: 80px solid white;
+  border-left: 80px solid transparent;
+  width: 0;
+}
+
+.assertion:after {
+  content: '';
+  position: absolute;
+  bottom:0 ; left: 0;
+  border-top: 80px solid transparent;
+  border-left: 80px solid white;
+  width: 0;
+}
+
+.assertionDark {
+  composes: assertion;
+  color: white !important;
+}
+
+
+.assertionDark .heading {
+  color: white;
+}
+
+.assertionSuccess {
+  composes: assertionDark;
+  background-color: var(--colorSuccess);
+}
+
+.assertionFailure {
+  composes: assertionDark;
+  background-color: var(--colorDanger);
+}
+
+.assertionFailure .counter {
+  color: var(--colorWarm0);
+}
+
+.contents {
+  display: flex;
+  border: solid 1px fuchsia;
+  padding: 4rem 0;
+}
+
 .remove {
   background-color: transparent;
   border-color: transparent;
   padding: 1rem;
+  position: absolute;
+  top: 0; right: 0;
+}
+
+.remove:hover {
+  background: red;
+}
+
+.remove:hover svg {
+  fill: white;
+}
+
+.returnedValue {
+  font-size: 2rem;
+  color: #333;
+  font-family: var(--fontDisplay);
+}
+
+.relationshipButtons {
+  width: 100%;
+  padding-top: 1rem;
+  background: lime;
+  flex: 1;
+}
+
+.operand {
+  font-family: var(--fontMono);
+}
+
+.operandInput {
+  height: 100%;
+}
+
+.bodySnippet {
+  background-color: var(--colorCodeBg);
+  color: var(--colorCodeBody);
+  padding: 1.2rem 2rem;
+  line-height: 1.8rem;
+}
+
+.jsonPath {
+  padding: 2rem 0;
+}
+
+.jsonPath label {
+  font-family: var(--fontDisplay);
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.jsonPath input {
+  width: 100%;
+  font-family: var(--fontDisplay);
+  font-size: 1.6rem;
+  line-height: 2rem;
+  padding: 2rem;
+}
+
+.autosuggest {
+  background-color: fuchsia
 }
