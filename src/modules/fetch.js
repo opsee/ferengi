@@ -1,6 +1,7 @@
-let fetch = undefined;
+let obj = undefined;
 if (typeof window !== 'undefined'){
-  fetch = window.fetch || require('whatwg-fetch');
+  require('whatwg-fetch');
+  obj = window.fetch;
 }
 
-export default fetch;
+export default obj;
