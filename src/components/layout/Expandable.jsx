@@ -19,7 +19,7 @@ const Expandable = React.createClass({
   },
   getClass(){
     const keys = _.chain({
-      expandable: true,
+      expandable: true
     })
     .assign(this.props, this.state)
     .pickBy(d => !!d)

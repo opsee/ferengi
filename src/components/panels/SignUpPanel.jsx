@@ -84,13 +84,23 @@ const SignUpPanel = React.createClass({
     }
     return null;
   },
+  renderTitle(){
+    if (this.state.referrer === 'producthunt'){
+      return (
+        <h1 className={style.heading}>Welcome <span className="text-accent">Producthunt</span>. Sign up today and get instant access.</h1>
+      );
+    }
+    return (
+      <h1 className={style.heading}>Ready to <span className="text-accent">get Opsee?</span></h1>
+    );
+  },
   renderForm(){
     if (this.getStatus() === 'success') {
       let msg;
       if (this.state.referrer === 'producthunt'){
-        msg = <span>We&rsquo;ve got your info! Check your email to get started.</span>
+        msg = <span>We&rsquo;ve got your info! Check your email to get started.</span>;
       } else {
-        msg = <span>Thanks! We&rsquo;re currently reviewing signups for our private beta, and if you&rsquo;re a good fit you&rsquo;ll get an email from us.</span>
+        msg = <span>Thanks! We&rsquo;re currently reviewing signups for our private beta, and if you&rsquo;re a good fit you&rsquo;ll get an email from us.</span>;
       }
       return (
         <div className={style.success}>{msg}</div>
@@ -130,7 +140,7 @@ const SignUpPanel = React.createClass({
           <div className={style.container}>
 
             <Padding tb={4} className="text-center">
-              <h1 className={style.heading}>Ready to <span className="text-accent">get Opsee?</span></h1>
+              {this.renderTitle()}
               <div className={style.subheading}>Opsee is free during public beta. Join now by giving us your email address below, and we&rsquo;ll send you a link to your very own Opsee account.</div>
             </Padding>
 
