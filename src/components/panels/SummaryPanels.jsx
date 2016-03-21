@@ -31,9 +31,7 @@ export default React.createClass({
           </SplitPanel>
 
           <SplitPanel className={style.imagePanel}>
-            <Padding l={4}>
-              <BaseSVG svg={onboardingSVG} />
-            </Padding>
+            <BaseSVG svg={onboardingSVG} />
           </SplitPanel>
         </SplitContainer>
 
@@ -41,9 +39,7 @@ export default React.createClass({
 
         <SplitContainer className={style.section}>
           <SplitPanel className={style.imagePanel}>
-            <Padding a={4}>
-              <BaseSVG className={style.assertionsSVG} svg={passingAssertionsSVG} />
-            </Padding>
+            <BaseSVG className={style.assertionsSVG} svg={passingAssertionsSVG} />
           </SplitPanel>
 
           <SplitPanel className={style.prosePanel} >
