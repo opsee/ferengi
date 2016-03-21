@@ -17,7 +17,7 @@ export default React.createClass({
         <div className={style.logoGroup}>
           <p className={style.prose}>Made with &hearts; by Opsee Co.</p>
           <p className={style.prose}>123 9th Street &bull; San Francisco, CA</p>
-          <p className={style.prose}><Link to="https://twitter.com/opseeco">Follow @opseeco</Link></p>
+          <p className={style.prose}><Link to="https://twitter.com/GetOpsee">Follow @opseeco</Link></p>
         </div>
       </div>
     );
