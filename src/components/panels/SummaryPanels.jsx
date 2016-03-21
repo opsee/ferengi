@@ -31,9 +31,7 @@ export default React.createClass({
           </SplitPanel>
 
           <SplitPanel className={style.imagePanel}>
-            <Padding l={4}>
-              <BaseSVG svg={onboardingSVG} />
-            </Padding>
+            <BaseSVG svg={onboardingSVG} />
           </SplitPanel>
         </SplitContainer>
 
