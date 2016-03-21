@@ -1,11 +1,10 @@
-
 .input,
 .button {
   width: 100%;
 }
 
 /* Large sons^H^H^H^Hscreens */
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .group {
     position: relative;
     display: table;
@@ -50,5 +49,6 @@
     vertical-align: middle;
     border-collapse: separate;
     overflow: visible;
+    width: auto;
   }
 }
