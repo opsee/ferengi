@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import {connect} from 'react-redux';
-import _ from 'lodash';
 
 import style from './urlInput.css';
 import ButtonInput from '../forms/ButtonInput';

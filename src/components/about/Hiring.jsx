@@ -1,6 +1,5 @@
 import React from 'react';
-import { Expandable, Padding } from '../layout';
-import style from './hiring.css';
+import {Padding } from '../layout';
 
 export default React.createClass({
   render() {
