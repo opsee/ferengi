@@ -79,7 +79,7 @@ const SignUpPanel = React.createClass({
   renderValidationError(){
     if (this.state.validationError){
       return (
-        <div>{this.state.validationError}</div>
+        <div className={style.alert}>{this.state.validationError}</div>
       );
     }
     return null;
@@ -101,11 +101,13 @@ const SignUpPanel = React.createClass({
       <div>
         <Padding t={1} b={1}>
           {this.renderAlert()}
+          {this.renderValidationError()}
         </Padding>
+
         <Padding t={2} b={1}>
           <Input className={style.input} name="email" placeholder="Your email" value={this.state.email} type="email" onChange={this.handleInputChange}/>
         </Padding>
-        {this.renderValidationError()}
+
         <Padding b={1}>
           <Button className={style.button} type="submit" disabled={this.getStatus() === 'pending'}>
             {this.getStatus() === 'pending' ? 'Submitting...' : 'Sign up for Opsee'}
