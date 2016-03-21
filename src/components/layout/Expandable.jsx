@@ -9,7 +9,8 @@ import style from './expandable.css';
 const Expandable = React.createClass({
   propTypes: {
     children: PropTypes.node,
-    noFade: PropTypes.bool
+    noFade: PropTypes.bool,
+    className: PropTypes.string
   },
   getInitialState(){
     return {
@@ -18,13 +19,13 @@ const Expandable = React.createClass({
   },
   getClass(){
     const keys = _.chain({
-      expandable: true
+      expandable: true,
     })
     .assign(this.props, this.state)
     .pickBy(d => !!d)
     .keys()
     .value();
-    return cx(_.chain(style).pick(keys).values().value());
+    return cx(_.chain(style).pick(keys).values().value(), this.props.className);
   },
   handleToggle(){
     this.setState({
