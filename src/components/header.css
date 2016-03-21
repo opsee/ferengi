@@ -81,11 +81,7 @@ a.cta:hover {
 .light a.cta {
   color: white;
   background-color: transparent;
-  border-color: white;
-}
-
-.light a.cta {
-  color: white;
+  border: solid 1px white;
 }
 
 .light a.cta:hover {

@@ -1,11 +1,4 @@
 
-.group {
-  position: relative;
-  display: table;
-  border-collapse: separate;
-  width: 100%;
-}
-
 .input,
 .button {
   width: 100%;
@@ -13,25 +6,32 @@
 
 /* Large sons^H^H^H^Hscreens */
 @media (min-width: 768px) {
+  .group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    width: 100%;
+  }
+
   .input {
     display: table-cell;
     position: relative;
     z-index: 2;
     float: left;
     width: 100%;
-    margin-bottom: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border-right: none !important;
     border-top-right-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
     background-color: #fff;
     background-image: none;
     color: var(--colorGray9);
-    border-right: none !important;
   }
 
   .buttonWrapper {
     position: relative;
     font-size: 0;
-    white-space: nowrap;
     width: 1%;
     white-space: nowrap;
     vertical-align: middle;
@@ -42,5 +42,13 @@
   .button {
     border-top-left-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
+    position: relative;
+    z-index: 2;
+    margin-left: -1px;
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-collapse: separate;
+    overflow: visible;
   }
 }
