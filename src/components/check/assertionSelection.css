@@ -70,11 +70,6 @@
   color: var(--colorWarm0);
 }
 
-.contents {
-  /*border: solid 1px fuchsia;*/
-  /*padding: 2rem 0 6rem 0;*/
-}
-
 .remove {
   padding: 0;
   position: absolute;
@@ -113,10 +108,6 @@
   width: 100%;
   padding-top: 1rem;
   flex: 1;
-}
-
-.operand {
-  font-family: var(--fontMono);
 }
 
 .operandInput {
@@ -177,10 +168,28 @@
   word-wrap: break-word;
 }
 
-:global .react-autosuggest__container {
+.assertionDark .button {
+  border-color: white;
+  color: white;
 }
 
-:global .react-autosuggest__container--open {
+.relationshipButton {
+  composes: button;
+  margin: 0 0.5 1rem;
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.operand {
+  font-family: var(--fontMono);
+  flex: 1;
+  min-width: 80%;
 }
 
 :global .react-autosuggest__suggestions {
@@ -197,14 +206,4 @@
 :global .react-autosuggest__suggestion--focused {
   background: var(--colorAccent);
   color: white;
-}
-
-.assertionDark .button {
-  border-color: white;
-  color: white;
-}
-
-.relationshipButton {
-  composes: button;
-  margin: 0 0.5 1rem;
 }

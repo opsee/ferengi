@@ -421,7 +421,7 @@ const AssertionsSelection = React.createClass({
         <div className={style.contents}>
           {this.renderReturnedValue(assertion, this.getResponse().code)}
 
-          <div className="display-flex">
+          <div className={style.rightSide}>
             {this.renderChosenRelationship(assertionIndex)}
             {this.renderOperand(assertionIndex)}
           </div>
@@ -460,7 +460,7 @@ const AssertionsSelection = React.createClass({
         <div style={{width: '100%'}}>
           {this.renderReturnedValue(assertion, selectedHeaderResult)}
         </div>
-        <div className="display-flex">
+        <div className={style.rightSide}>
           {this.renderChosenRelationship(assertionIndex)}
           {this.renderOperand(assertionIndex)}
         </div>
@@ -539,7 +539,7 @@ const AssertionsSelection = React.createClass({
             </div>
           </div>
 
-          <div className="display-flex">
+          <div className={style.rightSide}>
             {this.renderChosenRelationship(assertionIndex)}
             {this.renderOperand(assertionIndex)}
           </div>
