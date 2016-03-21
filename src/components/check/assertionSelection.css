@@ -110,10 +110,6 @@
   flex: 1;
 }
 
-.operandInput {
-  height: 100%;
-}
-
 /* The body snippet for JSON assertions */
 .bodySnippet {
   background-color: var(--colorCodeBg);
@@ -189,8 +185,12 @@
 
 .operand {
   font-family: var(--fontMono);
-  flex: 1;
+  flex: 1 auto;
   min-width: 80%;
+}
+
+.operandInput {
+  height: 100%;
 }
 
 :global .react-autosuggest__suggestions {
