@@ -10,7 +10,6 @@
   width: 100%;
   max-width: var(--layoutMaxWidth);
   margin: 0 auto;
-  padding: 1.6rem;
   text-align: center;
 }
 
@@ -26,8 +25,4 @@
 .heading h3 {
   font-size: 2.4rem;
   line-height: 3rem;
-}
-
-.widgetWrap {
-  margin: 24px auto 12px 0;
 }
