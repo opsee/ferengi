@@ -87,7 +87,7 @@ const AssertionsSelection = React.createClass({
           }
         }),
         value: CharField({
-          label: 'JSON path (optional) <a target="_blank" href="https://app.opsee.com/docs/checks">Learn More</a>',
+          label: 'JSON path (optional) <a target="_blank" href="https://app.opsee.com/docs/checks">(Learn More)</a>',
           required: false,
           widgetAttrs: {
             placeholder: self.getJsonPlaceholder()

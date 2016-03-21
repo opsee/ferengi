@@ -134,7 +134,7 @@
 }
 
 .assertionDark a {
-  color: var(--colorWarm0);
+  color: var(--colorGray3);
 }
 
 .assertion input {
