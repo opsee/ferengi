@@ -34,9 +34,9 @@ const URLInput = React.createClass({
   },
   renderError(){
     if (this.props.redux.checks.catfish.error){
-      const msg = _.get(this.props.redux.checks.catfish.error, 'message') || 'Something went wrong.';
+      const msg = 'Something went wrong... try again';
       return (
-        <div>{msg}</div>
+        <div className={style.alert}>{msg}</div>
       );
     }
     return null;

@@ -21,3 +21,11 @@
   padding: 2rem 6rem;
   border: solid 2px var(--colorAccent);
 }
+
+.alert {
+  font-family: var(--fontDisplay);
+  color: var(--colorWarm3);
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem;
+}
