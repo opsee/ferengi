@@ -29,7 +29,8 @@ const SignUpPanel = React.createClass({
       email: undefined,
       referrer: this.getReferrer(),
       name: 'default',
-      tos: false
+      tos: false,
+      validationError: undefined
     };
   },
   getReferrer(){
@@ -44,14 +45,24 @@ const SignUpPanel = React.createClass({
   },
   handleInputChange(e){
     if (e && e.target){
-      this.setState({
-        [e.target.name]: e.target.value
-      });
+      const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+      let state = {
+        [e.target.name]: value
+      };
+      if (e.target.name === 'tos' && value){
+        state.validationError = undefined;
+      }
+      this.setState(state);
     }
   },
   handleSubmit(e){
     e.preventDefault();
-    this.props.actions.signup(this.state);
+    if (!this.state.tos){
+      return this.setState({
+        validationError: 'You must accept the Terms of Service below.'
+      });
+    }
+    return this.props.actions.signup(this.state);
   },
   renderAlert(){
     if (this.getStatus() && this.getStatus() !== 'pending'){
@@ -61,6 +72,14 @@ const SignUpPanel = React.createClass({
       }
       return (
         <div className={style.alert}>{msg}</div>
+      );
+    }
+    return null;
+  },
+  renderValidationError(){
+    if (this.state.validationError){
+      return (
+        <div>{this.state.validationError}</div>
       );
     }
     return null;
@@ -86,6 +105,7 @@ const SignUpPanel = React.createClass({
         <Padding t={2} b={1}>
           <Input className={style.input} name="email" placeholder="Your email" value={this.state.email} type="email" onChange={this.handleInputChange}/>
         </Padding>
+        {this.renderValidationError()}
         <Padding b={1}>
           <Button className={style.button} type="submit" disabled={this.getStatus() === 'pending'}>
             {this.getStatus() === 'pending' ? 'Submitting...' : 'Sign up for Opsee'}
