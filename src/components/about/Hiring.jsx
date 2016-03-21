@@ -1,5 +1,6 @@
 import React from 'react';
 import { Expandable, Padding } from '../layout';
+import style from './hiring.css';
 
 export default React.createClass({
   render() {
@@ -10,7 +11,7 @@ export default React.createClass({
 
         <div className="section">
           <Padding t={1}>
-            <Expandable noFade>
+            <Expandable className={style.expandable} noFade>
               <div style={{width: '100%'}}>
               <h3>Frontend Developer</h3>
               <p>Opsee is looking for talented frontend engineers to help build our web application. You’ll be using your expertise in Javascript and modern JS frameworks (like React.js) to build tools that developers love.</p>
@@ -38,7 +39,7 @@ export default React.createClass({
 
         <div className="section">
           <Padding t={1}>
-            <Expandable noFade>
+            <Expandable className={style.expandable} noFade>
               <div style={{width: '100%'}}>
                 <h3>Backend Developer</h3>
                 <p>Opsee is looking for talented application developers to help craft our APIs, and design and build new product features. Our language of choice is Go, so expertise is a plus, but it is required. Professional experience developing web applications and a willingness to learn are the only requirements.</p>
