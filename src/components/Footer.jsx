@@ -1,8 +1,6 @@
 import React from 'react';
 import style from './footer.css';
-import { Link } from 'react-router'
-// import BaseSVG from './images/BaseSVG';
-// import logoSVG from './images/logos/opseelogo-screen-dark-one.svg';
+import { Link } from 'react-router';
 
 export default React.createClass({
   render() {

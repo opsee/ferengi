@@ -4,7 +4,6 @@ import { Padding } from '../layout';
 import SkewDivider from '../layout/SkewDivider';
 import style from './summaryPanels.css';
 import { SplitContainer, SplitPanel } from '../panels/SplitPanels';
-import { Link } from 'react-router';
 import BaseSVG from '../images/BaseSVG';
 import onboardingSVG from '../images/onboarding.svg';
 import passingAssertionsSVG from '../images/passing-assertions.svg';
