@@ -42,8 +42,8 @@ const Features = React.createClass({
               </ul>
 
               <Padding tb={2}>
-                <Button className={style.button} secondary chevron>
-                  <a href="/how">How it works</a>
+                <Button to="/how" className={style.button} secondary chevron>
+                  How it works
                 </Button>
               </Padding>
             </SplitPanel>
@@ -74,8 +74,8 @@ const Features = React.createClass({
               </ul>
 
               <Padding tb={2}>
-                <Button className={style.button} secondary chevron>
-                  <a href="https://app.opsee.com/docs/bastion" target="_blank">Learn more about our AWS instance</a>
+                <Button to="https://app.opsee.com/docs/bastion" target="_blank" className={style.button} secondary chevron>
+                  Learn more about our AWS instance
                 </Button>
               </Padding>
             </SplitPanel>
@@ -100,8 +100,8 @@ const Features = React.createClass({
               </ul>
 
               <Padding tb={2}>
-                <Button className={style.button} secondary chevron>
-                  <a href="https://app.opsee.com/docs/notifications" target="_blank">Learn more about notifcations</a>
+                <Button to="https://app.opsee.com/docs/notifications" target="_blank" className={style.button} secondary chevron>
+                  Learn more about notifcations
                 </Button>
               </Padding>
             </SplitPanel>
@@ -120,8 +120,8 @@ const Features = React.createClass({
               </ul>
 
               <Padding tb={2}>
-                <Button className={style.button} secondary chevron>
-                  <a href="https://app.opsee.com/docs/checks" target="_blank">Learn more about assertions</a>
+                <Button to="https://app.opsee.com/docs/checks" target="_blank" className={style.button} secondary chevron>
+                  Learn more about assertions
                 </Button>
               </Padding>
             </SplitPanel>

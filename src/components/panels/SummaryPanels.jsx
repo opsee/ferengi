@@ -24,8 +24,8 @@ export default React.createClass({
             <h3>No software to install, no shell scripts to cURL</h3>
 
             <Padding tb={2}>
-              <Button className={style.button} secondary chevron>
-                <a href="/features">Learn more about Opsee</a>
+              <Button to="/features" className={style.button} secondary chevron>
+                Learn more about Opsee
               </Button>
             </Padding>
           </SplitPanel>
@@ -54,10 +54,8 @@ export default React.createClass({
             <h3>Verify every part of the response – health is more than just a status code.</h3>
 
             <Padding tb={2}>
-              <Button className={style.button} secondary chevron>
-                <a href="https://app.opsee.com/docs/checks" target="_blank">
+              <Button to="https://app.opsee.com/docs/checks" target="_blank" className={style.button} secondary chevron>
                   Learn more about health checks
-                </a>
               </Button>
             </Padding>
           </SplitPanel>
@@ -74,8 +72,8 @@ export default React.createClass({
             <h3>Designed to work with your favorite tools.</h3>
 
             <Padding tb={2}>
-              <Button className={style.button} secondary chevron>
-                <a href="/how">How Opsee works</a>
+              <Button to="/how" className={style.button} secondary chevron>
+                How Opsee works
               </Button>
             </Padding>
           </SplitPanel>
