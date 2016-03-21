@@ -30,7 +30,7 @@ export default React.createClass({
                 <h2 className={style.step}>Add Opsee to your AWS environment</h2>
               </div>
               <p className="prose">The first thing we do is add the Bastion Instance to your AWS environment. It&rsquo;s resonsible for all health checking, incident response, and discovery of your infrastructure.</p>
-              <p className="prose">The Bastion Instance is an Amazon AMI defined by a CloudFormation Template. Learn more about the Bastion Instance in our docs.</p>
+              <p className="prose">The Bastion Instance is an Amazon AMI defined by a CloudFormation Template. Learn more about the Bastion Instance <a href="https://app.opsee.com/docs/checks" target="_blank">in our documentation</a>.</p>
             </SplitPanel>
 
             <SplitPanel className={style.imagePanel}>
