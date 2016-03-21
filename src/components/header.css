@@ -13,6 +13,10 @@
   font-size: 1.6rem;
 }
 
+.cta {
+  padding: 2rem !important;
+}
+
 .links {
   padding: 0 1.6rem;
   font-family: var(--fontDisplay);
@@ -49,8 +53,8 @@
   composes: links;
 }
 
-.cta a,
-.cta a:hover {
+a.cta,
+a.cta:hover {
   color: white !important;
 }
 
@@ -74,23 +78,23 @@
   color: #FFD15E;
 }
 
-.light .cta {
+.light a.cta {
   color: white;
   background-color: transparent;
   border-color: white;
 }
 
-.light .cta a {
+.light a.cta {
   color: white;
 }
 
-.light .cta:hover {
+.light a.cta:hover {
   background: white;
   color: var(--colorAccent);
 }
 
-.light .cta:hover a,
-.light .cta a:hover {
+.light a.cta:hover ,
+.light a.cta:hover {
   color: var(--colorAccent) !important;
 }
 

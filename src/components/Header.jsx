@@ -40,9 +40,9 @@ module.exports = React.createClass({
             <ul className={style.authLinks}>
               <li className={style.hideSm}><Link to="https://app.opsee.com/login">Log In</Link></li>
               <li>
-                <Button className={style.cta}>
-                  <a href="#signup">Get Opsee</a>
-                </Button>
+                <a href="#signup" className={style.cta}>
+                  Get Opsee
+                </a>
               </li>
             </ul>
           </div>
