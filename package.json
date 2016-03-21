@@ -65,6 +65,7 @@
     "redux-actions": "^0.9.1",
     "redux-router": "^1.0.0-beta7",
     "redux-thunk": "^1.0.3",
+    "scroll-behavior": "^0.3.3",
     "seedling": "github:opsee/seedling",
     "serialize-javascript": "^1.2.0",
     "slate": "git+ssh://git@github.com/opsee/slate.git#2.2.2",

@@ -6,16 +6,20 @@ import { Provider } from 'react-redux';
 import { createHistory } from 'history';
 import { ReduxRouter, reduxReactRouter } from 'redux-router';
 import { promiseMiddleware } from 'emissary/src/js/modules/promiseMiddleware';
-
+import useSimpleScroll from 'scroll-behavior/lib/useSimpleScroll';
 import reducer from '../reducers';
 import routes from '../routes';
 
 export default () => {
   const initialState = window.__initialState;
 
+  const scrollableHistory = useSimpleScroll(createHistory);
+
   const store = compose(
     applyMiddleware( thunk, promiseMiddleware ),
-    reduxReactRouter({ createHistory })
+    reduxReactRouter({
+      createHistory: scrollableHistory
+    })
   )(createStore)(reducer, initialState);
 
   const rootComponent = (
