@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { routerStateReducer as router } from 'redux-router'; // 'redux-router';
+import { routerStateReducer as router } from 'redux-router';
 import asyncActions from './asyncActions';
 
 import checks from './checks';
