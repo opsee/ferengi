@@ -41,7 +41,7 @@ module.exports = React.createClass({
               <li className={style.hideSm}><Link to="https://app.opsee.com/login">Log In</Link></li>
               <li>
                 <Button className={style.cta}>
-                  Get Opsee
+                  <a href="#signup">Get Opsee</a>
                 </Button>
               </li>
             </ul>

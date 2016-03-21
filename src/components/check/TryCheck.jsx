@@ -8,7 +8,6 @@ import URLInput from './URLInput';
 import style from './tryCheck.css';
 import CheckResponseSingle from './CheckResponseSingle';
 import AssertionSelection from './AssertionSelection';
-import smoothScroll from 'smoothscroll';
 
 const TryCheck = React.createClass({
   propTypes: {
@@ -32,15 +31,6 @@ const TryCheck = React.createClass({
       isLoading: false,
       assertions: []
     };
-  },
-
-  componentWillReceiveProps(nextProps) {
-    const isCurrentSuccess = this.props.redux.asyncActions.checkUrl.status === 'success';
-    const isNowSuccess = nextProps.redux.asyncActions.checkUrl.status === 'success';
-    if (!isCurrentSuccess && isNowSuccess) {
-      const target = document.querySelector('#scrollAnchor');
-      smoothScroll(target);
-    }
   },
 
   getResponses() {

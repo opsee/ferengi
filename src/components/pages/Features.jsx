@@ -10,12 +10,12 @@ import SignUpPanel from '../panels/SignUpPanel';
 import Button from '../forms/Button';
 
 import BaseSVG from '../images/BaseSVG';
-import bastionSVG from '../images/home-bastion3.svg';
-import checksSVG from '../images/home-checks2.svg';
 import checkDiagramSVG from '../images/product-checks.svg';
 import notificationsSVG from '../images/product-notifications.svg';
-import installStepsSVG from '../images/install-steps2.svg';
-import howBastionSVG from '../images/how-bastion.svg';
+import awsIntegrationsSVG from '../images/integrations-aws.svg';
+import passingAssertionsSVG from '../images/passing-assertions.svg';
+import securitySVG from '../images/security.svg';
+import cleanSimpleSVG from '../images/clean-simple.svg';
 
 const Features = React.createClass({
   render() {
@@ -23,7 +23,7 @@ const Features = React.createClass({
       <div>
         <StaticHeader className={style.header}>
           <div className="text-center">
-            <h1 className={style.header}>Great monitoring doesn&rsquo;t need to be <span className='text-accent-static'>complicated</span></h1>
+            <h1 className={style.header}>Great monitoring doesn&rsquo;t need to be <span className="text-accent-static">complicated</span></h1>
             <h3>Opsee is designed for busy teams who want to get back to doing what they love.</h3>
           </div>
         </StaticHeader>
@@ -42,20 +42,24 @@ const Features = React.createClass({
               </ul>
 
               <Padding tb={2}>
-                <Button className={style.button} secondary chevron>How it works</Button>
+                <Button className={style.button} secondary chevron>
+                  <a href="/how">How it works</a>
+                </Button>
               </Padding>
             </SplitPanel>
 
             <SplitPanel className={style.imagePanel}>
-              <BaseSVG svg={checkDiagramSVG} />
+              <BaseSVG svg={awsIntegrationsSVG} />
             </SplitPanel>
           </SplitContainer>
 
           <SkewDivider />
 
           <SplitContainer className={style.section}>
-            <SplitPanel className={style.screenshotPanel}>
-              <BaseSVG svg={installStepsSVG} />
+            <SplitPanel className={style.imagePanel}>
+              <Padding a={4}>
+                <BaseSVG svg={checkDiagramSVG} />
+              </Padding>
             </SplitPanel>
 
             <SplitPanel className={style.screenshotProsePanel}>
@@ -71,18 +75,17 @@ const Features = React.createClass({
 
               <Padding tb={2}>
                 <Button className={style.button} secondary chevron>
-                  Learn more about our AWS instance
+                  <a href="https://app.opsee.com/docs/bastion" target="_blank">Learn more about our AWS instance</a>
                 </Button>
               </Padding>
             </SplitPanel>
           </SplitContainer>
 
-          <SkewDivider className={style.offsetDivider} />
-
+          <SkewDivider />
 
           <SplitContainer className={style.section}>
             <SplitPanel className={style.screenshotPanel}>
-              <BaseSVG className={style.screenshotSVG} svg={notificationsSVG} className={style.svg} />
+              <BaseSVG svg={notificationsSVG} className={style.svg} />
             </SplitPanel>
 
             <SplitPanel className={style.screenshotProsePanel}>
@@ -98,12 +101,11 @@ const Features = React.createClass({
 
               <Padding tb={2}>
                 <Button className={style.button} secondary chevron>
-                  Learn more about notifcations
+                  <a href="https://app.opsee.com/docs/notifications" target="_blank">Learn more about notifcations</a>
                 </Button>
               </Padding>
             </SplitPanel>
           </SplitContainer>
-
 
           <SkewDivider className={style.offsetDivider} />
 
@@ -119,22 +121,23 @@ const Features = React.createClass({
 
               <Padding tb={2}>
                 <Button className={style.button} secondary chevron>
-                  Learn more about health checks
+                  <a href="https://app.opsee.com/docs/checks" target="_blank">Learn more about assertions</a>
                 </Button>
               </Padding>
             </SplitPanel>
 
-            <SplitPanel className={style.screenshotPanel}>
-              <BaseSVG svg={checksSVG} className={style.screenshotSVG} />
+            <SplitPanel className={style.imagePanel}>
+              <Padding a={4}>
+                <BaseSVG svg={passingAssertionsSVG} />
+              </Padding>
             </SplitPanel>
           </SplitContainer>
 
-
-          <SkewDivider className={style.offsetDivider} />
+          <SkewDivider />
 
           <SplitContainer className={style.section}>
             <SplitPanel className={style.imagePanel}>
-              <BaseSVG svg={bastionSVG} className={style.screenshotSVG} />
+              <BaseSVG svg={cleanSimpleSVG} className={style.screenshotSVG} />
             </SplitPanel>
 
             <SplitPanel className={style.screenshotProsePanel}>
@@ -147,12 +150,6 @@ const Features = React.createClass({
                 <li><span className="prose">Find problems without staring at graphs</span></li>
                 <li><span className="prose">Responsive UI works on any device</span></li>
               </ul>
-
-              <Padding tb={2}>
-                <Button className={style.button} secondary chevron>
-                  Create assertions against any website
-                </Button>
-              </Padding>
             </SplitPanel>
           </SplitContainer>
 
@@ -169,16 +166,12 @@ const Features = React.createClass({
                 <li><span className="prose">No third party software on your systems</span></li>
                 <li><span className="prose">Secure communication between Opsee & our instance</span></li>
               </ul>
-
-              <Padding tb={2}>
-                <Button className={style.button} secondary chevron>
-                  Learn more about our IAM & CloudFormation
-                </Button>
-              </Padding>
             </SplitPanel>
 
             <SplitPanel className={style.imagePanel}>
-              <BaseSVG svg={howBastionSVG} className={style.svg} />
+              <Padding a={4}>
+                <BaseSVG svg={securitySVG} className={style.svg} />
+              </Padding>
             </SplitPanel>
           </SplitContainer>
         </div>

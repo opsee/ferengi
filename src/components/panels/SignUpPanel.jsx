@@ -106,7 +106,7 @@ const SignUpPanel = React.createClass({
   render() {
     return (
       <Panel>
-        <div className={style.panel}>
+        <div id="signup" className={style.panel}>
           <div className={style.container}>
 
             <Padding tb={4} className="text-center">

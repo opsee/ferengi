@@ -1,18 +1,23 @@
 import React from 'react';
 import style from './footer.css';
-
-import BaseSVG from './images/BaseSVG';
-import logoSVG from './images/logos/opseelogo-screen-dark-one.svg';
+import { Link } from 'react-router';
 
 export default React.createClass({
   render() {
     return (
       <div className={style.footer}>
-        <div className={style.logoGroup}>
-          <BaseSVG className={style.logo} svg={logoSVG} />
+        <ul className={style.nav}>
+          <li><Link className={style.navLink} to="/features">Features</Link></li>
+          <li><Link className={style.navLink} to="/how">How It Works</Link></li>
+          <li><Link className={style.navLink} to="/about">About</Link></li>
+          <li><Link className={style.navLink} to="http://blog.opsee.com/" target="_blank">Blog</Link></li>
+          <li><Link className={style.navLink} to="https://app.opsee.com/login" target="_blank">Log in</Link></li>
+        </ul>
 
+        <div className={style.logoGroup}>
           <p className={style.prose}>Made with &hearts; by Opsee Co.</p>
           <p className={style.prose}>123 9th Street &bull; San Francisco, CA</p>
+          <p className={style.prose}><Link to="https://twitter.com/opseeco">Follow @opseeco</Link></p>
         </div>
       </div>
     );

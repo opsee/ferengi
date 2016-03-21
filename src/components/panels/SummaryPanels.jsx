@@ -4,7 +4,6 @@ import { Padding } from '../layout';
 import SkewDivider from '../layout/SkewDivider';
 import style from './summaryPanels.css';
 import { SplitContainer, SplitPanel } from '../panels/SplitPanels';
-
 import BaseSVG from '../images/BaseSVG';
 import onboardingSVG from '../images/onboarding.svg';
 import passingAssertionsSVG from '../images/passing-assertions.svg';
@@ -26,7 +25,7 @@ export default React.createClass({
 
             <Padding tb={2}>
               <Button className={style.button} secondary chevron>
-                Learn more about how Opsee works
+                <a href="/features">Learn more about Opsee</a>
               </Button>
             </Padding>
           </SplitPanel>
@@ -56,7 +55,9 @@ export default React.createClass({
 
             <Padding tb={2}>
               <Button className={style.button} secondary chevron>
-                Learn more about assertions
+                <a href="https://app.opsee.com/docs/checks" target="_blank">
+                  Learn more about health checks
+                </a>
               </Button>
             </Padding>
           </SplitPanel>
@@ -74,7 +75,7 @@ export default React.createClass({
 
             <Padding tb={2}>
               <Button className={style.button} secondary chevron>
-                Learn more about AWS integration
+                <a href="/how">How Opsee works</a>
               </Button>
             </Padding>
           </SplitPanel>
