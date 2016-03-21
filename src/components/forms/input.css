@@ -1,7 +1,12 @@
 .input {
+  /* @see http://stackoverflow.com/questions/23211656/remove-ios-input-shadow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
   background-color: white;
   box-sizing: border-box;
-  /*border-radius: 2rem;*/
+  border-radius: 0;
   border: solid 1px var(--colorGray4);
   padding: 1rem;
   width: 100%;
