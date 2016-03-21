@@ -51,7 +51,6 @@
   color: white !important;
 }
 
-
 .assertionDark .heading {
   color: white;
 }
@@ -207,4 +206,15 @@
 :global .react-autosuggest__suggestion--focused {
   background: var(--colorAccent);
   color: white;
+}
+
+@media (max-width: 768px) {
+  .assertion {
+    padding: 6rem 2rem;
+  }
+
+  .assertionInner {
+    /* Compensates for angled corners on small screens */
+    padding: 2rem 0;
+  }
 }
