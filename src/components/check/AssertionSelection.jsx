@@ -87,7 +87,7 @@ const AssertionsSelection = React.createClass({
           }
         }),
         value: CharField({
-          label: 'JSON path (optional) <a target="_blank" href="/docs/checks#json">Learn More</a>',
+          label: 'JSON path (optional) <a target="_blank" href="https://app.opsee.com/docs/checks">Learn More</a>',
           required: false,
           widgetAttrs: {
             placeholder: self.getJsonPlaceholder()
@@ -531,7 +531,7 @@ const AssertionsSelection = React.createClass({
 
           <div className={style.jsonPath}>
             <div className="form-group">
-              <label className="label" htmlFor={`json-path-${assertionIndex}`}>JSON path (optional) <a target="_blank" href="/docs/checks#json">Learn More</a></label>
+              <label className="label" htmlFor={`json-path-${assertionIndex}`}>JSON path (optional) <a target="_blank" href="https://app.opsee.com/docs/checks">Learn More</a></label>
 
               <div className={style.autosuggest}>
                 <Autosuggest suggestions={this.getFilteredJsonBodyKeys(assertionIndex)} inputProps={{onChange: this.handleJsonSuggestionSelect.bind(null, assertionIndex), value: assertion.value || '', placeholder: this.getJsonPlaceholder(), id: `json-path-${assertionIndex}`}} renderSuggestion={this.renderSuggestion} getSuggestionValue={(s) => s} style={{width: '100%'}} shouldRenderSuggestions={() => true}/>
