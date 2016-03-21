@@ -1,4 +1,6 @@
 import React from 'react';
+import Button from '../forms/Button';
+import { Padding } from '../layout';
 
 export default React.createClass({
   render() {
@@ -28,8 +30,12 @@ export default React.createClass({
                 <a href="https://s3-us-west-1.amazonaws.com/opsee-public-images/opseelogos-all.zip"><img src={'/' + require('../images/press/opseelogos-all.png')} alt="all Opsee logos for download"/></a>
               </div>
               <div className="padding-b">
-                <a className="btn btn-primary btn-block" href="https://s3-us-west-1.amazonaws.com/opsee-public-images/opseelogos-all.zip">DOWNLOAD</a>
-                <small>All logos come in small and large PNG, and vector SVG formats (161kB .ZIP file)</small>
+                <Padding tb={2}>
+                  <Button to="https://s3-us-west-1.amazonaws.com/opsee-public-images/opseelogos-all.zip" target="_blank" secondary chevron>
+                    Download
+                  </Button>
+                </Padding>
+                <p><small>All logos come in small and large PNG, and vector SVG formats (161kB .ZIP file)</small></p>
               </div>
             </div>
           </div>
