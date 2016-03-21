@@ -87,7 +87,7 @@ const AssertionsSelection = React.createClass({
           }
         }),
         value: CharField({
-          label: 'JSON path (optional) <a target="_blank" href="https://app.opsee.com/docs/checks">Learn More</a>',
+          label: 'JSON path (optional) <a target="_blank" href="https://app.opsee.com/docs/checks">(Learn More)</a>',
           required: false,
           widgetAttrs: {
             placeholder: self.getJsonPlaceholder()
@@ -524,9 +524,10 @@ const AssertionsSelection = React.createClass({
       buttons = this.renderRelationshipButtons(assertionIndex);
     }
     return (
-      <div>
+      <div className={style.assertionInner}>
         {this.renderTitle(assertionIndex, 'JSON Response Body')}
-        <Padding l={2} t={1} b={1} r={1}>
+
+        <div className={style.contents}>
           {this.getBodySnippet(assertion) || 'Select a header below'}
 
           <div className={style.jsonPath}>
@@ -544,7 +545,7 @@ const AssertionsSelection = React.createClass({
             {this.renderOperand(assertionIndex)}
           </div>
           {buttons}
-        </Padding>
+        </div>
       </div>
     );
   },

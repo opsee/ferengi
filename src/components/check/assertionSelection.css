@@ -51,7 +51,6 @@
   color: white !important;
 }
 
-
 .assertionDark .heading {
   color: white;
 }
@@ -135,7 +134,7 @@
 }
 
 .assertionDark a {
-  color: var(--colorWarm0);
+  color: var(--colorGray3);
 }
 
 .assertion input {
@@ -152,8 +151,6 @@
 }
 
 .autosuggest {
-  max-height: 20rem;
-  overflow-y: hidden;
   background-color: white;
   font-family: var(--fontDisplay);
   color: var(--colorGray6);
@@ -193,6 +190,16 @@
   height: 100%;
 }
 
+:global .react-autosuggest__suggestions-container {
+  max-height: 40rem;
+  overflow-y: auto;
+}
+
+:global .react-autosuggest__input,
+:global .react-autosuggest__input:focus {
+  border: none;
+}
+
 :global .react-autosuggest__suggestions {
   padding-left: 0;
   list-style: none;
@@ -201,10 +208,23 @@
 
 :global .react-autosuggest__suggestion {
   display: block;
-  padding: 3px 20px;
+  padding: 1rem 2rem;
+  margin: 0;
+  cursor: pointer;
 }
 
 :global .react-autosuggest__suggestion--focused {
   background: var(--colorAccent);
   color: white;
+}
+
+@media (max-width: 768px) {
+  .assertion {
+    padding: 6rem 2rem;
+  }
+
+  .assertionInner {
+    /* Compensates for angled corners on small screens */
+    padding: 2rem 0;
+  }
 }
