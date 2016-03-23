@@ -41,13 +41,20 @@
   text-align: center;
 }
 
+.screenshotPanel {
+  composes: imagePanel;
+  align-self: flex-end;
+  margin-bottom: -220px;
+}
+
 .svg {
   max-width: 420px;
 }
 
 @media (max-width: 768px) {
-  .prosePanel { order: 2; }
   .imagePanel { order: 1; }
+  .prosePanel { order: 2; }
+  .screenshotPanel { order: 3; }
 
   .imagePanel,
   .prosePanel {
