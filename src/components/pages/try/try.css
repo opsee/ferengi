@@ -1,0 +1,57 @@
+.splash {
+  display: flex;
+  vertical-align: center;
+  justify-content: center;
+  flex-direction: column;
+
+  min-height: 40vh;
+  padding: 10vh 2rem;
+  text-align: center;
+  background-position: 25% 50%;
+  background-size: cover;
+  background-repeat: none;
+  background-color: rgba(70,90,100,0.8);
+  background-blend-mode: multiply;
+}
+
+.section {
+  max-width: var(--layoutMaxWidth);
+  margin: 0 auto;
+  padding: 8rem 2rem;
+}
+
+.splash h1 {
+  color: white;
+}
+
+.splash h2 {
+  font-size: 2.4rem;
+  color: #90CAF9;
+}
+
+.prosePanel {
+  flex: 1;
+  padding: 2rem;
+  width: 50%;
+}
+
+.imagePanel {
+  width: 50%;
+  padding: 2rem;
+  text-align: center;
+}
+
+.svg {
+  max-width: 420px;
+}
+
+@media (max-width: 768px) {
+  .prosePanel { order: 2; }
+  .imagePanel { order: 1; }
+
+  .imagePanel,
+  .prosePanel {
+    flex: 1 100%;
+    width: 100%;
+  };
+}

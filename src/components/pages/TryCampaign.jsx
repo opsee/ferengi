@@ -1,5 +1,7 @@
 import React, { PropTypes } from 'react';
 import Header from '../Header';
+import SignUpPanel from '../panels/SignUpPanel';
+import SkewPanel from '../panels/SkewPanel';
 
 const TryCampaign = React.createClass({
   propTypes: {
@@ -12,9 +14,11 @@ const TryCampaign = React.createClass({
         <Header theme="dark" />
 
         <main>
-          hello
-
           {this.props.children}
+
+          <SkewPanel backgroundColor="#333" skewBottom={false}>
+            <SignUpPanel />
+          </SkewPanel>
         </main>
       </div>
     );
