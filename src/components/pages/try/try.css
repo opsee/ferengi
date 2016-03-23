@@ -4,7 +4,7 @@
   justify-content: center;
   flex-direction: column;
 
-  min-height: 40vh;
+  min-height: 50vh;
   padding: 10vh 2rem;
   text-align: center;
   background-position: 25% 50%;
@@ -27,6 +27,11 @@
 .splashNagios {
   composes: splash;
   background-image: url(https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-nagios.jpg);
+}
+
+.splashUX {
+  composes: splash;
+  background-image: url(https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-ux.jpg);
 }
 
 .section {
