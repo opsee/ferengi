@@ -17,8 +17,12 @@ export default React.createClass({
 
         <SplitContainer className={style.section}>
           <SplitPanel className={style.prosePanel} >
-            <h2>Integrate and auto-scale <span className="text-accent">seamlessly</span></h2>
-            <p>Opsee is built to work with your infrastructure and services. There are no agents to install or shell scripts to cURL.</p>
+            <Padding tb={2}>
+              <h2>Integrate and auto-scale <span className="text-accent">seamlessly</span></h2>
+              <h3>No agents to install or shell scripts to cURL.</h3>
+            </Padding>
+
+            <p>Opsee is made for AWS — seamlessly integrated into your environment and built to auto scale with you. You create health checks for your services and Opsee tracks changes for you.</p>
           </SplitPanel>
 
           <SplitPanel className={style.imagePanel}>
