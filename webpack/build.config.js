@@ -6,7 +6,9 @@ const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin'
 const sitemap =  require('sitemap-webpack-plugin');
 
 const PATHS = [
-  '/', '/about', '/how', '/features', '/beta-tos'
+  '/', '/about', '/how', '/features', '/beta-tos',
+  '/try', '/try/aws', '/try/checks', '/try/dev', '/try/icinga', '/try/microservices',
+  '/try/nagios', '/try/sensu', '/try/ux',
 ];
 
 var plugins = [
