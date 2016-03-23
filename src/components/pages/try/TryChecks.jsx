@@ -9,7 +9,7 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <div className={style.splash} style={{backgroundImage: 'url(https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev.jpg)'}}>
+        <div className={style.splashDev}>
           <Padding tb={2} lr={4}>
             <h1>Health Checks: Your First Line of Defense</h1>
           </Padding>

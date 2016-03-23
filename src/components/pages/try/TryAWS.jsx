@@ -9,7 +9,7 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <div className={style.splash} style={{backgroundImage: 'url(https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-aws.jpg)'}}>
+        <div className={style.splashAWS}>
           <Padding tb={2} lr={4}>
             <h1>Get Monitoring Built for AWS</h1>
           </Padding>

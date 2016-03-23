@@ -14,6 +14,21 @@
   background-blend-mode: multiply;
 }
 
+.splashAWS {
+  composes: splash;
+  background-image: url(https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-aws.jpg);
+}
+
+.splashDev {
+  composes: splash;
+  background-image: url(https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-aws.jpg);
+}
+
+.splashNagios {
+  composes: splash;
+  background-image: url(https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-nagios.jpg);
+}
+
 .section {
   max-width: var(--layoutMaxWidth);
   margin: 0 auto;
