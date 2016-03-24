@@ -4,17 +4,12 @@ import { Padding } from '../../layout';
 import { SplitContainer, SplitPanel } from '../../panels/SplitPanels';
 import BaseSVG from '../../images/BaseSVG';
 import awsIntegrationsSVG from '../../images/integrations-aws.svg';
+import TryCampaign from './TryCampaign';
 
 export default React.createClass({
   render() {
     return (
-      <div>
-        <div className={style.splashAWS}>
-          <Padding tb={2} lr={4}>
-            <h1>Get Monitoring Built for AWS</h1>
-          </Padding>
-        </div>
-
+      <TryCampaign title="Get Monitoring Built for AWS" splashClass={style.splashAWS}>
         <SplitContainer className={style.section}>
           <SplitPanel className={style.prosePanel} >
             <Padding tb={2}>
@@ -29,7 +24,7 @@ export default React.createClass({
             <BaseSVG svg={awsIntegrationsSVG} className={style.svg} />
           </SplitPanel>
         </SplitContainer>
-      </div>
+      </TryCampaign>
     );
   }
 });

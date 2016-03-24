@@ -4,17 +4,12 @@ import { Padding } from '../../layout';
 import { SplitContainer, SplitPanel } from '../../panels/SplitPanels';
 import BaseSVG from '../../images/BaseSVG';
 import cleanSimpleSVG from '../../images/clean-simple.svg';
+import TryCampaign from './TryCampaign';
 
 export default React.createClass({
   render() {
     return (
-      <div>
-        <div className={style.splashNagios}>
-          <Padding tb={2} lr={4}>
-            <h1>A Simpler Alternative to Icinga</h1>
-          </Padding>
-        </div>
-
+      <TryCampaign title="A Simpler Alternative to Icinga" splashClass={style.splashNagios}>
         <SplitContainer className={style.section}>
           <SplitPanel className={style.prosePanel} >
             <Padding tb={2}>
@@ -29,7 +24,7 @@ export default React.createClass({
             <BaseSVG svg={cleanSimpleSVG} className={style.svg} />
           </SplitPanel>
         </SplitContainer>
-      </div>
+      </TryCampaign>
     );
   }
 });

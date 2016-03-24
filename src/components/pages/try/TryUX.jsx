@@ -4,17 +4,12 @@ import { Padding } from '../../layout';
 import { SplitContainer, SplitPanel } from '../../panels/SplitPanels';
 import BaseSVG from '../../images/BaseSVG';
 import notificationsSVG from '../../images/product-notifications.svg';
+import TryCampaign from './TryCampaign';
 
 export default React.createClass({
   render() {
     return (
-      <div>
-        <div className={style.splashUX}>
-          <Padding tb={2} lr={4}>
-            <h1>Monitoring You Can Use Anywhere</h1>
-          </Padding>
-        </div>
-
+      <TryCampaign title="Monitoring You Can Use Anywhere" splashClass={style.splashUX}>
         <SplitContainer className={style.section}>
           <SplitPanel className={style.prosePanel} >
             <Padding tb={2}>
@@ -29,7 +24,7 @@ export default React.createClass({
             <BaseSVG svg={notificationsSVG} className={style.svg} />
           </SplitPanel>
         </SplitContainer>
-      </div>
+      </TryCampaign>
     );
   }
 });
