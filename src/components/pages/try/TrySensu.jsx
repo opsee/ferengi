@@ -9,7 +9,7 @@ import TryCampaign from './TryCampaign';
 export default React.createClass({
   render() {
     return (
-      <TryCampaign title="A Simpler Alternative to Sensu" splashClass={style.splashNagio}>
+      <TryCampaign title="A Simpler Alternative to Sensu" splashClass={style.splashNagios}>
         <SplitContainer className={style.section}>
           <SplitPanel className={style.prosePanel} >
             <Padding tb={2}>
