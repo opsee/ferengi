@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
@@ -12,6 +13,108 @@ import routes from '../routes';
 import iconLarge from '../components/images/favicon/icon_256x256@2x.png';
 import favicon from '../components/images/favicon/icon.ico';
 
+const DEFAULT_META = {
+  title: 'Opsee',
+  excerpt: 'Continuously test your services and deploy with confidence',
+  cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/opsee_logo_blue_400px.png',
+  twitter: '@GetOpsee'
+};
+
+const ROUTE_META = {
+  '/about': {
+    title: 'Opsee / About',
+  },
+
+  '/beta-tos': {
+    title: 'Opsee / Beta TOS',
+  },
+
+  '/features': {
+    title: 'Opsee / Features',
+  },
+
+  '/how': {
+    title: 'Opsee / How It Works',
+  },
+
+  '/try/aws': {
+    title: 'Opsee / Get Monitoring Built for AWS',
+    excerpt: 'Integrate and auto-scale seamlessly with your infrastructure. No agents to install or shell scripts to cURL.',
+    cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-aws.jpg',
+  },
+
+  '/try/checks': {
+    title: 'Opsee / Health Checks: Your First Line of Defense',
+    excerpt: 'Monitor your AWS infrastructure and services using checks that auto-scale with you.',
+    cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev.jpg',
+  },
+
+  '/try/dev': {
+    title: 'Opsee / Monitoring for On-Call Dev Teams',
+    excerpt: 'Effortless health checks for your services so you can get back to coding.',
+    cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev.jpg',
+  },
+
+  '/try/icinga': {
+    title: 'Opsee / Try a Simpler Alternative to Icinga',
+    excerpt: 'Health checks for your AWS infrastructure and services, zero maintenance.',
+    cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-nagios.jpg',
+  },
+
+  '/try/microservices': {
+    title: 'Opsee / Monitoring for Microservices',
+    excerpt: 'Health checks cut through the noise.',
+    cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev.jpg',
+  },
+
+  '/try/nagios': {
+    title: 'Opsee / Try a Simpler Alternative to Nagios',
+    excerpt: 'Health checks for your AWS infrastructure and services, zero maintenance.',
+    cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-nagios.jpg',
+  },
+
+  '/try/sensu': {
+    title: 'Opsee / Try a Simpler Alternative to Sensu',
+    excerpt: 'Health checks for your AWS infrastructure and services, zero maintenance.',
+    cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-nagios.jpg',
+  },
+
+  '/try/ux': {
+    title: 'Opsee / Monitoring You Can Use Anywhere',
+    excerpt: 'Powerful health checks, rich notifications, and deep AWS integration to take action anywhere.',
+    cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-ux.jpg',
+  },
+};
+
+function getMeta(path) {
+  const routeMeta = _.assign({}, DEFAULT_META, ROUTE_META[path]);
+  console.log(path, routeMeta);
+
+  return `
+    <meta name="copyright" content="Copyright ${new Date().getUTCFullYear()} Opsee, Inc. All rights reserved." />
+
+    <meta name="description" content="${routeMeta.excerpt}" />
+    <meta name="title" content="${routeMeta.title}" />
+
+    <meta content="${routeMeta.title}" property="og:site_name">
+    <meta content="${routeMeta.title}" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="${routeMeta.excerpt}" property="og:description">
+    <meta content="https://opsee.com" property="og:url">
+    <meta content="${routeMeta.cover}" property="og:image">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="${routeMeta.twitter}">
+    <meta name="twitter:title" content="${routeMeta.title}">
+    <meta name="twitter:description" content="${routeMeta.excerpt}">
+    <meta name="twitter:url" content="https://opsee.com${path}">
+    <meta name="twitter:creator" content="${routeMeta.twitter}">
+    <meta content="${routeMeta.cover}" property="twitter:image">
+
+    <title>${routeMeta.title}</title>
+  `;
+}
+
 function faviconMeta(){
   return `
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="${iconLarge}" />
@@ -22,10 +125,12 @@ function faviconMeta(){
   `;
 }
 
+
+
 /**
  * We do this in order to avoid mounting the entire React app onto the body.
  */
-function renderFullPage(html, initialState = {}) {
+function renderFullPage(path, html, initialState = {}) {
   // TODO: use this.props.assets for style.css/bundle.js instead of hardcoding
   return `
     <!DOCTYPE html>
@@ -34,28 +139,10 @@ function renderFullPage(html, initialState = {}) {
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
-        <meta name="copyright" content="Copyright ${new Date().getUTCFullYear()} Opsee, Inc. All rights reserved." />
-        <meta name="description" content="" />
-        <meta name="title" content="Opsee" />
-        ${faviconMeta()}
-
-        <meta content="Opsee - Effortless Monitoring" property="og:site_name">
-        <meta content="Health checks cut through the noise" property="og:title">
-        <meta content="website" property="og:type">
-        <meta content="Continuously test your services and deploy with confidence" property="og:description">
-        <meta content="https://opsee.com" property="og:url">
-        <meta content="https://s3-us-west-1.amazonaws.com/opsee-public-images/opsee_logo_blue_400px.png" property="og:image">
-
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:site" content="@GetOpsee">
-        <meta name="twitter:title" content="Health checks cut through the noise">
-        <meta name="twitter:description" content="Continuously test your services and deploy with confidence">
-        <meta name="twitter:url" content="https://opsee.com">
-        <meta name="twitter:creator" content="@GetOpsee">
-        <meta content="https://s3-us-west-1.amazonaws.com/opsee-public-images/opsee_logo_blue_400px.png" property="twitter:image">
-
-        <title>Opsee</title>
         <link rel="stylesheet" type="text/css" href="/style.css" />
+
+        ${faviconMeta()}
+        ${getMeta(path)}
       </head>
       <body>
         <div id="root">${html}</div>
@@ -77,7 +164,7 @@ function renderFullPage(html, initialState = {}) {
   `;
 }
 
-const getMarkup = (store) => {
+const getMarkup = (path, store) => {
   const initialState = serialize(store.getState());
 
   const markup = React.renderToStaticMarkup(
@@ -86,7 +173,7 @@ const getMarkup = (store) => {
     </Provider>
   );
 
-  return renderFullPage(markup, initialState);
+  return renderFullPage(path, markup, initialState);
 };
 
 module.exports = function renderServer(locals, callback) {
@@ -104,7 +191,7 @@ module.exports = function renderServer(locals, callback) {
     } else if (!routerState) {
       console.log('404 not found');
     } else {
-      callback(null, getMarkup(store));
+      callback(null, getMarkup(locals.path, store));
     }
   }));
 };
