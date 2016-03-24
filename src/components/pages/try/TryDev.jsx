@@ -9,7 +9,7 @@ import TryCampaign from './TryCampaign';
 export default React.createClass({
   render() {
     return (
-      <TryCampaign title="Health Checks: Your First Line of Defense" splashClass={style.splashDev}>
+      <TryCampaign title="Monitoring for the On-call Developer" splashClass={style.splashDev}>
         <SplitContainer className={style.section}>
           <SplitPanel className={style.prosePanel} >
             <Padding tb={2}>

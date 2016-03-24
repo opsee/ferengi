@@ -14,6 +14,7 @@ import {
   TryIcinga,
   TryMicroservices,
   TryNagios,
+  TryPingdom,
   TrySensu,
   TryUX
 } from './components/pages/try';
@@ -34,6 +35,7 @@ module.exports = (
       <Route path="try/icinga" component={TryIcinga} />
       <Route path="try/microservices" component={TryMicroservices} />
       <Route path="try/nagios" component={TryNagios} />
+      <Route path="try/pingdom" component={TryPingdom} />
       <Route path="try/sensu" component={TrySensu} />
       <Route path="try/ux" component={TryUX} />
     </Route>

@@ -26,19 +26,19 @@ module.exports = {
     },
 
     '/try/aws': {
-      title: 'Opsee / Get Monitoring Built for AWS',
+      title: 'Opsee / Monitoring Built for AWS',
       excerpt: 'Integrate and auto-scale seamlessly with your infrastructure. No agents to install or shell scripts to cURL.',
       cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-aws.jpg'
     },
 
     '/try/checks': {
-      title: 'Opsee / Health Checks: Your First Line of Defense',
-      excerpt: 'Monitor your AWS infrastructure and services using checks that auto-scale with you.',
+      title: 'Opsee / Health Checks Cut Through the Noise',
+      excerpt: 'Continuously Test Your Services and Deploy with Confidence',
       cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev.jpg'
     },
 
     '/try/dev': {
-      title: 'Opsee / Monitoring for On-Call Dev Teams',
+      title: 'Opsee / Monitoring for the On-Call Developer',
       excerpt: 'Effortless health checks for your services so you can get back to coding.',
       cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev.jpg'
     },
@@ -58,6 +58,12 @@ module.exports = {
     '/try/nagios': {
       title: 'Opsee / Try a Simpler Alternative to Nagios',
       excerpt: 'Health checks for your AWS infrastructure and services, zero maintenance.',
+      cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-nagios.jpg'
+    },
+
+    '/try/pingdom': {
+      title: 'Opsee / Try a Better Alternative to Pingdom',
+      excerpt: 'Health checks running inside your AWS environment for better visibility',
       cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-nagios.jpg'
     },
 
