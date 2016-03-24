@@ -1,25 +1,19 @@
-import _ from 'lodash';
 import React from 'react';
+import Helmet from 'react-helmet';
+import serialize from 'serialize-javascript';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { createMemoryHistory } from 'history';
 import { ReduxRouter } from 'redux-router';
 import { reduxReactRouter, match } from 'redux-router/server';
-import serialize from 'serialize-javascript';
 
 import reducer from '../reducers';
 import routes from '../routes';
 import iconLarge from '../components/images/favicon/icon_256x256@2x.png';
 import favicon from '../components/images/favicon/icon.ico';
-import { DEFAULT_META, ROUTE_META } from '../constants/routeMeta';
-import DocumentHead from '../components/layout/DocumentHead';
-import Helmet from 'react-helmet';
 
-function getMeta(path) {
-  const routeMeta = _.assign({}, DEFAULT_META, ROUTE_META[path]);
-  const docHead = React.renderToStaticMarkup(
-    <DocumentHead {...routeMeta} path={path} />
-  );
+function pathMeta() {
+  // @see https://github.com/nfl/react-helmet#server-usage
   let head = Helmet.rewind();
 
   return `
@@ -53,7 +47,7 @@ function renderFullPage(path, html, initialState = {}) {
         <link rel="stylesheet" type="text/css" href="/style.css" />
 
         ${faviconMeta()}
-        ${getMeta(path)}
+        ${pathMeta(path)}
       </head>
       <body>
         <div id="root">${html}</div>

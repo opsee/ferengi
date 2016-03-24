@@ -17,7 +17,7 @@ import {
   TryNagios,
   TrySensu,
   TryUX
-} from './components/pages/try'
+} from './components/pages/try';
 
 module.exports = (
   <Router>
