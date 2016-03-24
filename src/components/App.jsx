@@ -22,14 +22,6 @@ const App = React.createClass({
     }
   },
 
-  getPath() {
-    const pathname = this.props.router.location.pathname;
-    if (pathname.substr(-1) === '/') {
-      return pathname.substr(0, pathname.length - 1);
-    }
-    return pathname;
-  },
-
   render() {
     return (
       <div className={style.app}>
@@ -42,7 +34,7 @@ const App = React.createClass({
         </footer>
 
         <Analytics/>
-         <DocumentHead path={this.getPath()} />
+        <DocumentHead path={this.props.router.location.pathname} />
       </div>
     );
   }

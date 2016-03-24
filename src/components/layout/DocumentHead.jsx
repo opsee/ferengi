@@ -12,8 +12,17 @@ export default React.createClass({
     twitter: PropTypes.string
   },
 
+  getPath() {
+    const pathname = this.props.path;
+    if (pathname.substr(-1) === '/') {
+      return pathname.substr(0, pathname.length - 1);
+    }
+    return pathname;
+  },
+
   render() {
-    const meta = _.assign({}, DEFAULT_META, ROUTE_META[this.props.path], this.props);
+    const path = this.getPath();
+    const meta = _.assign({}, DEFAULT_META, ROUTE_META[path], this.props);
 
     return (
       <Helmet
