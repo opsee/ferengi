@@ -16,22 +16,22 @@
 
 .splashAWS {
   composes: splash;
-  background-image: url(https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-aws.jpg);
+  background-image: url('../../images/twitter-try-aws.jpg');
 }
 
 .splashDev {
   composes: splash;
-  background-image: url(https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-aws.jpg);
+  background-image: url('../../images/twitter-try-aws.jpg');
 }
 
 .splashNagios {
   composes: splash;
-  background-image: url(https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-nagios.jpg);
+  background-image: url('../../images/twitter-try-nagios.jpg');
 }
 
 .splashUX {
   composes: splash;
-  background-image: url(https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-ux.jpg);
+  background-image: url('../../images/twitter-try-ux.jpg');
 }
 
 .section {

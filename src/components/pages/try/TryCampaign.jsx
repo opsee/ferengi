@@ -3,7 +3,6 @@ import Header from '../../Header';
 import SignUpPanel from '../../panels/SignUpPanel';
 import SkewPanel from '../../panels/SkewPanel';
 import { Padding } from '../../layout';
-import style from './try.css';
 
 export default React.createClass({
   propTypes: {
@@ -13,8 +12,6 @@ export default React.createClass({
   },
 
   render() {
-    console.log(this.props);
-
     return (
       <div>
         <Header theme="dark" />
