@@ -5,8 +5,8 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <h2 className="text-accent">We&rsquo;re Hiring!</h2>
-        <p>Opsee doesn't have any open positions. However, we’re always interested in meeting talented people. Send an email with your résumé and a little about yourself to <a href="mailto:work@opsee.co?subject=love too work at opsee">work@opsee.co</a>. Every thoughtful application we receive will be replied to, we promise.</p>
+        <h2 className="text-accent">Working at Opsee</h2>
+        <p>Opsee doesn't currently have any open positions, but we're always interested in meeting talented people. Send an email with your résumé and a little about yourself to <a href="mailto:work@opsee.co?subject=love too work at opsee">work@opsee.co</a>. Every thoughtful application we receive will be replied to, we promise.</p>
 
         <div className="section">
           <h3>Benefits</h3>
