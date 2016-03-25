@@ -1,5 +1,7 @@
 import _ from 'lodash';
 import { SIGNUP } from './constants';
+import { trackEvent } from '../modules/analytics';
+import { ONBOARD, ONBOARD_SIGNUP } from '../constants/analyticsConstants';
 import fetch from '../modules/fetch';
 
 /**
@@ -20,6 +22,10 @@ export function signup(data = {}) {
               throw new Error(json.message);
             }).catch(reject);
           }
+
+          // Track successful signups only
+          trackEvent(ONBOARD, ONBOARD_SIGNUP, data);
+
           return res.json();
         })
         .then(resolve)
