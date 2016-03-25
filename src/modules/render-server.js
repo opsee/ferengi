@@ -1,16 +1,26 @@
 import React from 'react';
+import Helmet from 'react-helmet';
+import serialize from 'serialize-javascript';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { createMemoryHistory } from 'history';
 import { ReduxRouter } from 'redux-router';
 import { reduxReactRouter, match } from 'redux-router/server';
-import serialize from 'serialize-javascript';
 
 import reducer from '../reducers';
 import routes from '../routes';
-
 import iconLarge from '../components/images/favicon/icon_256x256@2x.png';
 import favicon from '../components/images/favicon/icon.ico';
+
+function pathMeta() {
+  // @see https://github.com/nfl/react-helmet#server-usage
+  let head = Helmet.rewind();
+
+  return `
+    ${head.title.toString()}
+    ${head.meta.toString()}
+  `;
+}
 
 function faviconMeta(){
   return `
@@ -25,7 +35,7 @@ function faviconMeta(){
 /**
  * We do this in order to avoid mounting the entire React app onto the body.
  */
-function renderFullPage(html, initialState = {}) {
+function renderFullPage(path, html, initialState = {}) {
   // TODO: use this.props.assets for style.css/bundle.js instead of hardcoding
   return `
     <!DOCTYPE html>
@@ -34,28 +44,10 @@ function renderFullPage(html, initialState = {}) {
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
-        <meta name="copyright" content="Copyright ${new Date().getUTCFullYear()} Opsee, Inc. All rights reserved." />
-        <meta name="description" content="" />
-        <meta name="title" content="Opsee" />
-        ${faviconMeta()}
-
-        <meta content="Opsee - Effortless Monitoring" property="og:site_name">
-        <meta content="Health checks cut through the noise" property="og:title">
-        <meta content="website" property="og:type">
-        <meta content="Continuously test your services and deploy with confidence" property="og:description">
-        <meta content="https://opsee.com" property="og:url">
-        <meta content="https://s3-us-west-1.amazonaws.com/opsee-public-images/opsee_logo_blue_400px.png" property="og:image">
-
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:site" content="@GetOpsee">
-        <meta name="twitter:title" content="Health checks cut through the noise">
-        <meta name="twitter:description" content="Continuously test your services and deploy with confidence">
-        <meta name="twitter:url" content="https://opsee.com">
-        <meta name="twitter:creator" content="@GetOpsee">
-        <meta content="https://s3-us-west-1.amazonaws.com/opsee-public-images/opsee_logo_blue_400px.png" property="twitter:image">
-
-        <title>Opsee</title>
         <link rel="stylesheet" type="text/css" href="/style.css" />
+
+        ${faviconMeta()}
+        ${pathMeta(path)}
       </head>
       <body>
         <div id="root">${html}</div>
@@ -77,7 +69,7 @@ function renderFullPage(html, initialState = {}) {
   `;
 }
 
-const getMarkup = (store) => {
+const getMarkup = (path, store) => {
   const initialState = serialize(store.getState());
 
   const markup = React.renderToStaticMarkup(
@@ -86,7 +78,7 @@ const getMarkup = (store) => {
     </Provider>
   );
 
-  return renderFullPage(markup, initialState);
+  return renderFullPage(path, markup, initialState);
 };
 
 module.exports = function renderServer(locals, callback) {
@@ -104,7 +96,7 @@ module.exports = function renderServer(locals, callback) {
     } else if (!routerState) {
       console.log('404 not found');
     } else {
-      callback(null, getMarkup(store));
+      callback(null, getMarkup(locals.path, store));
     }
   }));
 };

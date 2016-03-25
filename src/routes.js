@@ -7,6 +7,17 @@ import Index from './components/pages/Index.jsx';
 import Features from './components/pages/Features.jsx';
 import How from './components/pages/How.jsx';
 import BetaTOS from './components/pages/BetaTOS.jsx';
+import {
+  TryAWS,
+  TryChecks,
+  TryDev,
+  TryIcinga,
+  TryMicroservices,
+  TryNagios,
+  TryPingdom,
+  TrySensu,
+  TryUX
+} from './components/pages/try';
 
 module.exports = (
   <Router>
@@ -16,6 +27,17 @@ module.exports = (
       <Route path="how" component={How} />
       <Route path="about" component={About} />
       <Route path="beta-tos" component={BetaTOS} />
+
+      { /* Twitter campaign landing pages */ }
+      <Route path="try/aws" component={TryAWS} />
+      <Route path="try/checks" component={TryChecks} />
+      <Route path="try/dev" component={TryDev} />
+      <Route path="try/icinga" component={TryIcinga} />
+      <Route path="try/microservices" component={TryMicroservices} />
+      <Route path="try/nagios" component={TryNagios} />
+      <Route path="try/pingdom" component={TryPingdom} />
+      <Route path="try/sensu" component={TrySensu} />
+      <Route path="try/ux" component={TryUX} />
     </Route>
   </Router>
 );

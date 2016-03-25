@@ -1,0 +1,87 @@
+.splash {
+  display: flex;
+  vertical-align: center;
+  justify-content: center;
+  flex-direction: column;
+
+  min-height: 50vh;
+  padding: 10vh 2rem;
+  text-align: center;
+  background-position: 25% 50%;
+  background-size: cover;
+  background-repeat: none;
+  background-color: rgba(48,48,48,0.7);
+  background-blend-mode: darken;
+}
+
+.splashAWS {
+  composes: splash;
+  background-image: url('../../images/twitter-try-aws.jpg');
+  background-position: 50% 50%;
+}
+
+.splashDev {
+  composes: splash;
+  background-image: url('../../images/twitter-try-dev.jpg');
+}
+
+.splashNagios {
+  composes: splash;
+  background-image: url('../../images/twitter-try-nagios.jpg');
+  background-position: 50% 50%;
+}
+
+.splashUX {
+  composes: splash;
+  background-image: url('../../images/twitter-try-ux.jpg');
+  background-position: 50% 50%;
+}
+
+.section {
+  max-width: var(--layoutMaxWidth);
+  margin: 0 auto;
+  padding: 8rem 2rem;
+}
+
+.splash h1 {
+  color: white;
+}
+
+.splash h2 {
+  font-size: 2.4rem;
+  color: #90CAF9;
+}
+
+.prosePanel {
+  flex: 1;
+  padding: 2rem;
+  width: 50%;
+}
+
+.imagePanel {
+  width: 50%;
+  padding: 2rem;
+  text-align: center;
+}
+
+.screenshotPanel {
+  composes: imagePanel;
+  align-self: flex-end;
+  margin-bottom: -220px;
+}
+
+.svg {
+  max-width: 420px;
+}
+
+@media (max-width: 768px) {
+  .imagePanel { order: 1; }
+  .prosePanel { order: 2; }
+  .screenshotPanel { order: 3; }
+
+  .imagePanel,
+  .prosePanel {
+    flex: 1 100%;
+    width: 100%;
+  };
+}
