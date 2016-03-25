@@ -14,6 +14,8 @@ import getKeys from 'emissary/src/js/modules/getKeys';
 import relationships from 'slate/src/relationships';
 import slate from 'slate';
 import style from './assertionSelection.css';
+import { trackEvent } from '../../modules/analytics';
+import { TRY_CHECK, TRY_CHECK_ASSERTION } from '../../constants/analyticsConstants';
 
 const AssertionsSelection = React.createClass({
   propTypes: {
@@ -299,6 +301,10 @@ const AssertionsSelection = React.createClass({
   },
 
   runNewAssertion(key){
+    trackEvent(TRY_CHECK, TRY_CHECK_ASSERTION, {
+      assertionType: key
+    });
+
     const assertions = this.state.assertions.concat([
       this.getNewSchema({key}, this.state.assertions.length)
     ]);
