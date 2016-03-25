@@ -28,6 +28,10 @@ const TryCheck = React.createClass({
     })
   },
 
+  componentDidMount() {
+    this.handleSubmit('https://try.opsee.com');
+  },
+
   getInitialState() {
     return {
       isLoading: false,
@@ -54,6 +58,11 @@ const TryCheck = React.createClass({
       return res;
     }
     return null;
+  },
+
+  getInputClass() {
+    const hasResponse = !!this.getResponses();
+    return hasResponse ? style.urlInputExpanded : style.urlInput;
   },
 
   isLoading() {
@@ -97,11 +106,10 @@ const TryCheck = React.createClass({
 
   render() {
     return (
-      <div id="scrollAnchor" className={style.container}>
-        <div>
-          <URLInput handleSubmit={this.handleSubmit} isLoading={this.isLoading()} />
-        </div>
-        <div>
+      <div className={style.container}>
+        <URLInput className={this.getInputClass()} handleSubmit={this.handleSubmit} isLoading={this.isLoading()} />
+
+        <div className={style.response}>
           { this.renderResponses() }
         </div>
       </div>
