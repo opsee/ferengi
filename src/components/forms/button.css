@@ -2,6 +2,8 @@
   /* Defaults */
   background-color: var(--colorAccent);
   border: 1px solid var(--colorAccent);
+  border-radius: 4px;
+
   background-image: none;
   box-shadow: none;
   color: white;
