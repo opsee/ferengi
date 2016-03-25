@@ -1,5 +1,4 @@
 import React from 'react';
-import {Padding } from '../layout';
 
 export default React.createClass({
   render() {

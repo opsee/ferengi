@@ -56,6 +56,11 @@ const TryCheck = React.createClass({
     return null;
   },
 
+  getInputClass() {
+    const hasResponse = !!this.getResponses();
+    return hasResponse ? style.urlInputExpanded : style.urlInput;
+  },
+
   isLoading() {
     const requestStatus = this.props.redux.asyncActions.checkUrl.status;
     return requestStatus === 'pending';
@@ -97,11 +102,10 @@ const TryCheck = React.createClass({
 
   render() {
     return (
-      <div id="scrollAnchor" className={style.container}>
-        <div>
-          <URLInput handleSubmit={this.handleSubmit} isLoading={this.isLoading()} />
-        </div>
-        <div>
+      <div className={style.container}>
+        <URLInput className={this.getInputClass()} handleSubmit={this.handleSubmit} isLoading={this.isLoading()} />
+
+        <div className={style.response}>
           { this.renderResponses() }
         </div>
       </div>

@@ -6,6 +6,7 @@ import ButtonInput from '../forms/ButtonInput';
 
 const URLInput = React.createClass({
   propTypes: {
+    className: PropTypes.string,
     handleSubmit: PropTypes.func.isRequired,
     isLoading: PropTypes.bool,
     redux: PropTypes.shape({
@@ -42,11 +43,10 @@ const URLInput = React.createClass({
   },
   render() {
     return (
-      <div className={style.urlInput}>
+      <div className={this.props.className}>
         <form onSubmit={this.handleSubmit}>
           <ButtonInput onChange={this.handleChange} type="text" value={this.state.url}
-            buttonText="Show me" onClick={this.handleSubmit} isLoading={this.props.isLoading}
-            chevron={!this.props.isLoading} />
+            buttonText="Show me" onClick={this.handleSubmit} isLoading={this.props.isLoading} />
         </form>
         {this.renderError()}
       </div>

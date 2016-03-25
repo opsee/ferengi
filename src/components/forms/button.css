@@ -2,6 +2,8 @@
   /* Defaults */
   background-color: var(--colorAccent);
   border: 1px solid var(--colorAccent);
+  border-radius: 4px;
+
   background-image: none;
   box-shadow: none;
   color: white;
@@ -26,6 +28,7 @@
 
 .btn:hover {
   background: color(var(--colorAccent) shade(20%));
+  border-color: color(var(--colorAccent) shade(20%));
   color: white;
 }
 

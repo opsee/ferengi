@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import BaseSVG from './images/BaseSVG';
 import logoDark from './images/logos/opseelogo-screen-light-full.svg';
 import logoLight from './images/logos/opseelogo-screen-dark-one.svg';
-
+import Button from './forms/Button';
 import style from './header.css';
 
 module.exports = React.createClass({
@@ -39,9 +39,9 @@ module.exports = React.createClass({
             <ul className={style.authLinks}>
               <li className={style.hideSm}><a href="https://app.opsee.com/login">Log In</a></li>
               <li>
-                <a href="#signup" className={style.cta}>
+                <Button to="#signup" className={style.cta}>
                   Get Opsee
-                </a>
+                </Button>
               </li>
             </ul>
           </div>
