@@ -46,8 +46,7 @@ const URLInput = React.createClass({
       <div className={this.props.className}>
         <form onSubmit={this.handleSubmit}>
           <ButtonInput onChange={this.handleChange} type="text" value={this.state.url}
-            buttonText="Show me" onClick={this.handleSubmit} isLoading={this.props.isLoading}
-            chevron={!this.props.isLoading} />
+            buttonText="Show me" onClick={this.handleSubmit} isLoading={this.props.isLoading} />
         </form>
         {this.renderError()}
       </div>

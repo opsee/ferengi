@@ -28,10 +28,6 @@ const TryCheck = React.createClass({
     })
   },
 
-  componentDidMount() {
-    this.handleSubmit('https://try.opsee.com');
-  },
-
   getInitialState() {
     return {
       isLoading: false,
