@@ -28,6 +28,7 @@
 
 .btn:hover {
   background: color(var(--colorAccent) shade(20%));
+  border-color: color(var(--colorAccent) shade(20%));
   color: white;
 }
 
