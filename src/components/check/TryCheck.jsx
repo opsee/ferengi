@@ -8,6 +8,8 @@ import URLInput from './URLInput';
 import style from './tryCheck.css';
 import CheckResponseSingle from './CheckResponseSingle';
 import AssertionSelection from './AssertionSelection';
+import { trackEvent } from '../../modules/analytics';
+import { TRY_CHECK, TRY_CHECK_URL } from '../../constants/analyticsConstants';
 
 const TryCheck = React.createClass({
   propTypes: {
@@ -60,6 +62,7 @@ const TryCheck = React.createClass({
   },
 
   handleSubmit(url) {
+    trackEvent(TRY_CHECK, TRY_CHECK_URL, { url });
     this.setState({ isLoading: true });
     this.props.actions.checkURL(url);
   },
