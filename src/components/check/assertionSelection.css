@@ -26,6 +26,7 @@
   background-color: var(--colorGray2);
   position: relative;
   padding: 6rem;
+  border-radius: 4px;
 }
 
 .assertion:before {
