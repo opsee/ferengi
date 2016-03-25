@@ -1,3 +1,4 @@
+input[type="text"],
 .input {
   /* @see http://stackoverflow.com/questions/23211656/remove-ios-input-shadow */
   -webkit-appearance: none;

@@ -146,8 +146,8 @@
   font-family: var(--fontDisplay);
   font-size: 1.6rem;
   line-height: 2rem;
-  padding: 2rem;
-  border-radius: 0;
+  padding: 1rem 2rem;
+  border-radius: 4px;
 }
 
 .autosuggest {
