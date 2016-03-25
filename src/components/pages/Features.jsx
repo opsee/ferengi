@@ -166,6 +166,12 @@ const Features = React.createClass({
                 <li><span className="prose">No third party software on your systems</span></li>
                 <li><span className="prose">Secure communication between Opsee & our instance</span></li>
               </ul>
+
+              <Padding tb={2}>
+                <Button to="https://app.opsee.com/docs/permissions" target="_blank" className={style.button} secondary chevron>
+                  Learn more about our IAM roles
+                </Button>
+              </Padding>
             </SplitPanel>
 
             <SplitPanel className={style.imagePanel}>

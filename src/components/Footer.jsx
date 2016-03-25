@@ -10,6 +10,7 @@ export default React.createClass({
           <li><Link className={style.navLink} to="/features">Features</Link></li>
           <li><Link className={style.navLink} to="/how">How It Works</Link></li>
           <li><Link className={style.navLink} to="/about">About</Link></li>
+          <li><Link className={style.navLink} to="https://app.opsee.com/help" target="_blank">Documentation</Link></li>
           <li><Link className={style.navLink} to="http://blog.opsee.com/" target="_blank">Blog</Link></li>
           <li><Link className={style.navLink} to="https://app.opsee.com/login" target="_blank">Log in</Link></li>
         </ul>

@@ -50,7 +50,7 @@ export default React.createClass({
                 <div className={style.stepNumber}>Step 2</div>
                 <h2 className={style.step}>Opsee Discovers Your Infrastructure</h2>
               </div>
-              <p className="prose">The Bastion Instance uses AWS APIs to discover your instances and groups. It&rsquo;s always scanning, and detects changes to infrastructure automatically.</p>
+              <p className="prose">The Bastion Instance uses <a href="https://app.opsee.com/docs/permissions" target="_blank">AWS APIs</a> to discover your instances and groups. It&rsquo;s always scanning, and detects changes to infrastructure automatically.</p>
             </SplitPanel>
           </SplitContainer>
 
