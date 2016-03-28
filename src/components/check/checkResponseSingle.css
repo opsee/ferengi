@@ -6,8 +6,10 @@
   font-family: var(--fontMono);
   max-height: 40vh;
   overflow: auto;
+  overflow-y: scroll;
   padding: 2rem;
   text-align: left;
+  -webkit-overflow-scrolling: touch;
 }
 
 .wrapper::-webkit-scrollbar {
