@@ -7,6 +7,7 @@ import SignUpPanel from '../panels/SignUpPanel';
 import SummaryPanels from '../panels/SummaryPanels';
 import { Padding } from '../layout';
 import Button from '../forms/Button';
+import SkewDivider from '../layout/SkewDivider';
 
 import BaseSVG from '../images/BaseSVG';
 import illustAWSKey from '../images/illust_aws_key-01.svg';
@@ -22,11 +23,13 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <SkewPanel backgroundColor="#303030" skewTop={false}>
-          <Header theme="light"/>
+        <SkewPanel backgroundColor="white" skewTop={false}>
+          <Header theme="dark"/>
 
           <HeroPanel />
         </SkewPanel>
+
+        <SkewDivider />
 
         <Padding t={4} lr={2}>
           <div className="text-center">
@@ -48,7 +51,8 @@ export default React.createClass({
                 <BaseSVG svg={illustAWSKey} />
               </div>
               <div className={style.colText}>
-                <span className="text-accent">01.</span> Add Opsee to your AWS environment
+                <div className="text-accent">STEP 1</div>
+                <div>Add Opsee to your AWS environment</div>
               </div>
             </div>
 
@@ -57,7 +61,8 @@ export default React.createClass({
                 <BaseSVG svg={illustBrowser} />
               </div>
               <div className={style.colText}>
-                <span className="text-accent">02.</span> Opsee discovers your infrastructure
+                <div className="text-accent">STEP 2</div>
+                <div>Opsee discovers your infrastructure</div>
               </div>
             </div>
 
@@ -66,7 +71,8 @@ export default React.createClass({
                 <BaseSVG svg={illustChecks} />
               </div>
               <div className={style.colText}>
-                <span className="text-accent">03.</span> Get coverage instantly with nothing to maintain
+                <div className="text-accent">STEP 3</div>
+                <div>Get coverage instantly with nothing to maintain</div>
               </div>
             </div>
           </div>

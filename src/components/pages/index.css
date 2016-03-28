@@ -51,4 +51,8 @@
   .col {
     width: 100%;
   }
+
+  .colText {
+    text-align: center;
+  }
 }
