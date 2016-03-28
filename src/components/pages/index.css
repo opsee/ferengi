@@ -13,7 +13,7 @@
   margin: 0 auto;
 
   display: flex;
-  align-items: center;
+  /*align-items: center;*/
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
@@ -22,10 +22,18 @@
 .col {
   flex: 1 auto;
   width: 33.3333%;
+  padding: 0.5rem;
+}
+
+.colSVG {
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .colSVG img {
-  height: 224px;
+  max-width: 320px;
 }
 
 .colText {
