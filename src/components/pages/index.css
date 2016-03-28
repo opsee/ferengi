@@ -9,15 +9,38 @@
 }
 
 .grid {
-  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 1100px;
-  margin: 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .col {
-  flex-basis: 33.3333%;
-  padding: 2rem;
+  flex: 1 auto;
+  width: 33.3333%;
+}
+
+.colSVG img {
+  height: 224px;
+}
+
+.colText {
+  font-family: var(--fontDisplay);
+  font-size: 2rem;
+}
+
+.button {
+  font-size: 1.6rem;
+  padding: 2rem 4rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .col {
+    width: 100%;
+  }
 }

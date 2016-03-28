@@ -1,1 +1,59 @@
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 454"><title>illust_browsers</title><g id="browser"><path d="M484.89,354.5a10,10,0,0,1-10,10H216a10,10,0,0,1-10-10V75a10,10,0,0,1,10-10H474.89a10,10,0,0,1,10,10V354.5Z" style="fill:none;stroke:#231f20;stroke-miterlimit:10;stroke-width:5px"/><line x1="206" y1="102" x2="484.89" y2="102" style="fill:none;stroke:#231f20;stroke-miterlimit:10;stroke-width:5px"/></g><g id="phone"><rect x="130.98" y="200.64" width="105.18" height="187.18" rx="10" ry="10" style="fill:#fff"/><rect x="130.98" y="200.64" width="105.18" height="187.18" rx="10" ry="10" style="fill:none;stroke:#231f20;stroke-linecap:round;stroke-miterlimit:10;stroke-width:5px"/><line x1="130.98" y1="237" x2="232.67" y2="237" style="fill:none;stroke:#231f20;stroke-linecap:round;stroke-miterlimit:10;stroke-width:5px"/><line x1="167" y1="218" x2="197" y2="218" style="fill:none;stroke:#231f20;stroke-linecap:round;stroke-miterlimit:10;stroke-width:5px"/><line x1="131.98" y1="346" x2="233.67" y2="346" style="fill:none;stroke:#231f20;stroke-linecap:round;stroke-miterlimit:10;stroke-width:5px"/><circle cx="184" cy="364.33" r="7.67" style="fill:#fff;stroke:#231f20;stroke-linecap:round;stroke-miterlimit:10;stroke-width:5px"/></g><circle cx="224.92" cy="81.92" r="3.92"/><circle cx="238.92" cy="81.92" r="3.92"/><circle cx="252.92" cy="81.92" r="3.92"/><rect x="239" y="154.75" width="209.33" height="26.58" rx="10" ry="10" style="fill:none;stroke:#231f20;stroke-linecap:round;stroke-miterlimit:10;stroke-width:5px"/><path d="M221.49,284.11c0,5.1-4.5,9.26-10,9.26H156.15c-5.5,0-10-4.17-10-9.26s4.5-9.26,10-9.26h55.33C217,274.85,221.49,279,221.49,284.11Z" style="fill:none;stroke:#231f20;stroke-linecap:round;stroke-miterlimit:10;stroke-width:5px"/><line x1="155" y1="102" x2="155" y2="126" style="fill:none;stroke:#231f20;stroke-linecap:round;stroke-miterlimit:10;stroke-width:5px"/><line x1="143" y1="114" x2="167" y2="114" style="fill:none;stroke:#231f20;stroke-linecap:round;stroke-miterlimit:10;stroke-width:5px"/><line x1="85.33" y1="249" x2="85.33" y2="273" style="fill:none;stroke:#231f20;stroke-linecap:round;stroke-miterlimit:10;stroke-width:5px"/><line x1="73.33" y1="261" x2="97.33" y2="261" style="fill:none;stroke:#231f20;stroke-linecap:round;stroke-miterlimit:10;stroke-width:5px"/><circle cx="119.97" cy="138.91" r="7.67" style="fill:none;stroke:#231f20;stroke-linecap:round;stroke-miterlimit:10;stroke-width:5px"/><line x1="472.89" y1="387.82" x2="472.89" y2="411.82" style="fill:none;stroke:#231f20;stroke-linecap:round;stroke-miterlimit:10;stroke-width:5px"/><line x1="460.89" y1="399.82" x2="484.89" y2="399.82" style="fill:none;stroke:#231f20;stroke-linecap:round;stroke-miterlimit:10;stroke-width:5px"/><circle cx="528.74" cy="324.05" r="7.67" style="fill:none;stroke:#231f20;stroke-linecap:round;stroke-miterlimit:10;stroke-width:5px"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 650 454" style="enable-background:new 0 0 650 454;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#4C4C4C;stroke-width:5;stroke-miterlimit:10;}
+	.st1{fill:#FFFFFF;stroke:#4C4C4C;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#4C4C4C;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#9B9B9B;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
+	.st4{fill:#FFFFFF;stroke:#9B9B9B;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
+	.st5{fill:#9B9B9B;}
+	.st6{fill:#5D89FB;}
+	.st7{fill:none;stroke:#C9C9C9;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
+	.st8{font-family:'Geogrotesque-Regular';}
+	.st9{font-size:30px;}
+</style>
+<title>illust_browsers</title>
+<g id="browser">
+	<path class="st0" d="M484.9,354.5c0,5.5-4.5,10-10,10H216c-5.5,0-10-4.5-10-10V75c0-5.5,4.5-10,10-10h258.9c5.5,0,10,4.5,10,10
+		V354.5z"/>
+	<line class="st0" x1="206" y1="102" x2="484.9" y2="102"/>
+</g>
+<g id="phone">
+	<path class="st1" d="M141,200.6h85.2c5.5,0,10,4.5,10,10v167.2c0,5.5-4.5,10-10,10H141c-5.5,0-10-4.5-10-10V210.6
+		C131,205.1,135.5,200.6,141,200.6z"/>
+	<path class="st2" d="M141,200.6h85.2c5.5,0,10,4.5,10,10v167.2c0,5.5-4.5,10-10,10H141c-5.5,0-10-4.5-10-10V210.6
+		C131,205.1,135.5,200.6,141,200.6z"/>
+	<line class="st2" x1="131" y1="237" x2="232.7" y2="237"/>
+	<line class="st3" x1="167" y1="218" x2="197" y2="218"/>
+	<line class="st2" x1="132" y1="346" x2="233.7" y2="346"/>
+	<circle class="st4" cx="184" cy="364.3" r="7.7"/>
+</g>
+<g id="pips">
+	<circle class="st5" cx="224.9" cy="81.9" r="3.9"/>
+	<circle class="st5" cx="238.9" cy="81.9" r="3.9"/>
+	<circle class="st5" cx="252.9" cy="81.9" r="3.9"/>
+</g>
+<g>
+	<path id="big_fill" class="st6" d="M393.7,181.3H252.1c-7.3,0-13.3-6-13.3-13.3v0c0-7.3,6-13.3,13.3-13.3h141.6
+		c7.3,0,13.3,6,13.3,13.3v0C407,175.3,401,181.3,393.7,181.3z"/>
+	<path class="st2" d="M249,154.8h189.3c5.5,0,10,4.5,10,10v6.6c0,5.5-4.5,10-10,10H249c-5.5,0-10-4.5-10-10v-6.6
+		C239,159.2,243.5,154.8,249,154.8z"/>
+</g>
+<g>
+	<path id="little_fill" class="st6" d="M188.7,293.4h-31.3c-5.1,0-9.3-4.2-9.3-9.3l0,0c0-5.1,4.2-9.3,9.3-9.3h31.3
+		c5.1,0,9.3,4.2,9.3,9.3l0,0C198,289.2,193.8,293.4,188.7,293.4z"/>
+	<path class="st2" d="M221.5,284.1c0,5.1-4.5,9.3-10,9.3h-55.3c-5.5,0-10-4.2-10-9.3s4.5-9.3,10-9.3h55.3
+		C217,274.9,221.5,279,221.5,284.1z"/>
+</g>
+<line class="st7" x1="155" y1="102" x2="155" y2="126"/>
+<line class="st7" x1="143" y1="114" x2="167" y2="114"/>
+<line class="st7" x1="85.3" y1="249" x2="85.3" y2="273"/>
+<line class="st7" x1="73.3" y1="261" x2="97.3" y2="261"/>
+<circle class="st7" cx="120" cy="138.9" r="7.7"/>
+<line class="st7" x1="472.9" y1="387.8" x2="472.9" y2="411.8"/>
+<line class="st7" x1="460.9" y1="399.8" x2="484.9" y2="399.8"/>
+<circle class="st7" cx="528.7" cy="324" r="7.7"/>
+<text transform="matrix(1 0 0 1 279.84 228)" class="st5 st8 st9">86% done</text>
+</svg>
