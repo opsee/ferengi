@@ -31,9 +31,9 @@ export default React.createClass({
 
         <SkewDivider />
 
-        <Padding t={4} lr={2}>
+        <Padding t={2} lr={2}>
           <div className="text-center">
-            <Padding t={4}>
+            <Padding t={2}>
               <h2>Complete AWS coverage, <span className="text-accent">right now</span></h2>
               <h3>No software to install, no shell scripts to cURL</h3>
 
@@ -79,7 +79,7 @@ export default React.createClass({
           <SummaryPanels />
         </div>
 
-        <SkewPanel backgroundColor="#333" skewBottom={false}>
+        <SkewPanel backgroundColor="#303030" skewBottom={false}>
           <SignUpPanel />
         </SkewPanel>
       </div>
