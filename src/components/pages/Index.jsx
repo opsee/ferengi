@@ -33,7 +33,7 @@ export default React.createClass({
 
         <Padding t={4} lr={2}>
           <div className="text-center">
-            <Padding t={4} b={4}>
+            <Padding t={4}>
               <h2>Complete AWS coverage, <span className="text-accent">right now</span></h2>
               <h3>No software to install, no shell scripts to cURL</h3>
 
