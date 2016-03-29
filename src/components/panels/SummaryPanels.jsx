@@ -5,7 +5,6 @@ import SkewDivider from '../layout/SkewDivider';
 import style from './summaryPanels.css';
 import { SplitContainer, SplitPanel } from '../panels/SplitPanels';
 import BaseSVG from '../images/BaseSVG';
-import onboardingSVG from '../images/onboarding.svg';
 import passingAssertionsSVG from '../images/passing-assertions.svg';
 import integrationsSVG from '../images/integrations.svg';
 
@@ -13,28 +12,6 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <SkewDivider />
-
-        <SplitContainer className={style.section}>
-          <SplitPanel className={style.prosePanel} >
-            <div className={style.heading}>
-              <h2>Complete AWS coverage, <div className="text-accent">right now</div></h2>
-            </div>
-
-            <h3>No software to install, no shell scripts to cURL</h3>
-
-            <Padding tb={2}>
-              <Button to="/features" className={style.button} secondary chevron>
-                Learn more about Opsee
-              </Button>
-            </Padding>
-          </SplitPanel>
-
-          <SplitPanel className={style.imagePanel}>
-            <BaseSVG svg={onboardingSVG} />
-          </SplitPanel>
-        </SplitContainer>
-
         <SkewDivider />
 
         <SplitContainer className={style.section}>

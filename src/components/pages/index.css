@@ -7,3 +7,52 @@
   width: 100%;
   padding: 24px 0;
 }
+
+.grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1 auto;
+  width: 33.3333%;
+  padding: 2rem;
+}
+
+.colSVG {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.colSVG img {
+  width: 300px;
+}
+
+.colText {
+  /*font-family: var(--fontDisplay);*/
+  font-size: 1.6rem;
+  color: #616161;
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.button {
+  font-size: 1.6rem;
+  padding: 2rem 4rem;
+  margin: 2rem 0;
+}
+
+.colorBand {
+
+}
+
+@media (max-width: 700px) {
+  .col { width: 100%; }
+}
