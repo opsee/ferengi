@@ -38,7 +38,11 @@
 
 .colText {
   font-family: var(--fontDisplay);
-  font-size: 2rem;
+  font-size: 1.8rem;
+  color: #616161;
+  text-align: center;
+  margin-top: -40px;
+  max-width: 300px;
 }
 
 .button {

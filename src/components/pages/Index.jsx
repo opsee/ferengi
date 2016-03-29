@@ -51,7 +51,6 @@ export default React.createClass({
                 <BaseSVG svg={illustAWSKey} />
               </div>
               <div className={style.colText}>
-                <div className="text-accent">STEP 1</div>
                 <div>Add Opsee to your AWS environment</div>
               </div>
             </div>
@@ -61,7 +60,6 @@ export default React.createClass({
                 <BaseSVG svg={illustBrowser} />
               </div>
               <div className={style.colTextSwap}>
-                <div className="text-accent">STEP 2</div>
                 <div>Opsee discovers your infrastructure</div>
               </div>
             </div>
@@ -71,7 +69,6 @@ export default React.createClass({
                 <BaseSVG svg={illustChecks} />
               </div>
               <div className={style.colText}>
-                <div className="text-accent">STEP 3</div>
                 <div>Get coverage instantly with nothing to maintain</div>
               </div>
             </div>
