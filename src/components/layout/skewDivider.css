@@ -1,6 +1,6 @@
 .divider {
   border-top: solid 1px var(--colorGray2);
-  transform: skewY(-5deg);
+  transform: skewY(-3deg);
   background: white;
   margin: 10rem 2rem;
 }

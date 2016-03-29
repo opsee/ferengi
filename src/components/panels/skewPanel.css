@@ -1,6 +1,6 @@
 /* TODO: use relative calculations instead of magic numbers */
 :root {
-  --angle: -5deg;
+  --angle: -3deg;
   --offset: -40px;
   --height: 80px;
   --sin: 0.08715;
