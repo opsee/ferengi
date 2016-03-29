@@ -51,7 +51,7 @@ export default React.createClass({
                 <BaseSVG svg={illustAWSKey} />
               </div>
               <div className={style.colText}>
-                <div>Enter your AWS keys</div>
+                <div>Create temporary AWS keys</div>
               </div>
             </div>
 
@@ -69,7 +69,7 @@ export default React.createClass({
                 <BaseSVG svg={illustChecks} />
               </div>
               <div className={style.colText}>
-                <div>Get complete coverage</div>
+                <div>Get complete coverage of your services</div>
               </div>
             </div>
           </div>
