@@ -33,8 +33,7 @@
 }
 
 .colSVG img {
-  width: 100%;
-  max-width: 420px;
+  width: 300px;
 }
 
 .colText {
@@ -77,6 +76,10 @@
     width: 50%;
     height: auto;
     order: 1;
+  }
+
+  .colSVG img {
+    width: 100%;
   }
 
   .colTextSwap {

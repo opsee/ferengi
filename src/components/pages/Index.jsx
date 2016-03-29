@@ -78,7 +78,7 @@ export default React.createClass({
           </div>
         </Padding>
 
-        <div>
+        <div style={{backgroundColor: "#f9f9fa"}}>
           <SummaryPanels />
         </div>
 
