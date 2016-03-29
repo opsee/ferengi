@@ -56,10 +56,10 @@ export default React.createClass({
             </div>
 
             <div className={style.col}>
-              <div className={style.colSVGSwap}>
+              <div className={style.colSVG}>
                 <BaseSVG svg={illustBrowser} />
               </div>
-              <div className={style.colTextSwap}>
+              <div className={style.colText}>
                 <div>Opsee discovers your infrastructure</div>
               </div>
             </div>

@@ -27,7 +27,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 0;
 }
 
 .colSVG img {
@@ -41,6 +40,7 @@
   text-align: center;
   max-width: 300px;
   margin: 0 auto;
+  padding: 2rem 0;
 }
 
 .button {
@@ -49,13 +49,6 @@
   margin: 2rem 0;
 }
 
-.colSVGSwap {
-  composes: colSVG;
-}
-
-.colTextSwap {
-  composes: colText;
-}
 
 @media (max-width: 700px) {
   .col { width: 100%; }
