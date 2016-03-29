@@ -9,10 +9,9 @@
 	.st3{display:none;}
 	.st4{display:inline;fill:none;stroke:#BDBDBD;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
 	.st5{fill:#5D89FB;}
-	.st6{fill:#FFFFFF;}
-	.st7{font-family:'Geogrotesque-SemiBold';}
-	.st8{font-size:30px;}
-	.st9{fill:none;stroke:#5D89FB;stroke-width:3;stroke-miterlimit:10;}
+	.st6{enable-background:new    ;}
+	.st7{fill:#FFFFFF;}
+	.st8{fill:none;stroke:#5D89FB;stroke-width:3;stroke-miterlimit:10;}
 </style>
 <title>illust_aws_key</title>
 <g id="tag">
@@ -56,9 +55,13 @@
 </g>
 <g>
 	<circle class="st5" cx="265.5" cy="141.3" r="33.5"/>
-	<text transform="matrix(1 0 0 1 257 151.1935)" class="st6 st7 st8">1</text>
+	<g class="st6">
+		<path class="st7" d="M266.1,130.7c0.2,0,0.4,0,0.4,0.4v18.3h4.7c0.3,0,0.4,0.1,0.4,0.4v1c0,0.3-0.1,0.5-0.4,0.5h-11.7
+			c-0.3,0-0.4-0.1-0.4-0.5v-1c0-0.3,0.1-0.4,0.4-0.4h4.8V133l-4.8,1.1c-0.3,0.1-0.5-0.1-0.5-0.4v-1c0-0.3,0.2-0.5,0.5-0.5
+			L266.1,130.7z"/>
+	</g>
 </g>
-<path class="st9" d="M265.5,174.8c0,0,0,30.8,0,42h222.8"/>
-<polyline class="st9" points="488.3,217 507,217 507,284.1 "/>
-<path class="st9" d="M507,338.7v118.1c0,0-205.3,0-215.6,0V500"/>
+<path class="st8" d="M265.5,174.8c0,0,0,30.8,0,42h222.8"/>
+<polyline class="st8" points="488.3,217 507,217 507,284.1 "/>
+<path class="st8" d="M507,338.7v118.1c0,0-205.3,0-215.6,0V500"/>
 </svg>
