@@ -33,7 +33,8 @@
 }
 
 .colSVG img {
-  max-width: 320px;
+  width: 100%;
+  max-width: 420px;
 }
 
 .colText {
@@ -47,12 +48,40 @@
   margin: 2rem 0;
 }
 
-@media (max-width: 768px) {
+.colSVGSwap {
+  composes: colSVG;
+}
+
+.colTextSwap {
+  composes: colText;
+}
+
+@media (max-width: 700px) {
   .col {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .colText {
-    text-align: center;
+    flex: 1 auto;
+    width: 50%;
+    order: 2;
+    font-size: 1.6rem;
+    padding-left: 2rem;
   }
+
+  .colSVG {
+    flex: 1 auto;
+    width: 50%;
+    height: auto;
+    order: 1;
+  }
+
+  .colTextSwap {
+    order: 1;
+    padding-right: 2rem;
+  }
+  .colSVGSwap { order: 2; }
 }
