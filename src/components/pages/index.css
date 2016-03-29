@@ -22,14 +22,14 @@
 .col {
   flex: 1 auto;
   width: 33.3333%;
-  padding: 0.5rem;
+  padding: 2rem;
 }
 
 .colSVG {
-  height: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem 0;
 }
 
 .colSVG img {
@@ -41,8 +41,8 @@
   font-size: 1.8rem;
   color: #616161;
   text-align: center;
-  margin-top: -40px;
   max-width: 300px;
+  margin: 0 auto;
 }
 
 .button {
@@ -60,35 +60,5 @@
 }
 
 @media (max-width: 700px) {
-  .col {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .colText {
-    flex: 1 auto;
-    width: 50%;
-    order: 2;
-    font-size: 1.6rem;
-    padding-left: 2rem;
-  }
-
-  .colSVG {
-    flex: 1 auto;
-    width: 50%;
-    height: auto;
-    order: 1;
-  }
-
-  .colSVG img {
-    width: 100%;
-  }
-
-  .colTextSwap {
-    order: 1;
-    padding-right: 2rem;
-  }
-  .colSVGSwap { order: 2; }
+  .col { width: 100%; }
 }
