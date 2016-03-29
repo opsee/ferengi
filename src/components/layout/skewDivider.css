@@ -1,8 +1,8 @@
 .divider {
-  border-top: solid 1px var(--colorGray2);
+  border-top: solid 1px var(--colorGray3);
   transform: skewY(-3deg);
   background: white;
-  margin: 5rem;
+  margin: 7rem;
 }
 
 @media (max-width: 768px) {
