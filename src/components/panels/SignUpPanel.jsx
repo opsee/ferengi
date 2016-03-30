@@ -85,11 +85,6 @@ const SignUpPanel = React.createClass({
     return null;
   },
   renderTitle(){
-    if (this.state.referrer === 'producthunt'){
-      return (
-        <h1 className={style.heading}>Welcome, <br/><span className="text-accent">Product Hunt Community.</span> <br/>Sign up today and get instant access.</h1>
-      );
-    }
     return (
       <h1 className={style.heading}>Ready to <span className="text-accent">get Opsee?</span></h1>
     );
