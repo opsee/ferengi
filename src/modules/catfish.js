@@ -16,7 +16,7 @@ export function makeRequest(string) {
 
   if (typeof window !== 'undefined'){
     try {
-      const parsedURL = new window.URL(string);
+      const parsedURL = new window.URL(url);
       let protocol = parsedURL.protocol || '';
       protocol = protocol.replace(':', '');
       return {
