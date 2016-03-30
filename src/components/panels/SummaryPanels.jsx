@@ -39,7 +39,7 @@ export default React.createClass({
         <SplitContainer className={style.section}>
           <SplitPanel className={style.prosePanel} >
             <div className={style.heading}>
-              <h2>Built for your <span className="text-accent">your stack</span></h2>
+              <h2>Built for <span className="text-accent">your stack</span></h2>
             </div>
 
             <h3>Designed to work with your favorite tools.</h3>
