@@ -22,7 +22,8 @@ const TryCheck = React.createClass({
       }),
       checks: PropTypes.shape({
         catfish: PropTypes.shape({
-          responses: PropTypes.array
+          responses: PropTypes.array,
+          error: PropTypes.object
         })
       })
     })
@@ -33,6 +34,10 @@ const TryCheck = React.createClass({
       isLoading: false,
       assertions: []
     };
+  },
+
+  getError() {
+    return this.props.redux.checks.catfish.error;
   },
 
   getResponses() {
@@ -103,7 +108,8 @@ const TryCheck = React.createClass({
   render() {
     return (
       <div className={style.container}>
-        <URLInput className={this.getInputClass()} handleSubmit={this.handleSubmit} isLoading={this.isLoading()} />
+        <URLInput className={this.getInputClass()} handleSubmit={this.handleSubmit}
+          error={this.getError()} isLoading={this.isLoading()} />
 
         <div className={style.response}>
           { this.renderResponses() }

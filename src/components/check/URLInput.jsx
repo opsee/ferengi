@@ -9,11 +9,7 @@ const URLInput = React.createClass({
     className: PropTypes.string,
     handleSubmit: PropTypes.func.isRequired,
     isLoading: PropTypes.bool,
-    redux: PropTypes.shape({
-      checks: PropTypes.shape({
-        catfish: PropTypes.object
-      })
-    }).isRequired
+    error: PropTypes.object
   },
 
   getInitialState() {
@@ -33,10 +29,11 @@ const URLInput = React.createClass({
     this.props.handleSubmit(this.state.url);
   },
   renderError(){
-    if (this.props.redux.checks.catfish.error){
-      const msg = 'Something went wrong... try again';
+    if (!this.props.isLoading && this.props.error){
       return (
-        <div className={style.alert}>{msg}</div>
+        <div className={style.alert}>
+          Something went wrong... try again.
+        </div>
       );
     }
     return null;

@@ -9,20 +9,25 @@ export function getToken() {
 }
 
 export function makeRequest(string) {
+  let url = string;
+  if (!url.match('^http')){
+    url = `http://${url}`;
+  }
+
   if (typeof window !== 'undefined'){
     try {
-      const url = new window.URL(string);
-      let protocol = url.protocol || '';
+      const parsedURL = new window.URL(url);
+      let protocol = parsedURL.protocol || '';
       protocol = protocol.replace(':', '');
       return {
         check: {
           target: {
-            address: url.hostname
+            address: parsedURL.hostname
           },
           http_check: {
-            path: url.pathname || '/',
+            path: parsedURL.pathname || '/',
             protocol,
-            port: parseInt(url.port, 10) || (protocol === 'https' ? 443 : 80),
+            port: parseInt(parsedURL.port, 10) || (protocol === 'https' ? 443 : 80),
             name: '',
             body: '',
             verb: 'GET'
@@ -51,11 +56,20 @@ export function check(url) {
       },
       body: JSON.stringify(requestData)
     })
-    .then(res => res.json())
+    .then(res => {
+      // window.fetch will only trigger .catch() on network failures
+      // @see https://github.com/github/fetch#caveats
+      if (!res.ok) {
+        throw new Error(res.statusText);
+      }
+
+      return res.json();
+    })
     .then(json => {
       if (json.error) {
-        return console.error(json.error);
+        throw new Error(json.error);
       }
+
       const responses = json.responses;
       return { data: { token, responses } };
     });
