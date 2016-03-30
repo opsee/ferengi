@@ -16,8 +16,9 @@ const App = React.createClass({
 
   componentWillMount(){
     yeller.configure();
-    const ref = this.props.router.location.query.referrer;
-    if (ref && typeof window !== 'undefined'){
+    let ref = this.props.router.location.query.referrer;
+    if (typeof window !== 'undefined'){
+      ref = ref || document.referrer;
       window.localStorage.setItem('referrer', ref);
     }
   },
