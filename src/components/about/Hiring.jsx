@@ -27,9 +27,6 @@ export default React.createClass({
           <h3>Job openings</h3>
           <p>Opsee doesn't currently have any open positions, but we're always interested in meeting talented people. Send an email with your résumé and a little about yourself to <a href="mailto:work@opsee.co?subject=love too work at opsee">work@opsee.co</a>. Every thoughtful application we receive will be replied to, we promise.</p>
         </div>
-
-
-
       </div>
     );
   }
