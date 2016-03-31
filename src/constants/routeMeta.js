@@ -13,16 +13,20 @@ module.exports = {
       title: 'Opsee / About'
     },
 
-    '/beta-tos': {
-      title: 'Opsee / Beta TOS'
-    },
-
     '/features': {
       title: 'Opsee / Features'
     },
 
     '/how': {
       title: 'Opsee / How It Works'
+    },
+
+    '/aws': {
+      title: 'Opsee / Getting Started with AWS'
+    },
+
+    '/beta-tos': {
+      title: 'Opsee / Beta TOS'
     },
 
     '/try/aws': {
