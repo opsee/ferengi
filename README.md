@@ -8,6 +8,8 @@
 
 marketing wabsite
 
+### Developing
+
 ```
 // Install the dependencies
 npm install
@@ -31,3 +33,5 @@ npm run staging
 grunt --help
 ```
 
+### Deploying
+Ferengi's `master` branch is deployed to the production S3 bucket [by CircleCI](https://github.com/opsee/ferengi/blob/master/circle.yml#L4) after successful builds. All you need to do to deploy is to merge your PR into master. 
