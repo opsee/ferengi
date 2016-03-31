@@ -7,6 +7,7 @@ import Index from './components/pages/Index';
 import Features from './components/pages/Features';
 import How from './components/pages/How';
 import AWS from './components/pages/AWS';
+import Integrations from './components/pages/Integrations';
 import BetaTOS from './components/pages/BetaTOS';
 import {
   TryAWS,
@@ -28,6 +29,7 @@ module.exports = (
       <Route path="how" component={How} />
       <Route path="about" component={About} />
       <Route path="aws" component={AWS} />
+      <Route path="integrations" component={Integrations} />
       <Route path="beta-tos" component={BetaTOS} />
 
       { /* Twitter campaign landing pages */ }

@@ -25,6 +25,10 @@ module.exports = {
       title: 'Opsee / Getting Started with AWS'
     },
 
+    '/integrations': {
+      title: 'Opsee / Integrations'
+    },
+
     '/beta-tos': {
       title: 'Opsee / Beta TOS'
     },
