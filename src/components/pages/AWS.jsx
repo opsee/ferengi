@@ -38,11 +38,19 @@ export default React.createClass({
 
               <Padding b={1}>
                 <p>All you need is AWS keys to get started with Opsee. We don’t install agents on your systems–instead, we add a new EC2 instance to your environment that’s responsible for health checking and discovery. Here's how it works:</p>
-                <ol>
-                  <li><p>You use our IAM guide to create a temporary user for installation. Importantly, these keys are used only once and never stored. You can delete the user as soon as installation is done.</p></li>
-                  <li><p>You tell us where to add our instance. Just choose an AWS region, VPC, and subnet and we’ll do the rest. We use a CloudFormation template and AMI for our instance, and its permissions are defined by a couple of IAM roles</p></li>
-                  <li><p>That’s it! Once our instance is added, you can easily create health checks for your infrastructure and services–we even try to create checks for you.</p></li>
-                </ol>
+
+                <Padding lr={4}>
+                  <ol>
+                    <li><p>You use our IAM guide to create a temporary user for installation. Importantly, these keys are used only once and never stored. You can delete the user as soon as installation is done.</p></li>
+                    <li><p>You tell us where to add our instance. Just choose an AWS region, VPC, and subnet and we’ll do the rest. We use a CloudFormation template and AMI for our instance, and its permissions are defined by a couple of IAM roles</p></li>
+                    <li><p>That’s it! Once our instance is added, you can easily create health checks for your infrastructure and services–we even try to create checks for you.</p></li>
+                  </ol>
+                </Padding>
+              </Padding>
+
+              <Padding tb={1}>
+                <h3>Want to learn <span className="text-accent">more?</span></h3>
+                <p>Check out our <a href="https://blog.opsee.com/monitoring-built-for-aws-49c989c6a2c#.1vigkfjr2" target="_blank">blog post</a> for more on how Opsee integrates with your AWS environment, or find out about <a href="/features">what Opsee can do</a>.</p>
               </Padding>
             </div>
           </div>
@@ -120,19 +128,6 @@ export default React.createClass({
               that lets you run applications from Docker containers on clusters of EC2 instances.</p>
 
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam malesuada magna, finibus sollicitudin metus porta ac.</p>
-            </div>
-          </div>
-        </Panel>
-
-        <SkewDivider />
-
-        <Panel>
-          <div className="row">
-            <div className="col col-xs-12 col-sm-8 col-sm-offset-2">
-              <div className="text-center">
-                <h2>Want to learn <span className="text-accent">more?</span></h2>
-                <p>Check out our <a href="https://blog.opsee.com/monitoring-built-for-aws-49c989c6a2c#.1vigkfjr2" target="_blank">blog post</a> for more on how Opsee integrates with your AWS environment, </p>
-              </div>
             </div>
           </div>
         </Panel>
