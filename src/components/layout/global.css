@@ -18,6 +18,7 @@ body {
   font-weight: 300;
   font-family: var(--fontMain);
   line-height: 1.42857;
+  color: var(--colorGray6);
 }
 
 p {
@@ -53,6 +54,10 @@ h3 {
 /* Lists */
 ul {
   list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
 }
 
 li {
