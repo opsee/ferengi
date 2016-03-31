@@ -1,0 +1,13 @@
+.svg {
+  width: 100%;
+  max-width: 320px;
+}
+
+.svgPanel {
+  text-align: center;
+  width: 20%;
+}
+
+.prosePanel {
+  width: 80%;
+}
