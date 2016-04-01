@@ -13,11 +13,11 @@ export default React.createClass({
         <SplitContainer className={style.section}>
           <SplitPanel className={style.prosePanel} >
             <Padding tb={2}>
-              <h2>Health checks running <span className="text-accent">inside your AWS environment</span></h2>
+              <h2>Run health checks <span className="text-accent">inside your AWS environment</span></h2>
               <h3>Better visibility and rich, actionable notifications.</h3>
             </Padding>
 
-            <p>Create health checks for your services with no agents to install or shell scripts to cURL. Opsee is seamlessly integrated into your AWS environment and built to auto scale with you.</p>
+            <p>Opsee is like Pingdom for microservices, running checks inside your AWS environment to help you ensure your services, both inside and outside the firewall, are running as you expect. Opsee is seamlessly integrated into your environment, with no agents to install or shell scripts to cURL.</p>
           </SplitPanel>
 
           <SplitPanel className={style.screenshotPanel}>
