@@ -1,12 +1,3 @@
-.header {
-  color: white;
-}
-
-.button {
-  font-size: 1.4rem;
-  padding: 2rem;
-}
-
 .offsetDivider {
   margin-top: -6.4rem;
   height: 12vmax; /* use height instead of margin/padding to clip phone */
