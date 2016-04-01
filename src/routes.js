@@ -6,7 +6,6 @@ import App from './components/App';
 import Index from './components/pages/Index';
 import Features from './components/pages/Features';
 import How from './components/pages/How';
-import AWS from './components/pages/AWS';
 import Integrations from './components/pages/Integrations';
 import BetaTOS from './components/pages/BetaTOS';
 import {
@@ -21,6 +20,10 @@ import {
   TryUX
 } from './components/pages/try';
 
+/**
+ * ADDING A NEW ROUTE?
+ * Don't forget to update ferengi/src/constants/routeMeta.js
+ */
 module.exports = (
   <Router>
     <Route component={App} path="/">
@@ -28,7 +31,6 @@ module.exports = (
       <Route path="features" component={Features} />
       <Route path="how" component={How} />
       <Route path="about" component={About} />
-      <Route path="aws" component={AWS} />
       <Route path="integrations" component={Integrations} />
       <Route path="beta-tos" component={BetaTOS} />
 
