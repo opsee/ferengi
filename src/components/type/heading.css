@@ -35,25 +35,11 @@ h3 {
 }
 
 .permalink {
-  display: inline-block;
   visibility: hidden;
-  height: 2.4rem;
-  opacity: 0.4;
-  vertical-align: baseline;
-  margin-left: 1rem;
-}
-
-.permalink:hover {
-  opacity: 0.8;
 }
 
 .heading:hover .permalink {
   visibility: initial;
-}
-
-.h2 .permalink img {
-  height: 100%;
-  width: auto;
 }
 
 @media (max-width: 720px) {

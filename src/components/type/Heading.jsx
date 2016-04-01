@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import _ from 'lodash';
 import cx from 'classnames';
+import Permalink from './Permalink';
 import BaseSVG from '../images/BaseSVG';
 import linkSVG from '../images/icons/material-link.svg';
 
@@ -58,7 +59,9 @@ const Heading = React.createClass({
       <Padding {...this.getPadding()} className={this.getClass()}>
         {React.createElement(string, props, this.props.children)}
 
-        { this.props.permalink ? this.renderPermalink() : null }
+        { this.props.permalink ?
+          <Permalink link={this.props.permalink} className={style.permalink} />
+        : null }
       </Padding>
     );
   }
