@@ -42,7 +42,3 @@ h3 {
   visibility: initial;
 }
 
-@media (max-width: 720px) {
-  /* Always show permalinks on mobile since we can't hover */
-  .permalink { visibility: initial; }
-}

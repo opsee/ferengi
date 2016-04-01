@@ -46,7 +46,7 @@ export default React.createClass({
                 </div>
 
                 <p>With public cloud services like AWS, there’s a lot we can do to make monitoring effortless. Opsee figures out what your services and systems are doing, and what they’re supposed to be doing, using environment data. When your environment scales, your health checks update automatically. You get full coverage of your AWS ecosystem with nothing to maintain.</p>
-
+                <p>Read more about how Opsee works with AWS on the <a href="https://blog.opsee.com/monitoring-built-for-aws-49c989c6a2c" target="_blank">Opsee blog</a>.</p>
 
                 <Padding tb={2} r={4}>
                   <Padding tb={1}>

@@ -43,7 +43,7 @@ const Heading = React.createClass({
     const props = _.assign({}, this.props, {className});
 
     return (
-      <div className={this.getClass()}>
+      <div id={this.props.permalink || ''} className={this.getClass()}>
         {React.createElement(string, props, this.props.children)}
 
         { this.props.permalink ?
