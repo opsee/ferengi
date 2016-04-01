@@ -45,65 +45,62 @@ export default React.createClass({
                   <Heading permalink="aws" level={2}>Opsee + <span className="text-accent">AWS</span> = &hearts;</Heading>
                 </div>
 
-                <p>Amazon EC2 Container Service (ECS) is a container management service
-                that lets you run applications from Docker containers on clusters of EC2 instances.</p>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam malesuada magna, finibus sollicitudin metus porta ac.</p>
+                <p>With public cloud services like AWS, there’s a lot we can do to make monitoring effortless. Opsee figures out what your services and systems are doing, and what they’re supposed to be doing, using environment data. When your environment scales, your health checks update automatically. You get full coverage of your AWS ecosystem with nothing to maintain.</p>
 
 
                 <Padding tb={2} r={4}>
-                  <Padding tb={2}>
-                  <div className="row">
-                    <div className="col col-xs-2 text-center">
-                      <div className={style.awsHeading}>
-                        <BaseSVG svg={ecsSVG} />
-                        <Padding tb={1}>
-                          <Heading level={3}>ECS</Heading>
-                          <Permalink link="aws-ecs" className={style.awsPermalink}></Permalink>
-                        </Padding>
+                  <Padding tb={1}>
+                    <div className="row">
+                      <div className="col col-xs-4 col-sm-3 text-center">
+                        <div className={style.awsHeading}>
+                          <BaseSVG svg={ec2SVG} />
+                          <Padding tb={1}>
+                            <Heading level={3}>EC2</Heading>
+                            <Permalink link="aws-ec2" className={style.awsPermalink} />
+                          </Padding>
+                        </div>
+                      </div>
+
+                      <div className="col col-xs-8 col-sm-9">
+                        <p className="no-space"><a href="https://aws.amazon.com/ec2/" target="_blank">Amazon Elastic Compute Cloud</a> (Amazon EC2) is a web service that provides resizable compute capacity in the cloud. Opsee supports health checks for Security Groups, Auto Scale Groups, Elastic Load Balancers and individual EC2 instances, and support is available by default as part of our AWS integration.</p>
                       </div>
                     </div>
-
-                    <div className="col col-xs-10">
-                      <p>Amazon EC2 Container Service (ECS) is a container management service that lets you run applications from Docker containers on clusters of EC2 instances. Opsee supports health checks for ECS Services, and support is available by default as part of our AWS integration.</p>
-                    </div>
-                  </div>
                   </Padding>
 
-                  <Padding tb={2}>
-                   <div className="row">
-                    <div className="col col-xs-2 text-center">
-                      <div className={style.awsHeading}>
-                        <BaseSVG svg={rdsSVG} />
-                        <Padding tb={1}>
-                          <Heading level={3}>RDS</Heading>
-                          <Permalink link="aws-rds" className={style.awsPermalink} />
-                        </Padding>
+                  <Padding tb={1}>
+                    <div className="row">
+                      <div className="col col-xs-4 col-sm-3 text-center">
+                        <div className={style.awsHeading}>
+                          <BaseSVG svg={rdsSVG} />
+                          <Padding tb={1}>
+                            <Heading level={3}>RDS</Heading>
+                            <Permalink link="aws-rds" className={style.awsPermalink} />
+                          </Padding>
+                        </div>
+                      </div>
+
+                      <div className="col col-xs-8 col-sm-9">
+                        <p className="no-space"><a href="https://aws.amazon.com/rds/" target="_blank">Amazon Relational Database Service</a> (Amazon RDS) makes it easy to set up, operate, and scale a relational database in the cloud. Opsee supports health checks for RDS Database Instances, and support is available by default as part of our AWS integration.</p>
                       </div>
                     </div>
-
-                    <div className="col col-xs-10">
-                      <p>Amazon Relational Database Service (Amazon RDS) makes it easy to set up, operate, and scale a relational database in the cloud. Opsee supports health checks for RDS Database Instances, and support is available by default as part of our AWS integration.</p>
-                    </div>
-                  </div>
                   </Padding>
 
-                  <Padding tb={2}>
-                   <div className="row">
-                    <div className="col col-xs-2 text-center">
-                      <div className={style.awsHeading}>
-                        <BaseSVG svg={ec2SVG} />
-                        <Padding tb={1}>
-                          <Heading level={3}>EC2</Heading>
-                          <Permalink link="aws-ec2" className={style.awsPermalink} />
-                        </Padding>
+                  <Padding tb={1}>
+                    <div id="aws-ecs" className="row">
+                      <div className="col col-xs-4 col-sm-3 text-center">
+                        <div className={style.awsHeading}>
+                          <BaseSVG svg={ecsSVG} />
+                          <Padding tb={1}>
+                            <Heading level={3}>ECS</Heading>
+                            <Permalink link="aws-ecs" className={style.awsPermalink}></Permalink>
+                          </Padding>
+                        </div>
+                      </div>
+
+                      <div className="col col-xs-8 col-sm-9">
+                        <p className="no-space"><a href="https://aws.amazon.com/ecs/" target="_blank">Amazon EC2 Container Service</a> (Amazon ECS) is a container management service that lets you run applications from Docker containers on clusters of EC2 instances. Opsee supports health checks for ECS Services, and support is available by default as part of our AWS integration.</p>
                       </div>
                     </div>
-
-                    <div className="col col-xs-10">
-                      <p>Elastic Compute Cloud (Amazon EC2) is a web service that provides resizable compute capacity in the cloud. Opsee supports health checks for Security Groups, Auto Scale Groups, Elastic Load Balancers and individual EC2 instances, and support is available by default as part of our AWS integration.</p>
-                    </div>
-                  </div>
                   </Padding>
                 </Padding>
               </div>
@@ -132,6 +129,10 @@ export default React.createClass({
             </div>
           </div>
         </Panel>
+
+        <SkewPanel backgroundColor="#333" skewBottom={false}>
+          <SignUpPanel />
+        </SkewPanel>
       </div>
     );
   }
