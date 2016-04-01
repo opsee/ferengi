@@ -132,31 +132,6 @@ export default React.createClass({
             </div>
           </div>
         </Panel>
-
-        <SkewDivider />
-
-        <Panel>
-          <div className="row">
-            <div className="col center-xs col-xs-12 col-sm-4 col-md-3 first-xs">
-              <div className={style.logo}>
-                <BaseSVG svg={pagerdutySVG} />
-              </div>
-            </div>
-
-            <div className="col col-xs-12 col-sm-8 col-md-9 last-xs">
-              <div className={style.prosePanel}>
-                <div className="text-center-xs">
-                  <Heading permalink="pagerduty" level={2}>Incidence Response with <span className="text-accent">PagerDuty</span></Heading>
-                </div>
-
-                <p>Amazon EC2 Container Service (ECS) is a container management service
-                that lets you run applications from Docker containers on clusters of EC2 instances.</p>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam malesuada magna, finibus sollicitudin metus porta ac.</p>
-              </div>
-            </div>
-          </div>
-        </Panel>
       </div>
     );
   }
