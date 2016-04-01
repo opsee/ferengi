@@ -101,7 +101,7 @@ const Features = React.createClass({
 
               <Padding tb={2}>
                 <Button to="https://app.opsee.com/docs/notifications" target="_blank" className={style.button} secondary chevron>
-                  Learn more about notifcations
+                  Learn more about notifications
                 </Button>
               </Padding>
             </SplitPanel>
