@@ -1,22 +1,17 @@
 import React from 'react';
-import { Button } from '../forms';
 import StaticHeader from '../panels/StaticHeader';
 import Panel from '../panels/Panel';
 import SkewPanel from '../panels/SkewPanel';
 import SignUpPanel from '../panels/SignUpPanel';
 import SkewDivider from '../layout/SkewDivider';
-import { SplitContainer, SplitPanel } from '../panels/SplitPanels';
 import { Padding } from '../layout';
 import { Heading, Permalink } from '../type';
 import BaseSVG from '../images/BaseSVG';
-import awsIntegrationsSVG from '../images/integrations-aws.svg';
 import awsSVG from '../images/aws-01.svg';
 import slackSVG from '../images/slack-01.svg';
-import pagerdutySVG from '../images/pagerduty-01.svg';
 import ec2SVG from '../images/aws/ec2-01.svg';
 import ecsSVG from '../images/aws/ecs-01.svg';
-import rdsSVG from '../images/aws/rds-01.svg'
-import installationSVG from '../images/install-steps2.svg';
+import rdsSVG from '../images/aws/rds-01.svg';
 
 import style from './integrations.css';
 
@@ -92,7 +87,7 @@ export default React.createClass({
                           <BaseSVG svg={ecsSVG} />
                           <Padding tb={1}>
                             <Heading level={3}>ECS</Heading>
-                            <Permalink link="aws-ecs" className={style.awsPermalink}></Permalink>
+                            <Permalink link="aws-ecs" className={style.awsPermalink}/>
                           </Padding>
                         </div>
                       </div>
