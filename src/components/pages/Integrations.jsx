@@ -120,6 +120,7 @@ export default React.createClass({
                 </div>
 
                 <p><a href="https://slack.com/" target="_blank">Slack</a> is a messaging app for teams. Opsee can send notifications to Slack channels. Just connect Opsee to Slack in your profile, and choose a Slack channel to send notifications to when you create health checks.</p>
+                <p>Read more about setting up your Slack notifications <a href="https://app.opsee.com/docs/notifications" target="_blank">in our docs</a>.</p>
                 </div>
             </div>
           </div>
