@@ -1,6 +1,6 @@
 h1, h2, h3, h4, h5 {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 h1, h2 {
@@ -25,6 +25,7 @@ h3 {
   color: var(--colorGray7);
 }
 
+/* Component headings gotta be inline for the permalink, leave bare elements alone */
 .heading h1,
 .heading h2,
 .heading h3,
@@ -53,4 +54,9 @@ h3 {
 .h2 .permalink img {
   height: 100%;
   width: auto;
+}
+
+@media (max-width: 720px) {
+  /* Always show permalinks on mobile since we can't hover */
+  .permalink { visibility: initial; }
 }
