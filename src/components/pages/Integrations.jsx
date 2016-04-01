@@ -40,7 +40,7 @@ export default React.createClass({
 
             <div className="col col-xs-12 col-sm-8 col-md-9 last-xs">
               <div className={style.prosePanel}>
-                <div className="center-xs">
+                <div className="text-center-xs">
                   <h2 id="ec2">Opsee + <span className="text-accent">AWS</span> = &hearts;</h2>
                   <a href="#ec2"><small>(link icon)</small></a>
                 </div>
@@ -108,7 +108,7 @@ export default React.createClass({
 
             <div className="col col-xs-12 col-sm-8 col-md-9 last-xs">
               <div className={style.prosePanel}>
-                <div className="center-xs">
+                <div className="text-center-xs">
                   <h2 id="ec2">Rich Notifications with <span className="text-accent">Slack</span></h2>
                   <a href="#ec2"><small>(link icon)</small></a>
                 </div>
@@ -134,7 +134,7 @@ export default React.createClass({
 
             <div className="col col-xs-12 col-sm-8 col-md-9 last-xs">
               <div className={style.prosePanel}>
-                <div className="center-xs">
+                <div className="text-center-xs">
                   <h2 id="ec2">Incidence Response with <span className="text-accent">PagerDuty</span></h2>
                   <a href="#ec2"><small>(link icon)</small></a>
                 </div>
