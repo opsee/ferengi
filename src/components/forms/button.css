@@ -3,7 +3,8 @@
   background-color: var(--colorAccent);
   border: 1px solid var(--colorAccent);
   border-radius: 4px;
-
+  font-size: 1.4rem;
+  padding: 2rem;
   background-image: none;
   box-shadow: none;
   color: white;
@@ -11,7 +12,6 @@
   display: inline-block;
   font-family: var(--fontDisplay);
   outline: 0;
-  padding: 1rem 1.5rem;
   text-align: center;
   touch-action: manipulation;
   user-select: none;

@@ -24,7 +24,7 @@ const constants = {
   },
 
   layout: {
-    maxWidth: '1000px',
+    maxWidth: '1100px',
     headerWidth: '1600px;'
   },
 

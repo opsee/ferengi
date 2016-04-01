@@ -1,3 +1,7 @@
+/**
+ * ADDING A NEW ROUTE?
+ * Don't forget to update ferengi/src/routes.js!
+ */
 module.exports = {
   DEFAULT_META: {
     title: 'Opsee',
@@ -13,16 +17,20 @@ module.exports = {
       title: 'Opsee / About'
     },
 
-    '/beta-tos': {
-      title: 'Opsee / Beta TOS'
-    },
-
     '/features': {
       title: 'Opsee / Features'
     },
 
     '/how': {
       title: 'Opsee / How It Works'
+    },
+
+    '/integrations': {
+      title: 'Opsee / Integrations'
+    },
+
+    '/beta-tos': {
+      title: 'Opsee / Beta TOS'
     },
 
     '/try/aws': {

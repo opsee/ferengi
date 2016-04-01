@@ -1,12 +1,13 @@
 import React from 'react';
 import { Router, Route, IndexRoute } from 'react-router';
 
-import About from './components/pages/About.jsx';
-import App from './components/App.jsx';
-import Index from './components/pages/Index.jsx';
-import Features from './components/pages/Features.jsx';
-import How from './components/pages/How.jsx';
-import BetaTOS from './components/pages/BetaTOS.jsx';
+import About from './components/pages/About';
+import App from './components/App';
+import Index from './components/pages/Index';
+import Features from './components/pages/Features';
+import How from './components/pages/How';
+import Integrations from './components/pages/Integrations';
+import BetaTOS from './components/pages/BetaTOS';
 import {
   TryAWS,
   TryChecks,
@@ -19,6 +20,10 @@ import {
   TryUX
 } from './components/pages/try';
 
+/**
+ * ADDING A NEW ROUTE?
+ * Don't forget to update ferengi/src/constants/routeMeta.js
+ */
 module.exports = (
   <Router>
     <Route component={App} path="/">
@@ -26,6 +31,7 @@ module.exports = (
       <Route path="features" component={Features} />
       <Route path="how" component={How} />
       <Route path="about" component={About} />
+      <Route path="integrations" component={Integrations} />
       <Route path="beta-tos" component={BetaTOS} />
 
       { /* Twitter campaign landing pages */ }

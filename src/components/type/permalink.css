@@ -1,0 +1,21 @@
+.permalink {
+  display: inline-block;
+  height: 2.4rem;
+  vertical-align: baseline;
+  margin-left: 1rem;
+  opacity: 0.4;
+}
+
+.permalink:hover {
+  opacity: 0.8;
+}
+
+.permalink img {
+  height: 100%;
+  width: auto;
+}
+
+@media (max-width: 720px) {
+  /* Always show permalinks on mobile since we can't hover */
+  .permalink { visibility: initial; }
+}
