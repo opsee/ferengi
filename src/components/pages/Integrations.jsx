@@ -7,7 +7,7 @@ import SignUpPanel from '../panels/SignUpPanel';
 import SkewDivider from '../layout/SkewDivider';
 import { SplitContainer, SplitPanel } from '../panels/SplitPanels';
 import { Padding } from '../layout';
-import { Heading } from '../type';
+import { Heading, Permalink } from '../type';
 import BaseSVG from '../images/BaseSVG';
 import awsIntegrationsSVG from '../images/integrations-aws.svg';
 import awsSVG from '../images/aws-01.svg';
@@ -42,7 +42,7 @@ export default React.createClass({
             <div className="col col-xs-12 col-sm-8 col-md-9 last-xs">
               <div className={style.prosePanel}>
                 <div className="text-center-xs">
-                  <Heading permalink="ec2" level={2}>Opsee + <span className="text-accent">AWS</span> = &hearts;</Heading>
+                  <Heading permalink="aws" level={2}>Opsee + <span className="text-accent">AWS</span> = &hearts;</Heading>
                 </div>
 
                 <p>Amazon EC2 Container Service (ECS) is a container management service
@@ -55,12 +55,17 @@ export default React.createClass({
                   <Padding tb={2}>
                   <div className="row">
                     <div className="col col-xs-2 text-center">
-                      <BaseSVG className={style.awsServiceSVG} svg={ecsSVG} />
+                      <div className={style.awsHeading}>
+                        <BaseSVG svg={ecsSVG} />
+                        <Padding tb={1}>
+                          <Heading level={3}>ECS</Heading>
+                          <Permalink link="aws-ecs" className={style.awsPermalink}></Permalink>
+                        </Padding>
+                      </div>
                     </div>
 
                     <div className="col col-xs-10">
-                      <h3>ECS</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam malesuada magna, finibus sollicitudin metus porta ac.</p>
+                      <p>Amazon EC2 Container Service (ECS) is a container management service that lets you run applications from Docker containers on clusters of EC2 instances. Opsee supports health checks for ECS Services, and support is available by default as part of our AWS integration.</p>
                     </div>
                   </div>
                   </Padding>
@@ -68,12 +73,17 @@ export default React.createClass({
                   <Padding tb={2}>
                    <div className="row">
                     <div className="col col-xs-2 text-center">
-                      <BaseSVG className={style.awsServiceSVG} svg={rdsSVG} />
+                      <div className={style.awsHeading}>
+                        <BaseSVG svg={rdsSVG} />
+                        <Padding tb={1}>
+                          <Heading level={3}>RDS</Heading>
+                          <Permalink link="aws-rds" className={style.awsPermalink} />
+                        </Padding>
+                      </div>
                     </div>
 
                     <div className="col col-xs-10">
-                      <h3>RDS</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam malesuada magna, finibus sollicitudin metus porta ac.</p>
+                      <p>Amazon Relational Database Service (Amazon RDS) makes it easy to set up, operate, and scale a relational database in the cloud. Opsee supports health checks for RDS Database Instances, and support is available by default as part of our AWS integration.</p>
                     </div>
                   </div>
                   </Padding>
@@ -81,12 +91,17 @@ export default React.createClass({
                   <Padding tb={2}>
                    <div className="row">
                     <div className="col col-xs-2 text-center">
-                      <BaseSVG className={style.awsServiceSVG} svg={ec2SVG} />
+                      <div className={style.awsHeading}>
+                        <BaseSVG svg={ec2SVG} />
+                        <Padding tb={1}>
+                          <Heading level={3}>EC2</Heading>
+                          <Permalink link="aws-ec2" className={style.awsPermalink} />
+                        </Padding>
+                      </div>
                     </div>
 
                     <div className="col col-xs-10">
-                      <h3>EC2</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam malesuada magna, finibus sollicitudin metus porta ac.</p>
+                      <p>Elastic Compute Cloud (Amazon EC2) is a web service that provides resizable compute capacity in the cloud. Opsee supports health checks for Security Groups, Auto Scale Groups, Elastic Load Balancers and individual EC2 instances, and support is available by default as part of our AWS integration.</p>
                     </div>
                   </div>
                   </Padding>
@@ -109,14 +124,11 @@ export default React.createClass({
             <div className="col col-xs-12 col-sm-8 col-md-9 last-xs">
               <div className={style.prosePanel}>
                 <div className="text-center-xs">
-                  <Heading permalink="ec2" level={2}>Rich Notifications with <span className="text-accent">Slack</span></Heading>
+                  <Heading permalink="slack" level={2}>Rich Notifications with <span className="text-accent">Slack</span></Heading>
                 </div>
 
-                <p>Amazon EC2 Container Service (ECS) is a container management service
-                that lets you run applications from Docker containers on clusters of EC2 instances.</p>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam malesuada magna, finibus sollicitudin metus porta ac.</p>
-              </div>
+                <p><a href="https://slack.com/" target="_blank">Slack</a> is a messaging app for teams. Opsee can send notifications to Slack channels. Just connect Opsee to Slack in your profile, and choose a Slack channel to send notifications to when you create health checks.</p>
+                </div>
             </div>
           </div>
         </Panel>
@@ -134,7 +146,7 @@ export default React.createClass({
             <div className="col col-xs-12 col-sm-8 col-md-9 last-xs">
               <div className={style.prosePanel}>
                 <div className="text-center-xs">
-                  <Heading permalink="ec2" level={2}>Incidence Response with <span className="text-accent">PagerDuty</span></Heading>
+                  <Heading permalink="pagerduty" level={2}>Incidence Response with <span className="text-accent">PagerDuty</span></Heading>
                 </div>
 
                 <p>Amazon EC2 Container Service (ECS) is a container management service
