@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import {yeller} from '../modules';
+import { yeller } from '../modules';
+import * as storage from '../modules/storage';
 import Footer from './Footer.jsx';
 import style from './app.css';
 import Analytics from './global/Analytics';
@@ -19,7 +20,7 @@ const App = React.createClass({
     let ref = this.props.router.location.query.referrer;
     if (typeof window !== 'undefined'){
       ref = ref || document.referrer;
-      window.localStorage.setItem('referrer', ref);
+      storage.setItem('referrer', ref);
     }
   },
 
