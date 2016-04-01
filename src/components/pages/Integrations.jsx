@@ -7,6 +7,7 @@ import SignUpPanel from '../panels/SignUpPanel';
 import SkewDivider from '../layout/SkewDivider';
 import { SplitContainer, SplitPanel } from '../panels/SplitPanels';
 import { Padding } from '../layout';
+import { Heading } from '../type';
 import BaseSVG from '../images/BaseSVG';
 import awsIntegrationsSVG from '../images/integrations-aws.svg';
 import awsSVG from '../images/aws-01.svg';
@@ -41,8 +42,7 @@ export default React.createClass({
             <div className="col col-xs-12 col-sm-8 col-md-9 last-xs">
               <div className={style.prosePanel}>
                 <div className="text-center-xs">
-                  <h2 id="ec2">Opsee + <span className="text-accent">AWS</span> = &hearts;</h2>
-                  <a href="#ec2"><small>(link icon)</small></a>
+                  <Heading permalink="ec2" level={2}>Opsee + <span className="text-accent">AWS</span> = &hearts;</Heading>
                 </div>
 
                 <p>Amazon EC2 Container Service (ECS) is a container management service
@@ -109,8 +109,7 @@ export default React.createClass({
             <div className="col col-xs-12 col-sm-8 col-md-9 last-xs">
               <div className={style.prosePanel}>
                 <div className="text-center-xs">
-                  <h2 id="ec2">Rich Notifications with <span className="text-accent">Slack</span></h2>
-                  <a href="#ec2"><small>(link icon)</small></a>
+                  <Heading permalink="ec2" level={2}>Rich Notifications with <span className="text-accent">Slack</span></Heading>
                 </div>
 
                 <p>Amazon EC2 Container Service (ECS) is a container management service
@@ -135,8 +134,7 @@ export default React.createClass({
             <div className="col col-xs-12 col-sm-8 col-md-9 last-xs">
               <div className={style.prosePanel}>
                 <div className="text-center-xs">
-                  <h2 id="ec2">Incidence Response with <span className="text-accent">PagerDuty</span></h2>
-                  <a href="#ec2"><small>(link icon)</small></a>
+                  <Heading permalink="ec2" level={2}>Incidence Response with <span className="text-accent">PagerDuty</span></Heading>
                 </div>
 
                 <p>Amazon EC2 Container Service (ECS) is a container management service
