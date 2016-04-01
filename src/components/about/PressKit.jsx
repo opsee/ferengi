@@ -23,7 +23,7 @@ export default React.createClass({
         <div className="section">
           <h3>Logo pack</h3>
 
-          <p>All logo variants, available for download as a .ZIP file:</p>
+          <p>All logo variants, available for download as a .zip file:</p>
 
           <Row className="padding-tb">
             <Col xs={12} className="text-center">
