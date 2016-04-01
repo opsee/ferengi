@@ -43,7 +43,7 @@ export default React.createClass({
     const img1 = '/' + require(`../images/about/${person.id}1`);
     const img2 = '/' + require(`../images/about/${person.id}2`);
     return (
-      <figure className={style.person}>
+      <figure key={person.id} className={style.person}>
         <div className={style.headshot}>
           <img className={style.img} src={img1} alt={person.name}/>
           <img className={style.imgRoll} src={img2} alt={person.name}/>

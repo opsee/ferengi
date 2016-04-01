@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../forms/Button';
 import { Padding } from '../layout';
+import { Col, Row } from 'emissary/src/js/modules/bootstrap';
 
 export default React.createClass({
   render() {
@@ -24,11 +25,12 @@ export default React.createClass({
 
           <p>All logo variants, available for download as a .ZIP file:</p>
 
-          <div className="row padding-tb">
-            <div className="col-xs-12 text-center">
+          <Row className="padding-tb">
+            <Col xs={12} className="text-center">
               <div className="padding-b">
                 <a href="https://s3-us-west-1.amazonaws.com/opsee-public-images/opseelogos-all.zip"><img src={'/' + require('../images/press/opseelogos-all.png')} alt="all Opsee logos for download"/></a>
               </div>
+
               <div className="padding-b">
                 <Padding tb={2}>
                   <Button to="https://s3-us-west-1.amazonaws.com/opsee-public-images/opseelogos-all.zip" target="_blank" secondary chevron>
@@ -37,8 +39,8 @@ export default React.createClass({
                 </Padding>
                 <p><small>All logos come in small and large PNG, and vector SVG formats (161kB .ZIP file)</small></p>
               </div>
-            </div>
-          </div>
+            </Col>
+          </Row>
         </div>
       </div>
     );
