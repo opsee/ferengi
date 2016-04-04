@@ -7,11 +7,11 @@ import SkewDivider from '../layout/SkewDivider';
 import { Padding } from '../layout';
 import { Heading, Permalink } from '../type';
 import BaseSVG from '../images/BaseSVG';
-import awsSVG from '../images/aws-01.svg';
-import slackSVG from '../images/slack-01.svg';
-import ec2SVG from '../images/aws/ec2-01.svg';
-import ecsSVG from '../images/aws/ecs-01.svg';
-import rdsSVG from '../images/aws/rds-01.svg';
+import awsSVG from '../images/logos/aws-01.svg';
+import slackSVG from '../images/logos/slack-01.svg';
+import ec2SVG from '../images/logos/ec2-01.svg';
+import ecsSVG from '../images/logos/ecs-01.svg';
+import rdsSVG from '../images/logos/rds-01.svg';
 
 import style from './integrations.css';
 
