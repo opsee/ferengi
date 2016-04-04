@@ -74,6 +74,12 @@
   max-width: 420px;
 }
 
+.offsetDivider {
+  /*margin-top: -6.4rem;*/
+  height: 80px; /* use height instead of margin/padding to clip phone */
+  margin-bottom: 1rem;
+}
+
 @media (max-width: 768px) {
   .imagePanel { order: 1; }
   .prosePanel { order: 2; }
