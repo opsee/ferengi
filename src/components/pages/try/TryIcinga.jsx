@@ -34,7 +34,7 @@ export default React.createClass({
         <Panel>
           <Row>
             <Col xs={10} xsOffset={1}>
-              <Quote author="Brian Livingston" position="SysAdmin" company="Strathcom Media" url="http://www.strathcom.ca/" logo={strathcomLogo}>
+              <Quote author="Hector Castro" position="Operations Engineer" company="Azavea" url="http://www.azavea.com/" logo={azaveaLogo}>
                 <p>"Integrating Opsee into our existing AWS environment was elegant and seamless. Within a handful of minutes, we had fully functional instance and load balancer level assertions against our existing service health checks."</p>
               </Quote>
             </Col>
