@@ -40,7 +40,7 @@ export default React.createClass({
 
         <Padding tb={1}>
           <div className={style.author}><strong>{this.props.author}</strong></div>
-          <div className={style.meta}><em>{this.props.position}</em></div>
+          <div className={style.meta}>{this.props.position}, {this.props.company}</div>
         </Padding>
       </div>
     );

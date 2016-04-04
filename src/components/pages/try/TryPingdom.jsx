@@ -22,7 +22,7 @@ export default React.createClass({
               <h3>Better visibility and rich, actionable notifications.</h3>
             </Padding>
 
-            <p>Opsee is like Pingdom for microservices, running checks inside your AWS environment to help you ensure your services, both inside and outside the firewall, are running as you expect. Opsee is seamlessly integrated into your environment, with no agents to install or shell scripts to cURL.</p>
+            <p>Opsee runs checks inside your AWS environment to help you ensure your services, both inside and outside the firewall, are operating as you expect. Opsee is seamlessly integrated into your environment, with no agents to install or shell scripts to cURL.</p>
           </SplitPanel>
 
           <SplitPanel className={style.screenshotPanel}>
@@ -36,7 +36,7 @@ export default React.createClass({
           <Row>
             <Col xs={10} xsOffset={1}>
               <Quote author="Hector Castro" position="Operations Engineer" company="Azavea" url="http://www.azavea.com/" logo={azaveaLogo}>
-                <p>"Integrating Opsee into our existing AWS environment was elegant and seamless. Within a handful of minutes, we had fully functional instance and load balancer level assertions against our existing service health checks."</p>
+                <p>"Opsee is like Pingdom running inside of my AWS environment, but with more sophisticated options for where and how I apply health checks. I can see exactly what services and hosts are having problems. The notifications highlight issues in my responses, and I can resolve them right from the app."</p>
               </Quote>
             </Col>
           </Row>
