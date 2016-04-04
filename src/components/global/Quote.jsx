@@ -1,17 +1,14 @@
+import _ from 'lodash';
 import cx from 'classnames';
 import React, { PropTypes } from 'react';
 import { Padding } from '../layout';
 import BaseSVG from '../images/BaseSVG';
 import style from './quote.css';
+import quotes from '../../data/quotes';
 
 export default React.createClass({
   propTypes: {
-    children: PropTypes.node.isRequired, // The quote itself
-    author: PropTypes.string.isRequired,
-    company: PropTypes.string,
-    position: PropTypes.string,
-    logo: PropTypes.string,
-    url: PropTypes.string,
+    quote: PropTypes.oneOf(_.keys(quotes)),
     className: PropTypes.string
   },
 
@@ -20,23 +17,26 @@ export default React.createClass({
   },
 
   render() {
+    const quote = _.get(quotes, this.props.quote);
+    console.log(this.props.quote);
+
     return (
       <div className={this.getClass()}>
-        { this.props.logo ?
+        { _.has(quote, 'logo') ?
           <Padding tb={1}>
-            <a href={this.props.url} target="_blank">
-              <BaseSVG svg={this.props.logo} className={style.logo} />
+            <a href={_.get(quote, 'url')} target="_blank">
+              <BaseSVG svg={_.get(quote, 'logo')} className={style.logo} />
             </a>
           </Padding>
         : null }
 
         <Padding tb={1}>
-          <blockquote>{this.props.children}</blockquote>
+          <blockquote><p>{_.get(quote, 'quote')}</p></blockquote>
         </Padding>
 
         <Padding tb={1}>
-          <div className={style.author}><strong>{this.props.author}</strong></div>
-          <div className={style.meta}>{this.props.position}, {this.props.company}</div>
+          <div className={style.author}><strong>{_.get(quote, 'author')}</strong></div>
+          <div className={style.meta}>{_.get(quote, 'position')}, {_.get(quote, 'company')}</div>
         </Padding>
       </div>
     );

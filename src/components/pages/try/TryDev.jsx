@@ -8,7 +8,6 @@ import TryCampaign from './TryCampaign';
 import Panel from '../../panels/Panel';
 import SkewDivider from '../../layout/SkewDivider';
 import Quote from '../../global/Quote';
-import strathcomLogo from '../../images/logos/strathcom.png';
 
 export default React.createClass({
   render() {
@@ -34,9 +33,7 @@ export default React.createClass({
         <Panel>
           <Row>
             <Col xs={10} xsOffset={1}>
-              <Quote author="Brian Livingston" position="SysAdmin" company="Strathcom Media" url="http://www.strathcom.ca/" logo={strathcomLogo}>
-                <p>"I love that Opsee's on-boarding process consists mostly of waiting for my coffee to brew. I got almost 60 health checks created for me, and almost 50% of my EC2 instances covered, with zero effort."</p>
-              </Quote>
+              <Quote quote="coffee" />
             </Col>
           </Row>
         </Panel>

@@ -8,7 +8,6 @@ import TryCampaign from './TryCampaign';
 import Panel from '../../panels/Panel';
 import SkewDivider from '../../layout/SkewDivider';
 import Quote from '../../global/Quote';
-import azaveaLogo from '../../images/logos/azavea-logo.png';
 
 export default React.createClass({
   render() {
@@ -34,9 +33,7 @@ export default React.createClass({
         <Panel>
           <Row>
             <Col xs={10} xsOffset={1}>
-              <Quote author="Hector Castro" position="Operations Engineer" company="Azavea" url="http://www.azavea.com/" logo={azaveaLogo}>
-                <p>"Integrating Opsee into our existing AWS environment was elegant and seamless. Within a handful of minutes, we had fully functional instance and load balancer level assertions against our existing service health checks."</p>
-              </Quote>
+              <Quote quote="assertions" />
             </Col>
           </Row>
         </Panel>
