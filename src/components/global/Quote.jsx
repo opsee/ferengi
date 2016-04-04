@@ -26,15 +26,6 @@ export default React.createClass({
   render() {
     return (
       <div className={this.getClass()}>
-        <Padding tb={1}>
-          <blockquote>{this.props.children}</blockquote>
-        </Padding>
-
-        <Padding tb={1}>
-          <div className={style.author}><strong>{this.props.author}</strong></div>
-          <div className={style.meta}><em>{this.props.position}</em></div>
-        </Padding>
-
         { this.props.logo ?
           <Padding tb={1}>
             <a href={this.props.url} target="_blank">
@@ -43,6 +34,14 @@ export default React.createClass({
           </Padding>
         : null }
 
+        <Padding tb={1}>
+          <blockquote>{this.props.children}</blockquote>
+        </Padding>
+
+        <Padding tb={1}>
+          <div className={style.author}><strong>{this.props.author}</strong></div>
+          <div className={style.meta}><em>{this.props.position}</em></div>
+        </Padding>
       </div>
     );
   }

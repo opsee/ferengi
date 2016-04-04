@@ -76,7 +76,7 @@
 }
 
 .offsetDivider {
-  height: 100px; /* use height instead of margin/padding to clip phone */
+  height: 80px; /* use height instead of margin/padding to clip phone */
   margin-bottom: 0; /* margin accounted for by height */
 }
 
