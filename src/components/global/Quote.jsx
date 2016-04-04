@@ -6,17 +6,13 @@ import style from './quote.css';
 
 export default React.createClass({
   propTypes: {
-    // The quote itself
-    children: PropTypes.node.isRequired,
-    // The name of the person being quoted
+    children: PropTypes.node.isRequired, // The quote itself
     author: PropTypes.string.isRequired,
-    // The quote author's current position at the given company
+    company: PropTypes.string,
     position: PropTypes.string,
-    // Optional. A company logo or similar
     logo: PropTypes.string,
-    // Optional. A company URL
     url: PropTypes.string,
-    className: PropTypes.string,
+    className: PropTypes.string
   },
 
   getClass() {
