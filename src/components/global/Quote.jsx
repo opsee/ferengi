@@ -31,7 +31,7 @@ export default React.createClass({
         : null }
 
         <Padding tb={1}>
-          <blockquote><p>{_.get(quote, 'quote')}</p></blockquote>
+          <blockquote><p>&ldquo;{_.get(quote, 'quote')}&rdquo;</p></blockquote>
         </Padding>
 
         <Padding tb={1}>
