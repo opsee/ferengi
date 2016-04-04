@@ -8,7 +8,7 @@ import TryCampaign from './TryCampaign';
 import Panel from '../../panels/Panel';
 import SkewDivider from '../../layout/SkewDivider';
 import Quote from '../../global/Quote';
-import strathcomLogo from '../../images/logos/strathcom.png';
+import azaveaLogo from '../../images/logos/azavea-logo.png';
 
 export default React.createClass({
   render() {
