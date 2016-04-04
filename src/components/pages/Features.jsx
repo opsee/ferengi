@@ -60,7 +60,7 @@ const Features = React.createClass({
           <Panel>
             <Row>
               <Col xs={10} xsOffset={1}>
-                <Quote quote="assertions" />
+                <Quote quote="coffee" />
               </Col>
             </Row>
           </Panel>
@@ -95,16 +95,6 @@ const Features = React.createClass({
 
           <SkewDivider />
 
-          <Panel>
-            <Row>
-              <Col xs={10} xsOffset={1}>
-                <Quote quote="coffee" />
-              </Col>
-            </Row>
-          </Panel>
-
-          <SkewDivider />
-
           <SplitContainer className={style.section}>
             <SplitPanel className={style.screenshotPanel}>
               <BaseSVG svg={notificationsSVG} className={style.svg} />
@@ -131,6 +121,16 @@ const Features = React.createClass({
 
           <SkewDivider className={style.offsetDivider} />
 
+          <Panel>
+            <Row>
+              <Col xs={10} xsOffset={1}>
+                <Quote quote="pingdom" />
+              </Col>
+            </Row>
+          </Panel>
+
+          <SkewDivider />
+
           <SplitContainer className={style.section}>
             <SplitPanel className={style.screenshotProsePanel}>
               <Padding tb={1}>
@@ -154,16 +154,6 @@ const Features = React.createClass({
               </Padding>
             </SplitPanel>
           </SplitContainer>
-
-          <SkewDivider />
-
-          <Panel>
-            <Row>
-              <Col xs={10} xsOffset={1}>
-                <Quote quote="pingdom" />
-              </Col>
-            </Row>
-          </Panel>
 
           <SkewDivider />
 
