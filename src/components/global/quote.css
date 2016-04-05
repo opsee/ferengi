@@ -1,0 +1,21 @@
+.quote {
+  text-align: center;
+}
+
+.quote blockquote p {
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+
+.author {
+  font-family: var(--fontDisplay);
+  font-size: 2rem;
+}
+
+.logo {
+  max-width: 120px;
+}
+
+.author {
+  color: var(--colorGray8);
+}

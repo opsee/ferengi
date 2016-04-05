@@ -5,9 +5,11 @@ import SkewPanel from '../panels/SkewPanel';
 import HeroPanel from '../panels/HeroPanel';
 import SignUpPanel from '../panels/SignUpPanel';
 import SummaryPanels from '../panels/SummaryPanels';
-import { Padding } from '../layout';
+import { Padding, Row, Col } from '../layout';
 import Button from '../forms/Button';
 import SkewDivider from '../layout/SkewDivider';
+import Quote from '../global/Quote';
+import Panel from '../panels/Panel';
 
 import BaseSVG from '../images/BaseSVG';
 import illustAWSKey from '../images/illust_aws_key-01.svg';
@@ -78,6 +80,16 @@ export default React.createClass({
         <div>
           <SummaryPanels />
         </div>
+
+        <SkewDivider />
+
+        <Panel>
+          <Row>
+            <Col xs={10} xsOffset={1}>
+              <Quote quote="assertions" />
+            </Col>
+          </Row>
+        </Panel>
 
         <SkewPanel backgroundColor="#303030" skewBottom={false}>
           <SignUpPanel />

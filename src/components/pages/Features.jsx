@@ -3,11 +3,13 @@ import StaticHeader from '../panels/StaticHeader';
 import style from './features.css';
 import { SplitContainer, SplitPanel } from '../panels/SplitPanels';
 
-import Padding from '../layout/Padding';
+import { Padding, Row, Col } from '../layout';
 import SkewDivider from '../layout/SkewDivider';
 import SkewPanel from '../panels/SkewPanel';
 import SignUpPanel from '../panels/SignUpPanel';
 import Button from '../forms/Button';
+import Quote from '../global/Quote';
+import Panel from '../panels/Panel';
 
 import BaseSVG from '../images/BaseSVG';
 import checkDiagramSVG from '../images/product-checks.svg';
@@ -52,6 +54,16 @@ const Features = React.createClass({
               <BaseSVG svg={awsIntegrationsSVG} />
             </SplitPanel>
           </SplitContainer>
+
+          <SkewDivider />
+
+          <Panel>
+            <Row>
+              <Col xs={10} xsOffset={1}>
+                <Quote quote="coffee" />
+              </Col>
+            </Row>
+          </Panel>
 
           <SkewDivider />
 
@@ -108,6 +120,16 @@ const Features = React.createClass({
           </SplitContainer>
 
           <SkewDivider className={style.offsetDivider} />
+
+          <Panel>
+            <Row>
+              <Col xs={10} xsOffset={1}>
+                <Quote quote="pingdom" />
+              </Col>
+            </Row>
+          </Panel>
+
+          <SkewDivider />
 
           <SplitContainer className={style.section}>
             <SplitPanel className={style.screenshotProsePanel}>

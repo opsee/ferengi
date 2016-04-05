@@ -40,7 +40,7 @@
 .section {
   max-width: var(--layoutMaxWidth);
   margin: 0 auto;
-  padding: 8rem 2rem;
+  padding: 4rem 2rem;
 }
 
 .splash h1 {
@@ -67,11 +67,17 @@
 .screenshotPanel {
   composes: imagePanel;
   align-self: flex-end;
-  margin-bottom: -220px;
+  margin-bottom: -150px;
+  padding: 2rem 6rem 0 6rem;
 }
 
 .svg {
-  max-width: 420px;
+  max-width: 400px;
+}
+
+.offsetDivider {
+  height: 80px; /* use height instead of margin/padding to clip phone */
+  margin-bottom: 0; /* margin accounted for by height */
 }
 
 @media (max-width: 768px) {

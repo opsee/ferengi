@@ -1,10 +1,13 @@
 import React from 'react';
 import style from './try.css';
-import { Padding } from '../../layout';
+import { Padding, Row, Col } from '../../layout';
 import { SplitContainer, SplitPanel } from '../../panels/SplitPanels';
 import BaseSVG from '../../images/BaseSVG';
 import awsIntegrationsSVG from '../../images/integrations-aws.svg';
 import TryCampaign from './TryCampaign';
+import Panel from '../../panels/Panel';
+import SkewDivider from '../../layout/SkewDivider';
+import Quote from '../../global/Quote';
 
 export default React.createClass({
   render() {
@@ -24,6 +27,16 @@ export default React.createClass({
             <BaseSVG svg={awsIntegrationsSVG} className={style.svg} />
           </SplitPanel>
         </SplitContainer>
+
+        <SkewDivider />
+
+        <Panel>
+          <Row>
+            <Col xs={10} xsOffset={1}>
+              <Quote quote="assertions" />
+            </Col>
+          </Row>
+        </Panel>
       </TryCampaign>
     );
   }
