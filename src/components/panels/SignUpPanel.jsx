@@ -85,6 +85,12 @@ const SignUpPanel = React.createClass({
     return null;
   },
   renderTitle(){
+    if (this.getReferrer() === 'betalist') {
+      return (
+        <h1 className={style.heading}>Welcome, <span className="text-accent">BetaList</span> community!</h1>
+      );
+    }
+
     return (
       <h1 className={style.heading}>Ready to <span className="text-accent">get Opsee?</span></h1>
     );
