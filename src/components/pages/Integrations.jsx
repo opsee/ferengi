@@ -6,6 +6,8 @@ import SignUpPanel from '../panels/SignUpPanel';
 import SkewDivider from '../layout/SkewDivider';
 import { Padding } from '../layout';
 import { Heading, Permalink } from '../type';
+import { Col, Row } from 'emissary/src/js/modules/bootstrap';
+
 import BaseSVG from '../images/BaseSVG';
 import awsSVG from '../images/logos/aws-01.svg';
 import slackSVG from '../images/logos/slack-01.svg';
@@ -27,14 +29,14 @@ export default React.createClass({
         </StaticHeader>
 
         <Panel>
-          <div className="row">
-            <div className="col center-xs col-xs-12 col-sm-4 col-md-3 first-xs">
+          <Row>
+            <Col xs={12} sm={4} md={3} className="center-xs first-xs">
               <div className={style.logo}>
                 <BaseSVG svg={awsSVG} />
               </div>
-            </div>
+            </Col>
 
-            <div className="col col-xs-12 col-sm-8 col-md-9 last-xs">
+            <Col xs={12} sm={8} md={9} className="last-xs">
               <div className={style.prosePanel}>
                 <div className="text-center-xs">
                   <Heading permalink="aws" level={2}>Opsee + <span className="text-accent">AWS</span> = &hearts;</Heading>
@@ -45,8 +47,8 @@ export default React.createClass({
 
                 <Padding tb={2} r={4}>
                   <Padding tb={1}>
-                    <div className="row">
-                      <div className="col col-xs-4 col-sm-3 text-center">
+                    <Row>
+                      <Col xs={4} sm={3} className="text-center">
                         <div className={style.awsHeading}>
                           <BaseSVG svg={ec2SVG} />
                           <Padding tb={1}>
@@ -54,17 +56,17 @@ export default React.createClass({
                             <Permalink link="aws-ec2" className={style.awsPermalink} />
                           </Padding>
                         </div>
-                      </div>
+                      </Col>
 
-                      <div className="col col-xs-8 col-sm-9">
+                      <Col xs={8} sm={9}>
                         <p className="no-space"><a href="https://aws.amazon.com/ec2/" target="_blank">Amazon Elastic Compute Cloud</a> (Amazon EC2) is a web service that provides resizable compute capacity in the cloud. Opsee supports health checks for Security Groups, Auto Scale Groups, Elastic Load Balancers and individual EC2 instances, and support is available by default as part of our AWS integration.</p>
-                      </div>
-                    </div>
+                      </Col>
+                    </Row>
                   </Padding>
 
                   <Padding tb={1}>
-                    <div className="row">
-                      <div className="col col-xs-4 col-sm-3 text-center">
+                    <Row id="aws-rds">
+                      <Col xs={4} sm={3} className="text-center">
                         <div className={style.awsHeading}>
                           <BaseSVG svg={rdsSVG} />
                           <Padding tb={1}>
@@ -72,17 +74,17 @@ export default React.createClass({
                             <Permalink link="aws-rds" className={style.awsPermalink} />
                           </Padding>
                         </div>
-                      </div>
+                      </Col>
 
-                      <div className="col col-xs-8 col-sm-9">
+                      <Col xs={8} sm={9}>
                         <p className="no-space"><a href="https://aws.amazon.com/rds/" target="_blank">Amazon Relational Database Service</a> (Amazon RDS) makes it easy to set up, operate, and scale a relational database in the cloud. Opsee supports health checks for RDS Database Instances, and support is available by default as part of our AWS integration.</p>
-                      </div>
-                    </div>
+                      </Col>
+                    </Row>
                   </Padding>
 
                   <Padding tb={1}>
-                    <div id="aws-ecs" className="row">
-                      <div className="col col-xs-4 col-sm-3 text-center">
+                    <Row id="aws-ecs">
+                      <Col xs={4} sm={3} className="text-center">
                         <div className={style.awsHeading}>
                           <BaseSVG svg={ecsSVG} />
                           <Padding tb={1}>
@@ -90,30 +92,30 @@ export default React.createClass({
                             <Permalink link="aws-ecs" className={style.awsPermalink}/>
                           </Padding>
                         </div>
-                      </div>
+                      </Col>
 
-                      <div className="col col-xs-8 col-sm-9">
+                      <Col xs={8} sm={9}>
                         <p className="no-space"><a href="https://aws.amazon.com/ecs/" target="_blank">Amazon EC2 Container Service</a> (Amazon ECS) is a container management service that lets you run applications from Docker containers on clusters of EC2 instances. Opsee supports health checks for ECS Services, and support is available by default as part of our AWS integration.</p>
-                      </div>
-                    </div>
+                      </Col>
+                    </Row>
                   </Padding>
                 </Padding>
               </div>
-            </div>
-          </div>
+            </Col>
+          </Row>
         </Panel>
 
         <SkewDivider />
 
         <Panel>
-          <div className="row">
-            <div className="col center-xs col-xs-12 col-sm-4 col-md-3 first-xs">
+          <Row>
+            <Col xs={12} sm={4} md={3} className="center-xs first-xs">
               <div className={style.logo}>
                 <BaseSVG svg={slackSVG} />
               </div>
-            </div>
+            </Col>
 
-            <div className="col col-xs-12 col-sm-8 col-md-9 last-xs">
+            <Col xs={12} sm={8} md={9} className="last-xs">
               <div className={style.prosePanel}>
                 <div className="text-center-xs">
                   <Heading permalink="slack" level={2}>Rich Notifications with <span className="text-accent">Slack</span></Heading>
@@ -122,8 +124,8 @@ export default React.createClass({
                 <p><a href="https://slack.com/" target="_blank">Slack</a> is a messaging app for teams. Opsee can send notifications to Slack channels. Just connect Opsee to Slack in your profile, and choose a Slack channel to send notifications to when you create health checks.</p>
                 <p>Read more about setting up your Slack notifications <a href="https://app.opsee.com/docs/notifications" target="_blank">in our docs</a>.</p>
                 </div>
-            </div>
-          </div>
+            </Col>
+          </Row>
         </Panel>
 
         <SkewPanel backgroundColor="#333" skewBottom={false}>

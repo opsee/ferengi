@@ -14,7 +14,7 @@ export default React.createClass({
 
         <div className="section">
           <h3>Benefits</h3>
-          <ul className="bullet_list">
+          <ul>
             <li><p>We&rsquo;re located in the beautiful <a href="http://heavybit.com/clubhouse" target="_blank">Heavybit clubhouse</a> in San Francisco, CA where we offer free catered lunches, coffee, tea, and other beverages.</p></li>
             <li><p> We also offer, and actively support, remote working.</p></li>
             <li><p>Compensation is competitive and includes a generous equity grant and full medical, dental, and vision benefits</p></li>
