@@ -131,7 +131,7 @@ const Features = React.createClass({
 
           <SkewDivider className={style.offsetDivider} />
 
-          <Panel>
+          <Panel className={style.offsetPanel}>
             <Row>
               <Col xs={10} xsOffset={1}>
                 <Quote quote="pingdom" />
