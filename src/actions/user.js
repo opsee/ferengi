@@ -3,6 +3,7 @@ import { SIGNUP } from './constants';
 import { trackEvent } from '../modules/analytics';
 import { ONBOARD, ONBOARD_SIGNUP } from '../constants/analyticsConstants';
 import fetch from '../modules/fetch';
+import yeller from '../modules/yeller';
 
 /**
  * @param {string} url
@@ -29,7 +30,10 @@ export function signup(data = {}) {
           return res.json();
         })
         .then(resolve)
-        .catch(reject);
+        .catch(err => {
+          yeller.report(err);
+          reject(err);
+        });
       })
     });
   };

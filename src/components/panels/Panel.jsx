@@ -5,7 +5,7 @@ import style from './panel.css';
 export default React.createClass({
   propTypes: {
     children: PropTypes.node,
-    className: PropTypes.string,
+    className: PropTypes.string
   },
 
   render() {
