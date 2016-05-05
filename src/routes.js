@@ -8,9 +8,9 @@ import Features from './components/pages/Features';
 import How from './components/pages/How';
 import Integrations from './components/pages/Integrations';
 import BetaTOS from './components/pages/BetaTOS';
-import Solutions from './components/pages/solutions';
-import SolutionsStartup from './components/pages/solutions';
-import SolutionsEnterprise from './components/pages/solutions';
+import Solutions from './components/pages/solutions/Solutions';
+import SolutionsStartup from './components/pages/solutions/SolutionsStartup';
+import SolutionsEnterprise from './components/pages/solutions/SolutionsEnterprise';
 import {
   TryAWS,
   TryChecks,
