@@ -1,0 +1,68 @@
+.header {
+  color: white;
+}
+
+.button {
+  font-size: 1.4rem;
+  padding: 2rem;
+}
+
+.offsetDivider {
+  margin-top: -8rem;
+  height: 12vmax; /* use height instead of margin/padding to clip phone */
+  margin-bottom: 1rem;
+}
+
+.offsetPanel {
+  margin-top: -3rem;
+}
+
+.section {
+  min-height: 50vh;
+}
+
+.prosePanel {
+  padding: 2rem;
+}
+
+.screenshotProsePanel {
+  composes: prosePanel;
+  align-self: flex-start;
+}
+
+.imagePanel {
+  width: 50%;
+  text-align: center;
+  padding: 2rem;
+}
+
+.screenshotPanel {
+  composes: imagePanel;
+  padding-bottom: 0;
+}
+
+.svg {
+  width: 100%;
+  max-width: 360px;
+}
+
+.screenshotSVG {
+  composes: svg;
+}
+
+@media (max-width: 768px) {
+  .prosePanel { order: 1; }
+  .imagePanel { order: 2; }
+
+  .imagePanel,
+  .prosePanel {
+    flex: 1 100%;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  };
+
+  .button {
+    width: 100%;
+  }
+}

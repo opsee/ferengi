@@ -33,6 +33,18 @@ module.exports = {
       title: 'Opsee / Beta TOS'
     },
 
+    '/solutions': {
+      title: 'Opsee / Solutions'
+    },
+
+    '/solutions/startup': {
+      title: 'Opsee / Startup Solutions'
+    },
+
+    '/solutions/enterprise': {
+      title: 'Opsee / Enterprise Solutions'
+    },
+
     '/try/aws': {
       title: 'Opsee / Monitoring Built for AWS',
       excerpt: 'Integrate and auto-scale seamlessly with your infrastructure. No agents to install or shell scripts to cURL.',
