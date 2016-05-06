@@ -121,7 +121,7 @@ const SolutionsStartup = React.createClass({
               <ul>
                 <li><span className="prose">Our instance is t2.micro and is <a target="_blank" href="https://aws.amazon.com/ec2/pricing/">free-tier eligible</a></span></li>
                 <li><span className="prose">It uses AWS APIs to discover your environment, detecting changes to infrastructure automatically</span></li>
-                <li><span className="prose">Permissions are managed by our cross-account role</span></li>
+                <li><span className="prose">No agents to run on your systems</span></li>
               </ul>
             </SplitPanel>
             <SplitPanel className={style.imagePanel}>

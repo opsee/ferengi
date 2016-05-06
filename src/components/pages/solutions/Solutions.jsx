@@ -1,23 +1,17 @@
 import React from 'react';
 import StaticHeader from '../../panels/StaticHeader';
 import style from './solutions.css';
-import { SplitContainer, SplitPanel } from '../../panels/SplitPanels';
+// import { SplitContainer, SplitPanel } from '../../panels/SplitPanels';
 
 import { Padding, Row, Col } from '../../layout';
-import SkewDivider from '../../layout/SkewDivider';
 import SkewPanel from '../../panels/SkewPanel';
 import SignUpPanel from '../../panels/SignUpPanel';
-import Button from '../../forms/Button';
-// import Quote from '../../global/Quote';
 import Panel from '../../panels/Panel';
+import { Heading } from '../../type';
 
 import BaseSVG from '../../images/BaseSVG';
-// import checkDiagramSVG from '../../images/product-checks.svg';
-// import notificationsSVG from '../../images/product-notifications.svg';
-import awsIntegrationsSVG from '../../images/integrations-aws.svg';
-// import passingAssertionsSVG from '../../images/passing-assertions.svg';
-// import securitySVG from '../../images/security.svg';
-// import cleanSimpleSVG from '../../images/clean-simple.svg';
+import ec2SVG from '../../images/logos/ec2-01.svg';
+import rdsSVG from '../../images/logos/rds-01.svg';
 
 const Solutions = React.createClass({
   render() {
@@ -25,50 +19,59 @@ const Solutions = React.createClass({
       <div>
         <StaticHeader className={style.header}>
           <div className="text-center">
-            <h1 className={style.header}><span className="text-accent-static">Bootstrap</span> your devops team</h1>
-            <h3>Opsee is made for startups who want to get back to doing what they love: shipping product</h3>
+            <h1 className={style.header}><span className="text-accent-static">Solutions</span> for every team</h1>
+            <h3>Opsee is made for teams who want to get back to doing what they love: shipping product</h3>
           </div>
         </StaticHeader>
 
         <div>
           <Panel>
             <Row>
-              <Col xs={10} xsOffset={1}>
-                <p>The good news: a startup team running in AWS can grow to 20 or 30 engineers without dedicated ops</p>
-                <p>The bad news: now dev teams need to own their availability and performance</p>
-                <p>Open-source tools are a pain to set up and configure, and today’s SaaS products are powerful but expensive, and overkill for our needs.</p>
-                <p>Opsee is here to help.</p>
+              <Col>
+                <div className={style.prosePanel}>
+                  <div className="text-center-xs">
+                    <Heading permalink="aws" level={2}>Opsee + <span className="text-accent">AWS</span> = &hearts;</Heading>
+                  </div>
+
+                  <p>With public cloud services like AWS, monitoring can be effortless. Opsee automatically updates health checks on your services and systems, even when your environment scales. You get full coverage of your AWS ecosystem with nothing to maintain.</p>
+                  <p>Read more about how Opsee works with AWS on the <a href="https://blog.opsee.com/monitoring-built-for-aws-49c989c6a2c" target="_blank">Opsee blog</a>.</p>
+
+                  <Padding tb={2} r={4}>
+                    <Padding tb={1}>
+                      <Row>
+                        <Col xs={3} sm={2} className="text-center">
+                          <div className={style.awsHeading}>
+                            <BaseSVG svg={ec2SVG} />
+                          </div>
+                        </Col>
+
+                        <Col xs={9} sm={10}>
+                          <Padding b={2}><Heading level={3}>Startups</Heading></Padding>
+                          <p className="no-space"> <strong>The good news:</strong> a startup team running in AWS can grow to 20 or 30 engineers without dedicated ops. <strong>The bad news:</strong> now dev teams need to own their availability and performance. Open-source tools are a pain to set up and configure, and today’s SaaS products are powerful but expensive, and overkill for our needs. <strong>Opsee is here to help.</strong></p>
+                        </Col>
+                      </Row>
+                    </Padding>
+
+                    <Padding tb={2}>
+                      <Row>
+                        <Col xs={3} sm={2} className="text-center">
+                          <div className={style.awsHeading}>
+                            <BaseSVG svg={rdsSVG} />
+                          </div>
+                        </Col>
+
+                        <Col xs={9} sm={10}>
+                          <Padding b={2}><Heading level={3}>Enterprises</Heading></Padding>
+                          <p className="no-space"><a href="https://aws.amazon.com/rds/" target="_blank">Amazon Relational Database Service</a> (Amazon RDS) makes it easy to set up, operate, and scale a relational database in the cloud. Opsee supports health checks for RDS Database Instances, and support is available by default as part of our AWS integration.</p>
+                        </Col>
+                      </Row>
+                    </Padding>
+
+                  </Padding>
+                </div>
               </Col>
             </Row>
           </Panel>
-
-          <SkewDivider />
-
-          <SplitContainer className={style.section}>
-            <SplitPanel className={style.prosePanel}>
-              <Padding tb={1}>
-                <h2>Deep integration with <span className="text-accent">AWS</span></h2>
-              </Padding>
-
-              <ul>
-                <li><span className="prose">Just add our instance to your AWS environment</span></li>
-                <li><span className="prose">We automatically and continuously discover your environment</span></li>
-                <li><span className="prose">No configurations to manage</span></li>
-              </ul>
-
-              <Padding tb={2}>
-                <Button to="/how" className={style.button} secondary chevron>
-                  How it works
-                </Button>
-              </Padding>
-            </SplitPanel>
-
-            <SplitPanel className={style.imagePanel}>
-              <BaseSVG svg={awsIntegrationsSVG} />
-            </SplitPanel>
-          </SplitContainer>
-
-          <SkewDivider />
         </div>
 
         <SkewPanel backgroundColor="#333" skewBottom={false}>
