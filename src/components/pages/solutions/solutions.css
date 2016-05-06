@@ -1,3 +1,7 @@
+strong {
+  font-weight: bold;
+}
+
 .header {
   color: white;
 }
@@ -28,6 +32,13 @@
 .screenshotProsePanel {
   composes: prosePanel;
   align-self: flex-start;
+}
+
+.imagePanelThirds {
+  align-self: flex-start;
+  width: 33.3%;
+  /*text-align: center;*/
+  padding: 2rem;
 }
 
 .imagePanel {
