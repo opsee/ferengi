@@ -35,7 +35,7 @@ const Solutions = React.createClass({
                     <Heading level={2}>Complete coverage, <span className="text-accent">right now</span></Heading>
                   </div>
 
-                  <p>Running in AWS, monitoring can be effortless. Opsee automatically discovers your infrastructure and updates health checks as your environment scales. You get full coverage with nothing to maintain and no agents to run on your systems.</p>
+                  <p>Opsee automatically discovers your infrastructure and updates health checks as your environment scales. You get full coverage with no configurations to maintain or agents to run on your systems.</p>
 
                   <Padding tb={2} r={4}>
                     <Padding tb={1}>
@@ -48,7 +48,7 @@ const Solutions = React.createClass({
 
                         <Col xs={9} sm={10}>
                           <Padding b={2}><Heading level={3}>Startup</Heading></Padding>
-                          <p className="no-space"><strong>The good news:</strong> a startup team running in AWS can grow bigger than ever without dedicated ops. <strong>The bad news:</strong> now your dev team has to own their availability and performance. Open-source tools are a pain to set up and configure, and today’s SaaS products are powerful but expensive, and overkill for our needs. How do you bootstrap your monitoring efforts to stay in control?</p>
+                          <p className="no-space">The good news: AWS helps startup teams ship code faster than ever, and manage infrastructure without dedicated ops. The bad news: we need to hire DevOps to manage the complexity of legacy monitoring tools. How do we bootstrap our monitoring efforts to stay in control?</p>
 
                             <p><a href="/solutions/startup">Learn more about Opsee for startups</a></p>
                         </Col>
@@ -65,7 +65,7 @@ const Solutions = React.createClass({
 
                         <Col xs={9} sm={10}>
                           <Padding b={2}><Heading level={3}>Enterprise</Heading></Padding>
-                          <p className="no-space">It&rsquo;s a big company, but your team still feels like a startup. You&rsquo;re here to build product, and have limited access to ops. How can your team take charge of your application without a dedicated ops team or expensive and hard-to-maintain software?</p>
+                          <p className="no-space">It&rsquo;s a big company, but our team still feels like a startup. We build product, and have limited access to ops. How can our team take charge of our application without a dedicated ops team or expensive and hard-to-maintain software?</p>
 
                           <p><a href="/solutions/enterprise">Learn more about Opsee for enterprise teams</a></p>
                         </Col>
