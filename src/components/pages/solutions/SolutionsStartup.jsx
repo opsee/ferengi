@@ -39,9 +39,8 @@ const SolutionsStartup = React.createClass({
           <Panel>
             <Row>
               <Col xs={10} xsOffset={1}>
-                <p><strong>The good news:</strong> a startup team running in AWS can grow to 20 or 30 engineers without dedicated ops</p>
-                <p><strong>The bad news:</strong> now dev teams need to own their availability and performance</p>
-                <p>Open-source tools are a pain to set up and configure, and today’s SaaS products are powerful but expensive, and overkill for our needs.</p>
+                <p><strong>The good news:</strong> AWS lets startup engineering teams ship code faster than ever before.</p>
+                <p><strong>The bad news:</strong> You need to hire DevOps to manage the complexity of legacy monitoring tools.</p>
                 <p><strong>Opsee is here to help.</strong></p>
               </Col>
             </Row>
@@ -58,7 +57,7 @@ const SolutionsStartup = React.createClass({
               <ul>
                 <li><span className="prose">Failing health checks tell you exactly what’s wrong</span></li>
                 <li><span className="prose">Find problems without watching dashboards</span></li>
-                <li><span className="prose">Responsive UI works on any device</span></li>
+                <li><span className="prose">Respond to incidents from any device</span></li>
               </ul>
             </SplitPanel>
             <SplitPanel className={style.imagePanel}>
@@ -76,7 +75,7 @@ const SolutionsStartup = React.createClass({
             <SplitPanel className={style.imagePanelThirds}>
               <Padding b={2}><h3 className="text-center">AWS Resources</h3></Padding>
               <BaseSVG svg={checkEntities} className={style.screenshotSVG} />
-              <p>Our checks auto scale with your environment, tracking membership in Security Groups, Auto Scale Groups, and ELBs automatically. Verify the headers, JSON keys, and round-trip times of our responses too</p>
+              <p>Our checks auto scale with your environment, tracking membership in Security Groups, Auto Scale Groups, and ELBs automatically. Verify the headers, JSON keys, and round-trip times of your check responses.</p>
             </SplitPanel>
             <SplitPanel className={style.imagePanelThirds}>
               <Padding b={2}><h3 className="text-center">CloudWatch Metrics</h3></Padding>
@@ -119,7 +118,7 @@ const SolutionsStartup = React.createClass({
                 <h2>Just add <span className="text-accent">our instance</span></h2>
               </Padding>
               <ul>
-                <li><span className="prose">Our instance is t2.micro and is <a target="_blank" href="https://aws.amazon.com/ec2/pricing/">free-tier eligible</a></span></li>
+                <li><span className="prose">Our instance is a t2.micro and <a target="_blank" href="https://aws.amazon.com/ec2/pricing/">free-tier eligible</a></span></li>
                 <li><span className="prose">It uses AWS APIs to discover your environment, detecting changes to infrastructure automatically</span></li>
                 <li><span className="prose">No agents to run on your systems</span></li>
               </ul>
