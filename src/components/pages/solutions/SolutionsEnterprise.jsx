@@ -25,8 +25,8 @@ const SolutionsEnterprise = React.createClass({
       <div>
         <StaticHeader className={style.header}>
           <div className="text-center">
-            <h1 className={style.header}><span className="text-accent-static">Bootstrap</span> your devops team</h1>
-            <h3>Opsee is made for teams who need to monitor their services with limited access to ops</h3>
+            <h1 className={style.header}>DevOps for <span className="text-accent-static">Dev Teams</span></h1>
+            <h3>Opsee is made for enterprise teams who need to monitor their services effortlessly</h3>
           </div>
         </StaticHeader>
 
@@ -35,9 +35,9 @@ const SolutionsEnterprise = React.createClass({
             <Row>
               <Col xs={10} xsOffset={1} className="text-center">
                 <h3>Your team feels like <span className="text-accent">a startup</span></h3>
-                <p>You’re here to build product, and have limited access to ops.</p>
+                <p>You build product, and have limited access to Ops. Since you&rsquo;re in In AWS you can manage infrastructure internally, but...</p>
 
-                <h3>You have to <span className="text-accent">own your availability</span></h3>
+                <h3>You still have to <span className="text-accent">own your availability</span></h3>
                 <p>How can your team take charge of your application without a dedicated ops team or expensive and hard-to-maintain software?</p>
                 <h3>Opsee is here to help</h3>
               </Col>

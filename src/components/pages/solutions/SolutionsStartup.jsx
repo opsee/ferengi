@@ -25,7 +25,7 @@ const SolutionsStartup = React.createClass({
       <div>
         <StaticHeader className={style.header}>
           <div className="text-center">
-            <h1 className={style.header}><span className="text-accent-static">Bootstrap</span> your devops team</h1>
+            <h1 className={style.header}><span className="text-accent-static">Bootstrap</span> Your DevOps Team</h1>
             <h3>Opsee is made for startups who want to get back to doing what they love: shipping product</h3>
           </div>
         </StaticHeader>
@@ -35,7 +35,7 @@ const SolutionsStartup = React.createClass({
             <Row>
               <Col xs={10} xsOffset={1} className="text-center">
                 <h3>The <span className="text-accent">good news</span></h3>
-                <p>AWS lets startup teams ship code faster than ever before, and grow bigger without dedicated ops</p>
+                <p>AWS helps startup teams ship code faster than ever, and manage infrastructure without dedicated ops</p>
                 <h3>The <span className="text-accent">bad news</span></h3>
                 <p>You need to hire DevOps to manage the complexity of legacy monitoring tools</p>
                 <h3>Opsee is here to help</h3>
