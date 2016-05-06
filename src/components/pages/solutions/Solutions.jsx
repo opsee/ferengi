@@ -83,7 +83,7 @@ const Solutions = React.createClass({
           <Panel>
             <Row>
               <Col xs={10} xsOffset={1}>
-                <Quote quote="autochecks" />
+                <Quote quote="pingdom" />
               </Col>
             </Row>
           </Panel>
