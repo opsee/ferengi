@@ -35,10 +35,10 @@ const SolutionsEnterprise = React.createClass({
             <Row>
               <Col xs={10} xsOffset={1} className="text-center">
                 <h3>Your team feels like <span className="text-accent">a startup</span></h3>
-                <p>You build product, and have limited access to Ops. Since you&rsquo;re in In AWS you can manage infrastructure internally, but...</p>
+                <p>Because you're in AWS your team is innovativing faster than the rest of the company.</p>
 
-                <h3>You still have to <span className="text-accent">own your availability</span></h3>
-                <p>How can your team take charge of your application without a dedicated ops team or expensive and hard-to-maintain software?</p>
+                <h3>But IT Ops is only equipped to deal with <span className="text-accent">legacy infrastructure</span></h3>
+                <p>You're on your own for ensuring the reliability of your software in production, and legacy monitoring tools don't cut it in the cloud.</p>
                 <h3>Opsee is here to help</h3>
               </Col>
             </Row>
