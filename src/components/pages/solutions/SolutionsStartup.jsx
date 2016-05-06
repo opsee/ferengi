@@ -7,16 +7,11 @@ import { Padding, Row, Col } from '../../layout';
 import SkewDivider from '../../layout/SkewDivider';
 import SkewPanel from '../../panels/SkewPanel';
 import SignUpPanel from '../../panels/SignUpPanel';
-// import Button from '../../forms/Button';
-// import Quote from '../../global/Quote';
+import Quote from '../../global/Quote';
 import Panel from '../../panels/Panel';
 
 import BaseSVG from '../../images/BaseSVG';
-// import checkDiagramSVG from '../../images/product-checks.svg';
 import notificationsSVG from '../../images/product-notifications.svg';
-// import awsIntegrationsSVG from '../../images/integrations-aws.svg';
-// import passingAssertionsSVG from '../../images/passing-assertions.svg';
-// import securitySVG from '../../images/security.svg';
 import cleanSimpleSVG from '../../images/clean-simple.svg';
 import notificationLogosSVG from '../../images/notification-logos.svg';
 import howBastion from '../../images/how-bastion.svg';
@@ -38,10 +33,12 @@ const SolutionsStartup = React.createClass({
         <div>
           <Panel>
             <Row>
-              <Col xs={10} xsOffset={1}>
-                <p><strong>The good news:</strong> AWS lets startup engineering teams ship code faster than ever before.</p>
-                <p><strong>The bad news:</strong> You need to hire DevOps to manage the complexity of legacy monitoring tools.</p>
-                <p><strong>Opsee is here to help.</strong></p>
+              <Col xs={10} xsOffset={1} className="text-center">
+                <h3>The <span className="text-accent">good news</span></h3>
+                <p>AWS lets startup teams ship code faster than ever before, and grow bigger without dedicated ops</p>
+                <h3>The <span className="text-accent">bad news</span></h3>
+                <p>You need to hire DevOps to manage the complexity of legacy monitoring tools</p>
+                <h3>Opsee is here to help</h3>
               </Col>
             </Row>
           </Panel>
@@ -75,17 +72,17 @@ const SolutionsStartup = React.createClass({
             <SplitPanel className={style.imagePanelThirds}>
               <Padding b={2}><h3 className="text-center">AWS Resources</h3></Padding>
               <BaseSVG svg={checkEntities} className={style.screenshotSVG} />
-              <p>Our checks auto scale with your environment, tracking membership in Security Groups, Auto Scale Groups, and ELBs automatically. Verify the headers, JSON keys, and round-trip times of your check responses.</p>
+              <p>Our checks auto scale with your environment, tracking your Security Groups, Auto Scale Groups, and ELBs automatically. Easily verify the headers, JSON keys, and round-trip times of your check responses with no maintenance.</p>
             </SplitPanel>
             <SplitPanel className={style.imagePanelThirds}>
               <Padding b={2}><h3 className="text-center">CloudWatch Metrics</h3></Padding>
               <BaseSVG svg={checkCloudwatch} className={style.screenshotSVG} />
-              <p>Set thresholds on all of your important CloudWatch metrics.</p>
+              <p>Set thresholds on all of your important CloudWatch metrics. We even create automatic checks for you when you sign up.</p>
             </SplitPanel>
             <SplitPanel className={style.imagePanelThirds}>
               <Padding b={2}><h3 className="text-center">URLs</h3></Padding>
               <BaseSVG svg={checkURL} className={style.screenshotSVG} />
-              <p>If you have external dependencies, websites, and CDNs that need coverage, Opsee will track all DNS entries for a URL automatically and notify you of failures.</p>
+              <p>If you have external dependencies, websites, and CDNs that need coverage, Opsee will track all DNS entries for a URL automatically.</p>
             </SplitPanel>
           </SplitContainer>
 
@@ -100,7 +97,7 @@ const SolutionsStartup = React.createClass({
                 <h2>Rich, actionable <span className="text-accent">notifications</span></h2>
               </Padding>
               <ul>
-                <li><span className="prose">See failing responses in context</span></li>
+                <li><span className="prose">See failing responses with rich context</span></li>
                 <li><span className="prose">Get notified anywhere: email, Slack, webhooks, or PagerDuty</span></li>
                 <li><span className="prose">Take action on problem instances (restart, stop, or terminate)</span></li>
               </ul>
@@ -127,6 +124,16 @@ const SolutionsStartup = React.createClass({
               <BaseSVG svg={howBastion} className={style.svg} />
             </SplitPanel>
           </SplitContainer>
+
+          <SkewDivider />
+
+          <Panel>
+            <Row>
+              <Col xs={10} xsOffset={1}>
+                <Quote quote="autochecks" />
+              </Col>
+            </Row>
+          </Panel>
 
         </div>
 

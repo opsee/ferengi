@@ -4,14 +4,16 @@ import style from './solutions.css';
 // import { SplitContainer, SplitPanel } from '../../panels/SplitPanels';
 
 import { Padding, Row, Col } from '../../layout';
+import SkewDivider from '../../layout/SkewDivider';
 import SkewPanel from '../../panels/SkewPanel';
 import SignUpPanel from '../../panels/SignUpPanel';
+import Quote from '../../global/Quote';
 import Panel from '../../panels/Panel';
 import { Heading } from '../../type';
 
 import BaseSVG from '../../images/BaseSVG';
-import ec2SVG from '../../images/logos/ec2-01.svg';
-import rdsSVG from '../../images/logos/rds-01.svg';
+import solutionsStartupSVG from '../../images/solutions-startup.svg';
+import solutionsEnterpriseSVG from '../../images/solutions-enterprise.svg';
 
 const Solutions = React.createClass({
   render() {
@@ -20,7 +22,7 @@ const Solutions = React.createClass({
         <StaticHeader className={style.header}>
           <div className="text-center">
             <h1 className={style.header}><span className="text-accent-static">Solutions</span> for every team</h1>
-            <h3>Opsee is made for teams who want to get back to doing what they love: shipping product</h3>
+            <h3>Companies of all sizes are using Opsee to make monitoring effortless</h3>
           </div>
         </StaticHeader>
 
@@ -30,24 +32,25 @@ const Solutions = React.createClass({
               <Col>
                 <div className={style.prosePanel}>
                   <div className="text-center-xs">
-                    <Heading permalink="aws" level={2}>Opsee + <span className="text-accent">AWS</span> = &hearts;</Heading>
+                    <Heading level={2}>Complete coverage, <span className="text-accent">right now</span></Heading>
                   </div>
 
-                  <p>With public cloud services like AWS, monitoring can be effortless. Opsee automatically updates health checks on your services and systems, even when your environment scales. You get full coverage of your AWS ecosystem with nothing to maintain.</p>
-                  <p>Read more about how Opsee works with AWS on the <a href="https://blog.opsee.com/monitoring-built-for-aws-49c989c6a2c" target="_blank">Opsee blog</a>.</p>
+                  <p>Running in AWS, monitoring can be effortless. Opsee automatically discovers your infrastructure and updates health checks as your environment scales. You get full coverage with nothing to maintain and no agents to run on your systems.</p>
 
                   <Padding tb={2} r={4}>
                     <Padding tb={1}>
                       <Row>
                         <Col xs={3} sm={2} className="text-center">
                           <div className={style.awsHeading}>
-                            <BaseSVG svg={ec2SVG} />
+                            <a href="/solutions/startup"><BaseSVG svg={solutionsStartupSVG} /></a>
                           </div>
                         </Col>
 
                         <Col xs={9} sm={10}>
-                          <Padding b={2}><Heading level={3}>Startups</Heading></Padding>
-                          <p className="no-space"> <strong>The good news:</strong> a startup team running in AWS can grow to 20 or 30 engineers without dedicated ops. <strong>The bad news:</strong> now dev teams need to own their availability and performance. Open-source tools are a pain to set up and configure, and today’s SaaS products are powerful but expensive, and overkill for our needs. <strong>Opsee is here to help.</strong></p>
+                          <Padding b={2}><Heading level={3}>Startup</Heading></Padding>
+                          <p className="no-space"><strong>The good news:</strong> a startup team running in AWS can grow bigger than ever without dedicated ops. <strong>The bad news:</strong> now your dev team has to own their availability and performance. Open-source tools are a pain to set up and configure, and today’s SaaS products are powerful but expensive, and overkill for our needs. How do you bootstrap your monitoring efforts to stay in control?</p>
+
+                            <p><a href="/solutions/startup">Learn more about Opsee for startups</a></p>
                         </Col>
                       </Row>
                     </Padding>
@@ -56,19 +59,31 @@ const Solutions = React.createClass({
                       <Row>
                         <Col xs={3} sm={2} className="text-center">
                           <div className={style.awsHeading}>
-                            <BaseSVG svg={rdsSVG} />
+                            <a href="/solutions/enterprise"><BaseSVG svg={solutionsEnterpriseSVG} /></a>
                           </div>
                         </Col>
 
                         <Col xs={9} sm={10}>
-                          <Padding b={2}><Heading level={3}>Enterprises</Heading></Padding>
-                          <p className="no-space"><a href="https://aws.amazon.com/rds/" target="_blank">Amazon Relational Database Service</a> (Amazon RDS) makes it easy to set up, operate, and scale a relational database in the cloud. Opsee supports health checks for RDS Database Instances, and support is available by default as part of our AWS integration.</p>
+                          <Padding b={2}><Heading level={3}>Enterprise</Heading></Padding>
+                          <p className="no-space">It&rsquo;s a big company, but your team still feels like a startup. You&rsquo;re here to build product, and have limited access to ops. How can your team take charge of your application without a dedicated ops team or expensive and hard-to-maintain software?</p>
+
+                          <p><a href="/solutions/enterprise">Learn more about Opsee for enterprise teams</a></p>
                         </Col>
                       </Row>
                     </Padding>
 
                   </Padding>
                 </div>
+              </Col>
+            </Row>
+          </Panel>
+
+          <SkewDivider />
+
+          <Panel>
+            <Row>
+              <Col xs={10} xsOffset={1}>
+                <Quote quote="autochecks" />
               </Col>
             </Row>
           </Panel>
