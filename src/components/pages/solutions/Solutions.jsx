@@ -77,16 +77,6 @@ const Solutions = React.createClass({
               </Col>
             </Row>
           </Panel>
-
-          <SkewDivider />
-
-          <Panel>
-            <Row>
-              <Col xs={10} xsOffset={1}>
-                <Quote quote="pingdom" />
-              </Col>
-            </Row>
-          </Panel>
         </div>
 
         <SkewPanel backgroundColor="#333" skewBottom={false}>
