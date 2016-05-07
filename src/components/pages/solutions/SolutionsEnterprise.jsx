@@ -35,10 +35,10 @@ const SolutionsEnterprise = React.createClass({
             <Row>
               <Col xs={10} xsOffset={1} className="text-center">
                 <h3>Your team feels like <span className="text-accent">a startup</span></h3>
-                <p>Because you're in AWS your team is innovativing faster than the rest of the company.</p>
+                <p>Running in AWS means your team can move faster</p>
 
                 <h3>But IT Ops is only equipped to deal with <span className="text-accent">legacy infrastructure</span></h3>
-                <p>You're on your own for ensuring the reliability of your software in production, and legacy monitoring tools don't cut it in the cloud.</p>
+                <p>You&rsquo;re on your own for ensuring the reliability of your software in production, and legacy monitoring tools don&rsquo;t cut it in the cloud.</p>
                 <h3>Opsee is here to help</h3>
               </Col>
             </Row>
@@ -56,6 +56,7 @@ const SolutionsEnterprise = React.createClass({
                 <li><span className="prose">Failing health checks tell you exactly what’s wrong</span></li>
                 <li><span className="prose">Find problems without watching dashboards</span></li>
                 <li><span className="prose">Respond to incidents from any device</span></li>
+                <li><span className="prose">Checks are automatically created for common services and infrastructure</span></li>
               </ul>
             </SplitPanel>
             <SplitPanel className={style.imagePanel}>

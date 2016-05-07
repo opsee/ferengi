@@ -4,10 +4,8 @@ import style from './solutions.css';
 // import { SplitContainer, SplitPanel } from '../../panels/SplitPanels';
 
 import { Padding, Row, Col } from '../../layout';
-import SkewDivider from '../../layout/SkewDivider';
 import SkewPanel from '../../panels/SkewPanel';
 import SignUpPanel from '../../panels/SignUpPanel';
-import Quote from '../../global/Quote';
 import Panel from '../../panels/Panel';
 import { Heading } from '../../type';
 

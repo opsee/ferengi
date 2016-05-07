@@ -55,6 +55,7 @@ const SolutionsStartup = React.createClass({
                 <li><span className="prose">Failing health checks tell you exactly what’s wrong</span></li>
                 <li><span className="prose">Find problems without watching dashboards</span></li>
                 <li><span className="prose">Respond to incidents from any device</span></li>
+                <li><span className="prose">Checks are automatically created for common services and infrastructure</span></li>
               </ul>
             </SplitPanel>
             <SplitPanel className={style.imagePanel}>
