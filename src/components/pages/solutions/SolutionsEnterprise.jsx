@@ -35,7 +35,7 @@ const SolutionsEnterprise = React.createClass({
             <Row>
               <Col xs={10} xsOffset={1} className="text-center">
                 <h3>Your team feels like <span className="text-accent">a startup</span></h3>
-                <p>Running in AWS means your team can move faster</p>
+                <p>Running in AWS makes your team more independent, and you can move faster</p>
 
                 <h3>But IT Ops is only equipped to deal with <span className="text-accent">legacy infrastructure</span></h3>
                 <p>You&rsquo;re on your own for ensuring the reliability of your software in production, and legacy monitoring tools don&rsquo;t cut it in the cloud.</p>

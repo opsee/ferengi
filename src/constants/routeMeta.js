@@ -38,11 +38,15 @@ module.exports = {
     },
 
     '/solutions/startup': {
-      title: 'Opsee / Startup Solutions'
+      title: 'Opsee / Startup Solutions',
+      excerpt: 'DevOps for dev teams, for startups who want to get back to shipping product',
+      cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev2.jpg'
     },
 
     '/solutions/enterprise': {
-      title: 'Opsee / Enterprise Solutions'
+      title: 'Opsee / Enterprise Solutions',
+      excerpt: 'DevOps for dev teams, for enterprise teams who need to monitor their services effortlessly',
+      cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev2.jpg'
     },
 
     '/try/aws': {
@@ -54,13 +58,13 @@ module.exports = {
     '/try/checks': {
       title: 'Opsee / Health Checks Cut Through the Noise',
       excerpt: 'Continuously Test Your Services and Deploy with Confidence',
-      cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev.jpg'
+      cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev2.jpg'
     },
 
     '/try/dev': {
       title: 'Opsee / Monitoring for the On-Call Developer',
       excerpt: 'Effortless health checks for your services so you can get back to coding.',
-      cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev.jpg'
+      cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev2.jpg'
     },
 
     '/try/icinga': {
@@ -72,7 +76,7 @@ module.exports = {
     '/try/microservices': {
       title: 'Opsee / Monitoring for Microservices',
       excerpt: 'Health checks cut through the noise.',
-      cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev.jpg'
+      cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev2.jpg'
     },
 
     '/try/nagios': {

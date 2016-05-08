@@ -25,7 +25,7 @@ const SolutionsStartup = React.createClass({
       <div>
         <StaticHeader className={style.header}>
           <div className="text-center">
-            <h1 className={style.header}><span className="text-accent-static">Bootstrap</span> Your DevOps Team</h1>
+            <h1 className={style.header}>DevOps for <span className="text-accent-static">Dev Teams</span></h1>
             <h3>Opsee is made for startups who want to get back to doing what they love: shipping product</h3>
           </div>
         </StaticHeader>
