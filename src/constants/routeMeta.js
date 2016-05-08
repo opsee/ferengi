@@ -39,13 +39,13 @@ module.exports = {
 
     '/solutions/startup': {
       title: 'Opsee / Startup Solutions',
-      excerpt: 'DevOps for dev teams, for startups who want to get back to shipping product',
+      excerpt: 'DevOps for dev teams — for startups who want to get back to shipping product',
       cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev2.jpg'
     },
 
     '/solutions/enterprise': {
       title: 'Opsee / Enterprise Solutions',
-      excerpt: 'DevOps for dev teams, for enterprise teams who need to monitor their services effortlessly',
+      excerpt: 'DevOps for dev teams — for enterprise teams who need effortless monitoring',
       cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev2.jpg'
     },
 
