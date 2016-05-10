@@ -1,3 +1,7 @@
+strong {
+  font-weight: bold;
+}
+
 .header {
   color: white;
 }
@@ -5,12 +9,6 @@
 .button {
   font-size: 1.4rem;
   padding: 2rem;
-}
-
-.buttonCenter {
-  font-size: 1.4rem;
-  padding: 2rem;
-  margin: 0 auto;
 }
 
 .offsetDivider {
@@ -36,17 +34,17 @@
   align-self: flex-start;
 }
 
-.imagePanel {
-  width: 50%;
-  text-align: center;
-  padding: 2rem;
-}
-
 .imagePanelThirds {
   align-self: flex-start;
   width: 33.3%;
   /*text-align: center;*/
   padding: 3rem;
+}
+
+.imagePanel {
+  width: 50%;
+  text-align: center;
+  padding: 2rem;
 }
 
 .screenshotPanel {

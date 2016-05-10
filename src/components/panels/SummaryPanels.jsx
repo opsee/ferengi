@@ -27,7 +27,7 @@ export default React.createClass({
             <h3>Verify every part of the response – health is more than just a status code.</h3>
 
             <Padding tb={2}>
-              <Button to="https://app.opsee.com/docs/checks" target="_blank" className={style.button} secondary chevron>
+              <Button to="/features#checkTypes" className={style.button} secondary chevron>
                   Learn more about health checks
               </Button>
             </Padding>

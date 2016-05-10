@@ -33,6 +33,22 @@ module.exports = {
       title: 'Opsee / Beta TOS'
     },
 
+    '/solutions': {
+      title: 'Opsee / Solutions'
+    },
+
+    '/solutions/startup': {
+      title: 'Opsee / Startup Solutions',
+      excerpt: 'DevOps for dev teams — for startups who want to get back to shipping product',
+      cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev2.jpg'
+    },
+
+    '/solutions/enterprise': {
+      title: 'Opsee / Enterprise Solutions',
+      excerpt: 'DevOps for dev teams — for enterprise teams who need effortless monitoring',
+      cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev2.jpg'
+    },
+
     '/try/aws': {
       title: 'Opsee / Monitoring Built for AWS',
       excerpt: 'Integrate and auto-scale seamlessly with your infrastructure. No agents to install or shell scripts to cURL.',
@@ -42,13 +58,13 @@ module.exports = {
     '/try/checks': {
       title: 'Opsee / Health Checks Cut Through the Noise',
       excerpt: 'Continuously Test Your Services and Deploy with Confidence',
-      cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev.jpg'
+      cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev2.jpg'
     },
 
     '/try/dev': {
       title: 'Opsee / Monitoring for the On-Call Developer',
       excerpt: 'Effortless health checks for your services so you can get back to coding.',
-      cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev.jpg'
+      cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev2.jpg'
     },
 
     '/try/icinga': {
@@ -60,7 +76,7 @@ module.exports = {
     '/try/microservices': {
       title: 'Opsee / Monitoring for Microservices',
       excerpt: 'Health checks cut through the noise.',
-      cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev.jpg'
+      cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev2.jpg'
     },
 
     '/try/nagios': {

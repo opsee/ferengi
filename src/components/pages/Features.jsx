@@ -15,9 +15,12 @@ import BaseSVG from '../images/BaseSVG';
 import checkDiagramSVG from '../images/product-checks.svg';
 import notificationsSVG from '../images/product-notifications.svg';
 import awsIntegrationsSVG from '../images/integrations-aws.svg';
-import passingAssertionsSVG from '../images/passing-assertions.svg';
+// import passingAssertionsSVG from '../images/passing-assertions.svg';
 import securitySVG from '../images/security.svg';
 import cleanSimpleSVG from '../images/clean-simple.svg';
+import checkEntities from '../images/check-type-entities.svg';
+import checkCloudwatch from '../images/check-type-cloudwatch.svg';
+import checkURL from '../images/check-type-url.svg';
 
 const Features = React.createClass({
   render() {
@@ -67,31 +70,34 @@ const Features = React.createClass({
 
           <SkewDivider />
 
-          <SplitContainer className={style.section}>
-            <SplitPanel className={style.imagePanel}>
-              <Padding a={4}>
-                <BaseSVG svg={checkDiagramSVG} />
-              </Padding>
-            </SplitPanel>
+          <Padding b={1}>
+            <h2 className="text-center">Our health checks</h2>
+            <Padding tb={2} className="text-center">
+              <Button to="https://app.opsee.com/docs/checks" target="_blank" className={style.button} secondary chevron>
+                Check documentation
+              </Button>
+            </Padding>
+          </Padding>
 
-            <SplitPanel className={style.screenshotProsePanel}>
-              <Padding tb={1}>
-                <h2><span className="text-accent">Zero</span> maintenance</h2>
-              </Padding>
-
-              <ul>
-                <li><span className="prose">Easy install with just AWS keys</span></li>
-                <li><span className="prose">Your health checks dynamically adjust to your environment</span></li>
-                <li><span className="prose">Clean uninstall via Cloudformation</span></li>
-              </ul>
-
-              <Padding tb={2}>
-                <Button to="https://app.opsee.com/docs/bastion" target="_blank" className={style.button} secondary chevron>
-                  Learn more about our AWS instance
-                </Button>
-              </Padding>
-            </SplitPanel>
-          </SplitContainer>
+          <div id="checkTypes">
+            <SplitContainer className={style.section}>
+              <SplitPanel className={style.imagePanelThirds}>
+                <Padding b={2}><h3 className="text-center">AWS Resources</h3></Padding>
+                <BaseSVG svg={checkEntities} className={style.screenshotSVG} />
+                <p>Our checks auto scale with your environment, tracking your Security Groups, Auto Scale Groups, and ELBs automatically. Easily verify the headers, JSON keys, and round-trip times of your check responses with no maintenance.</p>
+              </SplitPanel>
+              <SplitPanel className={style.imagePanelThirds}>
+                <Padding b={2}><h3 className="text-center">CloudWatch Metrics</h3></Padding>
+                <BaseSVG svg={checkCloudwatch} className={style.screenshotSVG} />
+                <p>Set thresholds on all of your important CloudWatch metrics. We even create automatic checks for you when you sign up.</p>
+              </SplitPanel>
+              <SplitPanel className={style.imagePanelThirds}>
+                <Padding b={2}><h3 className="text-center">URLs</h3></Padding>
+                <BaseSVG svg={checkURL} className={style.screenshotSVG} />
+                <p>If you have external dependencies, websites, and CDNs that need coverage, Opsee will track all DNS entries for a URL automatically.</p>
+              </SplitPanel>
+            </SplitContainer>
+          </div>
 
           <SkewDivider />
 
@@ -142,25 +148,27 @@ const Features = React.createClass({
           <SkewDivider />
 
           <SplitContainer className={style.section}>
-            <SplitPanel className={style.screenshotProsePanel}>
-              <Padding tb={1}>
-                <h2><span className="text-accent">Assertions:</span> more just than status codes</h2>
-              </Padding>
-
-              <ul>
-                <li><span className="prose">Parse headers, JSON repsonse bodies, and status codes easily</span></li>
-              </ul>
-
-              <Padding tb={2}>
-                <Button to="https://app.opsee.com/docs/checks" target="_blank" className={style.button} secondary chevron>
-                  Learn more about assertions
-                </Button>
+            <SplitPanel className={style.imagePanel}>
+              <Padding a={4}>
+                <BaseSVG svg={checkDiagramSVG} />
               </Padding>
             </SplitPanel>
 
-            <SplitPanel className={style.imagePanel}>
-              <Padding a={4}>
-                <BaseSVG svg={passingAssertionsSVG} />
+            <SplitPanel className={style.screenshotProsePanel}>
+              <Padding tb={1}>
+                <h2><span className="text-accent">Zero</span> maintenance</h2>
+              </Padding>
+
+              <ul>
+                <li><span className="prose">Easy install with just AWS keys</span></li>
+                <li><span className="prose">Your health checks dynamically adjust to your environment</span></li>
+                <li><span className="prose">Clean uninstall via Cloudformation</span></li>
+              </ul>
+
+              <Padding tb={2}>
+                <Button to="https://app.opsee.com/docs/bastion" target="_blank" className={style.button} secondary chevron>
+                  Learn more about our AWS instance
+                </Button>
               </Padding>
             </SplitPanel>
           </SplitContainer>
