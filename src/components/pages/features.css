@@ -36,6 +36,13 @@
   padding: 2rem;
 }
 
+.imagePanelThirds {
+  align-self: flex-start;
+  width: 33.3%;
+  /*text-align: center;*/
+  padding: 3rem;
+}
+
 .screenshotPanel {
   composes: imagePanel;
   padding-bottom: 0;

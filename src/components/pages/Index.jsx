@@ -12,7 +12,7 @@ import Quote from '../global/Quote';
 import Panel from '../panels/Panel';
 
 import BaseSVG from '../images/BaseSVG';
-import illustAWSKey from '../images/illust_aws_key-01.svg';
+// import illustAWSKey from '../images/illust_aws_key-01.svg';
 import illustBrowser from '../images/illust_browsers-01.svg';
 import illustChecks from '../images/illust_checks-01.svg';
 
@@ -48,14 +48,6 @@ export default React.createClass({
           </div>
 
           <div className={style.grid}>
-            <div className={style.col}>
-              <div className={style.colSVG}>
-                <BaseSVG svg={illustAWSKey} />
-              </div>
-              <div className={style.colText}>
-                <div>Create temporary AWS keys</div>
-              </div>
-            </div>
 
             <div className={style.col}>
               <div className={style.colSVG}>

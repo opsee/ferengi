@@ -29,8 +29,8 @@ export default React.createClass({
                 <div className={style.stepNumber}>Step 1</div>
                 <h2 className={style.step}>Add Opsee to your AWS environment</h2>
               </div>
-              <p className="prose">The first thing we do is add the Bastion Instance to your AWS environment. It&rsquo;s resonsible for all health checking, incident response, and discovery of your infrastructure.</p>
-              <p className="prose">The Bastion Instance is an Amazon AMI defined by a CloudFormation Template. Learn more about the Bastion Instance <a href="https://app.opsee.com/docs/checks" target="_blank">in our documentation</a>.</p>
+              <p className="prose">The first thing we do is add our EC2 Instance to your AWS environment. It&rsquo;s resonsible for all health checking, incident response, and discovery of your infrastructure.</p>
+              <p className="prose">Our instance is an Amazon AMI defined by a CloudFormation Template. Learn more about our EC2 Instance <a href="https://app.opsee.com/docs/checks" target="_blank">in our documentation</a>.</p>
             </SplitPanel>
 
             <SplitPanel className={style.imagePanel}>
@@ -50,7 +50,7 @@ export default React.createClass({
                 <div className={style.stepNumber}>Step 2</div>
                 <h2 className={style.step}>Opsee Discovers Your Infrastructure</h2>
               </div>
-              <p className="prose">The Bastion Instance uses <a href="https://app.opsee.com/docs/permissions" target="_blank">AWS APIs</a> to discover your instances and groups. It&rsquo;s always scanning, and detects changes to infrastructure automatically.</p>
+              <p className="prose">Our EC2 instance uses <a href="https://app.opsee.com/docs/permissions" target="_blank">AWS APIs</a> to discover your instances and groups. It&rsquo;s always scanning, and detects changes to infrastructure automatically.</p>
             </SplitPanel>
           </SplitContainer>
 
