@@ -7,6 +7,12 @@
   padding: 2rem;
 }
 
+.buttonCenter {
+  font-size: 1.4rem;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
 .offsetDivider {
   margin-top: -8rem;
   height: 12vmax; /* use height instead of margin/padding to clip phone */

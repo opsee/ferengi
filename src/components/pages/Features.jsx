@@ -72,25 +72,32 @@ const Features = React.createClass({
 
           <Padding b={1}>
             <h2 className="text-center">Our health checks</h2>
+            <Padding tb={2} className="text-center">
+              <Button to="https://app.opsee.com/docs/checks" target="_blank" className={style.button} secondary chevron>
+                Check documentation
+              </Button>
+            </Padding>
           </Padding>
 
-          <SplitContainer className={style.section}>
-            <SplitPanel className={style.imagePanelThirds}>
-              <Padding b={2}><h3 className="text-center">AWS Resources</h3></Padding>
-              <BaseSVG svg={checkEntities} className={style.screenshotSVG} />
-              <p>Our checks auto scale with your environment, tracking your Security Groups, Auto Scale Groups, and ELBs automatically. Easily verify the headers, JSON keys, and round-trip times of your check responses with no maintenance.</p>
-            </SplitPanel>
-            <SplitPanel className={style.imagePanelThirds}>
-              <Padding b={2}><h3 className="text-center">CloudWatch Metrics</h3></Padding>
-              <BaseSVG svg={checkCloudwatch} className={style.screenshotSVG} />
-              <p>Set thresholds on all of your important CloudWatch metrics. We even create automatic checks for you when you sign up.</p>
-            </SplitPanel>
-            <SplitPanel className={style.imagePanelThirds}>
-              <Padding b={2}><h3 className="text-center">URLs</h3></Padding>
-              <BaseSVG svg={checkURL} className={style.screenshotSVG} />
-              <p>If you have external dependencies, websites, and CDNs that need coverage, Opsee will track all DNS entries for a URL automatically.</p>
-            </SplitPanel>
-          </SplitContainer>
+          <div id="checkTypes">
+            <SplitContainer className={style.section}>
+              <SplitPanel className={style.imagePanelThirds}>
+                <Padding b={2}><h3 className="text-center">AWS Resources</h3></Padding>
+                <BaseSVG svg={checkEntities} className={style.screenshotSVG} />
+                <p>Our checks auto scale with your environment, tracking your Security Groups, Auto Scale Groups, and ELBs automatically. Easily verify the headers, JSON keys, and round-trip times of your check responses with no maintenance.</p>
+              </SplitPanel>
+              <SplitPanel className={style.imagePanelThirds}>
+                <Padding b={2}><h3 className="text-center">CloudWatch Metrics</h3></Padding>
+                <BaseSVG svg={checkCloudwatch} className={style.screenshotSVG} />
+                <p>Set thresholds on all of your important CloudWatch metrics. We even create automatic checks for you when you sign up.</p>
+              </SplitPanel>
+              <SplitPanel className={style.imagePanelThirds}>
+                <Padding b={2}><h3 className="text-center">URLs</h3></Padding>
+                <BaseSVG svg={checkURL} className={style.screenshotSVG} />
+                <p>If you have external dependencies, websites, and CDNs that need coverage, Opsee will track all DNS entries for a URL automatically.</p>
+              </SplitPanel>
+            </SplitContainer>
+          </div>
 
           <SkewDivider />
 
