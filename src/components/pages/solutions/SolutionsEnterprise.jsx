@@ -11,6 +11,7 @@ import Quote from '../../global/Quote';
 import Panel from '../../panels/Panel';
 
 import BaseSVG from '../../images/BaseSVG';
+import awsIntegrationsSVG from '../../images/integrations-aws.svg';
 import notificationsSVG from '../../images/product-notifications.svg';
 import cleanSimpleSVG from '../../images/clean-simple.svg';
 import notificationLogosSVG from '../../images/notification-logos.svg';
@@ -85,6 +86,26 @@ const SolutionsEnterprise = React.createClass({
               <Padding b={2}><h3 className="text-center">URLs</h3></Padding>
               <BaseSVG svg={checkURL} className={style.screenshotSVG} />
               <p>If you have external dependencies, websites, and CDNs that need coverage, Opsee will track all DNS entries for a URL automatically.</p>
+            </SplitPanel>
+          </SplitContainer>
+
+          <SkewDivider />
+
+          <SplitContainer className={style.section}>
+            <SplitPanel className={style.prosePanel}>
+              <Padding tb={1}>
+                <h2>Deep integration with <span className="text-accent">AWS</span></h2>
+              </Padding>
+
+              <ul>
+                <li><span className="prose">Just add our instance to your AWS environment</span></li>
+                <li><span className="prose">We automatically and continuously discover your environment</span></li>
+                <li><span className="prose">No configurations to manage</span></li>
+              </ul>
+            </SplitPanel>
+
+            <SplitPanel className={style.imagePanel}>
+              <BaseSVG svg={awsIntegrationsSVG} />
             </SplitPanel>
           </SplitContainer>
 
