@@ -3,7 +3,7 @@
   vertical-align: center;
   justify-content: center;
   flex-direction: column;
-
+  margin-bottom: 4rem;
   min-height: 50vh;
   padding: 10vh 2rem;
   text-align: center;
@@ -22,7 +22,7 @@
 
 .splashDev {
   composes: splash;
-  background-image: url('../../images/twitter-try-dev.jpg');
+  background-image: url('../../images/twitter-try-dev2.jpg');
 }
 
 .splashNagios {
@@ -71,13 +71,36 @@
   padding: 2rem 6rem 0 6rem;
 }
 
+.prosePanel {
+  padding: 2rem;
+}
+
+.screenshotProsePanel {
+  composes: prosePanel;
+  align-self: flex-start;
+}
+
+.imagePanelThirds {
+  align-self: flex-start;
+  width: 33.3%;
+  /*text-align: center;*/
+  padding: 3rem;
+}
+
+
 .svg {
-  max-width: 400px;
+  width: 100%;
+  max-width: 360px;
+}
+
+.screenshotSVG {
+  composes: svg;
 }
 
 .offsetDivider {
-  height: 80px; /* use height instead of margin/padding to clip phone */
-  margin-bottom: 0; /* margin accounted for by height */
+  margin-top: -8rem;
+  height: 12vmax; /* use height instead of margin/padding to clip phone */
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -89,5 +112,7 @@
   .prosePanel {
     flex: 1 100%;
     width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   };
 }
