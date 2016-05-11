@@ -13,8 +13,9 @@ export default React.createClass({
   render() {
     return (
       <TryCampaign title="Health Checks Cut Through the Noise" splashClass={style.splashDev}>
+
         <SplitContainer className={style.section}>
-          <SplitPanel className={style.prosePanel} >
+          <SplitPanel className={style.screenshotProsePanel} >
             <Padding tb={2}>
               <h2><span className="text-accent">Continuously</span> Test Your Services and Deploy with Confidence</h2>
               <h3>Be sure your services respond the way you coded them.</h3>
@@ -23,7 +24,7 @@ export default React.createClass({
             <p>Verify every part of the response – health is more than just a status code. Assertions on headers, response bodies, and JSON keys assure your services work the way you coded them.</p>
           </SplitPanel>
 
-          <SplitPanel className={style.screenshotPanel}>
+          <SplitPanel className={style.imagePanel}>
             <BaseSVG svg={cleanSimpleSVG} className={style.svg} />
           </SplitPanel>
         </SplitContainer>
