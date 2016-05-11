@@ -16,6 +16,7 @@ import checkDiagramSVG from '../images/product-checks.svg';
 import notificationsSVG from '../images/product-notifications.svg';
 import awsIntegrationsSVG from '../images/integrations-aws.svg';
 // import passingAssertionsSVG from '../images/passing-assertions.svg';
+import notificationLogosSVG from '../images/notification-logos.svg';
 import securitySVG from '../images/security.svg';
 import cleanSimpleSVG from '../images/clean-simple.svg';
 import checkEntities from '../images/check-type-entities.svg';
@@ -126,6 +127,10 @@ const Features = React.createClass({
                 <li><span className="prose">Get notified anywhere: email, Slack, webhooks, or PagerDuty</span></li>
                 <li><span className="prose">Take action on problem instances (restart, stop, or terminate)</span></li>
               </ul>
+
+              <Padding tb={2}>
+                <BaseSVG svg={notificationLogosSVG} className={style.screenshotSVG} />
+              </Padding>
 
               <Padding tb={2}>
                 <Button to="https://app.opsee.com/docs/notifications" target="_blank" className={style.button} secondary chevron>
