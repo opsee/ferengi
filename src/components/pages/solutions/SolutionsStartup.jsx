@@ -26,8 +26,8 @@ const SolutionsStartup = React.createClass({
       <div>
         <StaticHeader className={style.header}>
           <div className="text-center">
-            <h1 className={style.header}>DevOps for <span className="text-accent-static">Dev Teams</span></h1>
-            <h3>Opsee is made for startups who want to get back to doing what they love: shipping product</h3>
+            <h1 className={style.header}><span className="text-accent-static">Moving fast</span> & breaking things? </h1>
+            <h3>Opsee has you covered. Complete AWS monitoring for startups that need to focus on shipping.</h3>
           </div>
         </StaticHeader>
 
@@ -36,9 +36,9 @@ const SolutionsStartup = React.createClass({
             <Row>
               <Col xs={10} xsOffset={1} className="text-center">
                 <h3>The <span className="text-accent">good news</span></h3>
-                <p>AWS helps startup teams ship code faster than ever, and manage infrastructure without dedicated ops</p>
+                <p>You&rsquo;re on AWS, you practice continuous delivery, and you&rsquo;re shipping code faster than your competitors</p>
                 <h3>The <span className="text-accent">bad news</span></h3>
-                <p>You need to hire DevOps to manage the complexity of legacy monitoring tools</p>
+                <p>Deploys are regularly breaking production and you don&rsquo;t find out until customers complain</p>
                 <h3>Opsee is here to help</h3>
               </Col>
             </Row>
