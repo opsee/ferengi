@@ -12,6 +12,11 @@ import Solutions from './components/pages/solutions/Solutions';
 import SolutionsStartup from './components/pages/solutions/SolutionsStartup';
 import SolutionsEnterprise from './components/pages/solutions/SolutionsEnterprise';
 import {
+  Guides,
+  GuidesDropwizardChecks,
+  GuidesAWSMonitoring
+} from './components/pages/guides';
+import {
   TryAWS,
   TryChecks,
   TryDev,
@@ -36,6 +41,11 @@ module.exports = (
       <Route path="about" component={About} />
       <Route path="integrations" component={Integrations} />
       <Route path="beta-tos" component={BetaTOS} />
+
+    { /* Guides */ }
+      <Route path="guides" component={Guides} />
+      <Route path="guides/dropwizard" component={GuidesDropwizardChecks} />
+      <Route path="guides/awsmonitoring" component={GuidesAWSMonitoring} />
 
     { /* Solutions pages */ }
       <Route path="solutions" component={Solutions} />
