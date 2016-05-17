@@ -27,8 +27,7 @@ const GuidesAWSMonitoring = React.createClass({
         <div>
           <Panel>
             <Row>
-              <Col>
-              </Col>
+              <Col/>
             </Row>
           </Panel>
         </div>

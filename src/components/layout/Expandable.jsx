@@ -10,11 +10,17 @@ const Expandable = React.createClass({
   propTypes: {
     children: PropTypes.node,
     noFade: PropTypes.bool,
-    className: PropTypes.string
+    className: PropTypes.string,
+    open: PropTypes.bool
+  },
+  getDefaultProps() {
+    return {
+      open: false
+    };
   },
   getInitialState(){
     return {
-      open: false
+      open: this.props.open
     };
   },
   getClass(){
