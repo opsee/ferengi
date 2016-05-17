@@ -52,7 +52,7 @@ const GuidesDropwizardChecks = React.createClass({
   @Override
   protected Result check() throws Exception {
     try (Handle h = dbi.open()) {
-      h.execute(&quot;select 1;&quot;);
+      h.execute("select 1;");
       return Result.healthy();
     }
   }
@@ -99,7 +99,7 @@ const GuidesDropwizardChecks = React.createClass({
   }
 
   @Override
-  public void execute(ImmutableMultimap&lt;String, String&gt; params, PrintWriter output) throws Exception {
+  public void execute(ImmutableMultimap<String, String>; params, PrintWriter output) throws Exception {
     //flip the drain parameter
     final boolean oldVal = draining.get();
     draining.compareAndSet(oldVal, !oldVal);
@@ -149,7 +149,7 @@ const GuidesDropwizardChecks = React.createClass({
 
     final DrainHealthCheck drainCheck = new DrainHealthCheck(draining);
     final DrainTask drainTask = new DrainTask(draining);
-    env.healthChecks().register(&quot;drain&quot;, drainCheck);
+    env.healthChecks().register("drain", drainCheck);
     env.admin().addTask(drainTask);
   }
 `}
@@ -179,8 +179,8 @@ const GuidesDropwizardChecks = React.createClass({
   @Override
   public Result check() throws Exception {
     latency = timer.getSnapshot().get99thPercentile();
-    if (latency &gt; threshold) {
-      return Result.unhealthy(&quot;latency of &quot; + latency + &quot;ms is outside threshold of &quot; threshold &quot;ms!&quot;);
+    if (latency > threshold) {
+      return Result.unhealthy("latency of " + latency + "ms is outside threshold of " threshold "ms!");
     }
     return Result.healthy();
   }
