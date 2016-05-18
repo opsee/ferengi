@@ -33,6 +33,14 @@ module.exports = {
       title: 'Opsee / Beta TOS'
     },
 
+    '/guides': {
+      title: 'Opsee / Guides'
+    },
+
+    '/guides/dropwizard': {
+      title: 'Opsee / Effective Health Checks With Dropwizard'
+    },
+
     '/solutions': {
       title: 'Opsee / Solutions'
     },
