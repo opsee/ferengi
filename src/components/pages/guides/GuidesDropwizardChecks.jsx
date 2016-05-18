@@ -205,7 +205,7 @@ const GuidesDropwizardChecks = React.createClass({
 
                 <Padding t={3}>
                   <BaseSVG className={style.logoGuideFooter} svg={logoDark} />
-                  <p className={style.guideFooter}>Opsee is application monitoring designed from the ground up to work with how you build apps in AWS. We keep an eye on all your backend services, letting you get back to doing what you do best: shipping code. Sign up today.</p>
+                  <p className={style.guideFooter}>Opsee continuously tests your services so you can deploy with confidence. Great health checks are what we do, and when you create verbose health check endpoints for your services you can use Opsee to keep an eye on them, letting you get back to doing what you do best: shipping code.</p>
                 </Padding>
 
               </Col>
