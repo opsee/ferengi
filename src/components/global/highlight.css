@@ -55,7 +55,7 @@
 
 :global .hljs,
 :global .hljs-subst {
-  /*color: #ddd;*/
+  color: var(--colorGray4);
 }
 
 :global .hljs-title,
@@ -101,7 +101,7 @@
 :global .hljs-shebang,
 :global .apache .hljs-sqbracket,
 :global .tex .hljs-formula {
-  color: #777;
+  color: var(--colorGray6);
 }
 
 :global .coffeescript .javascript,

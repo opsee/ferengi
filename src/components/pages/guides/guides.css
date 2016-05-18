@@ -2,6 +2,19 @@ strong {
   font-weight: bold;
 }
 
+.logoGuideFooter {
+  display: block;
+  margin: 0 auto;
+  opacity: 0.5;
+  width: 25%;
+}
+
+.guideFooter {
+  font-size: 2.1rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
 .header {
   color: white;
 }
@@ -62,6 +75,7 @@ strong {
 }
 
 @media (max-width: 768px) {
+  .logoGuideFooter { width: 40%; }
   .prosePanel { order: 1; }
   .imagePanel { order: 2; }
 
