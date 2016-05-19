@@ -80,7 +80,7 @@ const Guides = React.createClass({
 
                       <Col xs={9} sm={10}>
                         <Padding b={2}><Heading level={3}>Bootstrap your AWS monitoring with CloudWatch</Heading></Padding>
-                        <p className="no-space">It&rsquo;s a big company, but our team still feels like a startup. We build product, and have limited access to ops. How can our team take charge of our application without a dedicated ops team or expensive and hard-to-maintain software?</p>
+                        <p className="no-space">A guide for small dev teams, running in AWS, to bootstrap their monitoring using CloudWatch for some common AWS services. We&rsquo;ll create some common-sense checks to ensure that your services are all running and performing well, alerting whenever there are problems</p>
 
                         <p><a href="/guides/awsmonitoring">Read more &rsaquo;</a></p>
                       </Col>
