@@ -3,6 +3,7 @@ import json from 'highlight.js/lib/languages/json';
 import xml from 'highlight.js/lib/languages/xml';
 import css from 'highlight.js/lib/languages/css';
 import java from 'highlight.js/lib/languages/java';
+import golang from 'highlight.js/lib/languages/go';
 import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import cx from 'classnames';
@@ -14,6 +15,7 @@ hljs.registerLanguage('json', json);
 hljs.registerLanguage('xml', xml);
 hljs.registerLanguage('css', css);
 hljs.registerLanguage('java', java);
+hljs.registerLanguage('golang', golang);
 
 const Highlight = React.createClass({
   propTypes: {
