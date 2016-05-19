@@ -11,7 +11,7 @@ import { Heading } from '../../type';
 
 import BaseSVG from '../../images/BaseSVG';
 import DropwizardThumbImg from '../../images/guides/guides-dropwizard.png';
-// import CloudWatchThumbImg from '../../images/guides/guides-cloudwatch.png';
+import CloudWatchThumbImg from '../../images/guides/guides-cloudwatch.png';
 
 const Guides = React.createClass({
   render() {
@@ -44,6 +44,25 @@ const Guides = React.createClass({
                         <p className="no-space">One of the nice features of Dropwizard is providing you with a consistent mechanism for exposing your services&rsquo; health checks. Having a consistent scheme for health checks make everything from deployment to monitoring that much easier, especially in polyglot environments where multiple languages and/or frameworks are being deployed into production.</p>
 
                           <p><a href="/guides/dropwizard">Read more &rsaquo;</a></p>
+                      </Col>
+                    </Row>
+                  </Padding>
+
+                  <Padding tb={1}>
+                    <Row>
+                      <Col xs={3} sm={2} className="text-center">
+                        <div className={style.awsHeading}>
+                          <a href="/guides/awsmonitoring">
+                            <BaseSVG svg={CloudWatchThumbImg} className={style.logo} />
+                          </a>
+                        </div>
+                      </Col>
+
+                      <Col xs={9} sm={10}>
+                        <Padding b={2}><Heading level={3}>Bootstrap your AWS monitoring with CloudWatch</Heading></Padding>
+                        <p className="no-space">It&rsquo;s a big company, but our team still feels like a startup. We build product, and have limited access to ops. How can our team take charge of our application without a dedicated ops team or expensive and hard-to-maintain software?</p>
+
+                        <p><a href="/guides/awsmonitoring">Read more &rsaquo;</a></p>
                       </Col>
                     </Row>
                   </Padding>

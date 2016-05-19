@@ -1,6 +1,24 @@
 strong {
   font-weight: bold;
 }
+em {
+  font-style: italic;
+}
+code {
+  display: inline;
+  background-color: var(--colorGray2);
+  font-family: monospace;
+  outline: 3px solid var(--colorGray2);
+  margin: 0 5px;
+}
+
+.humbleBrag {
+  background-color: #fff3e0;
+  border-radius: 0.5rem;
+  font-style: italic;
+  padding: 0.5rem 1rem;
+  margin: 2rem -1rem;
+}
 
 .logoGuideFooter {
   display: block;
@@ -13,6 +31,14 @@ strong {
   font-size: 1.8rem;
   font-style: italic;
   line-height: 1.4;
+}
+
+.sectionHR {
+  border:none;
+  border-top:5px dotted #ddd;
+  height:5px;
+  margin: 5rem auto;
+  width:25%;
 }
 
 .header {
