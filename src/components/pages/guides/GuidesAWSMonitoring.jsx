@@ -40,7 +40,7 @@ const GuidesAWSMonitoring = React.createClass({
         <StaticHeader className={style.header}>
           <div className="text-center">
             <h1 className={style.header}>Bootstrap your AWS monitoring with CloudWatch</h1>
-            <h3>Get started with alarms for some common services and thresholds</h3>
+            <h3>Get started with alarms for common services and thresholds</h3>
           </div>
         </StaticHeader>
 
@@ -48,11 +48,11 @@ const GuidesAWSMonitoring = React.createClass({
           <Panel>
             <Row>
               <Col xs={12} sm={8} smOffset={2}>
-                <p>So you&rsquo;re new to AWS—a lot of us are, and a lot of things are new about this environment. Moving from a monolith to microservices, running managed services, auto scaling, containers…even if you’ve set up monitoring before, AWS poses a lot of new challenges to getting coverage.</p>
+                <p>Moving to AWS can be a gateway to lots of other changes - moving from a monolith to microservices, running managed services, auto scaling, containers…even if you&rsquo;ve set up monitoring before, AWS poses a lot of new challenges to getting coverage.</p>
 
-                <p>In this guide, we’ll cover how a small dev team running in AWS can bootstrap their monitoring using CloudWatch for some common AWS services. We’ll show you how to create some common-sense checks to ensure that your services are all running and performing well, alerting you whenever there are problems.</p>
+                <p>In this guide, we&rsquo;ll cover how a small dev team running in AWS can bootstrap their monitoring using CloudWatch for some common AWS services. We&rsquo;ll create some common-sense checks to ensure that your services are all running and performing well, alerting you whenever there are problems.</p>
 
-                <p>We’ll go service by service, covering:</p>
+                <p>We&rsquo;ll go service by service, covering:</p>
 
                 <ul>
                   <li>
@@ -93,7 +93,7 @@ const GuidesAWSMonitoring = React.createClass({
 
                 <BaseSVG svg={EC2_03} className={style.logo} />
 
-                <p>Since this is a binary, whenever the Sum (not the Avg, Min, or Max) is <strong>Greater Than (>) 0</strong> we’ll trigger the alarm. </p>
+                <p>Since this is a binary, whenever the Sum (not the Avg, Min, or Max) is <strong>Greater Than (>) 0</strong> we&rsquo;ll trigger the alarm. </p>
 
                 <BaseSVG svg={EC2_04} className={style.logo} />
 
@@ -204,11 +204,11 @@ const GuidesAWSMonitoring = React.createClass({
 
                 <BaseSVG svg={R53_04} className={style.logo} />
 
-                <p>Then we need to define an alarm, which can either be an existing SNS topic or a new one to send to an email address, like the one we&rsquo;re creating here. Once that’s set, the health check is ready!</p>
+                <p>Then we need to define an alarm, which can either be an existing SNS topic or a new one to send to an email address, like the one we&rsquo;re creating here. Once that&rsquo;s set, the health check is ready!</p>
 
                 <BaseSVG svg={R53_05} className={style.logo} />
 
-                <p>Now we’ll have a look at the latency metrics that got created in CloudWatch. In the <a target="_blank" href="https://console.aws.amazon.com/cloudwatch/home#metrics:metricFilter=Pattern%253DAWS%252FRoute53">CloudWatch dashboard for Route53</a> we can see <code>TimeToFirstByte</code>, as well as <code>SSLHandshakeTime</code> if the check is HTTPS, broken out by region.</p>
+                <p>Now we&rsquo;ll have a look at the latency metrics that got created in CloudWatch. In the <a target="_blank" href="https://console.aws.amazon.com/cloudwatch/home#metrics:metricFilter=Pattern%253DAWS%252FRoute53">CloudWatch dashboard for Route53</a> we can see <code>TimeToFirstByte</code>, as well as <code>SSLHandshakeTime</code> if the check is HTTPS, broken out by region.</p>
 
                 <BaseSVG svg={R53_07} className={style.logo} />
 
