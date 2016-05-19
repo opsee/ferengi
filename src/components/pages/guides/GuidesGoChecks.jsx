@@ -39,11 +39,11 @@ const GuidesGoChecks = React.createClass({
                   <Padding>
 {
 `adminHandler := http.NewServeMux()
-adminHandler.HandleFunc(&quot;/health&quot;, func(w http.ResponseWriter, r *http.Request) {
-  fmt.Fprintf(&quot;ok&quot;)
+adminHandler.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
+  fmt.Fprintf("ok")
 })
 admin := &amp;http.Server{
-            Addr:    &quot;:8081&quot;,
+            Addr:    ":8081",
             Handler: adminHandler,
 }
 log.Fatal(admin.ListenAndServe())`
@@ -68,7 +68,7 @@ log.Fatal(admin.ListenAndServe())`
     h.Healthy()
   }
 })
-metrics.Register(&quot;database&quot;, check)`
+metrics.Register("database", check)`
 }
                 </Padding>
               </Highlight>
@@ -78,7 +78,7 @@ metrics.Register(&quot;database&quot;, check)`
               <Highlight style={{background: '#303030'}}>
                 <Padding>
 {
-`adminHandler.HandleFunc(&quot;/metrics&quot;, func(w http.ResponseWriter, r *http.Request) {
+`adminHandler.HandleFunc("/metrics", func(w http.ResponseWriter, r *http.Request) {
   metrics.WriteJSONOnce(metrics.DefaultRegistry, w)
 })`
 }
@@ -90,7 +90,7 @@ metrics.Register(&quot;database&quot;, check)`
                 <Highlight style={{background: '#303030'}}>
                   <Padding>
 {
-`adminHandler.HandleFunc(&quot;/health&quot;, func(w http.ResponseWriter, r *http.Request) {
+`adminHandler.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
   data := make(map[string]interface{})
   failed := false
   metrics.DefaultRegistry.Each(func(name string, i interface{}) {
