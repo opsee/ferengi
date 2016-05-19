@@ -41,6 +41,10 @@ module.exports = {
       title: 'Opsee / Effective Health Checks With Dropwizard'
     },
 
+    '/guides/gochecks': {
+      title: 'Opsee / Effective Health Checks in Go'
+    },
+
     '/guides/awsmonitoring': {
       title: 'Opsee / Bootstrap your AWS monitoring with CloudWatch'
     },

@@ -11,6 +11,7 @@ import { Heading } from '../../type';
 
 import BaseSVG from '../../images/BaseSVG';
 import DropwizardThumbImg from '../../images/guides/guides-dropwizard.png';
+import GolangThumbImg from '../../images/guides/guides-golang.png';
 import CloudWatchThumbImg from '../../images/guides/guides-cloudwatch.png';
 
 const Guides = React.createClass({
@@ -44,6 +45,25 @@ const Guides = React.createClass({
                         <p className="no-space">One of the nice features of Dropwizard is providing you with a consistent mechanism for exposing your services&rsquo; health checks. Having a consistent scheme for health checks make everything from deployment to monitoring that much easier, especially in polyglot environments where multiple languages and/or frameworks are being deployed into production.</p>
 
                           <p><a href="/guides/dropwizard">Read more &rsaquo;</a></p>
+                      </Col>
+                    </Row>
+                  </Padding>
+
+                  <Padding tb={1}>
+                    <Row>
+                      <Col xs={3} sm={2} className="text-center">
+                        <div className={style.awsHeading}>
+                          <a href="/guides/gochecks">
+                            <BaseSVG svg={GolangThumbImg} className={style.logo} />
+                          </a>
+                        </div>
+                      </Col>
+
+                      <Col xs={9} sm={10}>
+                        <Padding b={2}><Heading level={3}>Effective Health Checks in Go</Heading></Padding>
+                        <p className="no-space">Go</p>
+
+                          <p><a href="/guides/gochecks">Read more &rsaquo;</a></p>
                       </Col>
                     </Row>
                   </Padding>
