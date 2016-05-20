@@ -42,7 +42,7 @@ const GuidesGoChecks = React.createClass({
 adminHandler.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
   fmt.Fprintf("ok")
 })
-admin := &amp;http.Server{
+admin := &http.Server{
             Addr:    ":8081",
             Handler: adminHandler,
 }
