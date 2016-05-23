@@ -81,7 +81,7 @@ const GuidesDropwizardChecks = React.createClass({
               <p>After starting up your Dropwizard service, a GET request to {'http://localhost:8081/healthcheck'} will invoke your database health check, in addition to any other checks registered with the health check registry. If all of the health checks pass, a <code>200 OK</code> response will be generated, otherwise the response status will be <code>500 Internal Service Error</code>. The response body is intended to be a human readable <code>text/plain</code> entity.</p>
 
               <h2 id="ratiohealthchecks">Ratio Health Checks</h2>
-              <h3>(thanks to <a href="https://twitter.com/gjesse">Jesse Hodges</a>)
+              <h3>(thanks to <a href="https://twitter.com/gjesse">Jesse Hodges</a>)</h3>
               <p>Actively pinging a database or other dependency is relatively straightforward, however sometimes can cause its own issues. You may not be able to make a meaningful request to a backend service without causing additional and unnecessary load, for instance. In those cases you can measure the success rate of the calls you&rsquo;d be making in the normal course of events and health check on that. The ratio health check class looks thusly:</p>
               <Highlight style="{{background: '#303030'}}">
                 <Padding>
