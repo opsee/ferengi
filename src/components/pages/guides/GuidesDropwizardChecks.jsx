@@ -83,7 +83,7 @@ const GuidesDropwizardChecks = React.createClass({
               <h2 id="ratiohealthchecks">Ratio Health Checks</h2>
               <h3>(thanks to <a href="https://twitter.com/gjesse">Jesse Hodges</a>)</h3>
               <p>Actively pinging a database or other dependency is relatively straightforward, however sometimes can cause its own issues. You may not be able to make a meaningful request to a backend service without causing additional and unnecessary load, for instance. In those cases you can measure the success rate of the calls you&rsquo;d be making in the normal course of events and health check on that. The ratio health check class looks thusly:</p>
-              <Highlight style="{{background: '#303030'}}">
+              <Highlight style={{background: '#303030'}}>
                 <Padding>
 {
 `/**
@@ -127,7 +127,7 @@ public class RatioGaugeHealthCheck extends HealthCheck {
 
               <p>Using the health check involves setting up two meters, that get marked when the call to a dependency either succceeds or fails:</p>
 
-              <Highlight style="{{background: '#303030'}}">
+              <Highlight style={{background: '#303030'}}>
                 <Padding>
 {
 `// mark these meters on success/failure
