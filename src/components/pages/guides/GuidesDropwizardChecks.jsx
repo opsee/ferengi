@@ -122,7 +122,7 @@ public class RatioGaugeHealthCheck extends HealthCheck {
     }
 }`
 }
-                <Padding>
+                </Padding>
               </Highlight>
 
               <p>Using the health check involves setting up two meters, that get marked when the call to a dependency either succceeds or fails:</p>
