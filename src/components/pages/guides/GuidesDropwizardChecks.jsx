@@ -82,9 +82,11 @@ const GuidesDropwizardChecks = React.createClass({
 
               <h2 id="ratiohealthchecks">Ratio Health Checks</h2>
               <h3>(thanks to <a href="https://twitter.com/gjesse">Jesse Hodges</a>)
-              <p>Actively pinging a database or other dependency is relatively straightforward, however sometimes can cause its own issues. You may not be able to make a meaningful request to a backend service without causing additional and unnecessary load, for instance. In those cases you can measure the success rate of the calls you'd be making in the normal course of events and health check on that. The ratio health check class looks thusly:</p>
+              <p>Actively pinging a database or other dependency is relatively straightforward, however sometimes can cause its own issues. You may not be able to make a meaningful request to a backend service without causing additional and unnecessary load, for instance. In those cases you can measure the success rate of the calls you&rsquo;d be making in the normal course of events and health check on that. The ratio health check class looks thusly:</p>
               <Highlight style="{{background: '#303030'}}">
-/**
+                <Padding>
+{
+`/**
  * Gauge-based health check that will return unhealthy if the
  * gauge value falls below the threshold
  */
@@ -118,13 +120,17 @@ public class RatioGaugeHealthCheck extends HealthCheck {
             return Result.unhealthy("Healthcheck [%s] value of %.02f is below threshold %.02f", name, value, threshold);
         }
     }
+}`
 }
+                <Padding>
               </Highlight>
 
               <p>Using the health check involves setting up two meters, that get marked when the call to a dependency either succceeds or fails:</p>
 
               <Highlight style="{{background: '#303030'}}">
-// mark these meters on success/failure
+                <Padding>
+{
+`// mark these meters on success/failure
 private static final Meter PUBLISH_STATE_OK = new Meter();
 private static final Meter PUBLISH_STATE_NOT_OK = new Meter();
 private static final RatioGauge PUBLISH_STATE_GAUGE = new RatioGauge() {
@@ -142,6 +148,9 @@ private static final RatioGauge PUBLISH_STATE_GAUGE = new RatioGauge() {
 final RatioGaugeHealthCheck check =
     new RatioGaugeHealthCheck("publish-success", PUBLISH_STATE_GAUGE, configuration.getPublishHealthThreshold());
 environment.healthChecks().register(check.getName(), check);
+}`
+}
+                </Padding>
               </Highlight>
 
               <h2 id="drainfullhealthchecks">Drain / Full Health Checks</h2>
@@ -195,8 +204,8 @@ environment.healthChecks().register(check.getName(), check);
     }
     return Result.healthy();
   }
+}`
 }
-`}
                   </Padding>
                 </Highlight>
 
@@ -213,8 +222,8 @@ environment.healthChecks().register(check.getName(), check);
     final DrainTask drainTask = new DrainTask(draining);
     env.healthChecks().register("drain", drainCheck);
     env.admin().addTask(drainTask);
-  }
-`}
+  }`
+}
                   </Padding>
                 </Highlight>
 
@@ -246,8 +255,8 @@ environment.healthChecks().register(check.getName(), check);
     }
     return Result.healthy();
   }
+}`
 }
-`}
                   </Padding>
                 </Highlight>
 
@@ -261,7 +270,8 @@ environment.healthChecks().register(check.getName(), check);
     doSomeLongRunningWork();
   }
 }
-`}
+`
+}
                   </Padding>
                 </Highlight>
 
