@@ -80,6 +80,70 @@ const GuidesDropwizardChecks = React.createClass({
 
               <p>After starting up your Dropwizard service, a GET request to {'http://localhost:8081/healthcheck'} will invoke your database health check, in addition to any other checks registered with the health check registry. If all of the health checks pass, a <code>200 OK</code> response will be generated, otherwise the response status will be <code>500 Internal Service Error</code>. The response body is intended to be a human readable <code>text/plain</code> entity.</p>
 
+              <h2 id="ratiohealthchecks">Ratio Health Checks</h2>
+              <h3>(thanks to <a href="https://twitter.com/gjesse">Jesse Hodges</a>)
+              <p>Actively pinging a database or other dependency is relatively straightforward, however sometimes can cause its own issues. You may not be able to make a meaningful request to a backend service without causing additional and unnecessary load, for instance. In those cases you can measure the success rate of the calls you'd be making in the normal course of events and health check on that. The ratio health check class looks thusly:</p>
+              <Highlight style="{{background: '#303030'}}">
+/**
+ * Gauge-based health check that will return unhealthy if the
+ * gauge value falls below the threshold
+ */
+public class RatioGaugeHealthCheck extends HealthCheck {
+
+    private final RatioGauge gauge;
+    private final double threshold;
+    private final String name;
+
+    public RatioGaugeHealthCheck(String name, RatioGauge gauge, double threshold) {
+        this.name = requireNonNull(name);
+        this.gauge = requireNonNull(gauge);
+        this.threshold = threshold;
+
+        checkArgument(!name.isEmpty(), "name must be specified");
+        checkArgument(threshold >= 0 && threshold <= 1, String.format("threshold out of range: [%.02f]", threshold));
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    protected Result check() throws Exception {
+        final Double value =  gauge.getValue();
+        if (Double.isNaN(value)) {
+            return Result.healthy("Unable to determine health. Gauge value is Double.NaN. The gauge may have no data or there may be a problem.");
+        } else if ( value >= threshold ) {
+            return Result.healthy();
+        } else {
+            return Result.unhealthy("Healthcheck [%s] value of %.02f is below threshold %.02f", name, value, threshold);
+        }
+    }
+}
+              </Highlight>
+
+              <p>Using the health check involves setting up two meters, that get marked when the call to a dependency either succceeds or fails:</p>
+
+              <Highlight style="{{background: '#303030'}}">
+// mark these meters on success/failure
+private static final Meter PUBLISH_STATE_OK = new Meter();
+private static final Meter PUBLISH_STATE_NOT_OK = new Meter();
+private static final RatioGauge PUBLISH_STATE_GAUGE = new RatioGauge() {
+    @Override
+    protected Ratio getRatio() {
+        final double numerator = PUBLISH_STATE_OK.getOneMinuteRate();
+        final double denominator = numerator + PUBLISH_STATE_NOT_OK.getOneMinuteRate();
+        return Ratio.of(numerator, denominator);
+    }
+};
+
+
+// register a health check
+
+final RatioGaugeHealthCheck check =
+    new RatioGaugeHealthCheck("publish-success", PUBLISH_STATE_GAUGE, configuration.getPublishHealthThreshold());
+environment.healthChecks().register(check.getName(), check);
+              </Highlight>
+
               <h2 id="drainfullhealthchecks">Drain / Full Health Checks</h2>
 
               <p>The results of a health check are often used to control whether a service is eligible as a backend for a load balancer. The basic algorithm used by most load balancing software will fail out a backend after it has failed a certain number of health checks, and reinstate the service once its checks start passing again. This can be used creatively to gain more fine grained operability and control over one&#8217;s services. For instance, if one need a way to manually take down a service gracefully, without enduring customer visible hiccups, one could implement a drain task hooked to a health check.</p>
