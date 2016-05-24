@@ -17,7 +17,8 @@ import {
   Guides,
   GuidesDropwizardChecks,
   GuidesAWSMonitoring,
-  GuidesGoChecks
+  GuidesGoChecks,
+  GuidesNodeChecks
 } from './components/pages/guides';
 import {
   TryAWS,
@@ -52,6 +53,7 @@ module.exports = (
       <Route path="guides/dropwizard" component={GuidesDropwizardChecks} />
       <Route path="guides/awsmonitoring" component={GuidesAWSMonitoring} />
       <Route path="guides/gochecks" component={GuidesGoChecks} />
+      <Route path="guides/nodechecks" component={GuidesNodeChecks} />
 
     { /* Solutions pages */ }
       <Route path="solutions" component={Solutions} />

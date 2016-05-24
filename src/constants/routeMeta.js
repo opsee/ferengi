@@ -46,11 +46,21 @@ module.exports = {
     },
 
     '/guides/dropwizard': {
-      title: 'Opsee / Effective Health Checks With Dropwizard'
+      title: 'Opsee / Effective Health Checks With Dropwizard',
+      excerpt: 'One of the nice features of Dropwizard is providing you with a consistent mechanism for exposing your services’ health checks',
+      cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/guide-banner-dropwizard.jpg'
     },
 
     '/guides/gochecks': {
-      title: 'Opsee / Effective Health Checks in Go'
+      title: 'Opsee / Effective Health Checks in Go',
+      excerpt: 'Even if you’re not using frameworks and simply implementing a bare bones Go service it’s fast and easy to add simple health checks',
+      cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/guide-banner-go.jpg'
+    },
+
+    '/guides/nodechecks': {
+      title: 'Opsee / Effective Health Checks in Node',
+      excerpt: 'Node.JS adheres to a fail-fast design philosophy, often exiting a process under unexpected conditions. This makes monitoring health checks all the more essential for a production Node.JS deployment',
+      cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/guide-banner-node.jpg'
     },
 
     '/guides/awsmonitoring': {
