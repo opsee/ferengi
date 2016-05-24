@@ -45,6 +45,10 @@ module.exports = {
       title: 'Opsee / Effective Health Checks in Go'
     },
 
+    '/guides/nodechecks': {
+      title: 'Opsee / Effective Health Checks in Node'
+    },
+
     '/guides/awsmonitoring': {
       title: 'Opsee / Bootstrap your AWS monitoring with CloudWatch'
     },

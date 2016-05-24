@@ -12,6 +12,7 @@ import { Heading } from '../../type';
 import BaseSVG from '../../images/BaseSVG';
 import DropwizardThumbImg from '../../images/guides/guides-dropwizard.png';
 import GolangThumbImg from '../../images/guides/guides-golang.png';
+import NodeThumbImg from '../../images/guides/guides-node.png';
 import CloudWatchThumbImg from '../../images/guides/guides-cloudwatch.png';
 
 const Guides = React.createClass({
@@ -64,6 +65,25 @@ const Guides = React.createClass({
                         <p className="no-space">Even if you&#8217;re not using frameworks and simply implementing a bare bones Go service it&#8217;s fast and easy to add simple health checks.</p>
 
                           <p><a href="/guides/gochecks">Read more &rsaquo;</a></p>
+                      </Col>
+                    </Row>
+                  </Padding>
+
+                  <Padding tb={1}>
+                    <Row>
+                      <Col xs={3} sm={2} className="text-center">
+                        <div className={style.awsHeading}>
+                          <a href="/guides/nodechecks">
+                            <BaseSVG svg={NodeThumbImg} className={style.logo} />
+                          </a>
+                        </div>
+                      </Col>
+
+                      <Col xs={9} sm={10}>
+                        <Padding b={2}><Heading level={3}>Effective Health Checks in Node.js</Heading></Padding>
+                        <p className="no-space">JavaScript, in the form of Node.js, is the language of choice in many microservice architectures. Its lightweight feel, fast startup times and ability to share code with the frontend makes it easy to get started with and develop new services. However, in many cases Node.JS adheres to a fail-fast design philosophy, often exiting a process under unexpected conditions. This makes monitoring health checks all the more essential for a production Node.JS deployment.</p>
+
+                          <p><a href="/guides/nodechecks">Read more &rsaquo;</a></p>
                       </Col>
                     </Row>
                   </Padding>

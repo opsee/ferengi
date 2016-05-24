@@ -7,12 +7,9 @@ import {Col, Padding, Row} from '../../layout';
 import SkewPanel from '../../panels/SkewPanel';
 import SignUpPanel from '../../panels/SignUpPanel';
 import Panel from '../../panels/Panel';
-// import { Heading } from '../../type';
 
 import BaseSVG from '../../images/BaseSVG';
 import logoDark from '../../images/logos/opsee/opseelogo-screen-light-one.svg';
-// import solutionsStartupSVG from '../../images/solutions-startup.svg';
-// import solutionsEnterpriseSVG from '../../images/solutions-enterprise.svg';
 
 const GuidesGoChecks = React.createClass({
   render() {
