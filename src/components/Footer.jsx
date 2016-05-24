@@ -16,6 +16,8 @@ export default React.createClass({
           <li><Link className={style.navLink} to="https://app.opsee.com/help" target="_blank">Documentation</Link></li>
           <li><Link className={style.navLink} to="http://blog.opsee.com/" target="_blank">Blog</Link></li>
           <li><Link className={style.navLink} to="https://app.opsee.com/login" target="_blank">Log in</Link></li>
+          <li><Link className={style.navLink} to="/privacy">Privacy Policy</Link></li>
+          <li><Link className={style.navLink} to="/terms-of-use">Terms of Use</Link></li>
         </ul>
 
         <div className={style.logoGroup}>

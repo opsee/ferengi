@@ -3,14 +3,16 @@ import { Router, Route, IndexRoute } from 'react-router';
 
 import About from './components/pages/About';
 import App from './components/App';
-import Index from './components/pages/Index';
+import BetaTOS from './components/pages/BetaTOS';
 import Features from './components/pages/Features';
 import How from './components/pages/How';
+import Index from './components/pages/Index';
 import Integrations from './components/pages/Integrations';
-import BetaTOS from './components/pages/BetaTOS';
+import PrivacyPolicy from './components/pages/PrivacyPolicy';
 import Solutions from './components/pages/solutions/Solutions';
 import SolutionsStartup from './components/pages/solutions/SolutionsStartup';
 import SolutionsEnterprise from './components/pages/solutions/SolutionsEnterprise';
+import TermsOfUse from './components/pages/TermsOfUse';
 import {
   Guides,
   GuidesDropwizardChecks,
@@ -41,6 +43,8 @@ module.exports = (
       <Route path="how" component={How} />
       <Route path="about" component={About} />
       <Route path="integrations" component={Integrations} />
+      <Route path="privacy" component={PrivacyPolicy} />
+      <Route path="terms-of-use" component={TermsOfUse} />
       <Route path="beta-tos" component={BetaTOS} />
 
     { /* Guides */ }

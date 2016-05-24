@@ -18,8 +18,6 @@ export default React.createClass({
 
   render() {
     const quote = _.get(quotes, this.props.quote);
-    console.log(this.props.quote);
-
     return (
       <div className={this.getClass()}>
         { _.has(quote, 'logo') ?
