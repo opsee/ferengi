@@ -29,6 +29,14 @@ module.exports = {
       title: 'Opsee / Integrations'
     },
 
+    '/privacy': {
+      title: 'Opsee / Privacy Policy'
+    },
+
+    '/terms-of-use': {
+      title: 'Opsee / Terms of Use'
+    },
+
     '/beta-tos': {
       title: 'Opsee / Beta TOS'
     },
