@@ -37,7 +37,7 @@ const GuidesGoChecks = React.createClass({
 {
 `adminHandler := http.NewServeMux()
 adminHandler.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
-  fmt.Fprintf("ok")
+  fmt.Fprintf(w, "ok")
 })
 admin := &http.Server{
             Addr:    ":8081",
