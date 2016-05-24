@@ -62,7 +62,7 @@ const Guides = React.createClass({
 
                       <Col xs={9} sm={10}>
                         <Padding b={2}><Heading level={3}>Effective Health Checks in Go</Heading></Padding>
-                        <p className="no-space">Even if you&#8217;re not using frameworks and simply implementing a bare bones Go service it&#8217;s fast and easy to add simple health checks.</p>
+                        <p className="no-space">Go is popping up all over the place these days. Its relatively simple syntax, rapidly growing library ecosystem, and lightweight statically compiled build artifacts have earned it a place in many microservice architectures. Fortunately, even if you&#8217;re not using frameworks and simply implementing a bare bones Go service it&#8217;s fast and easy to add simple health checks.</p>
 
                           <p><a href="/guides/gochecks">Read more &rsaquo;</a></p>
                       </Col>
