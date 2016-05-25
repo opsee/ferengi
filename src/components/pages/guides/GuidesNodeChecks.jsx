@@ -109,7 +109,7 @@ if (cluster.isMaster) {
 
               <h2 id="kardia">Kardia</h2>
 
-              <p>Fortunately there&#8217;s an NPM package that automates most of the health check reporting you&#8217;d want to do from Node, called <a href="kardia">https://www.npmjs.com/package/kardia</a>. Kardia is designed to work with Node clustering, providing a health check endpoint on the master process that can report on aggregated status for all of its workers, as well as register custom health check logic via the <code>registerHealthcheck</code> function.</p>
+              <p>Fortunately there&#8217;s an NPM package that automates most of the health check reporting you&#8217;d want to do from Node, called <a target="_blank" href="https://www.npmjs.com/package/kardia">Kardia</a>. Kardia is designed to work with Node clustering, providing a health check endpoint on the master process that can report on aggregated status for all of its workers, as well as register custom health check logic via the <code>registerHealthcheck</code> function.</p>
 
               <Highlight style={{background: '#303030'}}>
                 <Padding>
