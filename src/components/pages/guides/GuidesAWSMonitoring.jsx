@@ -105,6 +105,8 @@ const GuidesAWSMonitoring = React.createClass({
 
                 <p>You can also set this up using <a target="_blank" href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-system-instance-status-check.html">the AWS CLI</a>.</p>
 
+                <p className={style.humbleBrag}>With Opsee you can create health checks for Security Groups and Auto Scale Groups too, and we will automatically apply the checks to their instances. We also check the services running on your instances. You can send failure notifications to Slack, Pagerduty and webhooks as well as email.</p>
+
                 <hr className={style.sectionHR}/>
 
                 <h2 id="elasticloadbalancer">Elastic Load Balancer (ELB)</h2>

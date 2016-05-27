@@ -4,7 +4,8 @@ strong {
 em {
   font-style: italic;
 }
-code {
+
+.inlineCode {
   display: inline;
   background-color: var(--colorGray2);
   font-family: monospace;

@@ -30,7 +30,7 @@ const GuidesGoChecks = React.createClass({
 
               <h2 id="theminimalapproach">The Minimal Approach</h2>
 
-              <p>Go ships with the <code>net/http</code> package which provides straightforward http client and server implementations. Because go makes it so easy to spin up multiple http servers, it&#8217;s a good idea serve customer facing functions and internal administrative functions on different ports. Otherwise one must be careful to mask any admin endpoints at the load balancer or reverse proxy. The simplest possible health check can be expressed with just a few lines of Go:</p>
+              <p>Go ships with the <code className={style.inlineCode}>net/http</code> package which provides straightforward http client and server implementations. Because go makes it so easy to spin up multiple http servers, it&#8217;s a good idea serve customer facing functions and internal administrative functions on different ports. Otherwise one must be careful to mask any admin endpoints at the load balancer or reverse proxy. The simplest possible health check can be expressed with just a few lines of Go:</p>
 
                 <Highlight style={{background: '#303030'}}>
                   <Padding>
@@ -48,7 +48,7 @@ log.Fatal(admin.ListenAndServe())`
                   </Padding>
                 </Highlight>
 
-              <p>This sets up an admin handler and starts it listening on port 8081. The handler has one endpoint at <code>/health</code> which simply returns a 200 OK status code with <code>ok</code> as its body. Simple and straightforward, but we can do better.</p>
+              <p>This sets up an admin handler and starts it listening on port 8081. The handler has one endpoint at <code className={style.inlineCode}>/health</code> which simply returns a 200 OK status code with <code className={style.inlineCode}>ok</code> as its body. Simple and straightforward, but we can do better.</p>
 
               <h2 id="gometrics">Go Metrics</h2>
 
@@ -112,7 +112,7 @@ metrics.Register("database", check)`
                   </Padding>
                 </Highlight>
 
-              <p>This handler will evaluate all of your healthchecks, and report a json object associating the check name with either <code>true</code> for passing, or an error string if not. And the response code is set to 500 if any of the tests fail. This endpoint can then either be used by a load balancer to determine the liveness of a service instance, or by a monitoring system to notify you of a failure.</p>
+              <p>This handler will evaluate all of your healthchecks, and report a json object associating the check name with either <code className={style.inlineCode}>true</code> for passing, or an error string if not. And the response code is set to 500 if any of the tests fail. This endpoint can then either be used by a load balancer to determine the liveness of a service instance, or by a monitoring system to notify you of a failure.</p>
 
                 <Padding t={3}>
                   <BaseSVG className={style.logoGuideFooter} svg={logoDark} />

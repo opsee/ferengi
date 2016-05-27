@@ -35,7 +35,7 @@ const GuidesDropwizardChecks = React.createClass({
 
               <h2 id="thebasichealthcheck">The Basic Health Check</h2>
 
-              <p>All health checks in Dropwizard extend the <code>HealthCheck</code> class. The <code>HealthCheck</code> class provides a protected method for you to override, called <code>check()</code>. Within the check method you can perform arbitrary logic in order to verify the correct functioning of the service. The canonical example would be checking that a database dependency is running:</p>
+              <p>All health checks in Dropwizard extend the <code className={style.inlineCode}>HealthCheck</code> class. The <code className={style.inlineCode}>HealthCheck</code> class provides a protected method for you to override, called <code className={style.inlineCode}>check()</code>. Within the check method you can perform arbitrary logic in order to verify the correct functioning of the service. The canonical example would be checking that a database dependency is running:</p>
 
                 <Highlight style={{background: '#303030'}}>
                   <Padding>
@@ -59,9 +59,9 @@ const GuidesDropwizardChecks = React.createClass({
                   </Padding>
                 </Highlight>
 
-              <p>In this example we pass a <code>DataSouce</code> in the constructor, which we&#8217;re assuming represents the global database handle for this entire service. Every time the health check is evaluated we open a database handle and attempt to execute <code>&quot;select 1;&quot;</code> which should at least verify that the database server is running. If a problem is encountered, an exception will be thrown which will fail the health check.</p>
+              <p>In this example we pass a <code className={style.inlineCode}>DataSouce</code> in the constructor, which we&#8217;re assuming represents the global database handle for this entire service. Every time the health check is evaluated we open a database handle and attempt to execute <code className={style.inlineCode}>&quot;select 1;&quot;</code> which should at least verify that the database server is running. If a problem is encountered, an exception will be thrown which will fail the health check.</p>
 
-              <p>In order to use this health check it must be added to the Dropwizard environment. The Environment object has a registry specifically for instances of <code>HealthCheck</code>.</p>
+              <p>In order to use this health check it must be added to the Dropwizard environment. The Environment object has a registry specifically for instances of <code className={style.inlineCode}>HealthCheck</code>.</p>
 
               <Highlight style={{background: '#303030'}}>
                 <Padding>
@@ -78,7 +78,7 @@ const GuidesDropwizardChecks = React.createClass({
                 </Padding>
               </Highlight>
 
-              <p>After starting up your Dropwizard service, a GET request to {'http://localhost:8081/healthcheck'} will invoke your database health check, in addition to any other checks registered with the health check registry. If all of the health checks pass, a <code>200 OK</code> response will be generated, otherwise the response status will be <code>500 Internal Service Error</code>. The response body is intended to be a human readable <code>text/plain</code> entity.</p>
+              <p>After starting up your Dropwizard service, a GET request to {'http://localhost:8081/healthcheck'} will invoke your database health check, in addition to any other checks registered with the health check registry. If all of the health checks pass, a <code className={style.inlineCode}>200 OK</code> response will be generated, otherwise the response status will be <code className={style.inlineCode}>500 Internal Service Error</code>. The response body is intended to be a human readable <code className={style.inlineCode}>text/plain</code> entity.</p>
 
               <h2 id="ratiohealthchecks">Ratio Health Checks</h2>
               <h3>(thanks to <a href="https://twitter.com/gjesse">Jesse Hodges</a>)</h3>
@@ -227,7 +227,7 @@ environment.healthChecks().register(check.getName(), check);
                   </Padding>
                 </Highlight>
 
-              <p>After starting up your service a <code>POST</code> request to {'http://localhost:8081/tasks/drain'} will flip the drain switch for your service. Also, notice that we added a <code>startDrained</code> parameter to the service config. This allows for starting services in a drained state, which can be useful for canary testing experimental code or manually controlling when new services enter the load balancer backend.</p>
+              <p>After starting up your service a <code className={style.inlineCode}>POST</code> request to {'http://localhost:8081/tasks/drain'} will flip the drain switch for your service. Also, notice that we added a <code className={style.inlineCode}>startDrained</code> parameter to the service config. This allows for starting services in a drained state, which can be useful for canary testing experimental code or manually controlling when new services enter the load balancer backend.</p>
 
               <h2 id="metricshealthchecks">Metrics Health Checks</h2>
 

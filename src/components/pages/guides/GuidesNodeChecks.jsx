@@ -57,7 +57,7 @@ http.createServer(handleRequest).listen(8080);`
                 </Padding>
               </Highlight>
 
-              <p>This starts an http server on port 8080, which will always return <code>200 OK</code> for the <code>/health</code> route. While this may be fine for the simplest applications where liveness is our only concern, we can do more interesting things in more complex environments.</p>
+              <p>This starts an http server on port 8080, which will always return <code className={style.inlineCode}>200 OK</code> for the <code className={style.inlineCode}>/health</code> route. While this may be fine for the simplest applications where liveness is our only concern, we can do more interesting things in more complex environments.</p>
 
               <h2 id="clustercheck">Cluster Check</h2>
 
@@ -109,7 +109,7 @@ if (cluster.isMaster) {
 
               <h2 id="kardia">Kardia</h2>
 
-              <p>Fortunately there&#8217;s an NPM package that automates most of the health check reporting you&#8217;d want to do from Node, called <a target="_blank" href="https://www.npmjs.com/package/kardia">Kardia</a>. Kardia is designed to work with Node clustering, providing a health check endpoint on the master process that can report on aggregated status for all of its workers, as well as register custom health check logic via the <code>registerHealthcheck</code> function.</p>
+              <p>Fortunately there&#8217;s an NPM package that automates most of the health check reporting you&#8217;d want to do from Node, called <a target="_blank" href="https://www.npmjs.com/package/kardia">Kardia</a>. Kardia is designed to work with Node clustering, providing a health check endpoint on the master process that can report on aggregated status for all of its workers, as well as register custom health check logic via the <code className={style.inlineCode}>registerHealthcheck</code> function.</p>
 
               <Highlight style={{background: '#303030'}}>
                 <Padding>
