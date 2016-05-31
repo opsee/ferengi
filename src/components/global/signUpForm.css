@@ -1,0 +1,9 @@
+.input,
+.button {
+  width: 100%;
+  max-width: 600px;
+  font-family: var(--fontDisplay);
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  padding: 1.5rem;
+}

@@ -10,7 +10,6 @@
   width: 100%;
   max-width: var(--layoutMaxWidth);
   margin: 0 auto;
-  text-align: center;
 }
 
 .heading {

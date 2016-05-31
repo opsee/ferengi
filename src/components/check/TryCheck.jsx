@@ -8,6 +8,9 @@ import URLInput from './URLInput';
 import style from './tryCheck.css';
 import CheckResponseSingle from './CheckResponseSingle';
 import AssertionSelection from './AssertionSelection';
+import {Grid, Row, Col, Padding} from '../layout';
+import {Input, Button} from '../forms';
+import SignUpForm from '../global/SignUpForm';
 import { trackEvent } from '../../modules/analytics';
 import { TRY_CHECK, TRY_CHECK_URL } from '../../constants/analyticsConstants';
 
@@ -27,6 +30,10 @@ const TryCheck = React.createClass({
         })
       })
     })
+  },
+
+  componentDidMount(){
+    this.handleSubmit('https://try.opsee.com');
   },
 
   getInitialState() {
@@ -81,6 +88,10 @@ const TryCheck = React.createClass({
     return true;
   },
 
+  handleSignUp(data) {
+    console.log('TODO sign up!', data);
+  },
+
   renderResponses() {
     const first = this.getFirstResponse(true);
     if (first){
@@ -99,6 +110,12 @@ const TryCheck = React.createClass({
             <AssertionSelection assertions={this.state.assertions} onChange={this.handleAssertionsChange}
               response={this.getFirstResponse()} responseFormatted={this.getFirstResponse(true)}/>
           </form>
+
+          <Padding t={4}>
+            <h2>Get <span className="text-accent">notified</span> when stuff hits the fan</h2>
+            <p>Sign up for Opsee to receive notifications when your health check fails.</p>
+            <SignUpForm buttonText="Notify me" onSubmit={this.handleSignUp} />
+          </Padding>
         </div>
       );
     }
