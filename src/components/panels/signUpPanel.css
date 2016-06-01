@@ -28,41 +28,6 @@
   color: var(--colorGray4);
 }
 
-.prose {
-  color: var(--colorGray4);
-}
-
-.label {
-  composes: prose;
-}
-
-.tos label,
-.tos input {
-  float: left;
-  cursor: pointer;
-}
-
-.tos input {
-  margin-right: 0.5rem;
-}
-
-.input,
-.button {
-  width: 100%;
-  font-family: var(--fontDisplay);
-  text-align: center;
-  font-size: 2rem;
-  line-height: 3.2rem;
-  padding: 2rem 2rem;
-}
-
-.alert {
-  font-family: var(--fontDisplay);
-  color: var(--colorWarm3);
-  text-align: center;
-  font-size: 2rem;
-}
-
 .success {
   font-family: var(--fontDisplay);
   color: var(--colorSuccess);
