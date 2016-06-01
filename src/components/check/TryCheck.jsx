@@ -3,7 +3,8 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import _ from 'lodash';
 
-import * as actions from '../../actions/checks';
+import * as checkActions from '../../actions/checks';
+import * as userActions from '../../actions/user';
 import URLInput from './URLInput';
 import style from './tryCheck.css';
 import CheckResponseSingle from './CheckResponseSingle';
@@ -81,7 +82,7 @@ const TryCheck = React.createClass({
   handleSubmit(url) {
     trackEvent(TRY_CHECK, TRY_CHECK_URL, { url });
     this.setState({ isLoading: true });
-    this.props.actions.checkURL(url);
+    this.props.checkActions.checkURL(url);
   },
 
   handleAssertionsChange(){
@@ -89,7 +90,7 @@ const TryCheck = React.createClass({
   },
 
   handleSignUp(data) {
-    console.log('TODO sign up!', data);
+    this.props.userActions.signup(data);
   },
 
   renderResponses() {
@@ -141,7 +142,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators(actions, dispatch)
+  checkActions: bindActionCreators(checkActions, dispatch),
+  userActions: bindActionCreators(userActions, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TryCheck);
