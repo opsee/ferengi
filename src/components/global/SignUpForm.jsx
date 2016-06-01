@@ -26,9 +26,9 @@ const SignUpForm = React.createClass({
     return {
       checkboxID: _.uniqueId(),
       data: {
-        email: null,
-        name: null,
-        tos: false,
+        email: 'sara@opsee.co',
+        name: 'sara',
+        tos: true,
         referrer: this.getReferrer()
       },
       validationError: null

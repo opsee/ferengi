@@ -40,7 +40,8 @@ const TryCheck = React.createClass({
   getInitialState() {
     return {
       isLoading: false,
-      assertions: []
+      assertions: [],
+      url: null
     };
   },
 
@@ -81,15 +82,20 @@ const TryCheck = React.createClass({
 
   handleSubmit(url) {
     trackEvent(TRY_CHECK, TRY_CHECK_URL, { url });
-    this.setState({ isLoading: true });
+    this.setState({
+      url,
+      isLoading: true
+    });
     this.props.checkActions.checkURL(url);
   },
 
-  handleAssertionsChange(){
-    return true;
+  handleAssertionsChange(assertions){
+    this.setState({ assertions });
   },
 
-  handleSignUp(data) {
+  handleSignUp(signUpData) {
+    const { url, assertions } = this.state;
+    const data = _.assign({ url, assertions}, signUpData);
     this.props.userActions.signup(data);
   },
 
@@ -124,6 +130,8 @@ const TryCheck = React.createClass({
   },
 
   render() {
+    console.log('props', this.props);
+    console.log('state', this.state);
     return (
       <div className={style.container}>
         <URLInput className={this.getInputClass()} handleSubmit={this.handleSubmit}
