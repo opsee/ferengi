@@ -9,29 +9,19 @@ import fetch from '../modules/fetch';
 import yeller from '../modules/yeller';
 
 function setCookie(token) {
-  document.cookie = cookie.serialize('token', token, {
-    // domain: 'opsee.com', // explicitly set domain so it works on app.opsee.com
-    domain: 'localhost',
-    maxAge: 3600 // seconds (6 hours)
-  });
+  // TODO uncomment this to actually set token. This is blocked by the check
+  // that gets created actually getting created. Currently, the check that's returned
+  // is just mock data, the ID of which belongs to the sara@opsee.co account.
+  //
+  // document.cookie = cookie.serialize('token', token, {
+  //   // domain: 'opsee.com', // explicitly set domain so it works on app.opsee.com
+  //   domain: 'localhost',
+  //   maxAge: 3600 // seconds (6 hours)
+  // });
 }
 
 function doSignup(data = {}) {
-  return Promise.resolve({
-    "intercom_hmac": "3d3313f0a210a31d9d623fa474934920968e5b746bad577461f7e4102ff52a9c",
-    "token": "eyJhbGciOiJBMTI4R0NNS1ciLCJlbmMiOiJBMTI4R0NNIiwiaXYiOiJUNTNsXzJaZzgyM2pSX3NtIiwidGFnIjoiRzB5d21SVXRCVnZ0MWhpRXBBbUhKUSJ9.UgyKUUFcEkDp20NTKkOVJg.DvSVPVDS3Li25PTi.6xaxHuXcvsEPZXbMV3kCCJc96J80EOR-NeOTKpW5HO_318LnUkILsjAe7xnPJs2nAq1msqId2Fh2704FksulORv3KBnszsdMrFECjCo-JULFI8Y0KxtcEPY6iiz7GWjZpRHGTzo0wkLGps7o458Ig61eVeD5SAh-5q1X8s6u9qT3sbOdJvNgpfkowAp-y91d8TNPyxR-H1KGiJMWh5Or7zM4-d84l0TR4H-14RuzCb1BJYOfTqvkRZ2qFGiw4gXhqH1BWZtam5s-cvoLEavMLYW4sqfCdSSzOPV0295U4aEU1lba7R2JEUBSPXek7hls9j0NBJD5RR6sOAKYn27osp_zFoO7-So.PE5691FViVNVCyWSBOTnOA",
-    "user": {
-      "id": 308,
-      "customer_id": "2eb2a1de-2807-11e6-ba22-df5a1e83050b",
-      "email": "sara+local9@opsee.co",
-      "name": "sara+local9@opsee.co",
-      "active": true,
-      "created_at": 1464792199470,
-      "updated_at": 1464792199470,
-      "status": "active",
-      "perms": []
-    }
-  });
+  return Promise.resolve({"intercom_hmac":"bf471da9f3e5ce6d291c49a1e51e8b8de570498e1f7227bf48b732fa1c490967","token":"eyJhbGciOiJBMTI4R0NNS1ciLCJlbmMiOiJBMTI4R0NNIiwiaXYiOiJzejRlUGhhTnRCVk1PRzdVIiwidGFnIjoiS3FHamdfUVkybm1lRzFENUZTczUydyJ9.6t3R7w531I0jTthkSUXkSw.tb5-D2R4kiR8BVjL.Jcatcn7R3SWQFMuajmExPADMbg2JBWN-921Mf-WUWEjOvIOd2WIk_Rifn1BJzOzpR3fb1Jnz3DfTLnHZzZSx7qTHeIdpYOKMvG1i2pOicmskO-5HRraDRGe6Jh3rFA4MhYZaVn7vkFixTyhLLC0KZdy-M-KFnZbNejMa5dFfD4kJXvKwjiUh_10pG9KSf58tsXOONCeV3USrNRoGRcxrd62sgaAGXR1SD4LgdqD6vH9LwU5bahSppTU2sbHMY3S621EOIkjxXSHMnhoKkuDZzQf9U9vWFBcQaQZ-SYc0E1PMqtgOsoRSPy44KvtcZAArNWAwPjs9CXBBnfNYQIM6agYDrK0d9v9QoiI.WQor5ei2-D28zbWwRSJdQg","user":{"id":310,"customer_id":"4a9dad90-281a-11e6-ba24-2fbabd57b5f6","email":"sara+local11@opsee.co","name":"sara+local11@opsee.co","active":true,"created_at":1464800406747,"updated_at":1464800406747,"status":"active","perms":[]}});
   // return new Promise((resolve, reject) => {
   //   fetch('https://auth.opsee.com/signups/activate', {
   //     method: 'post',
@@ -144,7 +134,7 @@ export function signup(data) {
       })
       .then(checkResponse => {
         const checkID = _.chain(checkResponse).get('data.checks').first().get('id').value();
-        window.open(`http://localhost:8080/start/review-check?id=${checkID}`);
+        window.open(`http://localhost:8080/activated?id=${checkID}`);
       });
   };
 }
