@@ -9,16 +9,18 @@ import URLInput from './URLInput';
 import style from './tryCheck.css';
 import CheckResponseSingle from './CheckResponseSingle';
 import AssertionSelection from './AssertionSelection';
-import {Grid, Row, Col, Padding} from '../layout';
-import {Input, Button} from '../forms';
+import {Padding} from '../layout';
 import SignUpForm from '../global/SignUpForm';
 import { trackEvent } from '../../modules/analytics';
 import { TRY_CHECK, TRY_CHECK_URL } from '../../constants/analyticsConstants';
 
 const TryCheck = React.createClass({
   propTypes: {
-    actions: PropTypes.shape({
+    checkActions: PropTypes.shape({
       checkURL: PropTypes.func.isRequired
+    }),
+    userActions: PropTypes.shape({
+      signup: PropTypes.func.isRequired
     }),
     redux: PropTypes.shape({
       asyncActions: PropTypes.shape({

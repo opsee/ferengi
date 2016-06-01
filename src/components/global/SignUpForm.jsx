@@ -1,6 +1,5 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
 import _ from 'lodash';
 
 import {Padding} from '../layout';
@@ -15,7 +14,7 @@ const SignUpForm = React.createClass({
       query: PropTypes.shape({
         referrer: PropTypes.string
       })
-    }),
+    })
   },
   getDefaultProps(){
     return {
