@@ -27,7 +27,6 @@ const SignUpForm = React.createClass({
       data: {
         email: 'sara@opsee.co',
         name: 'sara',
-        tos: true,
         referrer: this.getReferrer()
       },
       validationError: null
@@ -41,7 +40,7 @@ const SignUpForm = React.createClass({
     return ref;
   },
   isValid() {
-    return !this.state.data.email || !this.state.data.name || !this.state.data.tos;
+    return !this.state.data.email || !this.state.data.name;
   },
   onChange(e) {
     if (e && e.target){
@@ -71,10 +70,7 @@ const SignUpForm = React.createClass({
         <Padding tb={1}>
           <Input name="email" value={this.state.data.email} placeholder="address@domain.com" className={style.input} onChange={this.onChange} />
         </Padding>
-        <Padding tb={1}>
-          <input name="tos" value={this.state.data.tos} type="checkbox" onChange={this.onChange} id={this.state.checkboxID} required />
-          <label className={style.label} htmlFor={this.state.checkboxID}>I accept the <a href="/beta-tos" target="_blank">Opsee Terms of Service</a></label>
-        </Padding>
+        <p className="small">By proceeding to create your account and use Opsee, you are agreeing to our <a href="/beta-tos">Terms of Service</a>.</p>
         <Padding t={1}>
           <Button type="submit">{this.props.buttonText}</Button>
         </Padding>
