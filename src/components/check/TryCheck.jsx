@@ -130,8 +130,8 @@ const TryCheck = React.createClass({
   },
 
   render() {
-    console.log('props', this.props);
-    console.log('state', this.state);
+    // console.log('props', this.props);
+    // console.log('state', this.state);
     return (
       <div className={style.container}>
         <URLInput className={this.getInputClass()} handleSubmit={this.handleSubmit}

@@ -1,10 +1,20 @@
 /* eslint-disable */
 import _ from 'lodash';
+import cookie from 'cookie';
+
 import { SIGNUP } from './constants';
 import { trackEvent } from '../modules/analytics';
 import { ONBOARD, ONBOARD_SIGNUP } from '../constants/analyticsConstants';
 import fetch from '../modules/fetch';
 import yeller from '../modules/yeller';
+
+function setCookie(token) {
+  document.cookie = cookie.serialize('token', token, {
+    // domain: 'opsee.com', // explicitly set domain so it works on app.opsee.com
+    domain: 'localhost',
+    maxAge: 3600 // seconds (6 hours)
+  });
+}
 
 function doSignup(data = {}) {
   return Promise.resolve({
@@ -49,23 +59,25 @@ function doSignup(data = {}) {
 
 function makeCheck(userData, data) {
   console.log(userData, data);
+  const {user} = userData;
   const {url, assertions} = data;
   return {
-    "target": {
-      "id":"try.opsee.com",
-      "type":"host"
+    'target': {
+      'id': url,
+      'type':"host"
     },
-    "http_check":{
-      "headers":[],
-      "path":"/",
-      "port":443,
-      "protocol":"https",
-      "verb":"GET"
+    'http_check':{
+      'headers':[],
+      'path':"/",
+      'port':443,
+      'protocol':"https",
+      'verb':"GET"
     },
-    "name":"Http try.opsee.com",
-    "notifications": [
-      {"type":"email", "value":"sara@opsee.co"}
-    ],
+    'name': `Http ${url}`,
+    'notifications': [{
+      type: 'email',
+      value: user.email
+    }],
     assertions
   };
 }
@@ -123,6 +135,7 @@ export function signup(data) {
   return dispatch => {
     doSignup(data)
       .then(userData => {
+        setCookie(userData.token);
         dispatch({
           type: SIGNUP,
           payload: userData
@@ -130,7 +143,8 @@ export function signup(data) {
         return createCheck(userData, data);
       })
       .then(checkResponse => {
-        debugger;
+        const checkID = _.chain(checkResponse).get('data.checks').first().get('id').value();
+        window.open(`http://localhost:8080/start/review-check?id=${checkID}`);
       });
   };
 }
