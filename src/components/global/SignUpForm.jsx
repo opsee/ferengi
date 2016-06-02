@@ -18,7 +18,6 @@ const SignUpForm = React.createClass({
       email: undefined,
       referrer: this.getReferrer(),
       name: 'default',
-      tos: false,
       validationError: undefined
     };
   },
@@ -38,19 +37,11 @@ const SignUpForm = React.createClass({
       let state = {
         [e.target.name]: value
       };
-      if (e.target.name === 'tos' && value){
-        state.validationError = undefined;
-      }
       this.setState(state);
     }
   },
   onSubmit(e){
     e.preventDefault();
-    if (!this.state.tos){
-      return this.setState({
-        validationError: 'You must accept the Terms of Service below.'
-      });
-    }
     return this.props.onSubmit(this.state);
   },
   renderAlert(){
@@ -65,23 +56,14 @@ const SignUpForm = React.createClass({
     }
     return null;
   },
-  renderValidationError(){
-    if (this.state.validationError){
-      return (
-        <div className={style.alert}>{this.state.validationError}</div>
-      );
-    }
-    return null;
-  },
   render() {
     return (
       <form onSubmit={this.onSubmit}>
         <Padding t={1} b={1}>
           {this.renderAlert()}
-          {this.renderValidationError()}
         </Padding>
 
-        <Padding t={2} b={1}>
+        <Padding b={1}>
           <Input className={style.input} name="email" placeholder="Your email" value={this.state.email} type="email" onChange={this.onInputChange}/>
         </Padding>
 
@@ -91,12 +73,7 @@ const SignUpForm = React.createClass({
           </Button>
         </Padding>
 
-        <Padding tb={1}>
-          <div className={[style.tos, 'clearfix'].join(' ')}>
-            <input id="js-tos" name="tos" value={this.state.tos} type="checkbox" onChange={this.onInputChange} required/>
-            <label className={style.label} htmlFor="js-tos">I accept the <a href="/beta-tos" target="_blank">Opsee Terms of Service</a></label>
-          </div>
-        </Padding>
+        <p className="small text-center">By proceeding to create your Opsee account, you are agreeing to Opsee's <a href="/beta-tos" target="_blank">Terms of Service</a> and <a href="/privacy">Privacy Policy</a>.</p>
       </form>
     );
   }
