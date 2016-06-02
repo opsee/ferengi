@@ -9,12 +9,13 @@ const URLInput = React.createClass({
     className: PropTypes.string,
     handleSubmit: PropTypes.func.isRequired,
     isLoading: PropTypes.bool,
-    error: PropTypes.object
+    error: PropTypes.object,
+    url: PropTypes.string
   },
 
   getInitialState() {
     return {
-      url: 'https://try.opsee.com'
+      url: this.props.url || null
     };
   },
 
