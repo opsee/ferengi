@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
-import referrer from '../../modules/referrer';
+import { getReferrer } from '../../modules/referrer';
 import Panel from './Panel.jsx';
 import Padding from '../layout/Padding';
 import SignUpForm from '../global/SignUpForm';
@@ -32,7 +32,7 @@ const SignUpPanel = React.createClass({
     return this.props.redux.asyncActions.signup.status;
   },
   getReferrer(){
-    return referrer(this.props.location);
+    return getReferrer(this.props.location);
   },
   onChange(data) {
     this.setState({ data });

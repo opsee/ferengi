@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 
-import referrer from '../../modules/referrer';
+import { getReferrer } from '../../modules/referrer';
 import Input from '../forms/Input';
 import Button from '../forms/Button';
 import Padding from '../layout/Padding';
@@ -23,7 +23,7 @@ const SignUpForm = React.createClass({
     };
   },
   getReferrer(){
-    return referrer(this.props.location);
+    return getReferrer(this.props.location);
   },
   getStatus(){
     return this.props.status;

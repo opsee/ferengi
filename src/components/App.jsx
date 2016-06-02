@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 
-import { referrer, yeller } from '../modules';
-import * as storage from '../modules/storage';
+import { yeller } from '../modules';
+import { setReferrer } from '../modules/referrer';
 import Footer from './Footer.jsx';
 import style from './app.css';
 import Analytics from './global/Analytics';
@@ -18,8 +18,7 @@ const App = React.createClass({
 
   componentWillMount(){
     yeller.configure();
-    const ref = referrer(this.props.router.location);
-    storage.setItem('referrer', ref || document.referrer);
+    setReferrer(this.props.router.location);
   },
 
   render() {
