@@ -36,6 +36,7 @@ const TryCheck = React.createClass({
     })
   },
 
+  // FIXME remove this
   componentDidMount(){
     this.handleSubmit('https://try.opsee.com');
   },
@@ -133,7 +134,6 @@ const TryCheck = React.createClass({
   },
 
   render() {
-    console.log(this.props);
     return (
       <div className={style.container}>
         <URLInput className={this.getInputClass()} handleSubmit={this.handleSubmit}
