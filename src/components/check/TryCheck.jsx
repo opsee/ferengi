@@ -24,7 +24,8 @@ const TryCheck = React.createClass({
     }),
     redux: PropTypes.shape({
       asyncActions: PropTypes.shape({
-        checkUrl: PropTypes.object
+        checkUrl: PropTypes.object,
+        signup: PropTypes.object
       }),
       checks: PropTypes.shape({
         catfish: PropTypes.shape({
@@ -123,7 +124,7 @@ const TryCheck = React.createClass({
           <Padding t={4}>
             <h2>Get <span className="text-accent">notified</span> when stuff hits the fan</h2>
             <p>Sign up for Opsee to receive notifications when your health check fails.</p>
-            <SignUpForm buttonText="Notify me" onSubmit={this.handleSignUp} />
+            <SignUpForm successText="Redirecting you to Opsee..." onSubmit={this.handleSignUp} status={this.props.redux.asyncActions.signup.status} />
           </Padding>
         </div>
       );
@@ -132,8 +133,7 @@ const TryCheck = React.createClass({
   },
 
   render() {
-    // console.log('props', this.props);
-    // console.log('state', this.state);
+    console.log(this.props);
     return (
       <div className={style.container}>
         <URLInput className={this.getInputClass()} handleSubmit={this.handleSubmit}

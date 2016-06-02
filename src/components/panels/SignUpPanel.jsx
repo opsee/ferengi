@@ -17,9 +17,7 @@ const SignUpPanel = React.createClass({
     }),
     redux: PropTypes.shape({
       asyncActions: PropTypes.shape({
-        signup: PropTypes.shape({
-          status: PropTypes.string
-        })
+        signup: PropTypes.object
       })
     })
   },

@@ -120,7 +120,9 @@ function createCheck(userData, data) {
  */
 export function signup(data) {
   return dispatch => {
-    doSignup(data)
+    dispatch({
+      type: SIGNUP,
+      payload: doSignup(data)
       .then(userData => {
         setUser(userData);
         dispatch({
@@ -131,8 +133,10 @@ export function signup(data) {
       })
       .then(checkResponse => {
         const checkID = _.chain(checkResponse).get('data.checks').first().get('id').value();
-        window.open(`http://localhost:8080/activated?id=${checkID}`);
-      });
+
+        window.location = `http://localhost:8080/activated?id=${checkID}`;
+      })
+    })
   };
 }
 
