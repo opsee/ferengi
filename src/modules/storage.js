@@ -8,3 +8,16 @@ export function setItem(keyName, keyValue) {
     }
   }
 }
+
+export function getItem(keyName) {
+  if (typeof window !== 'undefined') {
+    // Use of localStorage using Safari in private mode throws an error
+    try {
+      return window.localStorage.getItem(keyName);
+    } catch (e) {
+      console.warn(e);
+      return ''; // no-op
+    }
+  }
+  return '';
+}

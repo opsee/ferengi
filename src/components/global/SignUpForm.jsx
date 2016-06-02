@@ -2,78 +2,75 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 
-import {Padding} from '../layout';
-import {Input, Button} from '../forms';
+import { getReferrer } from '../../modules/referrer';
+import Input from '../forms/Input';
+import Button from '../forms/Button';
+import Padding from '../layout/Padding';
 import style from './signUpForm.css';
 
 const SignUpForm = React.createClass({
   propTypes: {
     onSubmit: PropTypes.func,
-    buttonText: PropTypes.string,
-    location: PropTypes.shape({
-      query: PropTypes.shape({
-        referrer: PropTypes.string
-      })
-    })
-  },
-  getDefaultProps(){
-    return {
-      buttonText: 'Sign up'
-    };
+    status: PropTypes.string,
+    location: PropTypes.object
   },
   getInitialState() {
     return {
-      checkboxID: _.uniqueId(),
-      data: {
-        email: 'sara@opsee.co',
-        name: 'sara',
-        referrer: this.getReferrer()
-      },
-      validationError: null
+      email: undefined,
+      referrer: this.getReferrer(),
+      name: 'default',
+      validationError: undefined
     };
   },
   getReferrer(){
-    let ref = this.props.location.query.referrer;
-    if (!ref && typeof window !== 'undefined'){
-      ref = window.localStorage.getItem('referrer');
-    }
-    return ref;
+    return getReferrer(this.props.location);
   },
-  isValid() {
-    return !this.state.data.email || !this.state.data.name;
+  getStatus(){
+    return this.props.status;
   },
-  onChange(e) {
+  onInputChange(e){
     if (e && e.target){
       const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
-      const data = _.assign(this.state.data, {
+      let state = {
         [e.target.name]: value
-      });
-      const state = { data };
-      if (e.target.name === 'tos' && value){
-        state.validationError = undefined;
-      }
+      };
       this.setState(state);
     }
   },
-  onSubmit(e) {
+  onSubmit(e){
     e.preventDefault();
-    if (typeof this.props.onSubmit === 'function') {
-      this.props.onSubmit(this.state.data);
-    }
+    return this.props.onSubmit(this.state);
   },
-  render(){
+  renderAlert(){
+    if (this.getStatus() && this.getStatus() !== 'pending'){
+      let msg = 'Something went wrong.';
+      if (typeof this.getStatus() === 'object'){
+        msg = _.get(this.getStatus(), 'message') || msg;
+      }
+      return (
+        <div className={style.alert}>{msg}</div>
+      );
+    }
+    return null;
+  },
+  render() {
     return (
       <form onSubmit={this.onSubmit}>
-        <Padding tb={1}>
-          <Input name="name" value={this.state.data.name} placeholder="Your Name" className={style.input} onChange={this.onChange} />
+        <Padding t={1} b={1}>
+          {this.renderAlert()}
         </Padding>
-        <Padding tb={1}>
-          <Input name="email" value={this.state.data.email} placeholder="address@domain.com" className={style.input} onChange={this.onChange} />
+
+        <Padding b={1}>
+          <Input className={style.input} name="email" placeholder="Your email" value={this.state.email} type="email" onChange={this.onInputChange}/>
         </Padding>
-        <p className="small">By proceeding to create your account and use Opsee, you are agreeing to our <a href="/beta-tos">Terms of Service</a>.</p>
-        <Padding t={1}>
-          <Button type="submit">{this.props.buttonText}</Button>
+
+        <Padding b={1}>
+          <Button className={style.button} type="submit" disabled={this.getStatus() === 'pending'}>
+            {this.getStatus() === 'pending' ? 'Submitting...' : 'Sign up for Opsee'}
+          </Button>
         </Padding>
+
+        <p className="small text-center">By proceeding to create your Opsee account, you are agreeing to Opsee's <a href="/beta-tos" target="_blank">Terms of Service</a> and <a href="/privacy">Privacy Policy</a>.</p>
       </form>
     );
   }
