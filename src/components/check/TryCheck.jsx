@@ -26,7 +26,14 @@ const TryCheck = React.createClass({
           error: PropTypes.object
         })
       })
-    })
+    }),
+    url: PropTypes.string
+  },
+
+  getDefaultProps(){
+    return {
+      url: 'https://try.opsee.com'
+    };
   },
 
   getInitialState() {
@@ -108,7 +115,7 @@ const TryCheck = React.createClass({
   render() {
     return (
       <div className={style.container}>
-        <URLInput className={this.getInputClass()} handleSubmit={this.handleSubmit}
+        <URLInput url={this.props.url} className={this.getInputClass()} handleSubmit={this.handleSubmit}
           error={this.getError()} isLoading={this.isLoading()} />
 
         <div className={style.response}>
