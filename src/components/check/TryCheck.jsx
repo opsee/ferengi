@@ -43,10 +43,10 @@ const TryCheck = React.createClass({
     };
   },
 
-  // FIXME remove this
-  componentDidMount(){
-    this.handleSubmit('https://try.opsee.com');
-  },
+  // // FIXME remove this
+  // componentDidMount(){
+  //   this.handleSubmit('https://try.opsee.com');
+  // },
 
   getInitialState() {
     return {
