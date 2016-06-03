@@ -4,3 +4,4 @@ export const TRY_CHECK_ASSERTION = 'TRY_CHECK_ASSERTION';
 
 export const ONBOARD = 'Onboard';
 export const ONBOARD_SIGNUP = 'signup';
+export const ONBOARD_FERENGI_CHECK = 'ferengi-check-created';

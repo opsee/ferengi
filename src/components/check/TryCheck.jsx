@@ -111,7 +111,7 @@ const TryCheck = React.createClass({
   handleSignUp(signUpData) {
     const { url, assertions } = this.state;
     const data = _.assign({ url, assertions}, signUpData);
-    this.props.userActions.signup(data);
+    this.props.userActions.signupWithCheck(data);
   },
 
   renderResponses() {
@@ -136,7 +136,7 @@ const TryCheck = React.createClass({
           <Padding t={4}>
             <h2>Get <span className="text-accent">notified</span> when stuff hits the fan</h2>
             <p>Sign up for Opsee to receive notifications when your health check fails.</p>
-            <SignUpForm successText="Redirecting you to Opsee..." onSubmit={this.handleSignUp} status={this.props.redux.asyncActions.signup.status} />
+            <SignUpForm successText="Redirecting you to Opsee..." onSubmit={this.handleSignUp} status={this.props.redux.asyncActions.signupWithCheck.status} />
           </Padding>
         </div>
       );
@@ -145,6 +145,7 @@ const TryCheck = React.createClass({
   },
 
   render() {
+    console.log(this.props.redux.asyncActions.signupWithCheck.status);
     return (
       <div className={style.container}>
         <URLInput url={this.props.url} className={this.getInputClass()} handleSubmit={this.handleSubmit}

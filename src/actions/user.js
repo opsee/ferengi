@@ -3,9 +3,9 @@ import _ from 'lodash';
 import cookie from 'cookie';
 import URL from 'url';
 
-import { SIGNUP } from './constants';
+import { SIGNUP, SIGNUP_WITH_CHECK } from './constants';
 import { trackEvent } from '../modules/analytics';
-import { ONBOARD, ONBOARD_SIGNUP } from '../constants/analyticsConstants';
+import { ONBOARD, ONBOARD_SIGNUP, ONBOARD_FERENGI_CHECK } from '../constants/analyticsConstants';
 import fetch from '../modules/fetch';
 import storage from '../modules/storage';
 import yeller from '../modules/yeller';
@@ -16,6 +16,7 @@ function setUser(userData) {
     domain: 'localhost',
     maxAge: 3600 // seconds (6 hours)
   });
+  console.log(document.cookie);
 }
 
 function doSignup(data = {}) {
@@ -30,11 +31,13 @@ function doSignup(data = {}) {
           throw new Error(json.message);
         }).catch(reject);
       }
-
+      return res.json();
+    })
+    .then(userData => {
+      // Persist the temporary cookie so it can be used for Emissary
+      setUser(userData);
       // Track successful signups only
       trackEvent(ONBOARD, ONBOARD_SIGNUP, data);
-
-      return res.json();
     })
     .then(resolve)
     .catch(err => {
@@ -98,8 +101,14 @@ function createCheck(userData, data) {
           throw new Error(json.message);
         }).catch(reject);
       }
-      // TODO trackEvent(..., ..., ...);
       return res.json();
+    })
+    .then(checkResponse => {
+      if (checkResponse.errors.length) {
+        const error = _.first(checkResponse.errors);
+        throw new Error(_.get(error, 'message'));
+      }
+      trackEvent(ONBOARD, ONBOARD_FERENGI_CHECK, data);
     })
     .then(resolve)
     .catch(err => {
@@ -120,8 +129,24 @@ export function signup(data) {
     dispatch({
       type: SIGNUP,
       payload: doSignup(data)
+    });
+  };
+}
+
+/**
+ * @param {object} data
+ * @param {string} data.name
+ * @param {string} data.email
+ * @param {string} data.referrer
+ * @param {string} url
+ * @param {object[]} assertions
+ */
+export function signupWithCheck(data) {
+  return dispatch => {
+    dispatch({
+      type: SIGNUP_WITH_CHECK,
+      payload: doSignup(data)
       .then(userData => {
-        setUser(userData);
         dispatch({
           type: SIGNUP,
           payload: userData
@@ -129,16 +154,13 @@ export function signup(data) {
         return createCheck(userData, data);
       })
       .then(checkResponse => {
-        if (checkResponse.errors.length) {
-          const error = _.first(checkResponse.errors);
-          throw new Error(_.get(error, 'message'));
-        }
         const checkID = _.chain(checkResponse).get('data.checks').first().get('id').value();
         window.location = `http://localhost:8080/activated?id=${checkID}`;
       })
       .catch(err => {
         yeller.report(err);
         console.warn(err);
+        throw err;
       })
     })
   };
