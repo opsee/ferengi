@@ -14,24 +14,12 @@ marketing wabsite
 // Install the dependencies
 npm install
 
-// Build the static site once. Output will be in dist/
-npm run build
-
-// Start up a webpack dev server (with hot reload) for the site
-// at http://localhost:8080. (Note that this does not actually build any static
-// output to dist/.)
-npm run dev
-
-// Run the tests. Everything must lint and build before it can get
-// merged onto master.
-npm run build
+// Start up a webpack dev server (with hot reload) for the site at http://localhost:8081.
+npm run start
 
 // Deploy to staging
 npm run staging
-
-// List all the other cool stuff you can do
-grunt --help
 ```
 
 ### Deploying
-Ferengi's `master` branch is deployed to the production S3 bucket [by CircleCI](https://github.com/opsee/ferengi/blob/master/circle.yml#L4) after successful builds. All you need to do to deploy is to merge your PR into master. 
+Ferengi's `master` branch is deployed to the production S3 bucket [by CircleCI](https://github.com/opsee/ferengi/blob/master/circle.yml#L4) after successful builds. All you need to do to deploy is to merge your PR into master.

@@ -72,7 +72,7 @@ module.exports = function(grunt) {
         inline: true,
         hot: true,
         colors: true,
-        port: 8080
+        port: 8081
       },
       start: {
         keepAlive: true
