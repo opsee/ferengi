@@ -20,12 +20,12 @@ const TryCheck = React.createClass({
       checkURL: PropTypes.func.isRequired
     }),
     userActions: PropTypes.shape({
-      signup: PropTypes.func.isRequired
+      signupWithCheck: PropTypes.func.isRequired
     }),
     redux: PropTypes.shape({
       asyncActions: PropTypes.shape({
         checkUrl: PropTypes.object,
-        signup: PropTypes.object
+        signupWithCheck: PropTypes.object
       }),
       checks: PropTypes.shape({
         catfish: PropTypes.shape({
@@ -145,7 +145,6 @@ const TryCheck = React.createClass({
   },
 
   render() {
-    console.log(this.props.redux.asyncActions.signupWithCheck.status);
     return (
       <div className={style.container}>
         <URLInput url={this.props.url} className={this.getInputClass()} handleSubmit={this.handleSubmit}

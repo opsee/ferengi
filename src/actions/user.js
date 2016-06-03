@@ -1,4 +1,3 @@
-/* eslint-disable */
 import _ from 'lodash';
 import cookie from 'cookie';
 import URL from 'url';
@@ -7,16 +6,14 @@ import { SIGNUP, SIGNUP_WITH_CHECK } from './constants';
 import { trackEvent } from '../modules/analytics';
 import { ONBOARD, ONBOARD_SIGNUP, ONBOARD_FERENGI_CHECK } from '../constants/analyticsConstants';
 import fetch from '../modules/fetch';
-import storage from '../modules/storage';
 import yeller from '../modules/yeller';
 
 function setUser(userData) {
   document.cookie = cookie.serialize('ferengi-token', userData.token, {
     // domain: 'opsee.com', // explicitly set domain so it works on app.opsee.com
-    domain: 'localhost',
+    domain: 'localhost', // FIXME
     maxAge: 3600 // seconds (6 hours)
   });
-  console.log(document.cookie);
 }
 
 function doSignup(data = {}) {
@@ -38,8 +35,8 @@ function doSignup(data = {}) {
       setUser(userData);
       // Track successful signups only
       trackEvent(ONBOARD, ONBOARD_SIGNUP, data);
+      resolve(userData);
     })
-    .then(resolve)
     .catch(err => {
       yeller.report(err);
       reject(err);
@@ -59,12 +56,12 @@ function makeCheck(userData, data) {
       'id': url,
       'type': 'external_host'
     },
-    'http_check':{
-      'headers':[], // Headers always empty from Ferengi
+    'http_check': {
+      'headers': [], // Headers always empty from Ferengi
       'path': _.get(parsedURL, 'pathname', '/'),
       'port': port,
       'protocol': protocol,
-      'verb':"GET" // Always GET from Ferengi
+      'verb': 'GET' // Always GET from Ferengi
     },
     'name': `Http ${_.get(parsedURL, 'hostname', url)}`,
     'notifications': [{
@@ -109,12 +106,12 @@ function createCheck(userData, data) {
         throw new Error(_.get(error, 'message'));
       }
       trackEvent(ONBOARD, ONBOARD_FERENGI_CHECK, data);
+      resolve(checkResponse);
     })
-    .then(resolve)
     .catch(err => {
       yeller.report(err);
       reject(err);
-    })
+    });
   });
 }
 
@@ -162,7 +159,7 @@ export function signupWithCheck(data) {
         console.warn(err);
         throw err;
       })
-    })
+    });
   };
 }
 
