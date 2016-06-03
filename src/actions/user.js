@@ -10,8 +10,10 @@ import yeller from '../modules/yeller';
 
 function setUser(userData) {
   document.cookie = cookie.serialize('ferengi-token', userData.token, {
-    // domain: 'opsee.com', // explicitly set domain so it works on app.opsee.com
-    domain: 'localhost', // FIXME
+    // explicitly set domain so it works on app.opsee.com
+    // IF YOURE RUNNING THIS LOCALLY, CHANGE THIS TO BE 'localhost'
+    // FIXME find a way to do this with config!!!!
+    domain: 'opsee.com',
     maxAge: 3600 // seconds (6 hours)
   });
 }
