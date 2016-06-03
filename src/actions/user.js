@@ -101,7 +101,7 @@ function createCheck(userData, data) {
       return res.json();
     })
     .then(checkResponse => {
-      if (checkResponse.errors.length) {
+      if (!_.isEmpty(checkResponse.errors)) {
         const error = _.first(checkResponse.errors);
         throw new Error(_.get(error, 'message'));
       }
