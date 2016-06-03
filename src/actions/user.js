@@ -1,6 +1,7 @@
 /* eslint-disable */
 import _ from 'lodash';
 import cookie from 'cookie';
+import URL from 'url';
 
 import { SIGNUP } from './constants';
 import { trackEvent } from '../modules/analytics';
@@ -43,23 +44,26 @@ function doSignup(data = {}) {
   });
 }
 
+// FIXME figure out a way to share this code with Emissary
 function makeCheck(userData, data) {
   const {user} = userData;
   const {url, assertions} = data;
+  const parsedURL = URL.parse(url);
+  const protocol = _.get(parsedURL, 'protocol', '').replace(/\:$/, ''); // lib returns protocol as e.g. "https:"
+  const port = parsedURL.port || (protocol === 'https' ? 443 : 80);
   return {
     'target': {
       'id': url,
-      'type':"host"
+      'type': 'external_host'
     },
-    // FIXME use Emissary for this
     'http_check':{
-      'headers':[],
-      'path':"/",
-      'port':443,
-      'protocol':"https",
-      'verb':"GET"
+      'headers':[], // Headers always empty from Ferengi
+      'path': _.get(parsedURL, 'pathname', '/'),
+      'port': port,
+      'protocol': protocol,
+      'verb':"GET" // Always GET from Ferengi
     },
-    'name': `Http ${url}`,
+    'name': `Http ${_.get(parsedURL, 'hostname', url)}`,
     'notifications': [{
       type: 'email',
       value: user.email
