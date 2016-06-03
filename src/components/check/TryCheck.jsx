@@ -51,7 +51,11 @@ const TryCheck = React.createClass({
   getInitialState() {
     return {
       isLoading: false,
-      assertions: [],
+      assertions: [{
+        key: 'code',
+        relationship: 'equal',
+        operand: '200'
+      }],
       url: null
     };
   },
