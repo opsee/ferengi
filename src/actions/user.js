@@ -9,11 +9,12 @@ import fetch from '../modules/fetch';
 import yeller from '../modules/yeller';
 
 function setUser(userData) {
-  // explicitly set domain so it works on app.opsee.com
+  // explicitly set domain so it works in Emissary as well
+  // See: https://tools.ietf.org/html/rfc2109
   const domain = process.env.NODE_ENV === 'development' ? 'localhost' : 'opsee.com';
   document.cookie = cookie.serialize('ferengi-token', userData.token, {
     domain,
-    maxAge: 3600 // seconds (6 hours)
+    maxAge: 3600 // seconds (1 hour)
   });
 }
 
