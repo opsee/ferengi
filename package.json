@@ -6,7 +6,7 @@
     "build": "NODE_ENV='production' ./node_modules/grunt-cli/bin/grunt build",
     "deploy": "./node_modules/grunt-cli/bin/grunt deploy:prod",
     "staging": "./node_modules/grunt-cli/bin/grunt deploy:staging",
-    "start": "NODE_ENV='development' node server.js",
+    "start": "npm run build && NODE_ENV='development' node server.js",
     "stats": "webpack --config webpack/build.config --profile --json > stats.json",
     "test": "NODE_ENV='production' ./node_modules/grunt-cli/bin/grunt build",
     "watch": "./node_modules/grunt-cli/bin/grunt watch"
@@ -66,6 +66,7 @@
     "redux-actions": "^0.9.1",
     "redux-router": "^1.0.0-beta7",
     "redux-thunk": "^1.0.3",
+    "rimraf": "^2.5.2",
     "scroll-behavior": "^0.3.3",
     "seedling": "github:opsee/seedling",
     "serialize-javascript": "^1.2.0",

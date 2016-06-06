@@ -10,16 +10,19 @@ marketing wabsite
 
 ### Developing
 
-```
-// Install the dependencies
+```bash
+# Install the dependencies
 npm install
 
-// Start up a webpack dev server (with hot reload) for the site at http://localhost:8081.
+# Start up a webpack dev server (with hot reload) for the site at http://localhost:8081.
+# (Starting up the server can take a minute, since it needs to build the static files
+# into dist/ AND bundle the client-side files. Subsequent builds are faster.)
 npm run start
 
-// Deploy to staging
+# Deploy to staging
 npm run staging
 ```
+
 
 ### Deploying
 Ferengi's `master` branch is deployed to the production S3 bucket [by CircleCI](https://github.com/opsee/ferengi/blob/master/circle.yml#L4) after successful builds. All you need to do to deploy is to merge your PR into master.
