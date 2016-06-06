@@ -152,12 +152,12 @@ export function signupWithCheck(data) {
         });
         return createCheck(userData, data);
       })
-      .then(checkResponse => {
-        const checkID = _.chain(checkResponse).get('data.checks').first().get('id').value();
+      .then(() => {
         // FIXME put this in config!
         // Uncomment below to use locally
+        // const checkID = _.chain(checkResponse).get('data.checks').first().get('id').value();
         // window.location = `http://localhost:8080/activated?id=${checkID}`;
-        window.location = `https://emissary-staging.in.opsee.com/`;
+        window.location = 'https://emissary-staging.in.opsee.com/';
       })
       .catch(err => {
         yeller.report(err);
