@@ -55,7 +55,7 @@ function makeCheck(userData, data) {
   const port = parsedURL.port || (protocol === 'https' ? 443 : 80);
   return {
     'target': {
-      'id': url,
+      'id': _.get(parsedURL, 'host'),
       'type': 'external_host'
     },
     'http_check': {
