@@ -23,7 +23,8 @@ module.exports = {
   },
   output: {
     filename: 'bundle.js',
-    path: 'dist',
+    path: path.resolve(__dirname, '../dist'),
+    publicPath: '/',
 
    /*
     * Must compile to UMD or CommonJS so it can be required in a Node context
@@ -63,7 +64,7 @@ module.exports = {
         include: INCLUDE_DIRS
       }, {
         test: /\.(png|jpg|svg|gif|ttf|eot|svg|ico|woff(2)?)$/,
-        loader: 'url-loader?limit=8192',
+        loader: 'url-loader', // FIXME add limit?
         include: INCLUDE_DIRS
       }
     ]

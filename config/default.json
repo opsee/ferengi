@@ -10,5 +10,9 @@
       "prod": "opsee-ferengi",
       "staging": "opsee-ferengi-staging0"
     }
+  },
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8081
   }
 }
