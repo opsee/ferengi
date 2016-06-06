@@ -153,11 +153,11 @@ export function signupWithCheck(data) {
         return createCheck(userData, data);
       })
       .then(() => {
-        // FIXME put this in config!
-        // Uncomment below to use locally
-        // const checkID = _.chain(checkResponse).get('data.checks').first().get('id').value();
-        // window.location = `http://localhost:8080/activated?id=${checkID}`;
-        window.location = 'https://emissary-staging.in.opsee.com/';
+        // FIXME better config management. As-is, webpack will strip out
+        // the process.env stuff and replace the line with just a string
+        // (e.g., const location = 'production') but it looks messy!
+        const location = process.env.NODE_ENV === 'production' ? 'https://app.opsee.com/' : 'http://localhost:8080';
+        window.location = location;
       })
       .catch(err => {
         yeller.report(err);
