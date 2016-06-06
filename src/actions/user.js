@@ -9,11 +9,10 @@ import fetch from '../modules/fetch';
 import yeller from '../modules/yeller';
 
 function setUser(userData) {
+  // explicitly set domain so it works on app.opsee.com
+  const domain = process.env.NODE_ENV === 'development' ? 'localhost' : 'opsee.com';
   document.cookie = cookie.serialize('ferengi-token', userData.token, {
-    // explicitly set domain so it works on app.opsee.com
-    // IF YOURE RUNNING THIS LOCALLY, CHANGE THIS TO BE 'localhost'
-    // FIXME find a way to do this with config!!!!
-    domain: 'opsee.com',
+    domain,
     maxAge: 3600 // seconds (6 hours)
   });
 }
