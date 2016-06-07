@@ -5,6 +5,7 @@ import About from './components/pages/About';
 import App from './components/App';
 import BetaTOS from './components/pages/BetaTOS';
 import Features from './components/pages/Features';
+import Pricing from './components/pages/Pricing';
 import How from './components/pages/How';
 import Index from './components/pages/Index';
 import Integrations from './components/pages/Integrations';
@@ -42,6 +43,7 @@ module.exports = (
       <IndexRoute component={Index} />
       <Route path="features" component={Features} />
       <Route path="how" component={How} />
+      <Route path="pricing" component={Pricing} />
       <Route path="about" component={About} />
       <Route path="integrations" component={Integrations} />
       <Route path="privacy" component={PrivacyPolicy} />

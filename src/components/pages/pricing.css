@@ -1,0 +1,38 @@
+.logo {
+  max-width: 320px;
+  margin: 0 auto;
+  padding-right: 2rem;
+}
+
+.awsHeading {
+  max-width: 60px;
+  margin: 0 auto;
+}
+
+.awsHeading h3 {
+  font-family: var(--fontDisplay);
+}
+
+.awsPermalink {
+  visibility: hidden;
+  display: block;
+  margin: 0;
+}
+
+.awsHeading:hover .awsPermalink {
+  visibility: initial;
+}
+
+.prosePanel {
+  padding-left: 2rem;
+}
+
+@media (max-width: 720px) {
+  .prosePanel {
+    padding-left: 0;
+  }
+
+  .logo {
+    padding: 4rem 2rem;
+  }
+}
