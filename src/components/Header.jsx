@@ -31,6 +31,7 @@ module.exports = React.createClass({
             <ul className={style.navLinks}>
               <li><Link to="/features">Features</Link></li>
               <li><Link to="/how">How It Works</Link></li>
+              <li><Link to="/pricing">Pricing</Link></li>
               <li><Link to="/about">About</Link></li>
               <li><Link to="http://blog.opsee.com/" target="_blank">Blog</Link></li>
             </ul>

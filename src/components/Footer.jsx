@@ -9,6 +9,7 @@ export default React.createClass({
         <ul className={style.nav}>
           <li><Link className={style.navLink} to="/features">Features</Link></li>
           <li><Link className={style.navLink} to="/solutions">Solutions</Link></li>
+          <li><Link className={style.navLink} to="/pricing">Pricing</Link></li>
           <li><Link className={style.navLink} to="/how">How It Works</Link></li>
           <li><Link className={style.navLink} to="/about">About</Link></li>
           <li><Link className={style.navLink} to="/integrations">Integrations</Link></li>

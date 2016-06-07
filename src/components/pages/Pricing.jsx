@@ -14,7 +14,7 @@ import ec2SVG from '../images/logos/ec2-01.svg';
 import ecsSVG from '../images/logos/ecs-01.svg';
 import rdsSVG from '../images/logos/rds-01.svg';
 
-import style from './integrations.css';
+import style from './pricing.css';
 
 export default React.createClass({
   render() {
@@ -22,8 +22,8 @@ export default React.createClass({
       <div>
         <StaticHeader>
           <div className="text-center">
-            <h1>Built for <span className="text-accent-static">your stack</span></h1>
-            <h3>Get more out of Opsee with integrations</h3>
+            <h1>It costs less <span className="text-accent-static">than downtime</span></h1>
+            <h3>Coming soon! We&rsquo;re still in free public beta, but here is what you can expect</h3>
           </div>
         </StaticHeader>
 
