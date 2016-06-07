@@ -95,7 +95,7 @@ export default React.createClass({
         <Panel>
           <Row>
             <Col xs={10} xsOffset={1}>
-              <Quote quote="pingdom" />
+              <Quote quote="autodeskChecks" />
             </Col>
           </Row>
         </Panel>

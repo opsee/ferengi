@@ -17,7 +17,7 @@ import notificationsSVG from '../images/product-notifications.svg';
 import awsIntegrationsSVG from '../images/integrations-aws.svg';
 // import passingAssertionsSVG from '../images/passing-assertions.svg';
 import notificationLogosSVG from '../images/notification-logos.svg';
-import securitySVG from '../images/security.svg';
+// import securitySVG from '../images/security.svg';
 import cleanSimpleSVG from '../images/clean-simple.svg';
 import checkEntities from '../images/check-type-entities.svg';
 import checkCloudwatch from '../images/check-type-cloudwatch.svg';
@@ -103,6 +103,16 @@ const Features = React.createClass({
 
           <SkewDivider />
 
+          <Panel>
+            <Row>
+              <Col xs={10} xsOffset={1}>
+                <Quote quote="autochecks" />
+              </Col>
+            </Row>
+          </Panel>
+
+          <SkewDivider />
+
           <SplitContainer className={style.section}>
             <SplitPanel className={style.prosePanel}>
               <Padding tb={1}>
@@ -133,7 +143,7 @@ const Features = React.createClass({
           <Panel>
             <Row>
               <Col xs={10} xsOffset={1}>
-                <Quote quote="autochecks" />
+                <Quote quote="autodeskTeam" />
               </Col>
             </Row>
           </Panel>
