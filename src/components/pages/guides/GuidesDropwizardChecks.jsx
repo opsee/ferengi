@@ -277,7 +277,11 @@ environment.healthChecks().register(check.getName(), check);
 
               <p>An important caveat with using metrics based health checks like this is to work through what might happen with them at scale, especially with regard to load balancers. For instance, suppose the dropwizard health checks are being used to determine load balancer membership. Suppose further that under heavy load a database latency check starts to fail. The load balancer will dutifully remove that instance, compounding the load on the remaining instances. The cascading failure that results can go on for quite some time. Therefore it&#8217;s important to maintain a distinction between health checking for load balancer health and health checking for monitoring. In the latter case it may make more sense to query Dropwizard&#8217;s metrics endpoint at {'http://localhost:8081/metrics'} and use a monitoring system that can parse the resultant JSON for alerting purposes.</p>
 
-              <TryCheck url="http://nameless-castle-75548.herokuapp.com/metrics?pretty=true" />
+              <h2>A Working Example</h2>
+
+              <p>A full working example of a dropwizard metrics endpoint is included below. The try it button will let you make a request against the metrics endpoint and parse out metrics from the response, just like in the Opsee app. Full source for the example app is on <a href="https://github.com/opsee/guides-dropwizard" target="_blank">github</a>.</p>
+
+              <TryCheck url="http://guides-dropwizard.opsee.com/metrics?pretty=true" />
 
                 <Padding t={3}>
                   <BaseSVG className={style.logoGuideFooter} svg={logoDark} />
