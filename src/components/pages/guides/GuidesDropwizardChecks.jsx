@@ -2,6 +2,7 @@ import React from 'react';
 import StaticHeader from '../../panels/StaticHeader';
 import style from './guides.css';
 import Highlight from '../../global/Highlight';
+import TryCheck from '../../check/TryCheck';
 
 import {Col, Padding, Row} from '../../layout';
 import SkewPanel from '../../panels/SkewPanel';
@@ -142,7 +143,6 @@ private static final RatioGauge PUBLISH_STATE_GAUGE = new RatioGauge() {
     }
 };
 
-
 // register a health check
 
 final RatioGaugeHealthCheck check =
@@ -276,6 +276,8 @@ environment.healthChecks().register(check.getName(), check);
                 </Highlight>
 
               <p>An important caveat with using metrics based health checks like this is to work through what might happen with them at scale, especially with regard to load balancers. For instance, suppose the dropwizard health checks are being used to determine load balancer membership. Suppose further that under heavy load a database latency check starts to fail. The load balancer will dutifully remove that instance, compounding the load on the remaining instances. The cascading failure that results can go on for quite some time. Therefore it&#8217;s important to maintain a distinction between health checking for load balancer health and health checking for monitoring. In the latter case it may make more sense to query Dropwizard&#8217;s metrics endpoint at {'http://localhost:8081/metrics'} and use a monitoring system that can parse the resultant JSON for alerting purposes.</p>
+
+              <TryCheck url="http://nameless-castle-75548.herokuapp.com/metrics?pretty=true" />
 
                 <Padding t={3}>
                   <BaseSVG className={style.logoGuideFooter} svg={logoDark} />
