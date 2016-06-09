@@ -40,7 +40,9 @@ export default React.createClass({
               <h3 className={style.pricingTableTHFree}>Free</h3>
               <div className={style.priceFree}>
                 <span className={style.priceDol}>$</span><span className={style.priceNum}>0</span>
-                <div className={style.priceNote}>free<br/>forever</div>
+                <Padding t={1}>
+                  <div className={style.priceNote}>free<br/>forever</div>
+                </Padding>
               </div>
 
               <Padding lr={1}>
@@ -57,7 +59,9 @@ export default React.createClass({
 
               <div className={style.price}>
                 <span className={style.priceDol}>$</span><span className={style.priceNum}>1</span>
-                <div className={style.priceNote}>per check<br/>per month</div>
+                <Padding t={1}>
+                  <div className={style.priceNote}>per check<br/>per month</div>
+                </Padding>
               </div>
 
               <Padding lr={1}>
@@ -73,7 +77,9 @@ export default React.createClass({
 
               <div className={style.price}>
                 <span className={style.priceDol}>$</span><span className={style.priceNum}>5</span>
-                <div className={style.priceNote}>per check<br/>per month</div>
+                <Padding t={1}>
+                  <div className={style.priceNote}>per check<br/>per month</div>
+                </Padding>
               </div>
 
               <Padding lr={1}>
