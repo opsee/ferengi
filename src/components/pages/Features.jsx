@@ -31,7 +31,7 @@ const Features = React.createClass({
       <div>
         <StaticHeader className={style.header}>
           <div className="text-center">
-            <h1 className={style.header}>Uptime and performance monitoring <span className="text-accent-static">made easy</span></h1>
+            <h1 className={style.header}><span className="text-accent-static">Effortless</span> availability and performance monitoring</h1>
             <h3>Be sure your sites & services are responding the way you expect</h3>
           </div>
         </StaticHeader>
@@ -47,7 +47,7 @@ const Features = React.createClass({
               <SplitPanel className={style.imagePanelThirds}>
                 <Padding b={2}><h3 className="text-center">Public & Private URLs</h3></Padding>
                 <BaseSVG svg={checkURL} className={style.screenshotSVG} />
-                <p>Check any public URL or IP. Opsee monitors all DNS entries for a URL automatically. Check private URLs in AWS by adding our instance.</p>
+                <p>Check any public URL or IP. Opsee automatically tracks all DNS entries. Check private URLs in AWS by adding our instance.</p>
               </SplitPanel>
               <SplitPanel className={style.imagePanelThirds}>
                 <Padding b={2}><h3 className="text-center">AWS Services</h3></Padding>
@@ -57,7 +57,7 @@ const Features = React.createClass({
               <SplitPanel className={style.imagePanelThirds}>
                 <Padding b={2}><h3 className="text-center">CloudWatch Metrics</h3></Padding>
                 <BaseSVG svg={checkCloudwatch} className={style.screenshotSVG} />
-                <p>Set thresholds on all of your important CloudWatch metrics. We even create some automatic checks for you.</p>
+                <p>Set thresholds on important CloudWatch metrics, and combine metrics into a single check for fewer alerts. We even create some automatic checks for you.</p>
               </SplitPanel>
             </SplitContainer>
           </div>
@@ -66,11 +66,15 @@ const Features = React.createClass({
 
           <SplitContainer className={style.section}>
             <SplitPanel className={style.prosePanel} >
-              <div className={style.heading}>
+              <Padding b={2}>
                 <h2><span className="text-accent">Global</span> availability and performance checks</h2>
-              </div>
+                <h3>Global coverage of your public sites and APIs. Every check runs from all 6 of our locations around the world, every 30 seconds</h3>
+              </Padding>
 
-              <h3>Global coverage of your public sites and APIs. Every check runs from all 6 of our locations around the world, every 30 seconds</h3>
+              <ul className="prose">
+                <li>Round-trip times measured from all 6 locations</li>
+                <li>All DNS entries for URLs are tracked automatically</li>
+              </ul>
 
               <Padding tb={2}>
                 <Button to="/how" className={style.button} secondary chevron>
@@ -92,11 +96,15 @@ const Features = React.createClass({
             </SplitPanel>
 
             <SplitPanel className={style.prosePanel} >
-              <div className={style.heading}>
+              <Padding b={2}>
                 <h2>Be sure your sites & services respond <span className="text-accent">the way you expect</span></h2>
-              </div>
+                <h3>Verify response headers, bodies, and round-trip times – health is more than a status code.</h3>
+              </Padding>
 
-              <h3>Verify response headers, bodies, and round-trip times – health is more than a status code.</h3>
+              <ul className="prose">
+                <li>Parse the contents of any response - even check individual JSON keys</li>
+                <li>Combine assertions for a more thorough view of health</li>
+              </ul>
 
             </SplitPanel>
           </SplitContainer>
@@ -115,15 +123,15 @@ const Features = React.createClass({
 
           <SplitContainer className={style.section}>
             <SplitPanel className={style.prosePanel}>
-              <Padding tb={1}>
+              <Padding b={1}>
                 <h2>Deep integration with <span className="text-accent">AWS</span></h2>
+                <h3>Just add our instance to your AWS environment. No agents to run or configurations to manage.</h3>
               </Padding>
 
-              <ul>
-                <li><span className="prose">Just add our instance to your AWS environment</span></li>
-                <li><span className="prose">We automatically discover your AWS services and infrastructure</span></li>
-                <li><span className="prose">We create automatic health checks for common services, and help you create checks for everything else</span></li>
-                <li><span className="prose">No agents to run or configurations to manage</span></li>
+              <ul className="prose">
+                <li>We automatically discover your AWS services and infrastructure</li>
+                <li>We create automatic health checks for common services, and help you create checks for everything else</li>
+                <li>CloudWatch integration for your important metrics</li>
               </ul>
 
               <Padding tb={2}>
@@ -143,7 +151,7 @@ const Features = React.createClass({
           <Panel>
             <Row>
               <Col xs={10} xsOffset={1}>
-                <Quote quote="autodeskTeam" />
+                <Quote quote="pingdom" />
               </Col>
             </Row>
           </Panel>
@@ -182,7 +190,7 @@ const Features = React.createClass({
           <Panel className={style.offsetPanel}>
             <Row>
               <Col xs={10} xsOffset={1}>
-                <Quote quote="pingdom" />
+                <Quote quote="autodeskTeam" />
               </Col>
             </Row>
           </Panel>

@@ -47,7 +47,7 @@ export default React.createClass({
                 <a href="/features"><BaseSVG svg={illustChecks} /></a>
               </div>
               <div className={style.colText}>
-                <div>Check the headers, bodies, and round-trip times of your responses – health is more than a status code.</div>
+                <div>Health is more than a status code. Check the headers, bodies, and round-trip times of your responses too.</div>
               </div>
             </div>
 

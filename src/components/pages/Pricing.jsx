@@ -3,16 +3,18 @@ import StaticHeader from '../panels/StaticHeader';
 import Panel from '../panels/Panel';
 import SkewPanel from '../panels/SkewPanel';
 import SignUpPanel from '../panels/SignUpPanel';
-import SkewDivider from '../layout/SkewDivider';
-import { Padding } from '../layout';
-import { Heading, Permalink } from '../type';
-import BaseSVG from '../images/BaseSVG';
-import awsSVG from '../images/logos/aws-01.svg';
-import slackSVG from '../images/logos/slack-01.svg';
-import pagerdutySVG from '../images/logos/pagerduty.svg';
-import ec2SVG from '../images/logos/ec2-01.svg';
-import ecsSVG from '../images/logos/ecs-01.svg';
-import rdsSVG from '../images/logos/rds-01.svg';
+// import SkewDivider from '../layout/SkewDivider';
+import { Padding, Row, Col } from '../layout';
+// import { Heading, Permalink } from '../type';
+// import BaseSVG from '../images/BaseSVG';
+// import infinitySVG from '../images/infinity.svg';
+// import notificationLogosWhiteSVG from '../images/notification-logos-white.svg';
+// import awsSVG from '../images/logos/aws-01.svg';
+// import slackSVG from '../images/logos/slack-01.svg';
+// import pagerdutySVG from '../images/logos/pagerduty.svg';
+// import ec2SVG from '../images/logos/ec2-01.svg';
+// import ecsSVG from '../images/logos/ecs-01.svg';
+// import rdsSVG from '../images/logos/rds-01.svg';
 
 import style from './pricing.css';
 
@@ -22,132 +24,69 @@ export default React.createClass({
       <div>
         <StaticHeader>
           <div className="text-center">
-            <h1>It costs less <span className="text-accent-static">than downtime</span></h1>
-            <h3>Coming soon! We&rsquo;re still in free public beta, but here is what you can expect</h3>
+            <h1>Only pay for <span className="text-accent-static">what you use</span></h1>
+            <h3>Coming soon. We&rsquo;re still in beta, but here is what you can expect</h3>
           </div>
         </StaticHeader>
 
         <Panel>
-          <div className="row">
-            <div className="col center-xs col-xs-12 col-sm-4 col-md-3 first-xs">
-              <div className={style.logo}>
-                <BaseSVG svg={awsSVG} />
+          <Padding b={3} className="text-center">
+            <h2>Free to get started. No credit card required.</h2>
+            <p>Try Opsee for free, for as long as you want, with up to 5 health checks on public URLs or APIs.</p>
+          </Padding>
+
+          <Row>
+            <Col xs={12} sm={4}>
+              <h3 className={style.pricingTableTHFree}>Free</h3>
+              <div className={style.priceFree}>
+                <span className={style.priceDol}>$</span><span className={style.priceNum}>0</span>
+                <div className={style.priceNote}>free<br/>forever</div>
               </div>
-            </div>
 
-            <div className="col col-xs-12 col-sm-8 col-md-9 last-xs">
-              <div className={style.prosePanel}>
-                <div className="text-center-xs">
-                  <Heading permalink="aws" level={2}>Opsee + <span className="text-accent">AWS</span> = &hearts;</Heading>
-                </div>
+              <Padding lr={1}>
+                <h3>Features</h3>
+                <ul className="prose">
+                  <li>Up to 5 Global Checks</li>
+                  <li>5-minute check frequency</li>
+                  <li>Run from 1 of our global locations</li>
+                </ul>
+              </Padding>
+            </Col>
+            <Col xs={12} sm={4}>
+              <h3 className={style.pricingTableTH}>Global Checks</h3>
 
-                <p>With public cloud services like AWS, monitoring can be effortless. Opsee automatically updates health checks on your services and systems, even when your environment scales. You get full coverage of your AWS ecosystem with nothing to maintain.</p>
-                <p>Read more about how Opsee works with AWS on the <a href="https://blog.opsee.com/monitoring-built-for-aws-49c989c6a2c" target="_blank">Opsee blog</a>.</p>
-
-                <Padding tb={2} r={4}>
-                  <Padding tb={1}>
-                    <div className="row">
-                      <div className="col col-xs-4 col-sm-3 text-center">
-                        <div className={style.awsHeading}>
-                          <BaseSVG svg={ec2SVG} />
-                          <Padding tb={1}>
-                            <Heading level={3}>EC2</Heading>
-                            <Permalink link="aws-ec2" className={style.awsPermalink} />
-                          </Padding>
-                        </div>
-                      </div>
-
-                      <div className="col col-xs-8 col-sm-9">
-                        <p className="no-space"><a href="https://aws.amazon.com/ec2/" target="_blank">Amazon Elastic Compute Cloud</a> (Amazon EC2) is a web service that provides resizable compute capacity in the cloud. Opsee supports health checks for Security Groups, Auto Scale Groups, Elastic Load Balancers and individual EC2 instances, and support is available by default as part of our AWS integration.</p>
-                      </div>
-                    </div>
-                  </Padding>
-
-                  <Padding tb={1}>
-                    <div className="row">
-                      <div className="col col-xs-4 col-sm-3 text-center">
-                        <div className={style.awsHeading}>
-                          <BaseSVG svg={rdsSVG} />
-                          <Padding tb={1}>
-                            <Heading level={3}>RDS</Heading>
-                            <Permalink link="aws-rds" className={style.awsPermalink} />
-                          </Padding>
-                        </div>
-                      </div>
-
-                      <div className="col col-xs-8 col-sm-9">
-                        <p className="no-space"><a href="https://aws.amazon.com/rds/" target="_blank">Amazon Relational Database Service</a> (Amazon RDS) makes it easy to set up, operate, and scale a relational database in the cloud. Opsee supports health checks for RDS Database Instances, and support is available by default as part of our AWS integration.</p>
-                      </div>
-                    </div>
-                  </Padding>
-
-                  <Padding tb={1}>
-                    <div id="aws-ecs" className="row">
-                      <div className="col col-xs-4 col-sm-3 text-center">
-                        <div className={style.awsHeading}>
-                          <BaseSVG svg={ecsSVG} />
-                          <Padding tb={1}>
-                            <Heading level={3}>ECS</Heading>
-                            <Permalink link="aws-ecs" className={style.awsPermalink}/>
-                          </Padding>
-                        </div>
-                      </div>
-
-                      <div className="col col-xs-8 col-sm-9">
-                        <p className="no-space"><a href="https://aws.amazon.com/ecs/" target="_blank">Amazon EC2 Container Service</a> (Amazon ECS) is a container management service that lets you run applications from Docker containers on clusters of EC2 instances. Opsee supports health checks for ECS Services, and support is available by default as part of our AWS integration.</p>
-                      </div>
-                    </div>
-                  </Padding>
-                </Padding>
+              <div className={style.price}>
+                <span className={style.priceDol}>$</span><span className={style.priceNum}>1</span>
+                <div className={style.priceNote}>per check<br/>per month</div>
               </div>
-            </div>
-          </div>
-        </Panel>
 
-        <SkewDivider />
+              <Padding lr={1}>
+                <h3>Features</h3>
+                <ul className="prose">
+                  <li>30-second check frequency</li>
+                  <li>Run from all 6 of our global locations</li>
+                </ul>
+              </Padding>
+            </Col>
+            <Col xs={12} sm={4}>
+              <h3 className={style.pricingTableTH}>AWS Checks</h3>
 
-        <Panel>
-          <div className="row">
-            <div className="col center-xs col-xs-12 col-sm-4 col-md-3 first-xs">
-              <div className={style.logo}>
-                <BaseSVG svg={slackSVG} />
+              <div className={style.price}>
+                <span className={style.priceDol}>$</span><span className={style.priceNum}>5</span>
+                <div className={style.priceNote}>per check<br/>per month</div>
               </div>
-            </div>
 
-            <div className="col col-xs-12 col-sm-8 col-md-9 last-xs">
-              <div className={style.prosePanel}>
-                <div className="text-center-xs">
-                  <Heading permalink="slack" level={2}>Rich Notifications with <span className="text-accent">Slack</span></Heading>
-                </div>
-
-                <p><a href="https://slack.com/" target="_blank">Slack</a> is a messaging app for teams. Opsee can send notifications to Slack channels. Just connect Opsee to Slack in your profile, and choose a Slack channel to send notifications to when you create health checks.</p>
-                <p>Read more about setting up your Slack notifications <a href="https://app.opsee.com/docs/notifications" target="_blank">in our docs</a>.</p>
-                </div>
-            </div>
-          </div>
-        </Panel>
-
-        <SkewDivider />
-
-        <Panel>
-          <div className="row">
-            <div className="col center-xs col-xs-12 col-sm-4 col-md-3 first-xs">
-              <div className={style.logo}>
-                <BaseSVG svg={pagerdutySVG} />
-              </div>
-            </div>
-
-            <div className="col col-xs-12 col-sm-8 col-md-9 last-xs">
-              <div className={style.prosePanel}>
-                <div className="text-center-xs">
-                  <Heading permalink="pagerduty" level={2}>Team incident management with <span className="text-accent">Pagerduty</span></Heading>
-                </div>
-
-                <p>With Opsee’s <a href="https://pagerduty.com/" target="_blank">PagerDuty</a> integration it’s even easier to share on-call responsibility with your team and manage incidents together. Health check status can be integrated with the rest of your operational data, so you can leverage your on-call and escalation rules and multi-channel alerts the way you expect.</p>
-                <p>Read more about setting up your Pagerduty notifications <a href="https://app.opsee.com/docs/notifications" target="_blank">in our docs</a>.</p>
-                </div>
-            </div>
-          </div>
+              <Padding lr={1}>
+                <h3>Features</h3>
+                <ul className="prose">
+                  <li>30-second check frequency</li>
+                  <li>Run from <a href="/how">our EC2 Instance</a></li>
+                  <li>Unlimited hosts</li>
+                  <li>CloudWatch integration with unlimited metrics per check</li>
+                </ul>
+              </Padding>
+            </Col>
+          </Row>
         </Panel>
 
         <SkewPanel backgroundColor="#333" skewBottom={false}>
