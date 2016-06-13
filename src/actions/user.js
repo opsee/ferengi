@@ -13,7 +13,8 @@ function setUser(userData) {
   // See: https://tools.ietf.org/html/rfc2109
   const cookieData = JSON.stringify({
     token: userData.token,
-    id: _.get(userData, 'user.id')
+    id: _.get(userData, 'user.id'),
+    email: _.get(userData, 'user.email')
   });
   const opts = {
     domain: process.env.NODE_ENV === 'development' ? 'localhost' : 'opsee.com',
@@ -52,6 +53,7 @@ function doSignup(data = {}) {
       return res.json();
     })
     .then(userData => {
+      // debugger;
       // Persist the temporary cookie so it can be used for Emissary
       setUser(userData);
       // Track successful signups only
