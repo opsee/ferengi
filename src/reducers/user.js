@@ -14,6 +14,8 @@ export default handleActions({
     next(state, action) {
       return _.assign({}, state, action.payload);
     },
-    throw: yeller.reportAction
+    throw(state, action){
+      return yeller.reportAction(state, action);
+    }
   }
 }, initial);
