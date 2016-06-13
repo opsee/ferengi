@@ -30,6 +30,7 @@ function doSignup(data = {}) {
           throw new Error(json.message);
         }).catch(reject);
       }
+      return res.json();
     })
     .then(userData => {
       // Persist the temporary cookie so it can be used for Emissary
