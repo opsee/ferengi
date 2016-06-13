@@ -82,11 +82,11 @@ export default React.createClass({
         <Padding className="text-center" t={2}>
           <h3>Featured Customers</h3>
           <Padding t={2}>
-            <BaseSVG svg={logoAutodesk} className={style.customerLogo} />
-            <BaseSVG svg={logoLivewatch} className={style.customerLogo} />
-            <BaseSVG svg={logoYieldbot} className={style.customerLogo} />
-            <BaseSVG svg={logoAzavea} className={style.customerLogo} />
-            <BaseSVG svg={logoRealself} className={style.customerLogo} />
+            <a target="_blank" href="http://www.autodesk.com/"><BaseSVG svg={logoAutodesk} className={style.customerLogo} /></a>
+            <a target="_blank" href="https://www.livewatch.com"><BaseSVG svg={logoLivewatch} className={style.customerLogo} /></a>
+            <a target="_blank" href="https://www.yieldbot.com/"><BaseSVG svg={logoYieldbot} className={style.customerLogo} /></a>
+            <a target="_blank" href="http://www.azavea.com/"><BaseSVG svg={logoAzavea} className={style.customerLogo} /></a>
+            <a target="_blank" href="https://www.realself.com/"><BaseSVG svg={logoRealself} className={style.customerLogo} /></a>
           </Padding>
         </Padding>
 
