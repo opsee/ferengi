@@ -18,6 +18,21 @@ function setUser(userData) {
   });
 }
 
+function redirectToEmissary() {
+  // FIXME better config management. As-is, webpack will strip out
+  // the process.env stuff and replace the line with just a string
+  // (e.g., const location = 'production') but it looks messy!
+  let location;
+  if (process.env.NODE_ENV === 'development') {
+    location = 'http://localhost:8080';
+  } else if (process.env.NODE_ENV === 'staging') {
+    location = 'https://emissary-staging.in.opsee.com';
+  } else {
+    location = 'https://app.opsee.com';
+  }
+  window.location = location;
+}
+
 function doSignup(data = {}) {
   return new Promise((resolve, reject) => {
     fetch('https://auth.opsee.com/signups/activate', {
@@ -92,6 +107,8 @@ function createCheck(userData, data) {
 }
 
 /**
+ * Signs up without a check
+ *
  * @param {object} data
  * @param {string} data.name
  * @param {string} data.email
@@ -102,11 +119,17 @@ export function signup(data) {
     dispatch({
       type: SIGNUP,
       payload: doSignup(data)
+        .then(() => {
+          return redirectToEmissary();
+        })
     });
   };
 }
 
 /**
+ * Signs up with a check. This is its own action/dispatch so that it's easier
+ * to track XHR state as a whole.
+ *
  * @param {object} data
  * @param {string} data.name
  * @param {string} data.email
@@ -127,18 +150,7 @@ export function signupWithCheck(data) {
         return createCheck(userData, data);
       })
       .then(() => {
-        // FIXME better config management. As-is, webpack will strip out
-        // the process.env stuff and replace the line with just a string
-        // (e.g., const location = 'production') but it looks messy!
-        let location;
-        if (process.env.NODE_ENV === 'development') {
-          location = 'https://app.opsee.com';
-        } else if (process.env.NODE_ENV === 'staging') {
-          location = 'https://emissary-staging.in.opsee.com';
-        } else {
-          location = 'http://localhost:8080';
-        }
-        window.location = location;
+        return redirectToEmissary();
       })
       .catch(err => {
         yeller.report(err);
