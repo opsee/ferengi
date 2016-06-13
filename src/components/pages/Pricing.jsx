@@ -3,12 +3,13 @@ import StaticHeader from '../panels/StaticHeader';
 import Panel from '../panels/Panel';
 import SkewPanel from '../panels/SkewPanel';
 import SignUpPanel from '../panels/SignUpPanel';
-// import SkewDivider from '../layout/SkewDivider';
+import SkewDivider from '../layout/SkewDivider';
 import { Padding, Row, Col } from '../layout';
 // import { Heading, Permalink } from '../type';
-// import BaseSVG from '../images/BaseSVG';
-// import infinitySVG from '../images/infinity.svg';
-// import notificationLogosWhiteSVG from '../images/notification-logos-white.svg';
+import BaseSVG from '../images/BaseSVG';
+import infinitySVG from '../images/infinity.svg';
+import latencySVG from '../images/latency.svg';
+import notificationLogosWhiteSVG from '../images/notification-logos-white.svg';
 // import awsSVG from '../images/logos/aws-01.svg';
 // import slackSVG from '../images/logos/slack-01.svg';
 // import pagerdutySVG from '../images/logos/pagerduty.svg';
@@ -45,7 +46,7 @@ export default React.createClass({
                 </Padding>
               </div>
 
-              <Padding lr={1}>
+              <Padding lr={1} b={2}>
                 <h3>Features</h3>
                 <ul className="prose">
                   <li>Up to 5 Global Checks</li>
@@ -64,7 +65,7 @@ export default React.createClass({
                 </Padding>
               </div>
 
-              <Padding lr={1}>
+              <Padding lr={1} b={2}>
                 <h3>Features</h3>
                 <ul className="prose">
                   <li>30-second check frequency</li>
@@ -82,7 +83,7 @@ export default React.createClass({
                 </Padding>
               </div>
 
-              <Padding lr={1}>
+              <Padding lr={1} b={2}>
                 <h3>Features</h3>
                 <ul className="prose">
                   <li>30-second check frequency</li>
@@ -91,6 +92,58 @@ export default React.createClass({
                   <li>CloudWatch integration with unlimited metrics per check</li>
                 </ul>
               </Padding>
+            </Col>
+          </Row>
+        </Panel>
+
+        <SkewDivider />
+
+        <Panel>
+          <Padding b={2} className="text-center">
+            <h2>Powerful features <span className="text-accent">for everyone</span></h2>
+            <h3>The best parts of Opsee are available to everyone.</h3>
+          </Padding>
+
+          <Row className="text-center">
+            <Col xs={6} sm={2}>
+              <div className={style.freeFeature}>
+                <BaseSVG svg={infinitySVG} className={style.freeSVG} />
+                <span>Unlimited<br/>Assertions</span>
+              </div>
+            </Col>
+            <Col xs={6} sm={2}>
+              <div className={style.freeFeature}>
+                <BaseSVG svg={notificationLogosWhiteSVG} className={style.freeSVG} />
+                <span>Rich<br/>Notifications</span>
+              </div>
+            </Col>
+            <Col xs={6} sm={2}>
+              <div className={style.freeFeature}>
+                <BaseSVG svg={latencySVG} className={style.freeSVG} />
+                <span>Latency<br/>Measurement</span>
+              </div>
+            </Col>
+          </Row>
+        </Panel>
+
+        <SkewDivider />
+
+        <Panel>
+          <Padding b={2} className="text-center">
+            <h2>Frequently Asked <span className="text-accent">Questions</span></h2>
+          </Padding>
+
+          <Row>
+            <Col sm={6}>
+              <p><strong>How do AWS checks work?</strong></p>
+              <p>The most important thing to know is that we don&rsquo;t count instances/hosts. When you target a check at a Security Group, for example, we track and check all of its instances automatically, whether there are 2 or 200</p>
+
+              <p><strong>How am I billed for checks?</strong></p>
+              <p>A check does not count unless it has been running for at least a week.</p>
+            </Col>
+            <Col sm={6}>
+              <p><strong>How do CloudWatch checks work?</strong></p>
+              <p>We capture the available metrics from CloudWatch and let you create checks for multiple metrics for a given target. So if you have a RDS Database Instance and want to track CPU utilization, free memory, and database connections, you can add all of those metrics to a single check. In fact, we will create that check for you automatically, for each RDS DB instance we detect, when you add our instance.</p>
             </Col>
           </Row>
         </Panel>

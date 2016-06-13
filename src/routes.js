@@ -49,6 +49,7 @@ module.exports = (
       <Route path="privacy" component={PrivacyPolicy} />
       <Route path="terms-of-use" component={TermsOfUse} />
       <Route path="beta-tos" component={BetaTOS} />
+      <Route path="pingdom-alternative" component={TryPingdom} />
 
     { /* Guides */ }
       <Route path="guides" component={Guides} />
