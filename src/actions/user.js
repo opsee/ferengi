@@ -53,7 +53,6 @@ function doSignup(data = {}) {
       return res.json();
     })
     .then(userData => {
-      // debugger;
       // Persist the temporary cookie so it can be used for Emissary
       setUser(userData);
       // Track successful signups only
