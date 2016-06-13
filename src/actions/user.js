@@ -130,7 +130,14 @@ export function signupWithCheck(data) {
         // FIXME better config management. As-is, webpack will strip out
         // the process.env stuff and replace the line with just a string
         // (e.g., const location = 'production') but it looks messy!
-        const location = process.env.NODE_ENV === 'development' ? 'http://localhost:8080' : 'https://app.opsee.com/';
+        let location;
+        if (process.env.NODE_ENV === 'development') {
+          location = 'https://app.opsee.com';
+        } else if (process.env.NODE_ENV === 'staging') {
+          location = 'https://emissary-staging.in.opsee.com';
+        } else {
+          location = 'http://localhost:8080';
+        }
         window.location = location;
       })
       .catch(err => {

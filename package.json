@@ -6,7 +6,7 @@
     "build": "NODE_ENV='production' ./node_modules/grunt-cli/bin/grunt build",
     "deploy": "./node_modules/grunt-cli/bin/grunt deploy:prod",
     "stage": "npm run staging",
-    "staging": "NODE_ENV=production ./node_modules/grunt-cli/bin/grunt deploy:staging",
+    "staging": "NODE_ENV=staging ./node_modules/grunt-cli/bin/grunt deploy:staging",
     "start": "NODE_ENV=development ./node_modules/grunt-cli/bin/grunt dev",
     "stats": "webpack --config webpack/build.config --profile --json > stats.json",
     "test": "NODE_ENV='production' ./node_modules/grunt-cli/bin/grunt build",
