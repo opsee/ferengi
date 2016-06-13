@@ -19,7 +19,12 @@ export function makeCheck(url, email, assertions) {
   const parsedURL = URL.parse(url);
   const protocol = _.get(parsedURL, 'protocol', '').replace(/\:$/, ''); // lib returns protocol as e.g. "https:"
   const port = parsedURL.port || (protocol === 'https' ? 443 : 80);
-  return {
+
+  const formattedAssertions = _.filter(assertions, assertion => {
+    return assertion.key && assertion.operand && assertion.relationship;
+  });
+
+  const check = {
     'target': {
       'id': _.get(parsedURL, 'host'),
       'type': 'external_host'
@@ -36,6 +41,7 @@ export function makeCheck(url, email, assertions) {
       type: 'email',
       value: email
     }],
-    assertions
+    assertions: formattedAssertions
   };
+  return check;
 }
