@@ -149,10 +149,13 @@ const AssertionsSelection = React.createClass({
     });
   },
 
-  getJsonPlaceholder(){
-    const keys = this.getJsonBodyKeys();
-    const last = _.chain(keys).sortBy(keys, k => k.length).last().value();
-    return last || 'animals.dogs[0].breed';
+  getJsonPlaceholder(assertionIndex){
+    if (!_.get(this.state.assertions, `[${assertionIndex}].value`)){
+      const keys = this.getJsonBodyKeys();
+      const last = _.chain(keys).sortBy(keys, k => k.length).last().value();
+      return last || 'animals.dogs[0].breed';
+    }
+    return null;
   },
 
   getFinalAssertions(assertions = this.state.assertions){
@@ -541,7 +544,7 @@ const AssertionsSelection = React.createClass({
               <label className="label" htmlFor={`json-path-${assertionIndex}`}>JSON path (optional) <a target="_blank" href="https://app.opsee.com/docs/checks">Learn More</a></label>
 
               <div className={style.autosuggest}>
-                <Autosuggest suggestions={this.getFilteredJsonBodyKeys(assertionIndex)} inputProps={{onChange: this.handleJsonSuggestionSelect.bind(null, assertionIndex), value: assertion.value || '', placeholder: this.getJsonPlaceholder(), id: `json-path-${assertionIndex}`}} renderSuggestion={this.renderSuggestion} getSuggestionValue={(s) => s} style={{width: '100%'}} shouldRenderSuggestions={() => true}/>
+                <Autosuggest suggestions={this.getFilteredJsonBodyKeys(assertionIndex)} inputProps={{onChange: this.handleJsonSuggestionSelect.bind(null, assertionIndex), value: assertion.value || '', placeholder: this.getJsonPlaceholder(assertionIndex), id: `json-path-${assertionIndex}`}} renderSuggestion={this.renderSuggestion} getSuggestionValue={(s) => s} style={{width: '100%'}} shouldRenderSuggestions={() => true}/>
               </div>
             </div>
           </div>
