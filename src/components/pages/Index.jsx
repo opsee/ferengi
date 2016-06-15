@@ -4,7 +4,6 @@ import Header from '../Header';
 import SkewPanel from '../panels/SkewPanel';
 import HeroPanel from '../panels/HeroPanel';
 import SignUpPanel from '../panels/SignUpPanel';
-// import SummaryPanels from '../panels/SummaryPanels';
 import { Padding, Row, Col } from '../layout';
 import Button from '../forms/Button';
 import SkewDivider from '../layout/SkewDivider';
@@ -12,9 +11,7 @@ import Quote from '../global/Quote';
 import Panel from '../panels/Panel';
 
 import BaseSVG from '../images/BaseSVG';
-// import illustAWSKey from '../images/illust_aws_key-01.svg';
 import locMap from '../images/location-map.svg';
-// import illustBrowser from '../images/illust_browsers-01.svg';
 import illustAWS from '../images/illust_aws-01.svg';
 import illustChecks from '../images/illust_checks-01.svg';
 import logoAutodesk from '../images/logos/logo-autodesk.svg';
@@ -79,16 +76,30 @@ export default React.createClass({
 
         <SkewDivider />
 
-        <Padding className="text-center" t={2}>
-          <h3>Featured Customers</h3>
-          <Padding t={2}>
-            <a target="_blank" href="http://www.autodesk.com/"><BaseSVG svg={logoAutodesk} className={style.customerLogo} /></a>
-            <a target="_blank" href="https://www.livewatch.com"><BaseSVG svg={logoLivewatch} className={style.customerLogo} /></a>
-            <a target="_blank" href="https://www.yieldbot.com/"><BaseSVG svg={logoYieldbot} className={style.customerLogo} /></a>
-            <a target="_blank" href="http://www.azavea.com/"><BaseSVG svg={logoAzavea} className={style.customerLogo} /></a>
-            <a target="_blank" href="https://www.realself.com/"><BaseSVG svg={logoRealself} className={style.customerLogo} /></a>
+        <div className="text-center">
+          <Padding tb={2}>
+            <h3>Featured Customers</h3>
           </Padding>
-        </Padding>
+          <Padding tb={2}>
+            <div className="flex-vertical-align justify-content-center flex-wrap">
+              <Padding a={1}>
+                <a target="_blank" href="http://www.autodesk.com/"><BaseSVG svg={logoAutodesk} className={style.customerLogo} /></a>
+              </Padding>
+              <Padding a={1}>
+                <a target="_blank" href="https://www.livewatch.com"><BaseSVG svg={logoLivewatch} className={style.customerLogo} /></a>
+              </Padding>
+              <Padding a={1}>
+                <a target="_blank" href="https://www.yieldbot.com/"><BaseSVG svg={logoYieldbot} className={style.customerLogo} /></a>
+              </Padding>
+              <Padding a={1}>
+                <a target="_blank" href="http://www.azavea.com/"><BaseSVG svg={logoAzavea} className={style.customerLogo} /></a>
+              </Padding>
+              <Padding a={1}>
+                <a target="_blank" href="https://www.realself.com/"><BaseSVG svg={logoRealself} className={style.customerLogo} /></a>
+              </Padding>
+            </div>
+          </Padding>
+        </div>
 
         <SkewDivider />
 
