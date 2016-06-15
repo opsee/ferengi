@@ -25,10 +25,6 @@ module.exports = {
       title: 'Opsee / How It Works'
     },
 
-    '/pricing': {
-      title: 'Opsee / Pricing'
-    },
-
     '/integrations': {
       title: 'Opsee / Integrations'
     },

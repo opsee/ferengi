@@ -59,7 +59,6 @@ export default React.createClass({
         <ul className={style.nav}>
           <li><Link to="https://app.opsee.com/create" target="_blank">Sign up</Link></li>
           <li><Link to="https://app.opsee.com/login" target="_blank">Log in</Link></li>
-          <li><Link to="/pricing">Pricing</Link></li>
           <li><Link to="/about">About Opsee</Link></li>
           <li><Link to="https://opsee.statuspage.io" target="_blank">System Status</Link></li>
         </ul>
