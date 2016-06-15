@@ -27,6 +27,7 @@ const TryCheck = React.createClass({
         })
       })
     }),
+    children: PropTypes.node,
     url: PropTypes.string
   },
 
@@ -97,10 +98,7 @@ const TryCheck = React.createClass({
             <CheckResponseSingle {...first}/>
           </div>
 
-          <div className={style.prose}>
-            <h2>Health checks are <span className="text-accent">more</span> than just a status code</h2>
-            <p>Lots of webservers will happily return a status code of 200 even if the underlying service is broken or misconfigured. Assertions let you dig deep into the health check response to ensure that everything is working exactly how you expect. Pull out headers and parse some JSON. Go on, it's fun.</p>
-          </div>
+          {this.props.children}
 
           <form ref="form">
             <AssertionSelection assertions={this.state.assertions} onChange={this.handleAssertionsChange}
