@@ -47,7 +47,7 @@ export default React.createClass({
                 <a href="/features"><BaseSVG svg={illustChecks} /></a>
               </div>
               <div className={style.colText}>
-                <div>Health is more than a status code. Check the headers, bodies, and round-trip times of your responses too.</div>
+                <p>Health is more than a status code. Check the headers, bodies, and round-trip times of your responses too.</p>
               </div>
             </div>
 
@@ -56,7 +56,7 @@ export default React.createClass({
                 <a href="/features"><BaseSVG svg={locMap} /></a>
               </div>
               <div className={style.colText}>
-                <div>Global coverage of your sites and APIs. Every check runs from all 6 of our locations around the world, every 30 seconds, with nothing to install.</div>
+                <p>Global coverage of your sites and APIs. Every check runs from all 6 of our locations around the world, every 30 seconds, with nothing to install.</p>
               </div>
             </div>
 
@@ -65,7 +65,7 @@ export default React.createClass({
                 <a href="/features"><BaseSVG svg={illustAWS} /></a>
               </div>
               <div className={style.colText}>
-                <div>Complete AWS coverage when you add our EC2 instance to your environment. Check your services and CloudWatch metrics with no agents to run.</div>
+                <p>Complete AWS coverage when you add our EC2 instance to your environment. Check your services and CloudWatch metrics with no agents to run.</p>
               </div>
             </div>
           </div>
