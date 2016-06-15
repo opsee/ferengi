@@ -62,6 +62,8 @@
 a.cta,
 a.cta:hover {
   color: white !important;
+  border-style: solid;
+  border-width: 1px;
 }
 
 @media (max-width: 820px) {
@@ -87,7 +89,7 @@ a.cta:hover {
 .light a.cta {
   color: white;
   background-color: transparent;
-  border: solid 1px white;
+  border-color: white;
 }
 
 .light a.cta:hover {
