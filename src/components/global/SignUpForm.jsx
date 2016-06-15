@@ -27,7 +27,6 @@ const SignUpForm = React.createClass({
   getInitialState() {
     return {
       data: {
-        name: null,
         email: null,
         referrer: this.getReferrer()
       },
@@ -41,13 +40,8 @@ const SignUpForm = React.createClass({
     return this.props.status;
   },
   getErrorMessage(){
-    const {email, name} = this.state.data;
-    if (!email && !name) {
-      return 'Name and email address are required';
-    } else if (!email) {
+    if (!this.state.data.email) {
       return 'Email address is required';
-    } else if (!name) {
-      return 'Name is required';
     }
     return null;
   },
@@ -108,10 +102,6 @@ const SignUpForm = React.createClass({
       <form onSubmit={this.onSubmit}>
         <Padding t={1} b={1}>
           {this.renderAlert()}
-        </Padding>
-
-        <Padding b={1}>
-          <Input className={style.input} name="name" placeholder="Your Name" value={this.state.data.name} type="text" onChange={this.onInputChange}/>
         </Padding>
 
         <Padding b={1}>

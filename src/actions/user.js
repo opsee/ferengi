@@ -42,7 +42,7 @@ function doSignup(data = {}) {
   return new Promise((resolve, reject) => {
     fetch('https://auth.opsee.com/signups/activate', {
       method: 'post',
-      body: JSON.stringify(_.pick(data, ['email', 'referrer', 'name']))
+      body: JSON.stringify(_.pick(data, ['email', 'referrer']))
     })
     .then(res => {
       if (!res.ok){
