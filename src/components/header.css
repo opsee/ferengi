@@ -34,7 +34,7 @@
 }
 
 .links li a {
-  padding: 1.6rem 0.6rem;
+  padding: 0.2rem 0.6rem;
 }
 
 .links li a:hover {
@@ -53,6 +53,10 @@
 
 .navLinks {
   composes: links;
+}
+
+.activeLink {
+  border-bottom: solid 1px white;
 }
 
 a.cta,
