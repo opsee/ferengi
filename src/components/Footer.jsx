@@ -27,7 +27,7 @@ export default React.createClass({
   renderLearnLinks(){
     return (
       <div>
-        <div className={style.category}>Learn</div>
+        <div className={style.category}>Guides</div>
         <ul className={style.nav}>
           <li><Link to="/guides/nodechecks">node.js</Link></li>
           <li><Link to="/guides/nodechecks">Go</Link></li>
