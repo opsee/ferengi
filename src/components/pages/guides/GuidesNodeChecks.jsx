@@ -2,6 +2,7 @@ import React from 'react';
 import StaticHeader from '../../panels/StaticHeader';
 import style from './guides.css';
 import Highlight from '../../global/Highlight';
+import TryCheck from '../../check/TryCheck';
 
 import {Col, Padding, Row} from '../../layout';
 import SkewPanel from '../../panels/SkewPanel';
@@ -139,6 +140,12 @@ if (cluster.isMaster) {
               </Highlight>
 
               <p>Kardia has a ton more functionality than that, including event stacks, counters, and throughput. It can also integrate with Consul, fluentd and even aggregate statistics across more than one host. Overkill for many use cases, however getting started with it is still fairly easy.</p>
+
+              <h2>A Working Example</h2>
+
+              <p>A full working example of a node metrics endpoint is included below. The try it button will let you make a request against the metrics endpoint and parse out metrics from the response, just like in the Opsee app. Full source for the example app is on <a href="https://github.com/opsee/guides-nodejs" target="_blank">github</a>.</p>
+
+              <TryCheck url="http://guides-nodejs.opsee.com/" />
 
               <Padding t={3}>
                 <BaseSVG className={style.logoGuideFooter} svg={logoDark} />
