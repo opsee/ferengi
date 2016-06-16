@@ -78,7 +78,7 @@
   display: inline-block;
   font-size: 1.75rem;
   margin-left: -1px;
-  min-width: 200px;
+  width: 200px;
   overflow: visible;
   position: relative;
   vertical-align: middle;
