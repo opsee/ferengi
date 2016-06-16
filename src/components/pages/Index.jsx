@@ -40,6 +40,7 @@ export default React.createClass({
         <Padding t={2} lr={2}>
           <div className={style.grid}>
             <div className={style.col}>
+              <h3 className="text-center">Rich assertions</h3>
               <div className={style.colSVG}>
                 <a href="/features"><BaseSVG svg={illustChecks} /></a>
               </div>
@@ -49,20 +50,22 @@ export default React.createClass({
             </div>
 
             <div className={style.col}>
+              <h3 className="text-center">Global Coverage</h3>
               <div className={style.colSVG}>
                 <a href="/features"><BaseSVG svg={locMap} /></a>
               </div>
               <div className={style.colText}>
-                <p>Global coverage of your sites and APIs. Every check runs from all 6 of our locations around the world, every 30 seconds, with nothing to install.</p>
+                <p>Every check runs from all 6 of our locations around the world, every 30 seconds</p>
               </div>
             </div>
 
             <div className={style.col}>
+              <h3 className="text-center">AWS Coverage</h3>
               <div className={style.colSVG}>
                 <a href="/features"><BaseSVG svg={illustAWS} /></a>
               </div>
               <div className={style.colText}>
-                <p>Complete AWS coverage when you add our EC2 instance to your environment. Check your services and CloudWatch metrics with no agents to run.</p>
+                <p>Just add our EC2 instance to your environment. We&rsquo;ll check your services and CloudWatch metrics with no agents to run.</p>
               </div>
             </div>
           </div>
