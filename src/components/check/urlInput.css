@@ -5,3 +5,42 @@
   font-size: 2rem;
   padding: 2rem;
 }
+
+.input {
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+
+  border: solid 1px var(--colorGray4);
+
+  font-size: 2rem;
+
+  box-sizing: border-box;
+  /*height: 7rem;*/
+
+  font-family: var(--fontDisplay) !important;
+  letter-spacing: 0.65px;
+  padding: 1.5rem 2rem;
+  width: 100%;
+
+  /* @see http://stackoverflow.com/questions/23211656/remove-ios-input-shadow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.inputPending {
+  composes: input;
+  border-color: var(--colorPrimary);
+}
+
+.inputSuccess {
+  composes: input;
+  border-color: var(--colorSuccess);
+}
+
+.inputError {
+  composes: input;
+  border-color: red;
+}

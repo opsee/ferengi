@@ -43,7 +43,7 @@ li {
 
 textarea:focus, input:focus{
   outline: none;
-  border: solid 1px var(--colorAccent);
+  /*border: solid 1px var(--colorAccent);*/
 }
 
 /* Link styling */
