@@ -7,12 +7,17 @@
 }
 
 .input,
+.button,
+.buttonWrapper {
+  width: 100%;
+}
+
+.input,
 .button {
   border-radius: 2px;
   font-family: var(--fontDisplay);
   line-height: 2.4rem;
   padding: 2rem 2.4rem;
-  width: 100%;
 }
 
 .input {
@@ -50,10 +55,21 @@
   background-color: var(--colorAccent);
   border: solid 1px var(--colorAccent);
   font-size: 1.75rem;
-  width: 200px;
   overflow: visible;
   vertical-align: middle;
   white-space: nowrap;
+}
+
+@media (max-width: 769px) {
+  .input {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .button {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
 }
 
 @media (min-width: 769px) {
@@ -90,6 +106,6 @@
     display: inline-block;
     margin-left: -1px;
     position: relative;
-    width: auto;
+    width: 200px;
   }
 }

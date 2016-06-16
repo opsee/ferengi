@@ -66,3 +66,7 @@ a:focus {
 input, button {
   border-radius: 0;
 }
+
+button {
+  cursor: pointer;
+}
