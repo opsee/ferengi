@@ -2,8 +2,9 @@ import _ from 'lodash';
 import React, { PropTypes } from 'react';
 import {connect} from 'react-redux';
 import validUrl from 'valid-url';
-import {plain as seed} from 'seedling';
 
+import Button from '../forms/Button';
+import LoadingDots from '../loaders/LoadingDots';
 import style from './urlInput.css';
 
 const URLInput = React.createClass({
@@ -11,8 +12,19 @@ const URLInput = React.createClass({
     className: PropTypes.string,
     handleSubmit: PropTypes.func.isRequired,
     isLoading: PropTypes.bool,
+    status: PropTypes.oneOf([null, 'pending', 'success', 'error']),
     error: PropTypes.object,
     url: PropTypes.string
+  },
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({ inputState: nextProps.status });
+  },
+
+  getDefaultProps() {
+    return {
+      placeholder: 'https://try.opsee.com'
+    };
   },
 
   getInitialState() {
@@ -26,49 +38,68 @@ const URLInput = React.createClass({
 
   getInputClass(){
     const styleName = `input${_.capitalize(this.state.inputState)}`;
-    console.log(styleName);
-    console.log(style);
     return style[styleName];
   },
 
+
   handleChange(e) {
-    this.setState({ url: e.target.value, inputState: 'pending' });
-    this.state.debouncedSubmit();
+    const url = e.target.value;
+    this.setState({
+      url,
+      inputState: url ? 'pending' : null
+    });
+    this.state.debouncedSubmit(url);
   },
 
-  handleSubmit(e) {
+  handleSubmit(url) {
+    if (validUrl.isWebUri(url)) {
+      this.props.handleSubmit(url);
+    } else {
+      const inputState = url ? 'error' : null;
+      this.setState({ inputState });
+    }
+  },
+
+  handleFormSubmit(e) {
     if (e) {
       e.preventDefault();
     }
-
-    const url = this.state.url;
-    if (validUrl.isWebUri(url)) {
-      console.log(`VALID ${url}`)
-      this.props.handleSubmit(this.state.url);
-    } else {
-      this.setState({ inputState: 'error' });
-      console.log(`INVALID ${url}`)
-    }
+    const url = this.props.placeholder;
+    this.setState({ url });
+    this.handleSubmit(url);
   },
 
   renderError(){
-    if (!this.props.isLoading && this.props.error){
-      return (
-        <div className={style.alert}>
-          Something went wrong... try again.
-        </div>
-      );
+    if (!this.props.error || this.state.inputState === 'pending') {
+      return null;
     }
-    return null;
+    return (
+      <div className={style.alert}>
+        Something went wrong... try again.
+      </div>
+    );
   },
 
   renderInput() {
-    console.log(this.getInputClass());
+    const styleName = _.capitalize(this.state.inputState);
+    const inputClass = style[`input${styleName}`];
+
+    let innerButton = 'Show Me';
+    if (this.state.inputState === 'pending') {
+      innerButton = <LoadingDots />;
+    }
+
     return (
       <div className={style.inputGroup}>
         <input value={this.state.url} type="text" aria-label="Try a URL"
-          className={this.getInputClass()} onChange={this.handleChange} />
+          placeholder={this.props.placeholder} className={inputClass}
+          onChange={this.handleChange} autoFocus />
 
+        <div className={style.buttonWrapper}>
+          <Button type="submit" className={style.button}>
+            {innerButton}
+          </Button>
+        </div>
       </div>
     );
   },
@@ -76,7 +107,7 @@ const URLInput = React.createClass({
   render() {
     return (
       <div className={this.props.className}>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleFormSubmit}>
           {this.renderInput()}
         </form>
         {this.renderError()}

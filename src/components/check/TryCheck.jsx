@@ -32,7 +32,7 @@ const TryCheck = React.createClass({
 
   getDefaultProps(){
     return {
-      url: 'https://try.opsee.com'
+      url: null
     };
   },
 
@@ -71,6 +71,15 @@ const TryCheck = React.createClass({
   getInputClass() {
     const hasResponse = !!this.getResponses();
     return hasResponse ? style.urlInputExpanded : style.urlInput;
+  },
+
+  getStatus() {
+    const { status } = this.props.redux.asyncActions.checkUrl;
+    if (status && typeof status === 'string') {
+      return status;
+    } else {
+      return 'error';
+    }
   },
 
   isLoading() {
@@ -116,7 +125,7 @@ const TryCheck = React.createClass({
     return (
       <div className={style.container}>
         <URLInput url={this.props.url} className={this.getInputClass()} handleSubmit={this.handleSubmit}
-          error={this.getError()} isLoading={this.isLoading()} />
+          status={this.getStatus()} error={this.getError()} isLoading={this.isLoading()} />
 
         <div className={style.response}>
           { this.renderResponses() }
