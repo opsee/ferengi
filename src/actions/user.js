@@ -29,11 +29,9 @@ function redirectToEmissary() {
   // (e.g., const location = 'production') but it looks messy!
   let location;
   if (process.env.NODE_ENV === 'development') {
-    location = 'http://localhost:8080';
-  } else if (process.env.NODE_ENV === 'staging') {
-    location = 'https://emissary-staging.in.opsee.com';
+    location = 'http://localhost:8080/start/welcome';
   } else {
-    location = 'https://app.opsee.com';
+    location = 'https://app.opsee.com/start/welcome';
   }
   window.location = location;
 }
@@ -159,8 +157,8 @@ export function signupWithCheck(data) {
       })
       .catch(err => {
         yeller.report(err);
-        console.warn(err);
-        throw err;
+        // Redirect to Emissary anyway
+        return redirectToEmissary();
       })
     });
   };
