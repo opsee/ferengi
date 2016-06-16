@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import ReactDOMServer from 'react-dom/server';
 import serialize from 'serialize-javascript';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
@@ -80,7 +81,7 @@ function renderFullPage(path, html, initialState = {}) {
 const getMarkup = (path, store) => {
   const initialState = serialize(store.getState());
 
-  const markup = React.renderToStaticMarkup(
+  const markup = ReactDOMServer.renderToStaticMarkup(
     <Provider store={store} key="provider">
       <ReduxRouter/>
     </Provider>

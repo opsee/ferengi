@@ -2,6 +2,7 @@ import React from 'react';
 import StaticHeader from '../../panels/StaticHeader';
 import style from './guides.css';
 import Highlight from '../../global/Highlight';
+import TryCheck from '../../check/TryCheck';
 
 import {Col, Padding, Row} from '../../layout';
 import SkewPanel from '../../panels/SkewPanel';
@@ -113,6 +114,12 @@ metrics.Register("database", check)`
                 </Highlight>
 
               <p>This handler will evaluate all of your healthchecks, and report a json object associating the check name with either <code className={style.inlineCode}>true</code> for passing, or an error string if not. And the response code is set to 500 if any of the tests fail. This endpoint can then either be used by a load balancer to determine the liveness of a service instance, or by a monitoring system to notify you of a failure.</p>
+
+              <h2>A Working Example</h2>
+
+              <p>A full working example of a go metrics endpoint is included below. The try it button will let you make a request against the metrics endpoint and parse out metrics from the response, just like in the Opsee app. Full source for the example app is on <a href="https://github.com/opsee/guides-go" target="_blank">github</a>.</p>
+
+              <TryCheck url="http://guides-go.opsee.com/metrics" />
 
                 <Padding t={3}>
                   <BaseSVG className={style.logoGuideFooter} svg={logoDark} />
