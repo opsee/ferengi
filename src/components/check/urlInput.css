@@ -51,12 +51,12 @@
 
 .inputSuccess {
   composes: input;
-  border-color: var(--colorSuccess);
+  border-color: var(--colorAccent);
 }
 
 .inputError {
   composes: input;
-  border-color: red;
+  border-color: var(--colorDanger);
 }
 
 .buttonWrapper {
