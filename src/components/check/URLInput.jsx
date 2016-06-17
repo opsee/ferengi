@@ -33,7 +33,7 @@ const URLInput = React.createClass({
       debouncedSubmit: _.debounce(this.handleSubmit, 500),
       inputState: null,
       isActive: false,
-      url: this.props.url || null
+      url: this.props.url || ''
     };
   },
 
