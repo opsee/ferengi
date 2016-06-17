@@ -5,7 +5,6 @@ import _ from 'lodash';
 
 import * as actions from '../../actions/checks';
 import URLInput from './URLInput';
-import style from './tryCheck.css';
 import CheckResponseSingle from './CheckResponseSingle';
 import AssertionSelection from './AssertionSelection';
 import { trackEvent } from '../../modules/analytics';
@@ -69,11 +68,6 @@ const TryCheck = React.createClass({
     return null;
   },
 
-  getInputClass() {
-    const hasResponse = !!this.getResponses();
-    return hasResponse ? style.urlInputExpanded : style.urlInput;
-  },
-
   getStatus() {
     const { status } = this.props.redux.asyncActions.checkUrl;
     if (status && typeof status === 'string') {
@@ -102,9 +96,7 @@ const TryCheck = React.createClass({
     if (first){
       return (
         <div>
-          <div className={style.response}>
-            <CheckResponseSingle {...first}/>
-          </div>
+          <CheckResponseSingle {...first}/>
 
           {this.props.children}
 
@@ -120,13 +112,10 @@ const TryCheck = React.createClass({
 
   render() {
     return (
-      <div className={style.container}>
-        <URLInput url={this.props.url} className={this.getInputClass()} handleSubmit={this.handleSubmit}
+      <div>
+        <URLInput url={this.props.url} handleSubmit={this.handleSubmit}
           status={this.getStatus()} error={this.getError()} isLoading={this.isLoading()} />
-
-        <div className={style.response}>
-          { this.renderResponses() }
-        </div>
+        {this.renderResponses()}
       </div>
     );
   }
