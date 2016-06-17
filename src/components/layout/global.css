@@ -43,7 +43,6 @@ li {
 
 textarea:focus, input:focus{
   outline: none;
-  /*border: solid 1px var(--colorAccent);*/
 }
 
 /* Link styling */
@@ -65,8 +64,4 @@ a:focus {
 
 input, button {
   border-radius: 0;
-}
-
-button {
-  cursor: pointer;
 }
