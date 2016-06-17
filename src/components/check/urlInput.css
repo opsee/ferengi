@@ -15,9 +15,11 @@
 .input,
 .button {
   border-radius: 2px;
+  box-sizing: border-box;
   font-family: var(--fontDisplay);
-  line-height: 2.4rem;
+  height: 65px; /* Force height since Firefox is garbage at styling buttons */
   padding: 2rem 2.4rem;
+  margin: 0;
 }
 
 .input {
