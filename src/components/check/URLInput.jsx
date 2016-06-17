@@ -30,7 +30,7 @@ const URLInput = React.createClass({
 
   getInitialState() {
     return {
-      debouncedSubmit: _.debounce(this.handleSubmit, 500),
+      debouncedSubmit: _.debounce(this.handleSubmit, 1000),
       inputState: null,
       isActive: false,
       url: this.props.url || ''
