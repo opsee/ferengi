@@ -64,7 +64,8 @@ const URLInput = React.createClass({
     if (e) {
       e.preventDefault();
     }
-    const url = this.props.placeholder;
+    // Set placeholder as URL if input is empty
+    const url = this.state.url || this.props.placeholder;
     this.setState({ url });
     this.handleSubmit(url);
   },
