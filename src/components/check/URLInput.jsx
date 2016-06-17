@@ -42,6 +42,14 @@ const URLInput = React.createClass({
     return style[styleName];
   },
 
+  getFormattedURL(url) {
+    // Prepend http if protocol missing
+    if (!url.match(/^https?:\/\//)) {
+      return `http://${url}`;
+    }
+    return url;
+  },
+
   handleChange(e) {
     const url = e.target.value;
     this.setState({
@@ -52,10 +60,11 @@ const URLInput = React.createClass({
   },
 
   handleSubmit(url) {
-    if (validUrl.isWebUri(url)) {
-      this.props.handleSubmit(url);
+    const formattedURL = this.getFormattedURL(url);
+    if (validUrl.isWebUri(formattedURL)) {
+      this.props.handleSubmit(formattedURL);
     } else {
-      const inputState = url ? 'error' : null;
+      const inputState = formattedURL ? 'error' : null;
       this.setState({ inputState });
     }
   },
