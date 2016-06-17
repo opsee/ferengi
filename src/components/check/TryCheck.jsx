@@ -78,9 +78,8 @@ const TryCheck = React.createClass({
     const { status } = this.props.redux.asyncActions.checkUrl;
     if (status && typeof status === 'string') {
       return status;
-    } else {
-      return 'error';
     }
+    return 'error';
   },
 
   isLoading() {

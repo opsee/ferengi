@@ -14,7 +14,8 @@ const URLInput = React.createClass({
     isLoading: PropTypes.bool,
     status: PropTypes.oneOf([null, 'pending', 'success', 'error']),
     error: PropTypes.object,
-    url: PropTypes.string
+    url: PropTypes.string,
+    placeholder: PropTypes.string
   },
 
   componentWillReceiveProps(nextProps) {
@@ -40,7 +41,6 @@ const URLInput = React.createClass({
     const styleName = `input${_.capitalize(this.state.inputState)}`;
     return style[styleName];
   },
-
 
   handleChange(e) {
     const url = e.target.value;
