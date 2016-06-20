@@ -9,6 +9,7 @@ import Button from '../forms/Button';
 import SkewDivider from '../layout/SkewDivider';
 import Quote from '../global/Quote';
 import Panel from '../panels/Panel';
+import WizardPanel from '../panels/WizardPanel';
 
 import BaseSVG from '../images/BaseSVG';
 import locMap from '../images/location-map.svg';
@@ -29,12 +30,12 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <SkewPanel backgroundColor="white" skewTop={false}>
-          <Header theme="dark"/>
+        <Header theme="dark"/>
 
-          <HeroPanel />
-        </SkewPanel>
+        <HeroPanel />
+        <SkewDivider />
 
+        <WizardPanel />
         <SkewDivider />
 
         <Padding t={2} lr={2}>

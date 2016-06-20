@@ -1,0 +1,18 @@
+.iconGroup {
+  padding-bottom: 12rem;
+}
+
+.icon {
+  max-width: 80px;
+  margin: 0 auto;
+}
+
+.iconHeading {
+  font-family: var(--fontDisplay);
+  font-size: 2rem;
+  letter-spacing: 0.25px;
+}
+
+.urlInputWrapper {
+  padding-top: 8rem;
+}

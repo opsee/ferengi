@@ -1,5 +1,4 @@
 .heroPanel {
-  min-height: 45vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,14 +14,4 @@
 
 .heading {
   margin: 4rem 0 8rem 0;
-}
-
-.heading h1 {
-  color: var(--colorGray8);
-  margin: 2rem 0;
-}
-
-.heading h3 {
-  font-size: 2.4rem;
-  line-height: 3rem;
 }

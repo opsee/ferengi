@@ -98,10 +98,12 @@ const TryCheck = React.createClass({
         <div>
           <CheckResponseSingle {...first}/>
           {this.props.children}
-          <form ref="form">
-            <AssertionSelection assertions={this.state.assertions} onChange={this.handleAssertionsChange}
-              response={this.getFirstResponse()} responseFormatted={this.getFirstResponse(true)}/>
-          </form>
+          {this.props.showAssertions ?
+            <form ref="form">
+              <AssertionSelection assertions={this.state.assertions} onChange={this.handleAssertionsChange}
+                response={this.getFirstResponse()} responseFormatted={this.getFirstResponse(true)}/>
+            </form>
+          : null }
         </div>
       );
     }
