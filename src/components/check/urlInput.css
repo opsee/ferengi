@@ -5,3 +5,109 @@
   font-size: 2rem;
   padding: 2rem;
 }
+
+.input,
+.button,
+.buttonWrapper {
+  width: 100%;
+}
+
+.input,
+.button {
+  border-radius: 2px;
+  box-sizing: border-box;
+  font-family: var(--fontDisplay);
+  height: 65px; /* Force height since Firefox is garbage at styling buttons */
+  padding: 2rem 2.4rem;
+  margin: 0;
+}
+
+.input {
+  background-color: #fff;
+  background-image: none;
+  border: solid 1px var(--colorGray4);
+  box-sizing: border-box;
+  color: var(--colorGray9);
+  font-size: 2rem;
+  letter-spacing: 0.65px;
+  margin: 0;
+
+  /* @see http://stackoverflow.com/questions/23211656/remove-ios-input-shadow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.inputPending {
+  composes: input;
+  border-color: var(--colorAccent);
+}
+
+.inputSuccess {
+  composes: input;
+  border-color: var(--colorAccent);
+}
+
+.inputError {
+  composes: input;
+  border-color: var(--colorDanger);
+}
+
+.button {
+  background-color: var(--colorAccent);
+  border: solid 1px var(--colorAccent);
+  font-size: 1.75rem;
+  overflow: visible;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+@media (max-width: 769px) {
+  .input {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .button {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+}
+
+@media (min-width: 769px) {
+  .inputGroup {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    width: 100%;
+  }
+
+  .input {
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    display: table-cell;
+    float: left;
+    position: relative;
+  }
+
+  .buttonWrapper {
+    position: relative;
+    font-size: 0;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+    display: table-cell;
+    border-collapse: separate;
+  }
+
+  .button {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-collapse: separate;
+    display: inline-block;
+    margin-left: -1px;
+    position: relative;
+    width: 200px;
+  }
+}

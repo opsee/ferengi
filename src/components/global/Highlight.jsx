@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import hljs from 'highlight.js/lib/highlight';
 import json from 'highlight.js/lib/languages/json';
 import xml from 'highlight.js/lib/languages/xml';
@@ -36,6 +37,9 @@ const Highlight = React.createClass({
   },
   componentDidMount() {
     this.runHighlightCode();
+  },
+  shouldComponentUpdate(nextProps) {
+    return !_.isEqual(nextProps.children, this.props.children);
   },
   componentDidUpdate() {
     this.runHighlightCode();
