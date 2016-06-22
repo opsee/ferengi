@@ -27,10 +27,6 @@
   border-radius: 2px;
 }
 
-.input {
-  border-color: transparent;
-}
-
 .alert {
   font-family: var(--fontDisplay);
   color: var(--colorWarm3);
