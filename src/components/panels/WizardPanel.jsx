@@ -12,6 +12,7 @@ import Padding from '../layout/Padding';
 import URLInput from '../check/URLInput';
 import TryCheck from '../check/TryCheck';
 import CheckResponseSingle from '../check/CheckResponseSingle';
+import AssertionSelection from '../check/AssertionSelection';
 
 import style from './wizardPanel.css';
 import mailSVG from '../images/icons/mail';
@@ -23,6 +24,16 @@ const WizardPanel = React.createClass({
     actions: PropTypes.shape({
       checkURL: PropTypes.func.isRequired
     })
+  },
+
+  getInitialState() {
+    return {
+      assertions: [{
+        key: 'code',
+        relationship: 'equal',
+        operand: '200'
+      }]
+    }
   },
 
   getResponse(formatHeaders) {
@@ -38,6 +49,10 @@ const WizardPanel = React.createClass({
       return res;
     }
     return null;
+  },
+
+  handleAssertionChange(assertions) {
+    this.setState({ assertions });
   },
 
   renderStep(i) {
@@ -71,7 +86,7 @@ const WizardPanel = React.createClass({
   },
 
   render() {
-    console.log(this.props.redux.checks);
+    console.log(this.getResponse(false), this.getResponse(true));
     return (
       <Panel>
         <Padding b={4} className="text-center">
@@ -100,7 +115,10 @@ const WizardPanel = React.createClass({
               {this.renderStep(2)}
             </Col>
             <Col xs={12} sm={8}>
-              do a thing
+              <AssertionSelection assertions={this.state.assertions}
+                onChange={this.handleAssertionChange}
+                response={this.getResponse(false)}
+                reponseFormatted={this.getResponse(true)} />
             </Col>
           </Row>
 

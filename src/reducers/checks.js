@@ -2,6 +2,7 @@ import _ from 'lodash';
 import { handleActions } from 'redux-actions';
 import {yeller} from '../modules';
 import {
+  ADD_ASSERTION,
   CHECK_URL,
   SET_URL
 } from '../actions/constants';
@@ -10,6 +11,7 @@ const initial = {
   token: null,
   url: null,
   responses: [],
+  assertions: [],
   error: undefined
 };
 
@@ -41,4 +43,5 @@ export default handleActions({
       return _.assign({}, state, catfish);
     }
   }
+
 }, initial);

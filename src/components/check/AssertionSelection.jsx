@@ -23,16 +23,7 @@ const AssertionsSelection = React.createClass({
     assertions: PropTypes.array,
     response: PropTypes.object,
     responseFormatted: PropTypes.object,
-    onChange: PropTypes.func.isRequired,
-    redux: PropTypes.shape({
-      user: PropTypes.object,
-      checks: PropTypes.shape({
-        responses: PropTypes.object
-      }),
-      asyncActions: PropTypes.shape({
-        checkCreate: PropTypes.object
-      })
-    })
+    onChange: PropTypes.func.isRequired
   },
 
   getDefaultProps() {
@@ -604,7 +595,7 @@ const AssertionsSelection = React.createClass({
   },
 
   renderAssertionList(){
-    if (!this.getResponse().code){
+    if (!_.has(this.getResponse(), 'code')) {
       return null;
     }
     if (this.state.assertions.length){
