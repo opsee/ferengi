@@ -15,6 +15,7 @@ import TryCheck from '../check/TryCheck';
 import CheckResponseSingle from '../check/CheckResponseSingle';
 import AssertionSelection from '../check/AssertionSelection';
 import { Button, Input } from '../forms';
+import SignUpForm from '../global/SignUpForm';
 
 import style from './wizardPanel.css';
 import mailSVG from '../images/icons/mail';
@@ -28,9 +29,9 @@ const WizardPanel = React.createClass({
     })
   },
 
-  componentWillMount() {
-    this.props.actions.checkURL('https://try.opsee.com');
-  },
+  // componentWillMount() {
+  //   this.props.actions.checkURL('https://try.opsee.com');
+  // },
 
   getInitialState() {
     return {
@@ -60,6 +61,10 @@ const WizardPanel = React.createClass({
 
   handleAssertionChange(assertions) {
     this.setState({ assertions });
+  },
+
+  handleSignUp() {
+
   },
 
   renderStep(i) {
@@ -136,9 +141,7 @@ const WizardPanel = React.createClass({
               {this.renderStep(3)}
             </Col>
             <Col xs={12} sm={8}>
-              <label>Sign up with just your email address:</label>
-              <Input type="email" placeholder="address@domain.com" />
-              <Button block>Sign Up & Create a New Check</Button>
+              <SignUpForm onSubmit={this.handleSignUp} />
             </Col>
           </Row>
         </Grid>
