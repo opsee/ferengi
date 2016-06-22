@@ -2,6 +2,7 @@ import azaveaLogo from '../components/images/logos/azavea-logo.png';
 import mettzerLogo from '../components/images/logos/mettzer.png';
 import realSelfLogo from '../components/images/logos/realself.png';
 import strathcomLogo from '../components/images/logos/strathcom.png';
+import autodeskLogo from '../components/images/logos/autodesk.png';
 
 export default {
   assertions: {
@@ -47,5 +48,24 @@ export default {
     logo: realSelfLogo,
     url: 'https://www.realself.com/',
     quote: 'When we got started with Opsee we got about a dozen health checks created for us automatically. Not long after that, we had a bad deploy and one of these checks caught it! Our first experience with the product was great.'
+  },
+
+  autodeskChecks: {
+    author: 'Ian Keough',
+    position: 'Developer',
+    company: 'Autodesk',
+    logo: autodeskLogo,
+    url: 'https://www.autodesk.com/',
+    quote: 'With Opsee’s health checks we always know our services are working the way we wrote them. Notifications tell us exactly when and where problems arise and make it easy to restore the system to operational readiness.'
+  },
+
+  autodeskTeam: {
+    author: 'Greg Marr',
+    position: 'Developer',
+    company: 'Autodesk',
+    logo: autodeskLogo,
+    url: 'https://www.autodesk.com/',
+    quote: 'We’re a small team of developers working on a pre-release product with limited access to our corporate ops team. With Opsee we know that our services are working the way we expect without a lot of development effort.'
   }
+
 };

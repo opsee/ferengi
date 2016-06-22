@@ -30,11 +30,6 @@ export default [
     linked: 'https://www.linkedin.com/in/daniel-compton-7428b2a3'
   },
   {
-    name: 'Mike Borsuk',
-    twitter: 'wireds0ul',
-    linked: 'https://www.linkedin.com/in/mikeborsuk'
-  },
-  {
     name: 'Sara Bee',
     twitter: 'doeg'
   }

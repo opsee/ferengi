@@ -56,7 +56,7 @@ const SignUpPanel = React.createClass({
         <div id="signup" className={style.panel}>
           <div className={style.container}>
 
-            <Padding tb={4} className="text-center">
+            <Padding t={4} b={2} className="text-center">
               {this.renderTitle()}
               <div className={style.subheading}>Opsee is free during public beta. Join now by giving us your email address below, and we&rsquo;ll send you a link to your very own Opsee account.</div>
             </Padding>

@@ -570,7 +570,7 @@
 
 @media (min-width: 1200px) {
   :global .container {
-    width: 900px;
+    width: 1200px;
   }
   :global .col-lg,
   :global .col-lg-1,
