@@ -3,21 +3,28 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import _ from 'lodash';
 
-import * as actions from '../../actions/checks';
+import * as checkActions from '../../actions/checks';
+import * as userActions from '../../actions/user';
 import URLInput from './URLInput';
 import CheckResponseSingle from './CheckResponseSingle';
 import AssertionSelection from './AssertionSelection';
+import {Padding} from '../layout';
+import SignUpForm from '../global/SignUpForm';
 import { trackEvent } from '../../modules/analytics';
 import { TRY_CHECK, TRY_CHECK_URL } from '../../constants/analyticsConstants';
 
 const TryCheck = React.createClass({
   propTypes: {
-    actions: PropTypes.shape({
+    checkActions: PropTypes.shape({
       checkURL: PropTypes.func.isRequired
+    }),
+    userActions: PropTypes.shape({
+      signupWithCheck: PropTypes.func.isRequired
     }),
     redux: PropTypes.shape({
       asyncActions: PropTypes.shape({
-        checkUrl: PropTypes.object
+        checkUrl: PropTypes.object,
+        signupWithCheck: PropTypes.object
       }),
       checks: PropTypes.shape({
         responses: PropTypes.array,
@@ -37,7 +44,12 @@ const TryCheck = React.createClass({
   getInitialState() {
     return {
       isLoading: false,
-      assertions: []
+      assertions: [{
+        key: 'code',
+        relationship: 'equal',
+        operand: '200'
+      }],
+      url: null
     };
   },
 
@@ -81,12 +93,21 @@ const TryCheck = React.createClass({
 
   handleSubmit(url) {
     trackEvent(TRY_CHECK, TRY_CHECK_URL, { url });
-    this.setState({ isLoading: true });
-    this.props.actions.checkURL(url);
+    this.setState({
+      url,
+      isLoading: true
+    });
+    this.props.checkActions.checkURL(url);
   },
 
-  handleAssertionsChange(){
-    return true;
+  handleAssertionsChange(assertions){
+    this.setState({ assertions });
+  },
+
+  handleSignUp(signUpData) {
+    const { url, assertions } = this.state;
+    const data = _.assign({ url, assertions}, signUpData);
+    this.props.userActions.signupWithCheck(data);
   },
 
   renderResponses() {
@@ -96,12 +117,19 @@ const TryCheck = React.createClass({
         <div>
           <CheckResponseSingle {...first}/>
           {this.props.children}
+
           {this.props.showAssertions ?
             <form ref="form">
               <AssertionSelection assertions={this.state.assertions} onChange={this.handleAssertionsChange}
                 response={this.getFirstResponse()} responseFormatted={this.getFirstResponse(true)}/>
             </form>
           : null }
+
+          <Padding t={4}>
+            <h2>Get <span className="text-accent">notified</span> when stuff hits the fan</h2>
+            <p>Sign up for Opsee to receive notifications when your health check fails.</p>
+            <SignUpForm successText="Redirecting you to Opsee..." onSubmit={this.handleSignUp} status={this.props.redux.asyncActions.signupWithCheck.status} />
+          </Padding>
         </div>
       );
     }
@@ -124,7 +152,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators(actions, dispatch)
+  checkActions: bindActionCreators(checkActions, dispatch),
+  userActions: bindActionCreators(userActions, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TryCheck);

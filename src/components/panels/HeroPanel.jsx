@@ -13,10 +13,17 @@ export default React.createClass({
         <div className={style.heroPanel}>
           <div className={style.heroContent}>
             <div className={style.heading}>
-              <Padding tb={1}>
-                <Heading l={1}><span className="text-accent">Health checks</span> for microservices</Heading>
-              </Padding>
-              <div className={style.subHeader}>See the availability and performance of your sites, APIs and internal services in one place</div>
+              <h1>Always know <span className="text-accent">what&rsquo;s up</span></h1>
+              <h3 className={style.subHeader}>See the availability and performance of your sites, APIs and internal services in one place</h3>
+            </div>
+
+            <div>
+              <TryCheck>
+                <Padding t={4} b={2}>
+                  <h2>Health checks are <span className="text-accent">more</span> than just a status code</h2>
+                  <p>Lots of webservers will happily return a status code of 200 even if the underlying service is broken or misconfigured. Assertions let you dig deep into the health check response to ensure that everything is working exactly how you expect. Pull out headers and parse some JSON. Go on, it's fun.</p>
+                </Padding>
+              </TryCheck>
             </div>
           </div>
         </div>

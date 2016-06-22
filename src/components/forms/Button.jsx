@@ -46,13 +46,13 @@ const Button = React.createClass({
     return cx(arr);
   },
   handleClick(e){
-    if (typeof this.props.onClick === 'function'){
+    if (!this.props.disabled && typeof this.props.onClick === 'function'){
       e.preventDefault();
       this.props.onClick();
     }
   },
   handleLinkClick(e){
-    if (this.props.target && this.props.target === '_blank'){
+    if (!this.props.disabled && this.props.target && this.props.target === '_blank'){
       e.preventDefault();
       e.stopPropagation();
       window.open(this.history.createHref(this.props.to));

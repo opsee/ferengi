@@ -1,3 +1,5 @@
+input[type="text"]
+input[type="email"],
 .input {
   /* @see http://stackoverflow.com/questions/23211656/remove-ios-input-shadow */
   -webkit-appearance: none;
@@ -8,7 +10,7 @@
   box-sizing: border-box;
   border-radius: 4px;
   border: solid 1px var(--colorGray4);
-  padding: 1rem;
+  padding: 0.5rem;
   width: 100%;
 
   font-family: var(--fontDisplay);

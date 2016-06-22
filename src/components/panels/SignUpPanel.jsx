@@ -17,9 +17,7 @@ const SignUpPanel = React.createClass({
     }),
     redux: PropTypes.shape({
       asyncActions: PropTypes.shape({
-        signup: PropTypes.shape({
-          status: PropTypes.string
-        })
+        signup: PropTypes.object
       })
     })
   },
@@ -40,17 +38,6 @@ const SignUpPanel = React.createClass({
   onSubmit(data){
     this.setState({ data });
     return this.props.actions.signup(data);
-  },
-  renderForm(){
-    if (this.getStatus() === 'success') {
-      return (
-        <div className={style.success}>
-          We&rsquo;ve got your info! Check your email to get started.
-        </div>
-      );
-    }
-
-    return <SignUpForm status={this.getStatus()} onChange={this.onChange} onSubmit={this.onSubmit} />;
   },
   renderTitle(){
     if (this.getReferrer() === 'betalist') {
@@ -74,7 +61,7 @@ const SignUpPanel = React.createClass({
               <div className={style.subheading}>Opsee is free during public beta. Join now by giving us your email address below, and we&rsquo;ll send you a link to your very own Opsee account.</div>
             </Padding>
 
-            {this.renderForm()}
+            <SignUpForm successText="Redirecting you to Opsee..." status={this.getStatus()} onChange={this.onChange} onSubmit={this.onSubmit} />
           </div>
         </div>
       </Panel>

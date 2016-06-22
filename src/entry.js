@@ -1,5 +1,4 @@
-import renderServer from './modules/render-server';
-import renderClient from './modules/render-client';
+import { renderServer, renderClient } from './modules';
 
 /*
  * This rendering happens on the client-side
