@@ -29,9 +29,9 @@ const WizardPanel = React.createClass({
     })
   },
 
-  // componentWillMount() {
-  //   this.props.actions.checkURL('https://try.opsee.com');
-  // },
+  componentDidMount() {
+    this.props.actions.checkURL('https://try.opsee.com');
+  },
 
   getInitialState() {
     return {
