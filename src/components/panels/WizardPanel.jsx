@@ -14,6 +14,7 @@ import URLInput from '../check/URLInput';
 import TryCheck from '../check/TryCheck';
 import CheckResponseSingle from '../check/CheckResponseSingle';
 import AssertionSelection from '../check/AssertionSelection';
+import { Button, Input } from '../forms';
 
 import style from './wizardPanel.css';
 import mailSVG from '../images/icons/mail';
@@ -37,7 +38,8 @@ const WizardPanel = React.createClass({
         key: 'code',
         relationship: 'equal',
         operand: '200'
-      }]
+      }],
+      email: ''
     }
   },
 
@@ -84,7 +86,9 @@ const WizardPanel = React.createClass({
         <div className={style.icon}>
           <BaseSVG svg={icon} />
         </div>
-        <Padding t={3} b={1} className={style.iconHeading}>{i}. {heading}</Padding>
+        <Padding t={3} b={1} className={cx(style.iconHeading, 'text-center-xs')}>
+          {i}. {heading}
+        </Padding>
         <p>{text}</p>
       </div>
     );
@@ -127,12 +131,14 @@ const WizardPanel = React.createClass({
             </Col>
           </Row>
 
-          <Row className={cx(style.row, 'middle-xs', 'between-xs')}>
+          <Row className={cx(style.row, 'between-xs')}>
             <Col xs={12} sm={3}>
               {this.renderStep(3)}
             </Col>
             <Col xs={12} sm={8}>
-              do a thing
+              <label>Sign up with just your email address:</label>
+              <Input type="email" placeholder="address@domain.com" />
+              <Button block>Sign Up & Create a New Check</Button>
             </Col>
           </Row>
         </Grid>

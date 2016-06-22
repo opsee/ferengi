@@ -10,4 +10,10 @@
   border: solid 1px var(--colorGray4);
   padding: 1rem;
   width: 100%;
+
+  font-family: var(--fontDisplay);
+  font-size: 1.75rem;
+  line-height: 2rem;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
 }

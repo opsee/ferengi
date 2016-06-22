@@ -18,6 +18,10 @@ const constants = {
     codeBgHover: 'rgb(24, 40, 80)'
   },
 
+  border: {
+    radius: '2px'
+  },
+
   font: {
     display: '"Geogrotesque-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif',
     main: '"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif'

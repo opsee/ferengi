@@ -1,21 +1,17 @@
 .row {
-
+  margin: 8rem 0;
 }
 
-.iconGroup {
-  padding-bottom: 12rem;
+.row:first-child {
+  margin-top: 2rem;
 }
 
 .urlInputWrapper {
-  padding-top: 8rem;
+  padding-top: 2rem;
 }
 
 @media(max-width: 760px) {
   .row {
-    padding-bottom: 2rem;
-  }
-
-  .iconGroup {
     padding-bottom: 2rem;
   }
 

@@ -583,7 +583,7 @@ const AssertionsSelection = React.createClass({
             name = 'Status Code';
           }
           return (
-            <Button className={style.button} onClick={this.runNewAssertion.bind(null, schemaType)} key={`assertion-button-${type}`}>
+            <Button className={style.button} onClick={this.runNewAssertion.bind(null, schemaType)} key={`assertion-button-${type}`} secondary>
               <Add inline fill="white"/>&nbsp;{name}
             </Button>
           );
@@ -596,10 +596,10 @@ const AssertionsSelection = React.createClass({
     if (!_.has(this.getResponse(), 'code')) {
       return null;
     }
-    if (this.state.assertions.length){
-      return this.state.assertions.map(this.renderAssertion);
+    if (!this.state.assertions.length){
+      return null;
     }
-    return null;
+    return this.state.assertions.map(this.renderAssertion);
   },
 
   render(){

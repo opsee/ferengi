@@ -23,7 +23,8 @@ const Button = React.createClass({
     title: PropTypes.string,
     href: PropTypes.string,
     onClick: PropTypes.func,
-    style: PropTypes.object
+    style: PropTypes.object,
+    block: PropTypes.bool
   },
   getDefaultProps(){
     return {

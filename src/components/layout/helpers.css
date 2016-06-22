@@ -15,6 +15,11 @@
   text-align: center;
 }
 
+:global .text-center-sm {
+  text-align: center;
+}
+
+
 :global .text-right {
   text-align: right;
 }
