@@ -23,6 +23,7 @@
 .icon {
   max-width: 80px;
   margin: 0 auto;
+  opacity: 0.85;
 }
 
 .iconHeading {

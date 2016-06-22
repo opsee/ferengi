@@ -91,8 +91,9 @@ const WizardPanel = React.createClass({
         <div className={style.icon}>
           <BaseSVG svg={icon} />
         </div>
-        <Padding t={3} b={1} className={cx(style.iconHeading, 'text-center-xs')}>
-          {i}. {heading}
+        <Padding t={2} className={cx(style.iconHeading, 'text-center')}>
+          <div className="text-accent">Step {i}</div>
+          {heading}
         </Padding>
         <p>{text}</p>
       </div>
