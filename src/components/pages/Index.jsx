@@ -41,7 +41,7 @@ export default React.createClass({
         <Padding t={2} lr={2}>
           <div className={style.grid}>
             <div className={style.col}>
-              <h3 className="text-center">Rich assertions</h3>
+              <h3 className="text-center font-accent">Rich assertions</h3>
               <div className={style.colSVG}>
                 <a href="/features"><BaseSVG svg={illustChecks} /></a>
               </div>
@@ -51,7 +51,7 @@ export default React.createClass({
             </div>
 
             <div className={style.col}>
-              <h3 className="text-center">Global Coverage</h3>
+              <h3 className="text-center font-accent">Global Coverage</h3>
               <div className={style.colSVG}>
                 <a href="/features"><BaseSVG svg={locMap} /></a>
               </div>
@@ -61,7 +61,7 @@ export default React.createClass({
             </div>
 
             <div className={style.col}>
-              <h3 className="text-center">AWS Coverage</h3>
+              <h3 className="text-center font-accent">AWS Coverage</h3>
               <div className={style.colSVG}>
                 <a href="/features"><BaseSVG svg={illustAWS} /></a>
               </div>
