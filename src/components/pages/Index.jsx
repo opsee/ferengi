@@ -33,50 +33,10 @@ export default React.createClass({
         <Header theme="dark"/>
 
         <HeroPanel />
+
         <SkewDivider />
 
         <WizardPanel />
-        <SkewDivider />
-
-        <Padding t={2} lr={2}>
-          <div className={style.grid}>
-            <div className={style.col}>
-              <h3 className="text-center font-accent">Rich assertions</h3>
-              <div className={style.colSVG}>
-                <a href="/features"><BaseSVG svg={illustChecks} /></a>
-              </div>
-              <div className={style.colText}>
-                <p>Health is more than a status code. Check the headers, bodies, and round-trip times of your responses too.</p>
-              </div>
-            </div>
-
-            <div className={style.col}>
-              <h3 className="text-center font-accent">Global Coverage</h3>
-              <div className={style.colSVG}>
-                <a href="/features"><BaseSVG svg={locMap} /></a>
-              </div>
-              <div className={style.colText}>
-                <p>Every check runs from all 6 of our locations around the world, every 30 seconds</p>
-              </div>
-            </div>
-
-            <div className={style.col}>
-              <h3 className="text-center font-accent">AWS Coverage</h3>
-              <div className={style.colSVG}>
-                <a href="/features"><BaseSVG svg={illustAWS} /></a>
-              </div>
-              <div className={style.colText}>
-                <p>Just add our EC2 instance to your environment. We&rsquo;ll check your services and CloudWatch metrics with no agents to run.</p>
-              </div>
-            </div>
-          </div>
-        </Padding>
-
-        <Padding className="text-center" tb={2}>
-          <Button to="/features" className={style.button} secondary chevron>
-            Learn more about Opsee
-          </Button>
-        </Padding>
 
         <SkewDivider />
 

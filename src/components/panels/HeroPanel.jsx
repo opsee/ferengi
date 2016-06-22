@@ -6,6 +6,16 @@ import Padding from '../layout/Padding';
 import TryCheck from '../check/TryCheck';
 import { Heading } from '../type';
 
+import BaseSVG from '../images/BaseSVG';
+import locMap from '../images/location-map.svg';
+import illustAWS from '../images/illust_aws-01.svg';
+import illustChecks from '../images/illust_checks-01.svg';
+import logoAutodesk from '../images/logos/logo-autodesk.svg';
+import logoLivewatch from '../images/logos/logo-livewatch.png';
+import logoAzavea from '../images/logos/logo-azavea.png';
+import logoYieldbot from '../images/logos/logo-yieldbot.png';
+import logoRealself from '../images/logos/logo-realself.png';
+
 export default React.createClass({
   render() {
     return (
@@ -19,6 +29,41 @@ export default React.createClass({
               <div className={style.subHeader}>See the availability and performance of your sites, APIs and internal services in one place</div>
             </div>
           </div>
+
+          <Padding t={2} lr={2}>
+            <div className={style.grid}>
+              <div className={style.col}>
+                <div className={style.colSVG}>
+                  <a href="/features"><BaseSVG svg={illustChecks} /></a>
+                </div>
+                <h3 className="text-center font-accent">Rich assertions</h3>
+                <div className={style.colText}>
+                  <p>Health is more than a status code. Check the headers, bodies, and round-trip times of your responses too.</p>
+                </div>
+              </div>
+
+              <div className={style.col}>
+                <div className={style.colSVG}>
+                  <a href="/features"><BaseSVG svg={locMap} /></a>
+                </div>
+                <h3 className="text-center font-accent">Global Coverage</h3>
+                <div className={style.colText}>
+                  <p>Every check runs from all 6 of our locations around the world, every 30 seconds</p>
+                </div>
+
+              </div>
+
+              <div className={style.col}>
+                <div className={style.colSVG}>
+                  <a href="/features"><BaseSVG svg={illustAWS} /></a>
+                </div>
+                <h3 className="text-center font-accent">AWS Coverage</h3>
+                <div className={style.colText}>
+                  <p>Just add our EC2 instance to your environment. We&rsquo;ll check your services and CloudWatch metrics with no agents to run.</p>
+                </div>
+              </div>
+            </div>
+          </Padding>
         </div>
       </Panel>
     );
