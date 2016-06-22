@@ -1,0 +1,12 @@
+.assertion {
+  border-left: solid 6px transparent;
+  padding-left: 1rem;
+}
+
+.assertionPassing {
+  border-color: var(--colorSuccess);
+}
+
+.assertionFailing {
+  border-color: var(--colorDanger);
+}

@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import cx from 'classnames';
 import React, { PropTypes } from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
@@ -24,6 +25,10 @@ const WizardPanel = React.createClass({
     actions: PropTypes.shape({
       checkURL: PropTypes.func.isRequired
     })
+  },
+
+  componentWillMount() {
+    this.props.actions.checkURL('https://try.opsee.com');
   },
 
   getInitialState() {
@@ -95,7 +100,7 @@ const WizardPanel = React.createClass({
         </Padding>
 
         <Grid fluid>
-          <Row className="between-xs">
+          <Row className={cx(style.row, "between-xs")}>
             <Col xs={12} sm={3}>
               {this.renderStep(1)}
             </Col>
@@ -110,7 +115,7 @@ const WizardPanel = React.createClass({
             </Col>
           </Row>
 
-          <Row className="between-xs">
+          <Row className={cx(style.row, "between-xs")}>
             <Col xs={12} sm={3}>
               {this.renderStep(2)}
             </Col>
@@ -122,7 +127,7 @@ const WizardPanel = React.createClass({
             </Col>
           </Row>
 
-          <Row className="middle-xs between-xs">
+          <Row className={cx(style.row, 'middle-xs', 'between-xs')}>
             <Col xs={12} sm={3}>
               {this.renderStep(3)}
             </Col>

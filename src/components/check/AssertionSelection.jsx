@@ -404,11 +404,12 @@ const AssertionsSelection = React.createClass({
   },
 
   renderTitle(assertionIndex, title){
-    return (
-      <h3 className={style.heading}>
-        <span className={style.counter}>#{assertionIndex + 1}</span> <span className={style.divider}>/</span> {title}
-      </h3>
-    );
+    return null;
+    // return (
+    //   <h3 className={style.heading}>
+    //     <span className={style.counter}>#{assertionIndex + 1}</span> <span className={style.divider}>/</span> {title}
+    //   </h3>
+    // );
   },
 
   renderCode(assertionIndex){
@@ -553,18 +554,15 @@ const AssertionsSelection = React.createClass({
   renderAssertion(assertion, index){
     const key = assertion.key || 'code';
     return (
-      <Padding key={`assertion-${index}`} b={2}>
-        <div className={this.getAssertionClass(assertion)}>
-
-          <div className={style.remove}>
-            <Button className={style.removeButton} color="danger" title="Remove this Assertion" onClick={this.runDelete.bind(null, index)}>
-              <Delete className={style.removeSVG} inline fill="danger"/>
-            </Button>
-          </div>
-
-          {this[`render${_.capitalize(key)}`](index)}
+      <div key={index} className={this.getAssertionClass(assertion)}>
+        <div className={style.remove}>
+          <Button className={style.removeButton} color="danger" title="Remove this Assertion" onClick={this.runDelete.bind(null, index)}>
+            <Delete className={style.removeSVG} inline fill="danger"/>
+          </Button>
         </div>
-      </Padding>
+
+        {this[`render${_.capitalize(key)}`](index)}
+      </div>
     );
   },
 

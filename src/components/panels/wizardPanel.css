@@ -1,5 +1,27 @@
+.row {
+
+}
+
 .iconGroup {
   padding-bottom: 12rem;
+}
+
+.urlInputWrapper {
+  padding-top: 8rem;
+}
+
+@media(max-width: 760px) {
+  .row {
+    padding-bottom: 2rem;
+  }
+
+  .iconGroup {
+    padding-bottom: 2rem;
+  }
+
+  .urlInputWrapper {
+    padding-top: 0;
+  }
 }
 
 .icon {
@@ -13,6 +35,3 @@
   letter-spacing: 0.25px;
 }
 
-.urlInputWrapper {
-  padding-top: 8rem;
-}
