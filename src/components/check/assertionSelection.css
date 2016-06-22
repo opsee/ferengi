@@ -23,10 +23,11 @@
 }
 
 .assertion {
-  position: relative;
   background-color: var(--colorGray2);
+  border-left: solid 1rem var(--colorGray4);
+  margin: 1rem 0;
   padding: 1rem;
-  border-left: solid 1rem var(--colorGray2);
+  position: relative;
 }
 
 .assertionSuccess {
@@ -73,10 +74,6 @@
   padding: 2rem 0;
 }
 
-.assertionDark .returnedValue {
-  color: white;
-}
-
 .relationshipButtons {
   width: 100%;
   padding-top: 1rem;
@@ -103,14 +100,6 @@
   color: var(--colorGray6);
 }
 
-.assertionDark .jsonPath label {
-  color: var(--colorGray3);
-}
-
-.assertionDark a {
-  color: var(--colorGray3);
-}
-
 .assertion input {
   width: 100%;
 }
@@ -134,16 +123,6 @@
 .assertion pre {
   white-space: pre-wrap;
   word-wrap: break-word;
-}
-
-.assertionDark .button {
-  border-color: white;
-  color: white;
-}
-
-.assertionDark .button:hover {
-  background-color: white;
-  color: var(--colorAccent);
 }
 
 .relationshipButton {
@@ -195,15 +174,4 @@
 :global .react-autosuggest__suggestion--focused {
   background: var(--colorAccent);
   color: white;
-}
-
-@media (max-width: 768px) {
-  .assertion {
-    padding: 6rem 2rem;
-  }
-
-  .assertionInner {
-    /* Compensates for angled corners on small screens */
-    padding: 2rem 0;
-  }
 }

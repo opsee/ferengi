@@ -351,7 +351,7 @@ const AssertionsSelection = React.createClass({
           };
           if (rel.id === 'equal' && !assertion.operand){
             if (assertion.key === 'code'){
-              data.operand = this.getResponseFormatted().code || '';
+              data.operand = _.get(this.getResponseFormatted(), 'code') || '';
             } else if (assertion.key === 'header'){
               data.operand = _.get(this.getResponseFormatted(), `headers.${assertion.value}`) || '';
             } else if (assertion.key === 'json'){
