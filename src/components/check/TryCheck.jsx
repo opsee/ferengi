@@ -20,10 +20,8 @@ const TryCheck = React.createClass({
         checkUrl: PropTypes.object
       }),
       checks: PropTypes.shape({
-        catfish: PropTypes.shape({
-          responses: PropTypes.array,
-          error: PropTypes.object
-        })
+        responses: PropTypes.array,
+        error: PropTypes.object
       })
     }),
     children: PropTypes.node,
@@ -44,12 +42,12 @@ const TryCheck = React.createClass({
   },
 
   getError() {
-    return this.props.redux.checks.catfish.error;
+    return this.props.redux.checks.error;
   },
 
   getResponses() {
     const isSuccess = this.props.redux.asyncActions.checkUrl.status === 'success';
-    const responses = this.props.redux.checks.catfish.responses;
+    const responses = this.props.redux.checks.responses;
     return isSuccess ? responses : null;
   },
 

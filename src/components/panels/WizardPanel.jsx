@@ -1,5 +1,9 @@
-import React from 'react';
+import _ from 'lodash';
+import React, { PropTypes } from 'react';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
 
+import * as actions from '../../actions/app';
 import {Grid, Row, Col} from '../layout';
 import { Heading } from '../type';
 import BaseSVG from '../images/BaseSVG';
@@ -7,13 +11,34 @@ import Panel from './Panel.jsx';
 import Padding from '../layout/Padding';
 import URLInput from '../check/URLInput';
 import TryCheck from '../check/TryCheck';
+import CheckResponseSingle from '../check/CheckResponseSingle';
 
 import style from './wizardPanel.css';
 import mailSVG from '../images/icons/mail';
 import targetSVG from '../images/icons/target';
 import taskSVG from '../images/icons/task';
 
-export default React.createClass({
+const WizardPanel = React.createClass({
+  propTypes: {
+    actions: PropTypes.shape({
+      checkURL: PropTypes.func.isRequired
+    })
+  },
+
+  getResponse(formatHeaders) {
+    const res = _.chain(this.props.redux.checks.responses).head().get('http_response').value();
+    if (res && res.headers){
+      if (formatHeaders){
+        let headers = {};
+        res.headers.forEach(h => {
+          headers[h.name] = h.values.join('; ');
+        });
+        return _.assign({}, res, {headers});
+      }
+      return res;
+    }
+    return null;
+  },
 
   renderStep(i) {
     let icon, text, heading, inner;
@@ -46,6 +71,7 @@ export default React.createClass({
   },
 
   render() {
+    console.log(this.props.redux.checks);
     return (
       <Panel>
         <Padding b={4} className="text-center">
@@ -61,13 +87,15 @@ export default React.createClass({
             <Col xs={12} sm={8}>
               <div className={style.iconGroup}>
                 <div className={style.urlInputWrapper}>
-                  <TryCheck />
+                  <URLInput url={this.props.redux.checks.url}
+                    handleSubmit={this.props.actions.checkURL} />
+                  <CheckResponseSingle {...this.getResponse(true)} />
                 </div>
               </div>
             </Col>
           </Row>
 
-          <Row className="middle-xs between-xs">
+          <Row className="between-xs">
             <Col xs={12} sm={3}>
               {this.renderStep(2)}
             </Col>
@@ -89,3 +117,13 @@ export default React.createClass({
     );
   },
 });
+
+const mapStateToProps = (state) => ({
+  redux: state
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  actions: bindActionCreators(actions, dispatch)
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(WizardPanel);

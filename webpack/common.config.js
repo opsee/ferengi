@@ -33,13 +33,13 @@ module.exports = {
   },
 
   module: {
-    preLoaders:[
-      {
-        test: /\.js$|\.jsx$/,
-        loaders: ['eslint-loader'],
-        include: INCLUDE_DIRS
-      },
-    ],
+    // preLoaders:[
+    //   {
+    //     test: /\.js$|\.jsx$/,
+    //     loaders: ['eslint-loader'],
+    //     include: INCLUDE_DIRS
+    //   },
+    // ],
     loaders: [
       {
         test: /\.json$/,
