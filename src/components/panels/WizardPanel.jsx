@@ -141,6 +141,7 @@ const WizardPanel = React.createClass({
               {this.renderStep(3)}
             </Col>
             <Col xs={12} sm={8}>
+              <p>Sign up with just your email address. We'll create your free Opsee account, create your first health check, and send you notifications whenever it fails.</p>
               <SignUpForm onSubmit={this.handleSignUp} />
             </Col>
           </Row>
