@@ -29,9 +29,9 @@ function redirectToEmissary() {
   // (e.g., const location = 'production') but it looks messy!
   let location;
   if (process.env.NODE_ENV === 'development') {
-    location = 'http://localhost:8080/start/welcome';
+    location = 'http://localhost:8080/welcome';
   } else {
-    location = 'https://app.opsee.com/start/welcome';
+    location = 'https://app.opsee.com/welcome';
   }
   window.location = location;
 }
