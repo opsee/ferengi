@@ -1,5 +1,6 @@
-import React, {PropTypes} from 'react';
 import _ from 'lodash';
+import cx from 'classnames';
+import React, {PropTypes} from 'react';
 import Form from 'newforms/Form';
 import CharField from 'newforms/CharField';
 import {connect} from 'react-redux';
@@ -7,7 +8,7 @@ import Autosuggest from 'react-autosuggest';
 
 import {BoundField, Button} from '../forms';
 import {Add, Delete} from 'emissary/src/js/components/icons';
-import {Padding, Expandable} from '../layout';
+import {Padding, Expandable, Grid, Row, Col} from '../layout';
 import Highlight from '../global/Highlight';
 import validate from 'emissary/src/js/modules/validate';
 import getKeys from 'emissary/src/js/modules/getKeys';
@@ -389,6 +390,7 @@ const AssertionsSelection = React.createClass({
       return (
         <div className={style.operand}>
           <BoundField className={style.operandInput} bf={this.state.assertions[assertionIndex].form.boundField('operand')}/>
+          <div className="small font-accent">expected value</div>
         </div>
       );
     }
@@ -419,13 +421,14 @@ const AssertionsSelection = React.createClass({
       <div>
         {this.renderTitle(assertionIndex, 'Response Code')}
 
-        <div className={style.contents}>
-          {this.renderReturnedValue(assertion, this.getResponse().code)}
+        <div className="row middle-xs between xs">
+          <Padding lr={2} inline>
+            <div>{this.renderReturnedValue(assertion, this.getResponse().code)}</div>
+            <div className="small font-accent">status code</div>
+          </Padding>
 
-          <div className={style.rightSide}>
-            {this.renderChosenRelationship(assertionIndex)}
-            {this.renderOperand(assertionIndex)}
-          </div>
+          {this.renderChosenRelationship(assertionIndex)}
+          {this.renderOperand(assertionIndex)}
 
           { assertion.relationship ? null : this.renderRelationshipButtons(assertionIndex) }
         </div>
@@ -551,16 +554,20 @@ const AssertionsSelection = React.createClass({
     );
   },
 
+  renderRemoveButton() {
+    return (
+      <div className={style.remove}>
+        <Button className={style.removeButton} color="danger" title="Remove this Assertion" onClick={this.runDelete.bind(null, index)}>
+          <Delete className={style.removeSVG} inline fill="danger"/>
+        </Button>
+      </div>
+    );
+  },
+
   renderAssertion(assertion, index){
     const key = assertion.key || 'code';
     return (
       <div key={index} className={this.getAssertionClass(assertion)}>
-        <div className={style.remove}>
-          <Button className={style.removeButton} color="danger" title="Remove this Assertion" onClick={this.runDelete.bind(null, index)}>
-            <Delete className={style.removeSVG} inline fill="danger"/>
-          </Button>
-        </div>
-
         {this[`render${_.capitalize(key)}`](index)}
       </div>
     );

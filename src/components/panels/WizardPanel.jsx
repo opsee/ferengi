@@ -117,7 +117,7 @@ const WizardPanel = React.createClass({
             <Col xs={12} sm={8}>
               <div className={style.iconGroup}>
                 <div className={style.urlInputWrapper}>
-                  <URLInput url={this.props.redux.checks.url}
+                  <URLInput url={this.props.redux.checks.url || 'https://try.opsee.com'}
                     handleSubmit={this.props.actions.checkURL} />
                   <CheckResponseSingle {...this.getResponse(true)} />
                 </div>
