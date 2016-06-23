@@ -12,8 +12,8 @@ export default React.createClass({
         <div className={style.heroPanel}>
           <div className={style.heroContent}>
             <div className={style.heading}>
-              <h1><span className="text-accent">Health checks</span> cut through the noise</h1>
-              <h3 className={style.subHeader}>Continuously test your services and deploy with confidence</h3>
+              <h1>Always know <span className="text-accent">what&rsquo;s up</span></h1>
+              <h3 className={style.subHeader}>See the availability and performance of your sites, APIs and internal services in one place</h3>
             </div>
 
             <div>

@@ -1,0 +1,65 @@
+.pricingTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+.pricingTableTH {
+  background-color: var(--colorWarm4);
+  color: white;
+  font-weight: bold;
+  padding: 2rem;
+  text-align: center;
+}
+.pricingTableTHFree {
+  composes: pricingTableTH;
+  background-color: var(--colorGray5);
+}
+
+.pricingTableTH:first-of-type {
+  border-right: 3px solid white;
+}
+.pricingTableTD {
+  border-bottom: 1px solid var(--colorWarm4);
+  padding: 2rem;
+}
+.price {
+  color: var(--colorWarm4);
+  line-height: 4rem;
+  padding: 2rem 0;
+  text-align: center;
+}
+.priceFree {
+  composes: price;
+  color: var(--colorGray5);
+}
+.priceDol {
+  margin-right: 0.3rem;
+  vertical-align: top;
+}
+.priceNum {
+  font-weight: bold;
+  font-size: 4rem;
+  vertical-align: top;
+}
+.priceNote {
+  line-height: 1;
+  color: var(--colorGray5);
+}
+
+.freeFeature {
+  background-color: var(--colorGray5);
+  border-radius: 1rem;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
+
+.freeSVG {
+  display: block;
+  margin: 0 auto 2rem auto;
+}
+
+
+@media (max-width: 720px) {
+
+}

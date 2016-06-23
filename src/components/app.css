@@ -4,7 +4,7 @@
 @import './layout/grid.css';
 @import './layout/layout.css';
 @import './layout/helpers.css';
-@import 'emissary/src/js/components/layout/grid.css';
+/*@import 'emissary/src/js/components/layout/grid.css';*/
 
 /**
  * A bit of cruft in here to deal with various browsers, etc. so the cruft has

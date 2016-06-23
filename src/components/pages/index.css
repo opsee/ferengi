@@ -49,8 +49,10 @@
   margin: 2rem 0;
 }
 
-.colorBand {
-
+.customerLogo {
+  height: 50px;
+  margin: 0 1rem;
+  width: 150px;
 }
 
 @media (max-width: 700px) {
