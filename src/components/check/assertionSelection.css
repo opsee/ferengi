@@ -1,10 +1,4 @@
-
-
 /* Single assertion styling */
-.assertion {
-
-}
-
 .assertion {
   background-color: #F6F6F6;
   border-left: solid 1rem var(--colorGray4);
@@ -20,6 +14,7 @@
   border-left-color: var(--colorDanger);
 }
 
+/* Columns */
 .row {
   display: flex;
   flex-direction: row;
@@ -27,7 +22,6 @@
 }
 
 .col {
-  /*border: solid 1px red;*/
   padding-right: 1rem;
 }
 
@@ -54,8 +48,9 @@
   color: var(--colorGray7);
   font-family: var(--fontDisplay);
   font-size: 1.4rem;
-  margin-left: 0.5rem;
+  margin: 0.5rem;
 }
+
 
 /* OLD STUFF */
 .button {
@@ -109,16 +104,17 @@
 
 /* JSON path input & heading */
 .jsonPath {
-  padding: 2rem 0;
+  composes: col;
+  width: 100%;
 }
 
-.jsonPath label {
+/*.jsonPath label {
   font-family: var(--fontDisplay);
   padding: 2rem 0;
   font-size: 2rem;
   color: var(--colorGray6);
 }
-
+*/
 .assertion input {
   width: 100%;
 }
@@ -151,18 +147,6 @@
   border-radius: var(--borderRadius);
 }
 
-.autosuggest {
-  background-color: white;
-  font-family: var(--fontDisplay);
-  color: var(--colorGray6);
-  position: relative;
-}
-
-.assertion pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
 .relationshipButton {
   composes: button;
   margin: 0 0.5 1rem;
@@ -173,23 +157,20 @@
   border-radius: 2px;
 }
 
-.operand,
-.chosenRelationship,
-.rightSide {
-  display: inline-block;
-  /*display: flex;*/
-  /*flex-direction: row;*/
-  /*flex-wrap: wrap;*/
-  /*justify-content: flex-start;*/
-  /*align-content: flex-start;*/
-}
-
 .operand {
   font-family: var(--fontMono);
 }
 
 .operandInput {
   height: 100%;
+}
+
+/* Autosuggest for JSON path input */
+.autosuggest {
+  background-color: white;
+  font-family: var(--fontDisplay);
+  color: var(--colorGray6);
+  position: relative;
 }
 
 :global .react-autosuggest__suggestions-container {

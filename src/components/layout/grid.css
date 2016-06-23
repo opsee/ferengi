@@ -1,4 +1,7 @@
 /* Uncomment and set these variables to customize the grid. */
+:global .flex {
+  display: flex;
+}
 
 :global .container-fluid, :global .container {
   margin-right: auto;
@@ -28,6 +31,14 @@
 
 :global .col.reverse {
   flex-direction: column-reverse;
+}
+
+:global .flex-row {
+  flex-direction: row;
+}
+
+:global .flex-col {
+  flex-direction: column;
 }
 
 :global .col-xs,

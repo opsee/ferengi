@@ -429,17 +429,6 @@ const AssertionsSelection = React.createClass({
     );
   },
 
-  renderCode(assertionIndex){
-    const assertion = this.getAssertion(assertionIndex);
-    return (
-      <div className={style.row}>
-          {this.renderReturnedValue(assertion, this.getResponse().code, 'status code')}
-          {this.renderRelationship(assertionIndex)}
-          {this.renderOperand(assertionIndex)}
-      </div>
-    );
-  },
-
   renderHeader(assertionIndex){
     const assertion = this.getAssertion(assertionIndex);
     const selectedHeader = assertion.value;
@@ -489,6 +478,31 @@ const AssertionsSelection = React.createClass({
     );
   },
 
+  renderJsonPath(assertion, index) {
+    const inputID = `json-path-${index}`;
+    // <label className="label" htmlFor={inputID}>JSON path (optional) a></label>
+    return (
+      <div className={style.jsonPath}>
+        <div className="form-group">
+          <div className={style.autosuggest}>
+            <Autosuggest suggestions={this.getFilteredJsonBodyKeys(index)}
+              inputProps={{
+                onChange: this.handleJsonSuggestionSelect.bind(null, index),
+                value: assertion.value || '',
+                placeholder: this.getJsonPlaceholder(index),
+                id: inputID
+              }} renderSuggestion={this.renderSuggestion} getSuggestionValue={(s) => s}
+              style={{width: '100%'}} shouldRenderSuggestions={() => true} />
+          </div>
+          <div className="flex between-xs">
+            <div className={style.label}>JSON path (optional)</div>
+            <div className={style.label}><a target="_blank" href="https://app.opsee.com/docs/checks">Learn More</a></div>
+          </div>
+        </div>
+      </div>
+    );
+  },
+
   renderJsonInput(assertion){
     const jsonBody = this.getJsonBody();
     if (jsonBody){
@@ -525,42 +539,24 @@ const AssertionsSelection = React.createClass({
     return <span>{suggestion}</span>;
   },
 
+  renderCode(assertionIndex){
+    const assertion = this.getAssertion(assertionIndex);
+    return (
+      <div className="flex flex-row middle-xs">
+          {this.renderReturnedValue(assertion, this.getResponse().code, 'status code')}
+          {this.renderRelationship(assertionIndex)}
+          {this.renderOperand(assertionIndex)}
+      </div>
+    );
+  },
+
   renderJson(assertionIndex){
     const assertion = this.getAssertion(assertionIndex);
-    let buttons = null;
-    if (!assertion.relationship){
-      buttons = this.renderRelationshipButtons(assertionIndex);
-    }
     return (
-      <div className={style.assertionInner}>
-        {/* this.renderTitle(assertionIndex, 'JSON Response Body') */}
-
-        <div className={style.contents}>
-          {this.getBodySnippet(assertion) || 'Select a header below'}
-
-          <div className={style.jsonPath}>
-            <div className="form-group">
-              <label className="label" htmlFor={`json-path-${assertionIndex}`}>JSON path (optional) <a target="_blank" href="https://app.opsee.com/docs/checks">Learn More</a></label>
-
-              <div className={style.autosuggest}>
-                <Autosuggest suggestions={this.getFilteredJsonBodyKeys(assertionIndex)}
-                  inputProps={{
-                    onChange: this.handleJsonSuggestionSelect.bind(null, assertionIndex),
-                    value: assertion.value || '',
-                    placeholder: this.getJsonPlaceholder(assertionIndex),
-                    id: `json-path-${assertionIndex}`
-                  }} renderSuggestion={this.renderSuggestion} getSuggestionValue={(s) => s}
-                  style={{width: '100%'}} shouldRenderSuggestions={() => true} />
-              </div>
-            </div>
-          </div>
-
-          <div className={style.rightSide}>
-            {this.renderChosenRelationship(assertionIndex)}
-            {this.renderOperand(assertionIndex)}
-          </div>
-          {buttons}
-        </div>
+      <div className="flex flex-col middle-xs">
+        {this.renderJsonPath(assertion, assertionIndex)}
+        {this.renderRelationship(assertionIndex)}
+        {this.renderOperand(assertionIndex)}
       </div>
     );
   },
