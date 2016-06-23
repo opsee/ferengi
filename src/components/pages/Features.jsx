@@ -47,7 +47,7 @@ const Features = React.createClass({
               <SplitPanel className={style.imagePanelThirds}>
                 <Padding b={2}><h3 className="text-center">Public & Private URLs</h3></Padding>
                 <BaseSVG svg={checkURL} className={style.screenshotSVG} />
-                <p>Check any public URL or IP. Opsee automatically tracks all DNS entries. Check private URLs in AWS by adding our instance.</p>
+                <p>Check any public URL or IP, and check private URLs in AWS by adding our instance.</p>
               </SplitPanel>
               <SplitPanel className={style.imagePanelThirds}>
                 <Padding b={2}><h3 className="text-center">AWS Services</h3></Padding>
