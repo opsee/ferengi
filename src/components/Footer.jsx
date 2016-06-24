@@ -10,7 +10,7 @@ import twitterSVG from './images/logos/twitter-white.svg';
 import style from './footer.css';
 
 export default React.createClass({
-  renderProductLinks() {
+  renderProduct() {
     return (
       <div>
         <div className={style.category}>Product</div>
@@ -24,7 +24,7 @@ export default React.createClass({
     );
   },
 
-  renderLearnLinks(){
+  renderLearn(){
     return (
       <div>
         <div className={style.category}>Guides</div>
@@ -39,7 +39,7 @@ export default React.createClass({
     );
   },
 
-  renderLegalLinks(){
+  renderLegal(){
     return (
       <div>
         <div className={style.category}>Legal</div>
@@ -52,7 +52,7 @@ export default React.createClass({
     );
   },
 
-  renderLinksLinks(){
+  renderLinks(){
     return (
       <div>
         <div className={style.category}>Links</div>
@@ -66,7 +66,7 @@ export default React.createClass({
     );
   },
 
-  renderSocialLinks(){
+  renderSocial(){
     return (
       <ul className={style.socialNav}>
         <li>
@@ -90,10 +90,10 @@ export default React.createClass({
             <Col xs={12} md={9}>
               <Grid fluid>
                 <Row>
-                  <Col xs={6} sm={3}>{this.renderProductLinks()}</Col>
-                  <Col xs={6} sm={3}>{this.renderLearnLinks()}</Col>
-                  <Col xs={6} sm={3}>{this.renderLegalLinks()}</Col>
-                  <Col xs={6} sm={3}>{this.renderLinksLinks()}</Col>
+                  <Col xs={6} sm={3}>{this.renderProduct()}</Col>
+                  <Col xs={6} sm={3}>{this.renderLearn()}</Col>
+                  <Col xs={6} sm={3}>{this.renderLegal()}</Col>
+                  <Col xs={6} sm={3}>{this.renderLinks()}</Col>
                 </Row>
               </Grid>
             </Col>
@@ -104,7 +104,7 @@ export default React.createClass({
                     <BaseSVG className={style.logo} svg={logoSVG} />
                   </Col>
                   <Col xs={8} md={12}>
-                    {this.renderSocialLinks()}
+                    {this.renderSocial()}
                   </Col>
                 </Row>
               </Grid>
