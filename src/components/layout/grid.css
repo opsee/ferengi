@@ -41,6 +41,10 @@
   flex-direction: column;
 }
 
+:global .flex-wrap {
+  flex-wrap: wrap;
+}
+
 :global .col-xs,
 :global .col-xs-1,
 :global .col-xs-2,

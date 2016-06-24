@@ -75,10 +75,9 @@ const WizardPanel = React.createClass({
   },
 
   handleSignUp(signupData) {
-    debugger;
     const data = _.assign({}, this.state, signupData);
-    console.log(data);
     this.props.userActions.signupWithCheck({ data });
+    this.setState(data);
   },
 
   renderStep(i) {
@@ -115,7 +114,6 @@ const WizardPanel = React.createClass({
   },
 
   render() {
-    console.log(this.state);
     return (
       <Panel>
         <Padding b={4} className="text-center">

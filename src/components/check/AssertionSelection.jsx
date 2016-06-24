@@ -483,7 +483,7 @@ const AssertionsSelection = React.createClass({
   renderCode(assertionIndex){
     const assertion = this.getAssertion(assertionIndex);
     return (
-      <div className="flex flex-row middle-xs">
+      <div className="flex flex-row flex-wrap middle-xs">
           {this.renderReturnedValue(assertion, this.getResponse().code, 'status code')}
           {this.renderRelationship(assertionIndex)}
           {this.renderOperand(assertionIndex)}
@@ -496,7 +496,7 @@ const AssertionsSelection = React.createClass({
     return (
       <div className="flex flex-col middle-xs">
         {this.renderJsonPath(assertion, assertionIndex)}
-        <Padding tb={1} className="flex flex-row" style={{width: '100%'}}>
+        <Padding t={1} className="flex flex-row flex-wrap" style={{width: '100%'}}>
           {this.renderRelationship(assertionIndex)}
           {this.renderOperand(assertionIndex)}
         </Padding>
