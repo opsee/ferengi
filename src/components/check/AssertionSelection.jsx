@@ -441,9 +441,7 @@ const AssertionsSelection = React.createClass({
 
     let buttons = null;
 
-    if (!assertion.relationship && assertion.value){
-      buttons = this.renderRelationshipButtons(assertionIndex);
-    } else if (!assertion.value){
+    if (!assertion.value){
       buttons = (
         <Padding t={1}>
           {headerKeys.map(key => {
@@ -467,12 +465,8 @@ const AssertionsSelection = React.createClass({
       </div>
     ) : null;
 
-    const title = selectedHeader ? ` - ${selectedHeader}` : '';
-
     return (
       <div>
-        {/* this.renderTitle(assertionIndex, `Response Header${title}`) */}
-
         <div className={style.contents}>
           {helper}
           {buttons}
@@ -483,7 +477,6 @@ const AssertionsSelection = React.createClass({
 
   renderJsonPath(assertion, index) {
     const inputID = `json-path-${index}`;
-    // <label className="label" htmlFor={inputID}>JSON path (optional) a></label>
     return (
       <div className={style.jsonPath}>
         <div className="form-group">
@@ -494,8 +487,11 @@ const AssertionsSelection = React.createClass({
                 value: assertion.value || '',
                 placeholder: this.getJsonPlaceholder(index),
                 id: inputID
-              }} renderSuggestion={this.renderSuggestion} getSuggestionValue={(s) => s}
-              style={{width: '100%'}} shouldRenderSuggestions={() => true} />
+              }}
+              renderSuggestion={s => <span>{s}</span>}
+              getSuggestionValue={s => s}
+              style={{width: '100%'}}
+              shouldRenderSuggestions={() => true} />
           </div>
           <div className="flex between-xs">
             <div className={style.label}>JSON path (optional)</div>
@@ -537,10 +533,6 @@ const AssertionsSelection = React.createClass({
   //     </div>
   //   );
   // },
-
-  renderSuggestion(suggestion){
-    return <span>{suggestion}</span>;
-  },
 
   renderCode(assertionIndex){
     const assertion = this.getAssertion(assertionIndex);
