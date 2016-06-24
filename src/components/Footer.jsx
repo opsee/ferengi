@@ -70,7 +70,7 @@ export default React.createClass({
     return (
       <ul className={style.socialNav}>
         <li>
-          <a href="mailto:welovereplies@opsee.co"><span className={style.hideSm}>welovereplies@opsee.co</span> <BaseSVG className={style.socialLogo} svg={emailSVG} /></a>
+          <a href="mailto:support@opsee.co"><span className={style.hideSm}>support@opsee.co</span> <BaseSVG className={style.socialLogo} svg={emailSVG} /></a>
         </li>
         <li>
           <a href="https://twitter.com/GetOpsee" target="_blank"><span className={style.hideSm}>@GetOpsee</span> <BaseSVG className={style.socialLogo} svg={twitterSVG} /></a>

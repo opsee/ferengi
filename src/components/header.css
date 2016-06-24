@@ -10,11 +10,11 @@
 .links,
 .cta {
   display: inline;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .cta {
-  padding: 2rem !important;
+  padding: 1.5rem 2rem !important;
   border-radius: 4px;
 }
 
@@ -24,7 +24,8 @@
 }
 
 .logo {
-  height: 100px;
+  height: 9rem;
+  padding: 2rem;
   width: auto;
 }
 
@@ -33,7 +34,7 @@
 }
 
 .links li a {
-  padding: 1.6rem 0.6rem;
+  padding: 0.2rem 0.6rem;
 }
 
 .links li a:hover {
@@ -54,12 +55,18 @@
   composes: links;
 }
 
+.activeLink {
+  border-bottom: solid 1px white;
+}
+
 a.cta,
 a.cta:hover {
   color: white !important;
+  border-style: solid;
+  border-width: 1px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .links li { padding: 0; }
   .hideSm { display: none !important; }
   .navLinks { display: none; }
@@ -82,7 +89,7 @@ a.cta:hover {
 .light a.cta {
   color: white;
   background-color: transparent;
-  border: solid 1px white;
+  border-color: white;
 }
 
 .light a.cta:hover {
