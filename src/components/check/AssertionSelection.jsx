@@ -14,9 +14,12 @@ import validate from 'emissary/src/js/modules/validate';
 import getKeys from 'emissary/src/js/modules/getKeys';
 import relationships from 'slate/src/relationships';
 import slate from 'slate';
-import style from './assertionSelection.css';
 import { trackEvent } from '../../modules/analytics';
 import { TRY_CHECK, TRY_CHECK_ASSERTION } from '../../constants/analyticsConstants';
+
+import style from './assertionSelection.css';
+import BaseSVG from '../images/BaseSVG';
+import closeSVG from '../images/icons/close.svg';
 
 const AssertionsSelection = React.createClass({
   propTypes: {
@@ -280,34 +283,34 @@ const AssertionsSelection = React.createClass({
     this.props.onChange(this.getFinalAssertions(assertions));
   },
 
-  runSetType(index, type){
-    this.runSetAssertionsState((n, i) => {
-      return _.assign({}, n, {
-        type: index === i ? type : n.type
-      });
-    });
-  },
+  // runSetType(index, type){
+  //   this.runSetAssertionsState((n, i) => {
+  //     return _.assign({}, n, {
+  //       type: index === i ? type : n.type
+  //     });
+  //   });
+  // },
 
-  runSetValue(index, data, e){
-    if (e){
-      e.preventDefault();
-    }
-    const assertions = this.runSetAssertionsState((n, i) => {
-      const value = data || n.valueState;
-      return _.assign({}, n, {
-        value: index === i ? value : n.value
-      });
-    }, true);
-    this.props.onChange(this.getFinalAssertions(assertions));
-  },
+  // runSetValue(index, data, e){
+  //   if (e){
+  //     e.preventDefault();
+  //   }
+  //   const assertions = this.runSetAssertionsState((n, i) => {
+  //     const value = data || n.valueState;
+  //     return _.assign({}, n, {
+  //       value: index === i ? value : n.value
+  //     });
+  //   }, true);
+  //   this.props.onChange(this.getFinalAssertions(assertions));
+  // },
 
-  runRemoveType(index){
-    this.runSetAssertionsState((n, i) => {
-      return _.assign({}, n, {
-        type: index === i ? undefined : n.type
-      });
-    });
-  },
+  // runRemoveType(index){
+  //   this.runSetAssertionsState((n, i) => {
+  //     return _.assign({}, n, {
+  //       type: index === i ? undefined : n.type
+  //     });
+  //   });
+  // },
 
   runNewAssertion(key){
     trackEvent(TRY_CHECK, TRY_CHECK_ASSERTION, {
@@ -503,37 +506,37 @@ const AssertionsSelection = React.createClass({
     );
   },
 
-  renderJsonInput(assertion){
-    const jsonBody = this.getJsonBody();
-    if (jsonBody){
-      return (
-        <Padding b={1} style={{width: '100%'}}>
-          <BoundField bf={assertion.form.boundField('value')}/>
-        </Padding>
-      );
-    }
-    return null;
-  },
+  // renderJsonInput(assertion){
+  //   const jsonBody = this.getJsonBody();
+  //   if (jsonBody){
+  //     return (
+  //       <Padding b={1} style={{width: '100%'}}>
+  //         <BoundField bf={assertion.form.boundField('value')}/>
+  //       </Padding>
+  //     );
+  //   }
+  //   return null;
+  // },
 
-  renderBody(assertionIndex){
-    const assertion = this.getAssertion(assertionIndex);
-    let buttons = null;
-    if (!assertion.relationship){
-      buttons = this.renderRelationshipButtons(assertionIndex);
-    }
-    return (
-      <div>
-        {/* this.renderTitle(assertionIndex, 'Plaintext Response Body') */}
+  // renderBody(assertionIndex){
+  //   const assertion = this.getAssertion(assertionIndex);
+  //   let buttons = null;
+  //   if (!assertion.relationship){
+  //     buttons = this.renderRelationshipButtons(assertionIndex);
+  //   }
+  //   return (
+  //     <div>
+  //       { this.renderTitle(assertionIndex, 'Plaintext Response Body') }
 
-        <div className={style.contents}>
-          {this.getBodySnippet(assertion) || 'Select a header below'}
-          {this.renderChosenRelationship(assertionIndex)}
-          {this.renderOperand(assertionIndex)}
-          {buttons}
-        </div>
-      </div>
-    );
-  },
+  //       <div className={style.contents}>
+  //         {this.getBodySnippet(assertion) || 'Select a header below'}
+  //         {this.renderChosenRelationship(assertionIndex)}
+  //         {this.renderOperand(assertionIndex)}
+  //         {buttons}
+  //       </div>
+  //     </div>
+  //   );
+  // },
 
   renderSuggestion(suggestion){
     return <span>{suggestion}</span>;
@@ -555,18 +558,18 @@ const AssertionsSelection = React.createClass({
     return (
       <div className="flex flex-col middle-xs">
         {this.renderJsonPath(assertion, assertionIndex)}
-        {this.renderRelationship(assertionIndex)}
-        {this.renderOperand(assertionIndex)}
+        <Padding tb={1} className="flex flex-row" style={{width: '100%'}}>
+          {this.renderRelationship(assertionIndex)}
+          {this.renderOperand(assertionIndex)}
+        </Padding>
       </div>
     );
   },
 
-  renderRemoveButton() {
+  renderRemoveButton(index) {
     return (
-      <div className={style.remove}>
-        <Button className={style.removeButton} color="danger" title="Remove this Assertion" onClick={this.runDelete.bind(null, index)}>
-          <Delete className={style.removeSVG} inline fill="danger"/>
-        </Button>
+      <div className={style.removeButton} onClick={this.runDelete.bind(null, index)}>
+        <BaseSVG svg={closeSVG} />
       </div>
     );
   },
@@ -580,6 +583,7 @@ const AssertionsSelection = React.createClass({
     });
     return (
       <div key={index} className={className}>
+        {this.renderRemoveButton(index)}
         {this[`render${_.capitalize(key)}`](index)}
       </div>
     );

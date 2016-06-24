@@ -2,8 +2,9 @@
 .assertion {
   background-color: #F6F6F6;
   border-left: solid 1rem var(--colorGray4);
-  margin: 1rem 0;
+  margin: 1rem 1rem 1rem 0;
   padding: 1rem;
+  position: relative;
 }
 
 .assertionPassing {
@@ -43,7 +44,6 @@
   flex-grow: 1;
 }
 
-
 .label {
   color: var(--colorGray7);
   font-family: var(--fontDisplay);
@@ -52,40 +52,34 @@
 }
 
 
+/* Remove assertion button */
+.assertion .removeButton {
+cursor: pointer;
+  border-radius: 1.8rem;
+  width: 3.6rem;
+  height: 3.6rem;
+  margin-right: -3.85rem; /* Width + a bit of margin */
+  opacity: 0.4;
+  padding: 0.5rem;
+  position: absolute;
+  right: 0;
+}
+
+.assertion:hover .removeButton {
+  display: block;
+}
+
+.removeButton:hover {
+  background-color: var(--colorGray5);
+  opacity: 0.75;
+}
+
+
 /* OLD STUFF */
 .button {
   font-size: 1.6rem;
   padding: 1.2rem 2.4rem;
   margin: 0 1rem 1rem 0;
-}
-
-.divider {
-  color: white;
-  opacity: 0.85;
-  padding: 0 1.6rem;
-}
-
-.remove {
-  padding: 0;
-  position: absolute;
-  top: 0; right: 0;
-}
-
-.remove svg {
-  fill: var(--colorGray3);
-}
-
-.remove:hover svg {
-  fill: red;
-}
-
-.removeButton {
-  background-color: transparent;
-  border-color: transparent;
-}
-
-.removeButton:hover {
-  background-color: transparent;
 }
 
 .relationshipButtons {
@@ -155,14 +149,6 @@
   line-height: 2rem;
   padding: 1.5rem 2rem;
   border-radius: 2px;
-}
-
-.operand {
-  font-family: var(--fontMono);
-}
-
-.operandInput {
-  height: 100%;
 }
 
 /* Autosuggest for JSON path input */
