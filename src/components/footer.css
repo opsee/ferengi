@@ -2,16 +2,15 @@
   background-color: #212121;
   color: var(--colorGray4);
   z-index: 20;
-  padding: 3.6rem 2rem;
-  text-align: center;
+  padding: 5rem 0 2rem 0;
 }
 
-.prose {
-  margin: 0;
+.category {
+  font-family: var(--fontDisplay);
 }
 
 .logo {
-  height: 7.4rem;
+  height: 4rem;
   opacity: 0.45;
 }
 
@@ -20,13 +19,68 @@
 }
 
 .nav li {
-  display: inline-block;
-  margin: 0;
+  display: block;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px; /* To compensate for the small font size */
+  line-height: 2.4rem;
+  margin: 0.5rem 0;
 }
 
-.navLink {
-  font-family: var(--fontDisplay);
-  display: inline-block;
-  font-size: 1.6rem;
-  padding: 2rem 1.2rem;
+.nav li a {
+  color: white;
+  opacity: 0.45;
+  text-decoration: none;
+}
+
+.nav li a:hover {
+  opacity: 1;
+}
+
+.socialColumn {
+  text-align: right;
+}
+
+.socialNav {
+  composes: nav;
+}
+
+.socialLogo {
+  height: 16px;
+  margin-left: 0.25rem;
+  vertical-align: text-bottom;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .footer {
+    padding-top: 2rem;
+  }
+
+  .category {
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .socialColumn {
+    text-align: left;
+    padding-top: 4rem;
+  }
+
+  .socialNav {
+    text-align: right;
+  }
+
+  .socialNav li {
+    display: inline-block !important;
+  }
+
+  .socialLogo {
+    height: 20px;
+    margin: 0 1rem;
+  }
+
+  .hideSm {
+    display: none;
+  }
 }
