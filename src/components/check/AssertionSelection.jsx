@@ -289,35 +289,6 @@ const AssertionsSelection = React.createClass({
     this.props.onChange(this.getFinalAssertions(assertions));
   },
 
-  // runSetType(index, type){
-  //   this.runSetAssertionsState((n, i) => {
-  //     return _.assign({}, n, {
-  //       type: index === i ? type : n.type
-  //     });
-  //   });
-  // },
-
-  // runSetValue(index, data, e){
-  //   if (e){
-  //     e.preventDefault();
-  //   }
-  //   const assertions = this.runSetAssertionsState((n, i) => {
-  //     const value = data || n.valueState;
-  //     return _.assign({}, n, {
-  //       value: index === i ? value : n.value
-  //     });
-  //   }, true);
-  //   this.props.onChange(this.getFinalAssertions(assertions));
-  // },
-
-  // runRemoveType(index){
-  //   this.runSetAssertionsState((n, i) => {
-  //     return _.assign({}, n, {
-  //       type: index === i ? undefined : n.type
-  //     });
-  //   });
-  // },
-
   runNewAssertion(key){
     trackEvent(TRY_CHECK, TRY_CHECK_ASSERTION, {
       assertionType: key
@@ -508,38 +479,6 @@ const AssertionsSelection = React.createClass({
       </div>
     );
   },
-
-  // renderJsonInput(assertion){
-  //   const jsonBody = this.getJsonBody();
-  //   if (jsonBody){
-  //     return (
-  //       <Padding b={1} style={{width: '100%'}}>
-  //         <BoundField bf={assertion.form.boundField('value')}/>
-  //       </Padding>
-  //     );
-  //   }
-  //   return null;
-  // },
-
-  // renderBody(assertionIndex){
-  //   const assertion = this.getAssertion(assertionIndex);
-  //   let buttons = null;
-  //   if (!assertion.relationship){
-  //     buttons = this.renderRelationshipButtons(assertionIndex);
-  //   }
-  //   return (
-  //     <div>
-  //       { this.renderTitle(assertionIndex, 'Plaintext Response Body') }
-
-  //       <div className={style.contents}>
-  //         {this.getBodySnippet(assertion) || 'Select a header below'}
-  //         {this.renderChosenRelationship(assertionIndex)}
-  //         {this.renderOperand(assertionIndex)}
-  //         {buttons}
-  //       </div>
-  //     </div>
-  //   );
-  // },
 
   renderCode(assertionIndex){
     const assertion = this.getAssertion(assertionIndex);
