@@ -78,7 +78,7 @@ cursor: pointer;
 /* OLD STUFF */
 .button {
   font-size: 1.6rem;
-  padding: 1.2rem 2.4rem;
+  padding: 1.5rem 2rem;
   margin: 0 1rem 1rem 0;
 }
 
@@ -118,7 +118,7 @@ cursor: pointer;
   font-family: var(--fontDisplay);
   font-size: 1.6rem;
   line-height: 2rem;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   border-radius: var(--borderRadius);
 }
 
@@ -143,12 +143,16 @@ cursor: pointer;
 
 .relationshipButton {
   composes: button;
-  margin: 0 0.5 1rem;
+  margin: 0 1rem 0 0;
   font-family: var(--fontDisplay);
   font-size: 1.75rem;
   line-height: 2rem;
   padding: 1.5rem 2rem;
   border-radius: 2px;
+}
+
+.relationshipButtons .relationshipButton {
+  margin-bottom: 1rem;
 }
 
 /* Autosuggest for JSON path input */
