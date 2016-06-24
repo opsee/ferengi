@@ -58,6 +58,12 @@ const AssertionsSelection = React.createClass({
     return this.state.assertions[index];
   },
 
+  getRelationships() {
+    return _.filter(relationships, relationship => {
+      return _.indexOf(['equal', 'empty', 'notEmpty', 'regExp', 'contain'], relationship.id) >= 0;
+    });
+  },
+
   getForm(type = 'code', kwargs){
     const self = this;
     let obj = null;
@@ -371,7 +377,7 @@ const AssertionsSelection = React.createClass({
     const assertion = this.getAssertion(assertionIndex);
     return (
       <div className={style.relationshipButtons}>
-        {relationships.map(rel => {
+        {this.getRelationships().map(rel => {
           let data = {
             relationship: rel.id
           };
@@ -399,7 +405,7 @@ const AssertionsSelection = React.createClass({
   renderChosenRelationship(assertionIndex){
     const assertion = this.getAssertion(assertionIndex);
     if (assertion.relationship){
-      const obj = _.find(relationships, {id: assertion.relationship}) || {};
+      const obj = _.find(this.getRelationships(), {id: assertion.relationship}) || {};
       return (
         <div className={style.chosenRelationship}>
           <Button className={style.relationshipButton} secondary color="white" onClick={this.runSetAssertionData.bind(null, assertionIndex, {relationship: null})}>{obj.name}</Button>
