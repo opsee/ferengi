@@ -491,6 +491,7 @@ const AssertionsSelection = React.createClass({
               renderSuggestion={s => <span>{s}</span>}
               getSuggestionValue={s => s}
               style={{width: '100%'}}
+              theme={style}
               shouldRenderSuggestions={() => true} />
           </div>
           <div className="flex between-xs">

@@ -152,37 +152,28 @@ cursor: pointer;
 }
 
 /* Autosuggest for JSON path input */
-.autosuggest {
+.suggestionsContainer {
   background-color: white;
-  font-family: var(--fontDisplay);
-  color: var(--colorGray6);
-  position: relative;
-}
-
-:global .react-autosuggest__suggestions-container {
-  max-height: 40rem;
+  border: solid 1px var(--colorGray4);
+  border-top: none;
+  max-height: 25rem;
   overflow-y: auto;
 }
 
-:global .react-autosuggest__input,
-:global .react-autosuggest__input:focus {
-  border: none;
-}
-
-:global .react-autosuggest__suggestions {
-  padding-left: 0;
+.suggestions {
   list-style: none;
   margin-left: 0;
+  padding-left: 0;
 }
 
-:global .react-autosuggest__suggestion {
-  display: block;
-  padding: 1rem 2rem;
-  margin: 0;
+.suggestion {
   cursor: pointer;
+  display: block;
+  padding: 1.2rem 2rem;
+  margin: 0;
 }
 
-:global .react-autosuggest__suggestion--focused {
+.suggestionFocused {
   background: var(--colorAccent);
   color: white;
 }
