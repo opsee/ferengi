@@ -145,7 +145,7 @@ const WizardPanel = React.createClass({
               <AssertionSelection assertions={this.state.assertions}
                 onChange={this.handleAssertionChange}
                 response={this.getResponse(false)}
-                reponseFormatted={this.getResponse(true)} />
+                responseFormatted={this.getResponse(true)} />
             </Col>
           </Row>
 

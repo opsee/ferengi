@@ -423,7 +423,7 @@ const AssertionsSelection = React.createClass({
         <Padding t={1}>
           {headerKeys.map(key => {
             return (
-              <Button flat nocap onClick={this.runSetAssertionData.bind(null, assertionIndex, {value: key})} color="text" style={{margin: '0 .5rem 1rem'}} key={`assertion-${assertionIndex}-header-key-${key}`}>{key}</Button>
+              <Button flat secondary nocap onClick={this.runSetAssertionData.bind(null, assertionIndex, {value: key})} color="text" style={{margin: '0 .5rem 1rem'}} key={`assertion-${assertionIndex}-header-key-${key}`}>{key}</Button>
             );
           })}
         </Padding>
@@ -436,7 +436,7 @@ const AssertionsSelection = React.createClass({
           {this.renderReturnedValue(assertion, selectedHeaderResult)}
         </div>
         <div className={style.rightSide}>
-          {this.renderChosenRelationship(assertionIndex)}
+          {this.renderRelationship(assertionIndex)}
           {this.renderOperand(assertionIndex)}
         </div>
       </div>
