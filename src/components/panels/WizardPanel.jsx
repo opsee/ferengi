@@ -5,6 +5,8 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
 import * as actions from '../../actions/app';
+import * as userActions from '../../actions/user';
+
 import {Grid, Row, Col} from '../layout';
 import { Heading } from '../type';
 import BaseSVG from '../images/BaseSVG';
@@ -30,11 +32,12 @@ const WizardPanel = React.createClass({
   },
 
   componentDidMount() {
-    this.props.actions.checkURL('https://try.opsee.com');
+    this.handleURLSubmit('https://try.opsee.com');
   },
 
   getInitialState() {
     return {
+      url: '',
       assertions: [{
         key: 'code',
         relationship: 'equal',
@@ -42,7 +45,8 @@ const WizardPanel = React.createClass({
       }, {
         key: 'json'
       }],
-      email: ''
+      email: '',
+      referrer: null
     }
   },
 
@@ -65,8 +69,16 @@ const WizardPanel = React.createClass({
     this.setState({ assertions });
   },
 
-  handleSignUp() {
+  handleURLSubmit(url) {
+    this.setState({ url });
+    this.props.actions.checkURL(url);
+  },
 
+  handleSignUp(signupData) {
+    debugger;
+    const data = _.assign({}, this.state, signupData);
+    console.log(data);
+    this.props.userActions.signupWithCheck({ data });
   },
 
   renderStep(i) {
@@ -103,7 +115,7 @@ const WizardPanel = React.createClass({
   },
 
   render() {
-    console.log(this.state.assertions);
+    console.log(this.state);
     return (
       <Panel>
         <Padding b={4} className="text-center">
@@ -120,7 +132,7 @@ const WizardPanel = React.createClass({
               <div className={style.iconGroup}>
                 <div className={style.urlInputWrapper}>
                   <URLInput url={this.props.redux.checks.url || 'https://try.opsee.com'}
-                    handleSubmit={this.props.actions.checkURL} />
+                    handleSubmit={this.handleURLSubmit} />
                   <CheckResponseSingle {...this.getResponse(true)} />
                 </div>
               </div>
@@ -159,7 +171,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators(actions, dispatch)
+  actions: bindActionCreators(actions, dispatch),
+  userActions: bindActionCreators(userActions, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(WizardPanel);

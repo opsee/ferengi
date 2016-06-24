@@ -142,6 +142,7 @@ export function signup(data) {
  */
 export function signupWithCheck(data) {
   return dispatch => {
+    debugger;
     dispatch({
       type: SIGNUP_WITH_CHECK,
       payload: doSignup(data)

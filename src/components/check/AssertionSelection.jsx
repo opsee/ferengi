@@ -621,7 +621,7 @@ const AssertionsSelection = React.createClass({
   render(){
     return (
       <div className={style.wrapper}>
-        {this.renderAssertionList()}
+        <form>{this.renderAssertionList()}</form>
         {this.renderAssertionPickType()}
       </div>
     );
