@@ -114,10 +114,8 @@ const TryCheck = React.createClass({
           <CheckResponseSingle {...first}/>
           {this.props.children}
 
-          <form ref="form">
-            <AssertionSelection assertions={this.state.assertions} onChange={this.handleAssertionsChange}
-              response={this.getFirstResponse()} responseFormatted={this.getFirstResponse(true)}/>
-          </form>
+          <AssertionSelection assertions={this.state.assertions} onChange={this.handleAssertionsChange}
+            response={this.getFirstResponse()} responseFormatted={this.getFirstResponse(true)}/>
 
           <Padding t={4}>
             <h2>Get <span className="text-accent">notified</span> when stuff hits the fan</h2>
