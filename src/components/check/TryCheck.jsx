@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import _ from 'lodash';
 
-import * as checkActions from '../../actions/checks';
+import * as actions from '../../actions/app';
 import * as userActions from '../../actions/user';
 import URLInput from './URLInput';
 import CheckResponseSingle from './CheckResponseSingle';
@@ -15,7 +15,7 @@ import { TRY_CHECK, TRY_CHECK_URL } from '../../constants/analyticsConstants';
 
 const TryCheck = React.createClass({
   propTypes: {
-    checkActions: PropTypes.shape({
+    actions: PropTypes.shape({
       checkURL: PropTypes.func.isRequired
     }),
     userActions: PropTypes.shape({
@@ -97,7 +97,7 @@ const TryCheck = React.createClass({
       url,
       isLoading: true
     });
-    this.props.checkActions.checkURL(url);
+    this.props.actions.checkURL(url);
   },
 
   handleAssertionsChange(assertions){
@@ -152,7 +152,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  checkActions: bindActionCreators(checkActions, dispatch),
+  actions: bindActionCreators(actions, dispatch),
   userActions: bindActionCreators(userActions, dispatch)
 });
 
