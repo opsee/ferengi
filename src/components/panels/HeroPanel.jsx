@@ -18,9 +18,9 @@ export default React.createClass({
           <div className={style.heroContent}>
             <div className={style.heading}>
               <Padding tb={1}>
-                <Heading l={1}><span className="text-accent">Health checks</span> for microservices</Heading>
+                <Heading l={1}>We watch <span className="text-accent">your APIs</span></Heading>
               </Padding>
-              <div className={style.subHeader}>See the availability and performance of your sites, APIs and internal services in one place</div>
+              <div className={style.subHeader}>Instant alerts for applications in distress</div>
             </div>
           </div>
 
