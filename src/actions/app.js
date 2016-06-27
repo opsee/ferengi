@@ -76,8 +76,8 @@ function createCheck(userData, data) {
         const error = _.first(checkResponse.errors);
         throw new Error(_.get(error, 'message'));
       }
-      trackEvent(ONBOARD, ONBOARD_FERENGI_CHECK, _.pick(data, ['url']), userData.user);
-      resolve(checkResponse);
+      trackEvent(ONBOARD, ONBOARD_FERENGI_CHECK, _.pick(data, ['url']), userData.user)
+        .then(() => resolve(checkResponse));
     })
     .catch(err => {
       yeller.report(err);
