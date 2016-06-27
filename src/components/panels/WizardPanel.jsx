@@ -32,7 +32,7 @@ const WizardPanel = React.createClass({
         checkUrl: PropTypes.object,
         signupWithCheck: PropTypes.object
       }),
-      checks: PropTypes.array
+      checks: PropTypes.object
     })
   },
 
