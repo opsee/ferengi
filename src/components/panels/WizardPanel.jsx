@@ -64,6 +64,10 @@ const WizardPanel = React.createClass({
     return null;
   },
 
+  getStatus() {
+    return this.props.redux.asyncActions.signupWithCheck.status;
+  },
+
   handleAssertionChange(assertions) {
     this.setState({ assertions });
   },
@@ -155,7 +159,7 @@ const WizardPanel = React.createClass({
             </Col>
             <Col xs={12} sm={8}>
               <p>Sign up with just your email address. We'll create your free Opsee account, create your first health check, and send you notifications whenever it fails.</p>
-              <SignUpForm onSubmit={this.handleSignUp} />
+              <SignUpForm status={this.getStatus()} onSubmit={this.handleSignUp} />
             </Col>
           </Row>
         </Grid>

@@ -90,7 +90,7 @@ const SignUpForm = React.createClass({
     }
     const status = this.getStatus();
     if (status && typeof status === 'object'){
-      const msg = _.get(this.getStatus(), 'message') || 'Something went wrong.';
+      const msg = _.get(status, 'message') || 'Something went wrong.';
       return (
         <div className={style.alert}>{msg}</div>
       );
