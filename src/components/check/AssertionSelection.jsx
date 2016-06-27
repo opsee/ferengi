@@ -431,14 +431,10 @@ const AssertionsSelection = React.createClass({
     }
 
     const helper = assertion.value ? (
-      <div>
-        <div style={{width: '100%'}}>
-          {this.renderReturnedValue(assertion, selectedHeaderResult)}
-        </div>
-        <div className={style.rightSide}>
-          {this.renderRelationship(assertionIndex)}
-          {this.renderOperand(assertionIndex)}
-        </div>
+      <div className="flex flex-row flex-wrap middle-xs">
+        {this.renderReturnedValue(assertion, selectedHeaderResult)}
+        {this.renderRelationship(assertionIndex)}
+        {this.renderOperand(assertionIndex)}
       </div>
     ) : null;
 
