@@ -12,7 +12,6 @@ import BaseSVG from '../images/BaseSVG';
 import Panel from './Panel.jsx';
 import Padding from '../layout/Padding';
 import URLInput from '../check/URLInput';
-import TryCheck from '../check/TryCheck';
 import CheckResponseSingle from '../check/CheckResponseSingle';
 import AssertionSelection from '../check/AssertionSelection';
 import { Button, Input } from '../forms';
