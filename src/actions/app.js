@@ -10,20 +10,22 @@ import yeller from '../modules/yeller';
 import { ONBOARD, ONBOARD_FERENGI_CHECK, ONBOARD_SIGNUP } from '../constants/analyticsConstants';
 import { CHECK_URL, SET_URL, SIGNUP, SIGNUP_WITH_CHECK } from './constants';
 
+function parseJSON(res) {
+  if (!res.ok){
+    return res.json().then(json => {
+      throw new Error(json.message);
+    }).catch(reject);
+  }
+  return res.json();
+}
+
 function doSignup(data = {}) {
   return new Promise((resolve, reject) => {
     fetch('https://auth.opsee.com/signups/activate', {
       method: 'post',
       body: JSON.stringify(_.pick(data, ['email', 'referrer']))
     })
-    .then(res => {
-      if (!res.ok){
-        return res.json().then(json => {
-          throw new Error(json.message);
-        }).catch(reject);
-      }
-      return res.json();
-    })
+    .then(parseJSON)
     .then(userData => {
       // Persist the temporary cookie so it can be used for Emissary
       emissary.setUser(userData);
@@ -42,7 +44,10 @@ function createCheck(userData, data) {
   const email = _.get(userData, 'user.email');
   const { url, assertions } = data;
   const check = makeCheck(url, email, assertions);
-  const checks = [check];
+
+  if (!check) {
+    return Promise.resolve();
+  }
 
   return new Promise((resolve, reject) => {
     fetch('https://api.opsee.com/graphql', {
@@ -58,17 +63,12 @@ function createCheck(userData, data) {
             }
           }
         `,
-        variables: { checks }
+        variables: {
+          checks: [check]
+        }
       })
     })
-    .then(res => {
-      if (!res.ok){
-        return res.json().then(json => {
-          throw new Error(json.message);
-        }).catch(reject);
-      }
-      return res.json();
-    })
+    .then(parseJSON)
     .then(checkResponse => {
       if (!_.isEmpty(checkResponse.errors)) {
         const error = _.first(checkResponse.errors);
@@ -97,18 +97,7 @@ export function signup(data = {}) {
           method: 'post',
           body: JSON.stringify(_.pick(data, ['email', 'referrer', 'name']))
         })
-        .then(res => {
-          if (!res.ok){
-            return res.json().then(json => {
-              throw new Error(json.message);
-            }).catch(reject);
-          }
-
-          // Track successful signups only
-          trackEvent(ONBOARD, ONBOARD_SIGNUP, data);
-
-          return res.json();
-        })
+        .then(parseJSON)
         .then(resolve)
         .catch(err => {
           yeller.report(err);

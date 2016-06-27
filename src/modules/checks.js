@@ -43,5 +43,6 @@ export function makeCheck(url, email, assertions) {
     }],
     assertions: formattedAssertions
   };
+
   return check;
 }

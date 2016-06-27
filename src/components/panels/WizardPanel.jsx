@@ -41,8 +41,6 @@ const WizardPanel = React.createClass({
         key: 'code',
         relationship: 'equal',
         operand: '200'
-      }, {
-        key: 'json'
       }],
       email: '',
       referrer: null
@@ -117,7 +115,6 @@ const WizardPanel = React.createClass({
   },
 
   render() {
-    console.log(this.getStatus());
     return (
       <Panel>
         <Padding b={4} className="text-center">
