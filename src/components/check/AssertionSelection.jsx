@@ -6,9 +6,9 @@ import CharField from 'newforms/CharField';
 import {connect} from 'react-redux';
 import Autosuggest from 'react-autosuggest';
 
-import {BoundField, Button, Input} from '../forms';
-import {Add, Delete} from 'emissary/src/js/components/icons';
-import {Padding, Expandable, Grid, Row, Col} from '../layout';
+import {BoundField, Button} from '../forms';
+import {Add} from 'emissary/src/js/components/icons';
+import {Padding, Expandable} from '../layout';
 import Highlight from '../global/Highlight';
 import validate from 'emissary/src/js/modules/validate';
 import getKeys from 'emissary/src/js/modules/getKeys';
@@ -411,7 +411,6 @@ const AssertionsSelection = React.createClass({
 
   renderHeader(assertionIndex){
     const assertion = this.getAssertion(assertionIndex);
-    const selectedHeader = assertion.value;
     const selectedHeaderResult = _.get(this.getResponseFormatted(), `headers.${assertion.value}`);
     const headers = _.get(this.getResponseFormatted(), 'headers') || {};
     const headerKeys = _.keys(headers);
@@ -513,7 +512,7 @@ const AssertionsSelection = React.createClass({
     const status = this.getAssertionStatus(assertion);
     const className = cx(style.assertion, {
       [style.assertionPassing]: status === 'passing',
-      [style.assertionFailing]: status === 'failing',
+      [style.assertionFailing]: status === 'failing'
     });
     return (
       <div key={index} className={className}>

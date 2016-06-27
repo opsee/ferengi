@@ -15,7 +15,8 @@ import { TRY_CHECK, TRY_CHECK_URL } from '../../constants/analyticsConstants';
 const TryCheck = React.createClass({
   propTypes: {
     actions: PropTypes.shape({
-      checkURL: PropTypes.func.isRequired
+      checkURL: PropTypes.func.isRequired,
+      signupWithCheck: PropTypes.func.isRequired
     }),
     redux: PropTypes.shape({
       asyncActions: PropTypes.shape({

@@ -14,12 +14,34 @@ function parseJSON(res) {
   if (!res.ok){
     return res.json().then(json => {
       throw new Error(json.message);
-    }).catch(reject);
+    });
   }
   return res.json();
 }
 
 function doSignup(data = {}) {
+//   return Promise.resolve({
+//   "intercom_hmac": "8a09813d61e6465e0b2b194146650557edc9d9aef72a1d0158cd81e37fd60258",
+//   "token": "eyJhbGciOiJBMTI4R0NNS1ciLCJlbmMiOiJBMTI4R0NNIiwiaXYiOiJabFBxRTFaZ3JHUXBfUUNnIiwidGFnIjoiQ0Z6RXJHN1Q4eTBiU01GTTFmTXZSdyJ9.my-Q6dCn6KLSgSwhb9XVRw.5Ctj5POxOiYSqKti.E1adSoQlwCw_o0dRSPaeHZ1Xns27IfS5qz784mR5KhTU-49zseOcoGTsAxaVs93bHOT1GQOgpSTfXgUTVkEoa0WE1TgdZCxRebrNozhd6M6UvSL0fnJVzmV-pP7P8PmJ-K-C82ANM9EqJH9dSzhViChiqug0V-Ieov2aGMKFV2qnqieSjNs4-qmMrUQb5cf92etyT1HdRpSi6eP6uyBLG35Es7UOryelhfRavXypIrBdAXRZtjDBcmflKomTbQWozRCl2YiAdNxegQZ33sfpA3RuqK1EnMQaHaZEhJ937nr2Yed_8LMQaPZ44Id2106h4QonLrz0enmjhyJYFOQW_iARvSgTotdQyhVm2HYuRoaGLetlf5xEEZX-eWtch6qk7RiAyhg.NCZ8Utdk0hFvu8ZZW8rHsA",
+//   "user": {
+//     "id": 490,
+//     "customer_id": "4f753a3c-3c9b-11e6-986a-2b0947950245",
+//     "email": "sara+062702@opsee.co",
+//     "verified": false,
+//     "admin": false,
+//     "active": true,
+//     "created_at": 1467054843204,
+//     "updated_at": 1467054843204,
+//     "status": "active",
+//     "has_password": false,
+//     "perms": {
+//       "admin": true,
+//       "edit": true,
+//       "billing": true
+//     }
+//   }
+// });
+
   return new Promise((resolve, reject) => {
     fetch('https://auth.opsee.com/signups/activate', {
       method: 'post',
@@ -83,7 +105,6 @@ function createCheck(userData, data) {
     });
   });
 }
-
 
 /**
  * @param {string} url

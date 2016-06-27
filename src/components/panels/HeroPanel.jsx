@@ -3,18 +3,12 @@ import React from 'react';
 import Panel from './Panel.jsx';
 import style from './heroPanel.css';
 import Padding from '../layout/Padding';
-import TryCheck from '../check/TryCheck';
 import { Heading } from '../type';
 
 import BaseSVG from '../images/BaseSVG';
 import locMap from '../images/location-map.svg';
 import illustAWS from '../images/illust_aws-01.svg';
 import illustChecks from '../images/illust_checks-01.svg';
-import logoAutodesk from '../images/logos/logo-autodesk.svg';
-import logoLivewatch from '../images/logos/logo-livewatch.png';
-import logoAzavea from '../images/logos/logo-azavea.png';
-import logoYieldbot from '../images/logos/logo-yieldbot.png';
-import logoRealself from '../images/logos/logo-realself.png';
 
 export default React.createClass({
   render() {

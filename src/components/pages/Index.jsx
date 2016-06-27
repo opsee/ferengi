@@ -5,16 +5,12 @@ import SkewPanel from '../panels/SkewPanel';
 import HeroPanel from '../panels/HeroPanel';
 import SignUpPanel from '../panels/SignUpPanel';
 import { Padding, Row, Col } from '../layout';
-import Button from '../forms/Button';
 import SkewDivider from '../layout/SkewDivider';
 import Quote from '../global/Quote';
 import Panel from '../panels/Panel';
 import WizardPanel from '../panels/WizardPanel';
 
 import BaseSVG from '../images/BaseSVG';
-import locMap from '../images/location-map.svg';
-import illustAWS from '../images/illust_aws-01.svg';
-import illustChecks from '../images/illust_checks-01.svg';
 import logoAutodesk from '../images/logos/logo-autodesk.svg';
 import logoLivewatch from '../images/logos/logo-livewatch.png';
 import logoAzavea from '../images/logos/logo-azavea.png';
