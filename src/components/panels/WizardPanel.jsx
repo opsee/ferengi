@@ -114,6 +114,16 @@ const WizardPanel = React.createClass({
     );
   },
 
+  renderResponse() {
+    const response = this.getResponse(true);
+    if (!response) {
+      return null;
+    }
+    return (
+      <CheckResponseSingle {...this.getResponse(true)} />
+    );
+  },
+
   render() {
     return (
       <Panel>
@@ -131,8 +141,8 @@ const WizardPanel = React.createClass({
               <div className={style.iconGroup}>
                 <div className={style.urlInputWrapper}>
                   <URLInput url={this.props.redux.checks.url || 'https://try.opsee.com'}
-                    handleSubmit={this.handleURLSubmit} />
-                  <CheckResponseSingle {...this.getResponse(true)} />
+                    status={this.props.redux.asyncActions.checkUrl.status} handleSubmit={this.handleURLSubmit} />
+                  {this.renderResponse()}
                 </div>
               </div>
             </Col>
