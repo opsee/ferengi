@@ -14,7 +14,7 @@ import BaseSVG from '../images/BaseSVG';
 import locMap from '../images/location-map.svg';
 import illustAWS from '../images/illust_aws-01.svg';
 import illustChecks from '../images/illust_checks-01.svg';
-import logoAutodesk from '../images/logos/logo-autodesk.svg';
+// import logoAutodesk from '../images/logos/logo-autodesk.svg';
 import logoLivewatch from '../images/logos/logo-livewatch.png';
 import logoAzavea from '../images/logos/logo-azavea.png';
 import logoYieldbot from '../images/logos/logo-yieldbot.png';
@@ -55,7 +55,7 @@ export default React.createClass({
                 <a href="/features"><BaseSVG svg={locMap} /></a>
               </div>
               <div className={style.colText}>
-                <p>Every check runs from all 6 of our locations around the world, every 30 seconds</p>
+                <p>Every check runs from all 6 of our locations around the world, every 30 seconds, with nothing to install</p>
               </div>
             </div>
 
@@ -86,9 +86,6 @@ export default React.createClass({
           <Padding tb={2}>
             <div className="flex-vertical-align justify-content-center flex-wrap">
               <Padding a={1}>
-                <a target="_blank" href="http://www.autodesk.com/"><BaseSVG svg={logoAutodesk} className={style.customerLogo} /></a>
-              </Padding>
-              <Padding a={1}>
                 <a target="_blank" href="https://www.livewatch.com"><BaseSVG svg={logoLivewatch} className={style.customerLogo} /></a>
               </Padding>
               <Padding a={1}>
@@ -109,7 +106,7 @@ export default React.createClass({
         <Panel>
           <Row>
             <Col xs={10} xsOffset={1}>
-              <Quote quote="autodeskChecks" />
+              <Quote quote="pingdom" />
             </Col>
           </Row>
         </Panel>
