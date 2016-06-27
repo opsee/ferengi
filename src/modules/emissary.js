@@ -20,7 +20,9 @@ export function redirectToEmissary() {
   // the process.env stuff and replace the line with just a string
   // (e.g., const location = 'production') but it looks messy!
   let location;
-  if (false){//(process.env.NODE_ENV === 'development') {
+  if (process.env.NODE_ENV === 'development') {
+    // We can't redirect to staging/production emissary from localhost since the
+    // domains are different; to do so, you'll want to modify your /etc/hosts file
     location = 'http://localhost:8080/welcome';
   } else {
     location = 'https://app.opsee.com/welcome';
