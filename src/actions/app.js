@@ -2,7 +2,7 @@ import _ from 'lodash';
 
 import * as catfish from '../modules/catfish';
 import * as emissary from '../modules/emissary';
-import { makeCheck } from '../modules/checks';
+import { isDefaultCheck, makeCheck } from '../modules/checks';
 import { trackEvent } from '../modules/analytics';
 import fetch from '../modules/fetch';
 import yeller from '../modules/yeller';
@@ -41,13 +41,13 @@ function doSignup(data = {}) {
 }
 
 function createCheck(userData, data) {
-  const email = _.get(userData, 'user.email');
   const { url, assertions } = data;
-  const check = makeCheck(url, email, assertions);
-
-  if (!check) {
+  if (isDefaultCheck(url, assertions)) {
     return Promise.resolve();
   }
+
+  const email = _.get(userData, 'user.email');
+  const check = makeCheck(url, email, assertions);
 
   return new Promise((resolve, reject) => {
     fetch('https://api.opsee.com/graphql', {

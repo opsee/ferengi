@@ -1,6 +1,12 @@
 import _ from 'lodash';
 import URL from 'url';
 
+export function isDefaultCheck(url, assertions) {
+  return url === 'https://try.opsee.com' &&
+    assertions.length === 1 &&
+    _.isEqual(assertions[0], {key: 'code', relationship: 'equal', operand: '200'});
+}
+
 /**
  * Example usage:
  *
