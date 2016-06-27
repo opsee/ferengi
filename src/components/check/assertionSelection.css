@@ -52,6 +52,20 @@
   margin: 0.5rem;
 }
 
+.assertionField {
+  font-family: var(--fontDisplay);
+  font-size: 1.6rem;
+  padding: 1.5rem 2rem;
+  margin: 0 1rem 1rem 0;
+}
+
+.value {
+  composes: assertionField;
+  border-bottom: solid 1px var(--colorGray4);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  color: var(--colorAccent);
+}
 
 /* Remove assertion button */
 .assertion .removeButton {
@@ -75,12 +89,9 @@
   opacity: 0.65;
 }
 
-
 /* OLD STUFF */
 .button {
-  font-size: 1.6rem;
-  padding: 1.5rem 2rem;
-  margin: 0 1rem 1rem 0;
+  composes: assertionField;
 }
 
 /* The body snippet for JSON assertions */

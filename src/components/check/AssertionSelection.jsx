@@ -403,7 +403,7 @@ const AssertionsSelection = React.createClass({
   renderReturnedValue(assertion, value, title){
     return (
       <div className={style.returnedValue}>
-        <Input className={style.input} value={value} disabled />
+        <div className={style.value}>{value}</div>
         <div className={style.label}>{title || 'value'}</div>
       </div>
     );
