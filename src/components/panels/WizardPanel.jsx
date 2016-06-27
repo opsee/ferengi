@@ -91,12 +91,12 @@ const WizardPanel = React.createClass({
       case 2:
         icon = taskSVG;
         heading = 'Define your assertions';
-        text = 'A target can be a URL, such as an API endpoint, or an internal service, such as an AWS EC2 instance.';
+        text = 'Verify response headers, bodies, and round-trip times – health is more than a status code.';
         break;
       case 3:
         icon = mailSVG;
         heading = 'Set up notifications';
-        text = 'A target can be a URL, such as an API endpoint, or an internal service, such as an AWS EC2 instance.';
+        text = 'Know what\'s wrong, wherever you are. Notifications can be sent via email, Slack, webhooks, or PagerDuty.';
         break;
     }
     return (
