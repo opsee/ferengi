@@ -4,7 +4,6 @@ import {bindActionCreators} from 'redux';
 import _ from 'lodash';
 
 import * as actions from '../../actions/app';
-import * as userActions from '../../actions/user';
 import URLInput from './URLInput';
 import CheckResponseSingle from './CheckResponseSingle';
 import AssertionSelection from './AssertionSelection';
@@ -17,9 +16,6 @@ const TryCheck = React.createClass({
   propTypes: {
     actions: PropTypes.shape({
       checkURL: PropTypes.func.isRequired
-    }),
-    userActions: PropTypes.shape({
-      signupWithCheck: PropTypes.func.isRequired
     }),
     redux: PropTypes.shape({
       asyncActions: PropTypes.shape({
@@ -107,7 +103,7 @@ const TryCheck = React.createClass({
   handleSignUp(signUpData) {
     const { url, assertions } = this.state;
     const data = _.assign({ url, assertions}, signUpData);
-    this.props.userActions.signupWithCheck(data);
+    this.props.actions.signupWithCheck(data);
   },
 
   renderResponses() {
@@ -152,8 +148,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators(actions, dispatch),
-  userActions: bindActionCreators(userActions, dispatch)
+  actions: bindActionCreators(actions, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TryCheck);

@@ -6,7 +6,7 @@ import { getReferrer } from '../../modules/referrer';
 import Panel from './Panel.jsx';
 import Padding from '../layout/Padding';
 import SignUpForm from '../global/SignUpForm';
-import * as actions from '../../actions/user';
+import * as actions from '../../actions/app';
 import style from './signUpPanel.css';
 
 const SignUpPanel = React.createClass({

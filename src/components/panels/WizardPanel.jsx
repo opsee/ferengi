@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
 import * as actions from '../../actions/app';
-import * as userActions from '../../actions/user';
 
 import {Grid, Row, Col} from '../layout';
 import { Heading } from '../type';
@@ -76,7 +75,7 @@ const WizardPanel = React.createClass({
 
   handleSignUp(signupData) {
     const data = _.assign({}, this.state, signupData);
-    this.props.userActions.signupWithCheck({ data });
+    this.props.actions.signupWithCheck(data);
     this.setState(data);
   },
 
@@ -114,6 +113,7 @@ const WizardPanel = React.createClass({
   },
 
   render() {
+    console.log(this.getStatus());
     return (
       <Panel>
         <Padding b={4} className="text-center">
@@ -169,8 +169,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators(actions, dispatch),
-  userActions: bindActionCreators(userActions, dispatch)
+  actions: bindActionCreators(actions, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(WizardPanel);
