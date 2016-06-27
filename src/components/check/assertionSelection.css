@@ -55,12 +55,12 @@
 
 /* Remove assertion button */
 .assertion .removeButton {
-cursor: pointer;
+  cursor: pointer;
   border-radius: 1.8rem;
   width: 3.6rem;
   height: 3.6rem;
   margin-right: -3.85rem; /* Width + a bit of margin */
-  opacity: 0.4;
+  opacity: 0.2;
   padding: 0.5rem;
   position: absolute;
   right: 0;
@@ -71,8 +71,8 @@ cursor: pointer;
 }
 
 .removeButton:hover {
-  background-color: var(--colorGray5);
-  opacity: 0.75;
+  background-color: var(--colorGray3);
+  opacity: 0.65;
 }
 
 
