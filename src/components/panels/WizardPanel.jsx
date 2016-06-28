@@ -36,13 +36,9 @@ const WizardPanel = React.createClass({
     })
   },
 
-  componentDidMount() {
-    this.handleURLSubmit('https://try.opsee.com');
-  },
-
   getInitialState() {
     return {
-      url: '',
+      url: 'https://try.opsee.com',
       assertions: [{
         key: 'code',
         relationship: 'equal',
@@ -54,7 +50,9 @@ const WizardPanel = React.createClass({
   },
 
   getResponse(formatHeaders) {
-    const res = _.chain(this.props.redux.checks.responses).head().get('http_response').value();
+    const data = this.props.redux.checks[this.state.url] || [];
+    const res = _.chain(data).get('responses').head().get('http_response').value();
+
     if (res && res.headers){
       if (formatHeaders){
         let headers = {};
@@ -151,7 +149,7 @@ const WizardPanel = React.createClass({
             <Col xs={12} sm={8}>
               <div className={style.iconGroup}>
                 <div className={style.urlInputWrapper}>
-                  <URLInput url={this.props.redux.checks.url || 'https://try.opsee.com'}
+                  <URLInput url={this.state.url}
                     status={this.props.redux.asyncActions.checkUrl.status} handleSubmit={this.handleURLSubmit} />
                   {this.renderResponse()}
                 </div>

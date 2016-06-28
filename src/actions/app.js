@@ -154,6 +154,10 @@ export function checkURL(url) {
     dispatch({
       type: CHECK_URL,
       payload: catfish.check(url)
+        .then(res => {
+          const data = _.assign({}, res.data, { url });
+          return { data };
+        })
     });
   };
 }

@@ -26,5 +26,6 @@ export function trackEvent(category, action = '', data = {}, user = {}) {
         throw new Error(json.message);
       });
     }
+    return res;
   });
 }

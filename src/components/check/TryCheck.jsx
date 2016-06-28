@@ -56,7 +56,7 @@ const TryCheck = React.createClass({
 
   getResponses() {
     const isSuccess = this.props.redux.asyncActions.checkUrl.status === 'success';
-    const responses = this.props.redux.checks.responses;
+    const responses = _.get(this.props.redux.checks[this.state.url], 'responses');
     return isSuccess ? responses : null;
   },
 
