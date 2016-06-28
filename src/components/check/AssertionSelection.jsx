@@ -499,6 +499,18 @@ const AssertionsSelection = React.createClass({
     );
   },
 
+
+  renderBody(assertionIndex){
+    const assertion = this.getAssertion(assertionIndex);
+    return (
+      <div className="flex flex-row flex-wrap middle-xs">
+        {this.renderReturnedValue(assertion, 'response body')}
+        {this.renderRelationship(assertionIndex)}
+        {this.renderOperand(assertionIndex)}
+      </div>
+    );
+  },
+
   renderRemoveButton(index) {
     return (
       <div className={style.removeButton} onClick={this.runDelete.bind(null, index)}>
@@ -514,10 +526,11 @@ const AssertionsSelection = React.createClass({
       [style.assertionPassing]: status === 'passing',
       [style.assertionFailing]: status === 'failing'
     });
+    const fn = this[`render${_.capitalize(key)}`];
     return (
       <div key={index} className={className}>
         {this.renderRemoveButton(index)}
-        {this[`render${_.capitalize(key)}`](index)}
+        {typeof fn === 'function' ? fn(index) : null}
       </div>
     );
   },
