@@ -51,7 +51,7 @@ export default React.createClass({
                 <ul className="prose">
                   <li>Up to 5 Global Checks</li>
                   <li>5-minute check frequency</li>
-                  <li>Run from 1 of our global locations</li>
+                  <li>Checks run from 1 of our global locations</li>
                 </ul>
               </Padding>
             </Col>
@@ -69,7 +69,7 @@ export default React.createClass({
                 <h3>Features</h3>
                 <ul className="prose">
                   <li>30-second check frequency</li>
-                  <li>Run from <a href="/how">our EC2 Instance</a></li>
+                  <li>AWS coverage with <a href="/how">our EC2 Instance</a></li>
                   <li>Unlimited hosts</li>
                   <li>CloudWatch integration with unlimited metrics per check</li>
                 </ul>
@@ -108,7 +108,7 @@ export default React.createClass({
             <Col xs={6} sm={2}>
               <div className={style.freeFeature}>
                 <BaseSVG svg={latencySVG} className={style.freeSVG} />
-                <span>Latency<br/>Measurement</span>
+                <span>Responsive<br/>Design</span>
               </div>
             </Col>
           </Row>
