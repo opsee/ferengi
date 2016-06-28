@@ -15,7 +15,8 @@ const SignUpForm = React.createClass({
     buttonText: PropTypes.string,
     pendingText: PropTypes.string,
     successText: PropTypes.string,
-    location: PropTypes.object
+    location: PropTypes.object,
+    disabled: PropTypes.bool
   },
   getDefaultProps(){
     return {
@@ -56,7 +57,7 @@ const SignUpForm = React.createClass({
     }
   },
   isDisabled(){
-    return this.props.status === 'pending';
+    return this.props.disabled || this.props.status === 'pending';
   },
   onInputChange(e){
     if (e && e.target){

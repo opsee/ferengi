@@ -13,11 +13,11 @@ const SignUpPanel = React.createClass({
   propTypes: {
     location: PropTypes.object,
     actions: PropTypes.shape({
-      signup: PropTypes.func.isRequired
+      signupWithCheck: PropTypes.func.isRequired
     }),
     redux: PropTypes.shape({
       asyncActions: PropTypes.shape({
-        signup: PropTypes.object
+        signupWithCheck: PropTypes.object
       })
     })
   },
@@ -27,7 +27,7 @@ const SignUpPanel = React.createClass({
     };
   },
   getStatus(){
-    return this.props.redux.asyncActions.signup.status;
+    return this.props.redux.asyncActions.signupWithCheck.status;
   },
   getReferrer(){
     return getReferrer(this.props.location);
@@ -37,7 +37,7 @@ const SignUpPanel = React.createClass({
   },
   onSubmit(data){
     this.setState({ data });
-    return this.props.actions.signup(data);
+    return this.props.actions.signupWithCheck(data);
   },
   renderTitle(){
     if (this.getReferrer() === 'betalist') {

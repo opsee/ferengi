@@ -44,7 +44,7 @@ function doSignup(data = {}) {
 
 function createCheck(userData, data) {
   const { url, assertions } = data;
-  if (isDefaultCheck(url, assertions)) {
+  if (!url || isDefaultCheck(url, assertions)) {
     return Promise.resolve();
   }
 
