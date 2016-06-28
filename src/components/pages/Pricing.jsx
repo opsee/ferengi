@@ -37,7 +37,7 @@ export default React.createClass({
           </Padding>
 
           <Row>
-            <Col xs={12} sm={4}>
+            <Col xs={12} sm={6}>
               <h3 className={style.pricingTableTHFree}>Free</h3>
               <div className={style.priceFree}>
                 <span className={style.priceDol}>$</span><span className={style.priceNum}>0</span>
@@ -55,25 +55,7 @@ export default React.createClass({
                 </ul>
               </Padding>
             </Col>
-            <Col xs={12} sm={4}>
-              <h3 className={style.pricingTableTH}>Global Checks</h3>
-
-              <div className={style.price}>
-                <span className={style.priceDol}>$</span><span className={style.priceNum}>1</span>
-                <Padding t={1}>
-                  <div className={style.priceNote}>per check<br/>per month</div>
-                </Padding>
-              </div>
-
-              <Padding lr={1} b={2}>
-                <h3>Features</h3>
-                <ul className="prose">
-                  <li>30-second check frequency</li>
-                  <li>Run from all 6 of our global locations</li>
-                </ul>
-              </Padding>
-            </Col>
-            <Col xs={12} sm={4}>
+            <Col xs={12} sm={6}>
               <h3 className={style.pricingTableTH}>AWS Checks</h3>
 
               <div className={style.price}>
@@ -123,27 +105,11 @@ export default React.createClass({
                 <span>Latency<br/>Measurement</span>
               </div>
             </Col>
-          </Row>
-        </Panel>
-
-        <SkewDivider />
-
-        <Panel>
-          <Padding b={2} className="text-center">
-            <h2>Frequently Asked <span className="text-accent">Questions</span></h2>
-          </Padding>
-
-          <Row>
-            <Col sm={6}>
-              <p><strong>How do AWS checks work?</strong></p>
-              <p>The most important thing to know is that we don&rsquo;t count instances/hosts. When you target a check at a Security Group, for example, we track and check all of its instances automatically, whether there are 2 or 200</p>
-
-              <p><strong>How am I billed for checks?</strong></p>
-              <p>A check does not count unless it has been running for at least a week.</p>
-            </Col>
-            <Col sm={6}>
-              <p><strong>How do CloudWatch checks work?</strong></p>
-              <p>We capture the available metrics from CloudWatch and let you create checks for multiple metrics for a given target. So if you have a RDS Database Instance and want to track CPU utilization, free memory, and database connections, you can add all of those metrics to a single check. In fact, we will create that check for you automatically, for each RDS DB instance we detect, when you add our instance.</p>
+            <Col xs={6} sm={2}>
+              <div className={style.freeFeature}>
+                <BaseSVG svg={latencySVG} className={style.freeSVG} />
+                <span>Latency<br/>Measurement</span>
+              </div>
             </Col>
           </Row>
         </Panel>
