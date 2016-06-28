@@ -27,7 +27,7 @@ export function makeCheck(url, email, assertions) {
   const port = parsedURL.port || (protocol === 'https' ? 443 : 80);
 
   const formattedAssertions = _.filter(assertions, assertion => {
-    return assertion.key && assertion.operand && assertion.relationship;
+    return assertion.key && assertion.relationship; // FIXME better logic
   });
 
   const check = {
