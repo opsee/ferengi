@@ -9,6 +9,7 @@ import { Heading, Permalink } from '../type';
 import BaseSVG from '../images/BaseSVG';
 import awsSVG from '../images/logos/aws-01.svg';
 import slackSVG from '../images/logos/slack-01.svg';
+import pagerdutySVG from '../images/logos/pagerduty.svg';
 import ec2SVG from '../images/logos/ec2-01.svg';
 import ecsSVG from '../images/logos/ecs-01.svg';
 import rdsSVG from '../images/logos/rds-01.svg';
@@ -121,6 +122,29 @@ export default React.createClass({
 
                 <p><a href="https://slack.com/" target="_blank">Slack</a> is a messaging app for teams. Opsee can send notifications to Slack channels. Just connect Opsee to Slack in your profile, and choose a Slack channel to send notifications to when you create health checks.</p>
                 <p>Read more about setting up your Slack notifications <a href="https://app.opsee.com/docs/notifications" target="_blank">in our docs</a>.</p>
+                </div>
+            </div>
+          </div>
+        </Panel>
+
+        <SkewDivider />
+
+        <Panel>
+          <div className="row">
+            <div className="col center-xs col-xs-12 col-sm-4 col-md-3 first-xs">
+              <div className={style.logo}>
+                <BaseSVG svg={pagerdutySVG} />
+              </div>
+            </div>
+
+            <div className="col col-xs-12 col-sm-8 col-md-9 last-xs">
+              <div className={style.prosePanel}>
+                <div className="text-center-xs">
+                  <Heading permalink="pagerduty" level={2}>Team incident management with <span className="text-accent">Pagerduty</span></Heading>
+                </div>
+
+                <p>With Opsee’s <a href="https://pagerduty.com/" target="_blank">PagerDuty</a> integration it’s even easier to share on-call responsibility with your team and manage incidents together. Health check status can be integrated with the rest of your operational data, so you can leverage your on-call and escalation rules and multi-channel alerts the way you expect.</p>
+                <p>Read more about setting up your Pagerduty notifications <a href="https://app.opsee.com/docs/notifications" target="_blank">in our docs</a>.</p>
                 </div>
             </div>
           </div>

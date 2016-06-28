@@ -1,5 +1,4 @@
 .heroPanel {
-  min-height: 45vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,19 +9,65 @@
   width: 100%;
   max-width: var(--layoutMaxWidth);
   margin: 0 auto;
-  text-align: center;
 }
 
 .heading {
-  margin: 4rem 0 8rem 0;
+  margin: 4rem 0 6rem 0;
+  text-align: center;
 }
 
-.heading h1 {
-  color: var(--colorGray8);
-  margin: 2rem 0;
+.assertionsPanel {
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 24px 0;
 }
 
-.heading h3 {
-  font-size: 2.4rem;
-  line-height: 3rem;
+.grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1 auto;
+  width: 33.3333%;
+  padding: 2rem;
+}
+
+.colSVG {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.colSVG img {
+  width: 300px;
+}
+
+.colText {
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.button {
+  font-size: 2rem;
+  padding: 2rem 4rem;
+}
+
+.customerLogo {
+  height: 50px;
+  margin: 0 1rem;
+  width: 150px;
+}
+
+@media (max-width: 700px) {
+  .col { width: 100%; }
 }

@@ -103,7 +103,7 @@ const URLInput = React.createClass({
       <div className={style.inputGroup}>
         <input value={this.state.url} type="text" aria-label="Try a URL"
           placeholder={this.props.placeholder} className={inputClass}
-          onChange={this.handleChange} autoFocus />
+          onChange={this.handleChange} />
 
         <div className={style.buttonWrapper}>
           <Button type="submit" className={style.button}>

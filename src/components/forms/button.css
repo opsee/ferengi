@@ -2,7 +2,7 @@
   /* Defaults */
   background-color: var(--colorAccent);
   border: 1px solid var(--colorAccent);
-  border-radius: 4px;
+  border-radius: var(--borderRadius);
   font-size: 1.4rem;
   padding: 2rem;
   background-image: none;
@@ -75,5 +75,7 @@ a.btn:hover,
   fill: #FFF;
 }
 
-
+.btnBlock{
+  width: 100%;
+}
 

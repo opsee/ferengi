@@ -5,8 +5,9 @@
   "scripts": {
     "build": "NODE_ENV='production' ./node_modules/grunt-cli/bin/grunt build",
     "deploy": "./node_modules/grunt-cli/bin/grunt deploy:prod",
-    "staging": "./node_modules/grunt-cli/bin/grunt deploy:staging",
-    "start": "./node_modules/grunt-cli/bin/grunt dev",
+    "stage": "npm run staging",
+    "staging": "NODE_ENV=staging ./node_modules/grunt-cli/bin/grunt deploy:staging",
+    "start": "NODE_ENV=development ./node_modules/grunt-cli/bin/grunt dev",
     "stats": "webpack --config webpack/build.config --profile --json > stats.json",
     "test": "NODE_ENV='production' ./node_modules/grunt-cli/bin/grunt build",
     "watch": "./node_modules/grunt-cli/bin/grunt watch"
@@ -29,6 +30,7 @@
     "babel-preset-react": "^6.5.0",
     "classnames": "^2.2.3",
     "config": "^1.19.0",
+    "cookie": "^0.3.1",
     "css-loader": "^0.23.1",
     "emissary": "github:opsee/emissary#d045cc30f90e37a6033ca8c924759bb6bcc4a1e5",
     "eslint": "~2.2.0",

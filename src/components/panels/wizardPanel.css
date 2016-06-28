@@ -1,0 +1,34 @@
+.row {
+  margin: 6rem 0;
+}
+
+.row:first-child {
+  margin-top: 2rem;
+}
+
+.urlInputWrapper {
+  padding-top: 2rem;
+}
+
+@media(max-width: 760px) {
+  .row {
+    padding-bottom: 2rem;
+  }
+
+  .urlInputWrapper {
+    padding-top: 0;
+  }
+}
+
+.icon {
+  max-width: 80px;
+  margin: 0 auto;
+  opacity: 0.6;
+}
+
+.iconHeading {
+  font-family: var(--fontDisplay);
+  font-size: 2rem;
+  letter-spacing: 0.25px;
+}
+

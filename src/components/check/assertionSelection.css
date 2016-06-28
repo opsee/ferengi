@@ -1,113 +1,97 @@
-.wrapper {
-  text-align: left;
-}
-
-.button {
-  font-size: 1.6rem;
-  padding: 1.2rem 2.4rem;
-  margin: 0 1rem 1rem 0;
-}
-
-.heading {
-  display: flex;
-  flex: 1;
-  align-items: center;
-  font-family: var(--fontDisplay);
-  color: var(--colorGray6);
-}
-
-.divider {
-  color: white;
-  opacity: 0.85;
-  padding: 0 1.6rem;
-}
-
+/* Single assertion styling */
 .assertion {
-  background-color: var(--colorGray2);
+  background-color: #F6F6F6;
+  border-left: solid 1rem var(--colorGray4);
+  margin: 1rem 1rem 1rem 0;
+  padding: 1rem;
   position: relative;
-  padding: 6rem;
-  border-radius: 4px;
 }
 
-.assertion:before {
-  content: '';
-  position: absolute;
-  top: 0; right: 0;
-  border-top: 9rem solid white;
-  border-left: 9rem solid transparent;
-  width: 0;
+.assertionPassing {
+  border-left-color: var(--colorSuccess);
 }
 
-.assertion:after {
-  content: '';
-  position: absolute;
-  bottom:0 ; left: 0;
-  border-top: 8rem solid transparent;
-  border-left: 8rem solid white;
-  width: 0;
+.assertionFailing {
+  border-left-color: var(--colorDanger);
 }
 
-.assertionDark {
-  composes: assertion;
-  color: white !important;
+/* Columns */
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.assertionDark .heading {
-  color: white;
-}
-
-.assertionSuccess {
-  composes: assertionDark;
-  background-color: var(--colorSuccess);
-}
-
-.assertionFailure {
-  composes: assertionDark;
-  background-color: var(--colorDanger);
-}
-
-.assertionFailure .counter {
-  color: var(--colorWarm0);
-}
-
-.remove {
-  padding: 0;
-  position: absolute;
-  top: 0; right: 0;
-}
-
-.remove svg {
-  fill: var(--colorGray3);
-}
-
-.remove:hover svg {
-  fill: red;
-}
-
-.removeButton {
-  background-color: transparent;
-  border-color: transparent;
-}
-
-.removeButton:hover {
-  background-color: transparent;
+.col {
+  padding-right: 1rem;
 }
 
 .returnedValue {
-  font-size: 2rem;
-  color: #333;
-  font-family: var(--fontDisplay);
-  padding: 2rem 0;
+  composes: col;
+  flex-grow: 1;
 }
 
-.assertionDark .returnedValue {
-  color: white;
+.relationship {
+  composes: col;
 }
 
 .relationshipButtons {
-  width: 100%;
-  padding-top: 1rem;
-  flex: 1;
+  composes: col;
+  flex-grow: 1;
+}
+
+.operand {
+  composes: col;
+  flex-grow: 1;
+}
+
+.label {
+  color: var(--colorGray7);
+  font-family: var(--fontDisplay);
+  font-size: 1.4rem;
+  margin: 0.5rem;
+}
+
+.assertionField {
+  font-family: var(--fontDisplay);
+  font-size: 1.6rem;
+  padding: 1.5rem 2rem;
+  margin: 0 1rem 1rem 0;
+}
+
+.value {
+  composes: assertionField;
+  border-bottom: solid 1px var(--colorGray4);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  color: var(--colorAccent);
+}
+
+/* Remove assertion button */
+.assertion .removeButton {
+  cursor: pointer;
+  border-radius: 1.8rem;
+  width: 3.6rem;
+  height: 3.6rem;
+  margin-right: -3.85rem; /* Width + a bit of margin */
+  opacity: 0.2;
+  padding: 0.5rem;
+  position: absolute;
+  right: 0;
+}
+
+.assertion:hover .removeButton {
+  display: block;
+}
+
+.removeButton:hover {
+  background-color: var(--colorGray3);
+  opacity: 0.65;
+}
+
+/* OLD STUFF */
+.button {
+  composes: assertionField;
 }
 
 /* The body snippet for JSON assertions */
@@ -120,22 +104,8 @@
 
 /* JSON path input & heading */
 .jsonPath {
-  padding: 2rem 0;
-}
-
-.jsonPath label {
-  font-family: var(--fontDisplay);
-  padding: 2rem 0;
-  font-size: 2rem;
-  color: var(--colorGray6);
-}
-
-.assertionDark .jsonPath label {
-  color: var(--colorGray3);
-}
-
-.assertionDark a {
-  color: var(--colorGray3);
+  composes: col;
+  width: 100%;
 }
 
 .assertion input {
@@ -147,90 +117,66 @@
   font-family: var(--fontDisplay);
   font-size: 1.6rem;
   line-height: 2rem;
-  padding: 1rem 2rem;
-  border-radius: 4px;
+  padding: 1.5rem 2rem;
+  border-radius: var(--borderRadius);
 }
 
-.autosuggest {
+.assertion input {
+    /* @see http://stackoverflow.com/questions/23211656/remove-ios-input-shadow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
   background-color: white;
+  box-sizing: border-box;
+  border: solid 1px var(--colorGray4);
+  padding: 0.5rem;
+  width: 100%;
+
   font-family: var(--fontDisplay);
-  color: var(--colorGray6);
-  position: relative;
-}
-
-.assertion pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-.assertionDark .button {
-  border-color: white;
-  color: white;
-}
-
-.assertionDark .button:hover {
-  background-color: white;
-  color: var(--colorAccent);
+  font-size: 1.6rem;
+  line-height: 2rem;
+  padding: 1.5rem 2rem;
+  border-radius: var(--borderRadius);
 }
 
 .relationshipButton {
   composes: button;
-  margin: 0 0.5 1rem;
+  margin: 0 1rem 0 0;
+  font-family: var(--fontDisplay);
+  font-size: 1.6rem;
+  line-height: 2rem;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
 }
 
-.rightSide {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: flex-start;
+.relationshipButtons .relationshipButton {
+  margin-bottom: 1rem;
 }
 
-.operand {
-  font-family: var(--fontMono);
-  flex: 1 auto;
-  min-width: 80%;
-}
-
-.operandInput {
-  height: 100%;
-}
-
-:global .react-autosuggest__suggestions-container {
-  max-height: 40rem;
+/* Autosuggest for JSON path input */
+.suggestionsContainer {
+  background-color: white;
+  border: solid 1px var(--colorGray4);
+  border-top: none;
+  max-height: 25rem;
   overflow-y: auto;
 }
 
-:global .react-autosuggest__input,
-:global .react-autosuggest__input:focus {
-  border: none;
-}
-
-:global .react-autosuggest__suggestions {
-  padding-left: 0;
+.suggestions {
   list-style: none;
   margin-left: 0;
+  padding-left: 0;
 }
 
-:global .react-autosuggest__suggestion {
-  display: block;
-  padding: 1rem 2rem;
-  margin: 0;
+.suggestion {
   cursor: pointer;
+  display: block;
+  padding: 1.2rem 2rem;
+  margin: 0;
 }
 
-:global .react-autosuggest__suggestion--focused {
+.suggestionFocused {
   background: var(--colorAccent);
   color: white;
-}
-
-@media (max-width: 768px) {
-  .assertion {
-    padding: 6rem 2rem;
-  }
-
-  .assertionInner {
-    /* Compensates for angled corners on small screens */
-    padding: 2rem 0;
-  }
 }

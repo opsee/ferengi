@@ -41,6 +41,12 @@ module.exports = {
       title: 'Opsee / Beta TOS'
     },
 
+    '/pingdom-alternative': {
+      title: 'Opsee / Try a Better Alternative to Pingdom',
+      excerpt: 'Be sure your sites, APIs and internal services respond the way you expect',
+      cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-nagios.jpg'
+    },
+
     '/guides': {
       title: 'Opsee / Guides'
     },

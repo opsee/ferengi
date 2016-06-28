@@ -4,7 +4,7 @@
   border-bottom-right-radius: 4px;
   color: var(--colorCodeBody);
   font-family: var(--fontMono);
-  max-height: 40vh;
+  max-height: 25vh;
   overflow: auto;
   overflow-y: scroll;
   padding: 2rem;

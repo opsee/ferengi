@@ -34,23 +34,20 @@
 }
 
 .colText {
-  /*font-family: var(--fontDisplay);*/
-  font-size: 1.6rem;
-  color: #616161;
   text-align: center;
   max-width: 300px;
   margin: 0 auto;
-  padding: 2rem 0;
 }
 
 .button {
-  font-size: 1.6rem;
+  font-size: 2rem;
   padding: 2rem 4rem;
-  margin: 2rem 0;
 }
 
-.colorBand {
-
+.customerLogo {
+  height: 50px;
+  margin: 0 1rem;
+  width: 150px;
 }
 
 @media (max-width: 700px) {

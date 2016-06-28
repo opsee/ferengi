@@ -5,10 +5,8 @@ import { Padding, Row, Col } from '../../layout';
 import { SplitContainer, SplitPanel } from '../../panels/SplitPanels';
 import Button from '../../forms/Button';
 import BaseSVG from '../../images/BaseSVG';
-import cleanSimpleSVG from '../../images/clean-simple.svg';
-import checkEntities from '../../images/check-type-entities.svg';
-import checkCloudwatch from '../../images/check-type-cloudwatch.svg';
-import checkURL from '../../images/check-type-url.svg';
+import passingAssertionsSVG from '../../images/passing-assertions.svg';
+import locMap from '../../images/location-map.svg';
 import TryCampaign from './TryCampaign';
 import Panel from '../../panels/Panel';
 import SkewDivider from '../../layout/SkewDivider';
@@ -17,49 +15,49 @@ import Quote from '../../global/Quote';
 export default React.createClass({
   render() {
     return (
-      <TryCampaign title="A Simpler Alternative to Pingdom" splashClass={style.splashNagios}>
+      <TryCampaign title="A Better Alternative to Pingdom" splashClass={style.splashNagios}>
         <SplitContainer className={style.section}>
-          <SplitPanel className={style.screenshotProsePanel} >
-            <Padding tb={2}>
-              <h2>Run health checks <span className="text-accent">inside your AWS environment</span></h2>
-              <h3>Better visibility and rich, actionable notifications.</h3>
+          <SplitPanel className={style.prosePanel} >
+            <Padding b={2}>
+              <h2>Be sure your sites & services respond <span className="text-accent">the way you expect</span></h2>
+              <h3>Verify response headers, bodies, and round-trip times – health is more than a status code.</h3>
             </Padding>
 
-            <p>Opsee runs checks inside your AWS environment to help you ensure your services, both inside and outside the firewall, are operating as you expect. Opsee is seamlessly integrated into your environment, with no agents to install or shell scripts to cURL.</p>
+            <ul className="prose">
+              <li>Parse the contents of any response - even check individual JSON keys</li>
+              <li>Combine assertions for a more thorough view of health</li>
+            </ul>
 
-            <Padding t={1}>
-              <Button to="/features" className={style.button} secondary chevron>
-                Learn more
-              </Button>
-            </Padding>
           </SplitPanel>
 
           <SplitPanel className={style.imagePanel}>
-            <BaseSVG svg={cleanSimpleSVG} className={style.svg} />
+            <BaseSVG svg={passingAssertionsSVG} />
           </SplitPanel>
         </SplitContainer>
 
-        <SkewDivider className={style.offsetDivider} />
-
-        <Padding b={1}>
-          <h2 className="text-center">Our health checks</h2>
-        </Padding>
+        <SkewDivider />
 
         <SplitContainer className={style.section}>
-          <SplitPanel className={style.imagePanelThirds}>
-            <Padding b={2}><h3 className="text-center">AWS Resources</h3></Padding>
-            <BaseSVG svg={checkEntities} className={style.screenshotSVG} />
-            <p>Our checks auto scale with your environment, tracking your Security Groups, Auto Scale Groups, and ELBs automatically. Easily verify the headers, JSON keys, and round-trip times of your check responses with no maintenance.</p>
+          <SplitPanel className={style.imagePanel}>
+            <BaseSVG svg={locMap} />
           </SplitPanel>
-          <SplitPanel className={style.imagePanelThirds}>
-            <Padding b={2}><h3 className="text-center">CloudWatch Metrics</h3></Padding>
-            <BaseSVG svg={checkCloudwatch} className={style.screenshotSVG} />
-            <p>Set thresholds on all of your important CloudWatch metrics. We even create automatic checks for you when you sign up.</p>
-          </SplitPanel>
-          <SplitPanel className={style.imagePanelThirds}>
-            <Padding b={2}><h3 className="text-center">URLs</h3></Padding>
-            <BaseSVG svg={checkURL} className={style.screenshotSVG} />
-            <p>If you have external dependencies, websites, and CDNs that need coverage, Opsee will track all DNS entries for a URL automatically.</p>
+
+          <SplitPanel className={style.prosePanel} >
+            <Padding b={2}>
+              <h2><span className="text-accent">Global</span> availability and performance checks</h2>
+              <h3>Global coverage of your public sites and APIs. Every check runs from all 6 of our locations around the world, every 30 seconds</h3>
+            </Padding>
+
+            <ul className="prose">
+              <li>Round-trip times measured from all 6 locations</li>
+              <li>All DNS entries for URLs are tracked automatically</li>
+            </ul>
+
+            <Padding tb={2}>
+              <Button to="/how" className={style.button} secondary chevron>
+                How Opsee works
+              </Button>
+            </Padding>
           </SplitPanel>
         </SplitContainer>
 
@@ -68,7 +66,50 @@ export default React.createClass({
         <Panel>
           <Row>
             <Col xs={10} xsOffset={1}>
-              <Quote quote="assertions" />
+              <Quote quote="pingdom" />
+            </Col>
+          </Row>
+        </Panel>
+
+        <SkewDivider />
+
+        <Panel>
+          <Padding b={2} className="text-center">
+            <h2>Compare to <span className="text-accent">Pingdom</span></h2>
+          </Padding>
+
+          <Row className="prose">
+            <Col sm={6}>
+              <p><strong>Health checks</strong></p>
+              <ul>
+                <li>Health checks in Opsee include rich assertions. Pingdom only looks at availability</li>
+                <li>Opsee includes round-trip time measurements on every check. Pingdom charges extra.</li>
+              </ul>
+
+              <p><strong>Notifications</strong></p>
+              <ul>
+                <li>Opsee has seamless integrations with Slack, Pagerduty, webhooks, and email. Try setting that up in Pingdom...</li>
+                <li>Opsee has deep integration with AWS for health checks on your sites, APIs, and internal services</li>
+              </ul>
+
+              <p><strong>Price</strong></p>
+              <ul>
+                <li>Opsee has health checks that are both more powerful and less expensive than Pingdom checks</li>
+              </ul>
+            </Col>
+            <Col sm={6}>
+              <p><strong>Coverage</strong></p>
+              <ul>
+                <li>In Opsee, all checks from from all of our global locations by default. With Pingdom it can be difficult, and not always possible, to set up checks from multiple locations</li>
+                <li>Opsee offers coverage that Pingdom can&rsquo;t. With our instance running in your AWS environment, we can cover not only your public sites and APIs, but internal services as well</li>
+                <li>Opsee identifies and tests all of the DNS entries for your URLs automatically</li>
+              </ul>
+
+              <p><strong>Usability</strong></p>
+              <ul>
+                <li>Opsee has a mobile-friendly, responsive UI that you can use anywhere</li>
+                <li>We include rich context in our notifications, showing you failing responses and where they came from</li>
+              </ul>
             </Col>
           </Row>
         </Panel>

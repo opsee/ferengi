@@ -4,17 +4,17 @@ import Header from '../Header';
 import SkewPanel from '../panels/SkewPanel';
 import HeroPanel from '../panels/HeroPanel';
 import SignUpPanel from '../panels/SignUpPanel';
-import SummaryPanels from '../panels/SummaryPanels';
 import { Padding, Row, Col } from '../layout';
-import Button from '../forms/Button';
 import SkewDivider from '../layout/SkewDivider';
 import Quote from '../global/Quote';
 import Panel from '../panels/Panel';
+import WizardPanel from '../panels/WizardPanel';
 
 import BaseSVG from '../images/BaseSVG';
-// import illustAWSKey from '../images/illust_aws_key-01.svg';
-import illustBrowser from '../images/illust_browsers-01.svg';
-import illustChecks from '../images/illust_checks-01.svg';
+import logoLivewatch from '../images/logos/logo-livewatch.png';
+import logoAzavea from '../images/logos/logo-azavea.png';
+import logoYieldbot from '../images/logos/logo-yieldbot.png';
+import logoRealself from '../images/logos/logo-realself.png';
 
 /*eslint-disable no-unused-vars*/
 import style from './index.css';
@@ -25,52 +25,36 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <SkewPanel backgroundColor="white" skewTop={false}>
-          <Header theme="dark"/>
+        <Header theme="dark"/>
 
-          <HeroPanel />
-        </SkewPanel>
+        <HeroPanel />
 
         <SkewDivider />
 
-        <Padding t={2} lr={2}>
-          <div className="text-center">
-            <Padding t={2}>
-              <h2>Complete AWS coverage, <span className="text-accent">right now</span></h2>
-              <h3>No software to install, no shell scripts to cURL</h3>
+        <WizardPanel />
 
-              <Padding t={2}>
-                <Button to="/features" className={style.button} secondary chevron>
-                  Learn more about Opsee
-                </Button>
+        <SkewDivider />
+
+        <div className="text-center">
+          <Padding tb={2}>
+            <h3>Featured Customers</h3>
+          </Padding>
+          <Padding tb={2}>
+            <div className="flex-vertical-align justify-content-center flex-wrap">
+              <Padding a={1}>
+                <a target="_blank" href="https://www.livewatch.com"><BaseSVG svg={logoLivewatch} className={style.customerLogo} /></a>
               </Padding>
-            </Padding>
-          </div>
-
-          <div className={style.grid}>
-
-            <div className={style.col}>
-              <div className={style.colSVG}>
-                <BaseSVG svg={illustBrowser} />
-              </div>
-              <div className={style.colText}>
-                <div>Add our instance to your environment</div>
-              </div>
+              <Padding a={1}>
+                <a target="_blank" href="https://www.yieldbot.com/"><BaseSVG svg={logoYieldbot} className={style.customerLogo} /></a>
+              </Padding>
+              <Padding a={1}>
+                <a target="_blank" href="http://www.azavea.com/"><BaseSVG svg={logoAzavea} className={style.customerLogo} /></a>
+              </Padding>
+              <Padding a={1}>
+                <a target="_blank" href="https://www.realself.com/"><BaseSVG svg={logoRealself} className={style.customerLogo} /></a>
+              </Padding>
             </div>
-
-            <div className={style.col}>
-              <div className={style.colSVG}>
-                <BaseSVG svg={illustChecks} />
-              </div>
-              <div className={style.colText}>
-                <div>Get complete coverage of your services</div>
-              </div>
-            </div>
-          </div>
-        </Padding>
-
-        <div>
-          <SummaryPanels />
+          </Padding>
         </div>
 
         <SkewDivider />
@@ -78,7 +62,7 @@ export default React.createClass({
         <Panel>
           <Row>
             <Col xs={10} xsOffset={1}>
-              <Quote quote="assertions" />
+              <Quote quote="pingdom" />
             </Col>
           </Row>
         </Panel>
