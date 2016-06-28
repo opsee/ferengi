@@ -30,7 +30,7 @@ export default React.createClass({
         <div className={style.category}>Guides</div>
         <ul className={style.nav}>
           <li><Link to="/guides/nodechecks">node.js</Link></li>
-          <li><Link to="/guides/nodechecks">Go</Link></li>
+          <li><Link to="/guides/gochecks">Go</Link></li>
           <li><Link to="/guides/cloudwatch">CloudWatch</Link></li>
           <li><Link to="/guides/dropwizard">Dropwizard</Link></li>
           <li><Link to="https://app.opsee.com/help" target="_blank">Documentation</Link></li>
