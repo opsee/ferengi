@@ -44,7 +44,7 @@ function doSignup(data = {}) {
 
 function createCheck(userData, data) {
   const { url, assertions } = data;
-  if (isDefaultCheck(url, assertions)) {
+  if (!url || isDefaultCheck(url, assertions)) {
     return Promise.resolve();
   }
 
@@ -154,6 +154,10 @@ export function checkURL(url) {
     dispatch({
       type: CHECK_URL,
       payload: catfish.check(url)
+        .then(res => {
+          const data = _.assign({}, res.data, { url });
+          return { data };
+        })
     });
   };
 }

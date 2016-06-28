@@ -32,6 +32,17 @@
   color: white;
 }
 
+.btn[disabled]{
+  cursor: not-allowed;
+  opacity: 0.65;
+  box-shadow: none;
+  color: var(--colorText2) !important;
+  pointer-events: none;
+  /*background: var(--colorGray8);*/
+  background: color(var(--colorAccent) shade(20%));
+  border-color: color(var(--colorAccent) shade(20%));
+}
+
 a.btn,
 a.btn:hover,
 a.button:focus,

@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import data from '../data/responses';
 import { handleActions } from 'redux-actions';
 import {yeller} from '../modules';
 import {
@@ -6,13 +7,9 @@ import {
   SET_URL
 } from '../actions/constants';
 
-const initial = {
-  token: null,
-  url: null,
-  responses: [],
-  assertions: [],
-  error: undefined
-};
+// Checks state is an object mapping URL to catfish response data.
+// Components can keep track of the URL they want to look up in their state.
+const initial = data;
 
 export default handleActions({
   [SET_URL]: {
@@ -25,13 +22,9 @@ export default handleActions({
 
   [CHECK_URL]: {
     next(state, action) {
-      const token = action.payload.data.token;
-      const responses = action.payload.data.responses;
-
+      const { url, token, responses } = action.payload.data;
       return _.assign({}, state, {
-        token,
-        responses,
-        error: null
+        [url]: { token, responses }
       });
     },
     throw(state, action){

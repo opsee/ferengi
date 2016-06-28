@@ -1,3 +1,4 @@
+/* eslint-disable */
 export default {
   'https://try.opsee.com': {
     "responses":[
@@ -40,3 +41,4 @@ export default {
     "error":""
   }
 };
+/* eslint-enable */
