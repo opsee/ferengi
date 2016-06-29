@@ -88,6 +88,6 @@
 
 @media (max-height: 700px) {
   .tier {
-    padding: 2rem 0;
+    /*padding: 2rem 0;*/
   }
 }

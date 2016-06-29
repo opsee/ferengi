@@ -37,7 +37,7 @@ export default React.createClass({
 
           <Grid fluid>
             <Row className="center-xs">
-              <Col xs={8} sm={5} className="flex">
+              <Col xs={10} sm={5} className="flex">
                 <div className={style.tier}>
                   <div className={style.pricing}>
                     <Padding tb={1}>
@@ -63,7 +63,7 @@ export default React.createClass({
                 </div>
               </Col>
 
-              <Col xs={8} sm={5} className="flex">
+              <Col xs={10} sm={5} className="flex">
                 <div className={style.tier}>
                   <div className={style.pricing}>
                     <Padding tb={1}>
