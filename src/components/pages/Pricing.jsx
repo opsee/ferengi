@@ -14,9 +14,9 @@ import StaticHeader from '../panels/StaticHeader';
 
 import style from './pricing.css';
 import BaseSVG from '../images/BaseSVG';
-import infinitySVG from '../images/infinity.svg';
-import latencySVG from '../images/latency.svg';
-import notificationLogosWhiteSVG from '../images/notification-logos-white.svg';
+import taskSVG from '../images/icons/task.svg';
+import stopwatchSVG from '../images/icons/stopwatch.svg';
+import mailSVG from '../images/icons/mail.svg';
 
 export default React.createClass({
   render() {
@@ -89,8 +89,8 @@ export default React.createClass({
                 </div>
               </Col>
             </Row>
-            <Row>
-              <Col xs={12}>
+            <Row className="center-xs">
+              <Col xs={12} sm={8}>
                 <Padding tb={2} className="text-center">
                   <h3>Interested in Enterprise-scale monitoring?</h3>
                   <Padding t={1} b={2}><p className="no-space">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vulputate urna a velit fringilla ornare. Pellentesque imperdiet a quam non ullamcorper. We'd love to talk to you!</p></Padding>
@@ -106,7 +106,7 @@ export default React.createClass({
         <SkewDivider />
 
         <Panel>
-          <Padding b={2} className="text-center">
+          <Padding b={4} className="text-center">
             <h2>Powerful features <span className="text-accent">for everyone</span></h2>
             <h3>The best parts of Opsee are available to everyone.</h3>
           </Padding>
@@ -115,19 +115,19 @@ export default React.createClass({
             <Row className="center-xs">
               <Col xs={6} sm={3}>
                 <div className={style.freeFeature}>
-                  <BaseSVG svg={infinitySVG} className={style.freeSVG} />
+                  <BaseSVG svg={taskSVG} className={style.freeSVG} />
                   <span>Unlimited<br/>Assertions</span>
                 </div>
               </Col>
               <Col xs={6} sm={3}>
                 <div className={style.freeFeature}>
-                  <BaseSVG svg={notificationLogosWhiteSVG} className={style.freeSVG} />
+                  <BaseSVG svg={mailSVG} className={style.freeSVG} />
                   <span>Rich<br/>Notifications</span>
                 </div>
               </Col>
               <Col xs={6} sm={3}>
                 <div className={style.freeFeature}>
-                  <BaseSVG svg={latencySVG} className={style.freeSVG} />
+                  <BaseSVG svg={stopwatchSVG} className={style.freeSVG} />
                   <span>Latency<br/>Measurement</span>
                 </div>
               </Col>
