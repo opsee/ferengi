@@ -89,6 +89,15 @@ export default React.createClass({
                 </div>
               </Col>
             </Row>
+            <Row>
+              <Col xs={12}>
+                <Padding tb={2} className="text-center">
+                  <h3>Interested in Enterprise-scale monitoring?</h3>
+                  <Padding t={1} b={2}><p className="no-space">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vulputate urna a velit fringilla ornare. Pellentesque imperdiet a quam non ullamcorper. We'd love to talk to you!</p></Padding>
+                  <Button className={style.button} secondary>Contact us</Button>
+                </Padding>
+              </Col>
+            </Row>
           </Grid>
         </Panel>
 
