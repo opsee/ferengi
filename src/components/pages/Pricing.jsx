@@ -113,28 +113,22 @@ export default React.createClass({
 
           <Grid fluid>
             <Row className="center-xs">
-              <Col xs={6} sm={2}>
+              <Col xs={6} sm={3}>
                 <div className={style.freeFeature}>
                   <BaseSVG svg={infinitySVG} className={style.freeSVG} />
                   <span>Unlimited<br/>Assertions</span>
                 </div>
               </Col>
-              <Col xs={6} sm={2}>
+              <Col xs={6} sm={3}>
                 <div className={style.freeFeature}>
                   <BaseSVG svg={notificationLogosWhiteSVG} className={style.freeSVG} />
                   <span>Rich<br/>Notifications</span>
                 </div>
               </Col>
-              <Col xs={6} sm={2}>
+              <Col xs={6} sm={3}>
                 <div className={style.freeFeature}>
                   <BaseSVG svg={latencySVG} className={style.freeSVG} />
                   <span>Latency<br/>Measurement</span>
-                </div>
-              </Col>
-              <Col xs={6} sm={2}>
-                <div className={style.freeFeature}>
-                  <BaseSVG svg={latencySVG} className={style.freeSVG} />
-                  <span>Responsive<br/>Design</span>
                 </div>
               </Col>
             </Row>
