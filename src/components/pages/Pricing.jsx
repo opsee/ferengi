@@ -102,8 +102,6 @@ export default React.createClass({
         </Panel>
 
         <SkewDivider />
-        <FeaturedCustomers />
-        <SkewDivider />
 
         <Panel>
           <Padding b={4} className="text-center">
@@ -134,6 +132,9 @@ export default React.createClass({
             </Row>
           </Grid>
         </Panel>
+
+        <SkewDivider />
+        <FeaturedCustomers />
 
         <SkewDivider />
         <Panel>
