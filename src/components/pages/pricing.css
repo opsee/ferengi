@@ -1,7 +1,40 @@
-.pricingTable {
-  border-collapse: collapse;
-  width: 100%;
+.tier {
+  border: solid 1px var(--colorPrimary);
+  padding: 2rem;
 }
+
+.pricing {
+  text-align: center;
+}
+
+.price {
+  color: var(--colorWarm4);
+  font-size: 4rem;
+  line-height: 4rem;
+}
+
+.features {
+  list-style-type: none;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.features li {
+  margin: 0;
+  padding: 1rem 0;
+  border-bottom: solid 1px var(--colorGray2);
+}
+
+.features li:last-child {
+  border-bottom: none;
+}
+
+
+.featureDisabled {
+  text-decoration: line-through;
+}
+
+
 .pricingTableTH {
   background-color: var(--colorWarm4);
   color: white;
@@ -21,12 +54,7 @@
   border-bottom: 1px solid var(--colorWarm4);
   padding: 2rem;
 }
-.price {
-  color: var(--colorWarm4);
-  line-height: 4rem;
-  padding: 2rem 0;
-  text-align: center;
-}
+
 .priceFree {
   composes: price;
   color: var(--colorGray5);
