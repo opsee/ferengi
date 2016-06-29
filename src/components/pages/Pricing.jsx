@@ -1,14 +1,16 @@
 import cx from 'classnames';
 import React from 'react';
 
-import StaticHeader from '../panels/StaticHeader';
-import Panel from '../panels/Panel';
-import SkewPanel from '../panels/SkewPanel';
-import SignUpPanel from '../panels/SignUpPanel';
-import SkewDivider from '../layout/SkewDivider';
 import { Padding, Grid, Row, Col } from '../layout';
 import { Button } from '../forms';
 import { Quote } from '../global';
+import SkewDivider from '../layout/SkewDivider';
+
+import FeaturedCustomers from '../panels/FeaturedCustomers';
+import Panel from '../panels/Panel';
+import SignUpPanel from '../panels/SignUpPanel';
+import SkewPanel from '../panels/SkewPanel';
+import StaticHeader from '../panels/StaticHeader';
 
 import style from './pricing.css';
 import BaseSVG from '../images/BaseSVG';
@@ -34,13 +36,15 @@ export default React.createClass({
           </Padding>
 
           <Grid fluid>
-            <Row>
-              <Col xs={12} sm={6}>
+            <Row className="center-xs">
+              <Col xs={8} sm={5} className="flex">
                 <div className={style.tier}>
                   <div className={style.pricing}>
-                    <h3>Free</h3>
                     <Padding tb={1}>
-                      <div className={style.price}>$0</div>
+                      <h3 className={style.tierName}>Free</h3>
+                    </Padding>
+                    <Padding tb={1}>
+                      <div className={style.price}><span className={style.dollarSign}>$</span><span className={style.priceValue}>0</span></div>
                       forever
                     </Padding>
                   </div>
@@ -52,17 +56,19 @@ export default React.createClass({
                     <li className={style.featureDisabled}>CloudWatch integration with unlimited metrics per check</li>
                   </ul>
                   <div className="text-center">
-                    <Button>Sign Up</Button>
+                    <Button className={style.button} block>Sign Up</Button>
                   </div>
                 </div>
               </Col>
 
-              <Col xs={12} sm={6}>
+              <Col xs={8} sm={5} className="flex">
                 <div className={style.tier}>
                   <div className={style.pricing}>
-                    <h3>Developer</h3>
                     <Padding tb={1}>
-                      <div className={style.price}>$5</div>
+                      <h3 className={style.tierName}>Developer</h3>
+                    </Padding>
+                    <Padding tb={1}>
+                    <div className={style.price}><span className={style.dollarSign}>$</span><span className={style.priceValue}>5</span></div>
                       per check, per month
                     </Padding>
                   </div>
@@ -74,7 +80,7 @@ export default React.createClass({
                     <li>CloudWatch integration with unlimited metrics per check</li>
                   </ul>
                   <div className="text-center">
-                    <Button>Sign Up</Button>
+                    <Button className={style.button} secondary disabled block>Coming in July!</Button>
                   </div>
                 </div>
               </Col>
@@ -83,6 +89,8 @@ export default React.createClass({
         </Panel>
 
         <SkewDivider />
+        <FeaturedCustomers />
+        <SkewDivider />
 
         <Panel>
           <Padding b={2} className="text-center">
@@ -90,32 +98,39 @@ export default React.createClass({
             <h3>The best parts of Opsee are available to everyone.</h3>
           </Padding>
 
-          <Row className="text-center">
-            <Col xs={6} sm={2}>
-              <div className={style.freeFeature}>
-                <BaseSVG svg={infinitySVG} className={style.freeSVG} />
-                <span>Unlimited<br/>Assertions</span>
-              </div>
-            </Col>
-            <Col xs={6} sm={2}>
-              <div className={style.freeFeature}>
-                <BaseSVG svg={notificationLogosWhiteSVG} className={style.freeSVG} />
-                <span>Rich<br/>Notifications</span>
-              </div>
-            </Col>
-            <Col xs={6} sm={2}>
-              <div className={style.freeFeature}>
-                <BaseSVG svg={latencySVG} className={style.freeSVG} />
-                <span>Latency<br/>Measurement</span>
-              </div>
-            </Col>
-            <Col xs={6} sm={2}>
-              <div className={style.freeFeature}>
-                <BaseSVG svg={latencySVG} className={style.freeSVG} />
-                <span>Responsive<br/>Design</span>
-              </div>
-            </Col>
-          </Row>
+          <Grid fluid>
+            <Row className="center-xs">
+              <Col xs={6} sm={2}>
+                <div className={style.freeFeature}>
+                  <BaseSVG svg={infinitySVG} className={style.freeSVG} />
+                  <span>Unlimited<br/>Assertions</span>
+                </div>
+              </Col>
+              <Col xs={6} sm={2}>
+                <div className={style.freeFeature}>
+                  <BaseSVG svg={notificationLogosWhiteSVG} className={style.freeSVG} />
+                  <span>Rich<br/>Notifications</span>
+                </div>
+              </Col>
+              <Col xs={6} sm={2}>
+                <div className={style.freeFeature}>
+                  <BaseSVG svg={latencySVG} className={style.freeSVG} />
+                  <span>Latency<br/>Measurement</span>
+                </div>
+              </Col>
+              <Col xs={6} sm={2}>
+                <div className={style.freeFeature}>
+                  <BaseSVG svg={latencySVG} className={style.freeSVG} />
+                  <span>Responsive<br/>Design</span>
+                </div>
+              </Col>
+            </Row>
+          </Grid>
+        </Panel>
+
+        <SkewDivider />
+        <Panel>
+          <Quote quote="autodeskChecks" />
         </Panel>
 
         <SkewPanel backgroundColor="#333" skewBottom={false}>

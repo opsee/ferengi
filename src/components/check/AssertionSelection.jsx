@@ -499,7 +499,6 @@ const AssertionsSelection = React.createClass({
     );
   },
 
-
   renderBody(assertionIndex){
     const assertion = this.getAssertion(assertionIndex);
     return (
