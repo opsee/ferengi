@@ -48,16 +48,18 @@ export default React.createClass({
                       forever
                     </Padding>
                   </div>
-                  <ul className={style.features}>
-                    <li>Up to 5 global checks</li>
-                    <li>5-minute check frequency</li>
-                    <li>Checks run from 1 of our global locations</li>
-                    <li className={style.featureDisabled}>AWS coverage with our EC2 Instance</li>
-                    <li className={style.featureDisabled}>CloudWatch integration with unlimited metrics per check</li>
-                  </ul>
-                  <div className="text-center">
+                  <Padding tb={1}>
+                    <ul className={style.features}>
+                      <li>Up to 5 global checks</li>
+                      <li>5-minute check frequency</li>
+                      <li>Checks run from 1 of our global locations</li>
+                      <li className={style.featureDisabled}>AWS coverage with our EC2 Instance</li>
+                      <li className={style.featureDisabled}>CloudWatch integration</li>
+                    </ul>
+                  </Padding>
+                  <Padding tb={1} className="text-center">
                     <Button className={style.button} block>Sign Up</Button>
-                  </div>
+                  </Padding>
                 </div>
               </Col>
 
@@ -72,16 +74,18 @@ export default React.createClass({
                       per check, per month
                     </Padding>
                   </div>
-                  <ul className={style.features}>
-                    <li>Unlimited global checks</li>
-                    <li>30-second check frequency</li>
-                    <li>Unlimited hosts</li>
-                    <li>AWS coverage with <a href="/how">our EC2 Instance</a></li>
-                    <li>CloudWatch integration with unlimited metrics per check</li>
-                  </ul>
-                  <div className="text-center">
+                  <Padding tb={1}>
+                    <ul className={style.features}>
+                      <li>Unlimited global checks</li>
+                      <li>30-second check frequency</li>
+                      <li>Unlimited hosts</li>
+                      <li>AWS coverage with <a href="/how">our EC2 Instance</a></li>
+                      <li>CloudWatch integration with unlimited metrics per check</li>
+                    </ul>
+                  </Padding>
+                  <Padding tb={1} className="text-center">
                     <Button className={style.button} secondary disabled block>Coming in July!</Button>
-                  </div>
+                  </Padding>
                 </div>
               </Col>
             </Row>
