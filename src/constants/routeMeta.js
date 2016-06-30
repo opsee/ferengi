@@ -89,6 +89,10 @@ module.exports = {
       cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/twitter-try-dev2.jpg'
     },
 
+    '/try': {
+      title: 'Opsee / Try It Out'
+    },
+
     '/try/aws': {
       title: 'Opsee / Monitoring Built for AWS',
       excerpt: 'Integrate and auto-scale seamlessly with your infrastructure. No agents to install or shell scripts to cURL.',

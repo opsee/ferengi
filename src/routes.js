@@ -21,6 +21,7 @@ import {
   GuidesNodeChecks
 } from './components/pages/guides';
 import {
+  Try,
   TryAWS,
   TryChecks,
   TryDev,
@@ -49,17 +50,19 @@ module.exports = (
       <Route path="beta-tos" component={BetaTOS} />
       <Route path="pingdom-alternative" component={TryPingdom} />
 
-    { /* Guides */ }
+      { /* Guides */ }
       <Route path="guides" component={Guides} />
       <Route path="guides/dropwizard" component={GuidesDropwizardChecks} />
       <Route path="guides/awsmonitoring" component={GuidesAWSMonitoring} />
       <Route path="guides/gochecks" component={GuidesGoChecks} />
       <Route path="guides/nodechecks" component={GuidesNodeChecks} />
 
-    { /* Solutions pages */ }
+      { /* Solutions pages */ }
       <Route path="solutions" component={Solutions} />
       <Route path="solutions/startup" component={SolutionsStartup} />
       <Route path="solutions/enterprise" component={SolutionsEnterprise} />
+
+      <Route path="try" component={Try} />
 
       { /* Twitter campaign landing pages */ }
       <Route path="try/aws" component={TryAWS} />
