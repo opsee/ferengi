@@ -23,46 +23,41 @@ export default React.createClass({
       <div>
         <StaticHeader>
           <div className="text-center">
-            <h1>Only pay for <span className="text-accent-static">what you use</span></h1>
-            <h3>Coming soon. We&rsquo;re still in beta, but here is what you can expect.</h3>
+            <h1>Free to get started. <span className="text-accent-static">No credit card required</span></h1>
+            <h3>We&rsquo;re wrapping up our beta, and here is what you can expect soon.</h3>
           </div>
         </StaticHeader>
 
         <Panel>
-          <Padding b={3} className="text-center">
-            <h2>Free to get started. No credit card required.</h2>
-            <p>Try Opsee for free, for as long as you want, with up to 5 health checks on public URLs or APIs.</p>
-          </Padding>
-
           <Grid fluid>
             <Row className="center-xs">
-              <Col xs={10} sm={5} className="flex">
+              <Col xs={10} sm={4} className="flex">
                 <div className={style.tier}>
                   <div className={style.pricing}>
                     <Padding tb={1}>
-                      <h3 className={style.tierName}>Free</h3>
+                      <h3 className={style.tierName}>FREE</h3>
                     </Padding>
                     <Padding tb={1}>
-                      <div className={style.price}><span className={style.dollarSign}>$</span><span className={style.priceValue}>0</span></div>
-                      forever
+                      <div className={style.price}><span className={style.dollarSign}>&nbsp;&nbsp;</span><span className={style.priceValue}>1</span></div>
+                      Check
                     </Padding>
                   </div>
                   <Padding tb={1}>
                     <ul className={style.features}>
-                      <li>Up to 5 global checks</li>
-                      <li>5-minute check frequency</li>
-                      <li>Checks run from 1 of our global locations</li>
+                      <li>Global coverage from our 6 PoPs</li>
                       <li className={style.featureDisabled}>AWS coverage with our EC2 Instance</li>
-                      <li className={style.featureDisabled}>CloudWatch integration</li>
+                      <li className={style.featureDisabled}>Muli-user access</li>
+                      <li className={style.featureDisabled}>Historical data</li>
+                      <li className={style.featureDisabled}>Uptime & performance reports</li>
                     </ul>
                   </Padding>
                   <Padding tb={1} className="text-center">
-                    <Button className={style.button} block>Sign Up</Button>
+                    <Button className={style.button} block>Try Opsee for FREE</Button>
                   </Padding>
                 </div>
               </Col>
 
-              <Col xs={10} sm={5} className="flex">
+              <Col xs={10} sm={4} className="flex">
                 <div className={style.tier}>
                   <div className={style.pricing}>
                     <Padding tb={1}>
@@ -75,15 +70,41 @@ export default React.createClass({
                   </div>
                   <Padding tb={1}>
                     <ul className={style.features}>
-                      <li>Unlimited global checks</li>
-                      <li>30-second check frequency</li>
-                      <li>Unlimited hosts</li>
+                      <li>Global coverage from our 6 PoPs</li>
                       <li>AWS coverage with <a href="/how">our EC2 Instance</a></li>
-                      <li>CloudWatch integration with unlimited metrics per check</li>
+                      <li className={style.featureDisabled}>Muli-user access</li>
+                      <li className={style.featureDisabled}>Historical data</li>
+                      <li className={style.featureDisabled}>Uptime & performance reports</li>
                     </ul>
                   </Padding>
                   <Padding tb={1} className="text-center">
                     <Button className={style.button} secondary disabled block>Coming in July!</Button>
+                  </Padding>
+                </div>
+              </Col>
+
+              <Col xs={10} sm={4} className="flex">
+                <div className={style.tier}>
+                  <div className={style.pricing}>
+                    <Padding tb={1}>
+                      <h3 className={style.tierName}>Team</h3>
+                    </Padding>
+                    <Padding tb={1}>
+                    <div className={style.price}><span className={style.dollarSign}>$</span><span className={style.priceValue}>10</span></div>
+                      per check, per month
+                    </Padding>
+                  </div>
+                  <Padding tb={1}>
+                    <ul className={style.features}>
+                      <li>Global coverage from our 6 PoPs</li>
+                      <li>AWS coverage with <a href="/how">our EC2 Instance</a></li>
+                      <li>Muli-user access</li>
+                      <li>Historical data</li>
+                      <li>Uptime & performance reports</li>
+                    </ul>
+                  </Padding>
+                  <Padding tb={1} className="text-center">
+                    <Button className={style.button} secondary disabled block>Coming in September!</Button>
                   </Padding>
                 </div>
               </Col>
@@ -92,8 +113,8 @@ export default React.createClass({
               <Col xs={12} sm={8}>
                 <Padding tb={2} className="text-center">
                   <h3>Interested in Enterprise-scale monitoring?</h3>
-                  <Padding t={1} b={2}><p className="no-space">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vulputate urna a velit fringilla ornare. Pellentesque imperdiet a quam non ullamcorper. We'd love to talk to you!</p></Padding>
-                  <Button className={style.button} secondary>Contact us</Button>
+                  <Padding t={1} b={2}><p className="no-space">If you&rsquo;re looking for an annual contract, SLA, and invoicing we&rsquo;d love to hear from you. Just contact our sales team.</p></Padding>
+                  <Button href="mailto:sales@opsee.com?subject=Enterprise Opsee" className={style.button} secondary>Contact us</Button>
                 </Padding>
               </Col>
             </Row>
@@ -126,6 +147,12 @@ export default React.createClass({
                 <div className={style.freeFeature}>
                   <BaseSVG svg={stopwatchSVG} className={style.freeSVG} />
                   <span>Latency<br/>Measurement</span>
+                </div>
+              </Col>
+              <Col xs={6} sm={3}>
+                <div className={style.freeFeature}>
+                  <BaseSVG svg={mailSVG} className={style.freeSVG} />
+                  <span>Global<br/>Coverage</span>
                 </div>
               </Col>
             </Row>
