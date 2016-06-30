@@ -35,7 +35,6 @@
 }
 
 .dollarSign {
-  /*font-weight: bold;*/
   font-size: 3rem;
   vertical-align: top;
 }
@@ -81,10 +80,4 @@
   margin: 0 auto 2rem auto;
   max-height: 40px;
   opacity: 0.85;
-}
-
-@media (max-height: 700px) {
-  .tier {
-    /*padding: 2rem 0;*/
-  }
 }
