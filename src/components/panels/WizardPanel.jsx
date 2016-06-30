@@ -150,8 +150,6 @@ const WizardPanel = React.createClass({
   },
 
   render() {
-    console.log(this.props.query);
-
     return (
       <Panel>
         <Padding b={4} className="text-center">
@@ -193,7 +191,7 @@ const WizardPanel = React.createClass({
             </Col>
             <Col xs={12} sm={8}>
               <p>Sign up with just your email address. We'll create your free Opsee account, create your first health check, and send you notifications whenever it fails.</p>
-              <SignUpForm status={this.getStatus()} onSubmit={this.handleSignUp} successText="Redirecting you to Opsee..." disabled={this.getStatus() === 'success'} />
+              <SignUpForm data={_.pick(this.props.query, 'email')} status={this.getStatus()} onSubmit={this.handleSignUp} successText="Redirecting you to Opsee..." disabled={this.getStatus() === 'success'} />
             </Col>
           </Row>
         </Grid>

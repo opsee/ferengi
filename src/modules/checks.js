@@ -22,7 +22,12 @@ export function isDefaultCheck(url, assertions) {
  * @returns {object} a check schema for compost
  */
 export function makeCheck(url, email, assertions) {
-  const parsedURL = URL.parse(url);
+  let fullURL = url;
+  if (!fullURL.match('^http')){
+    fullURL = `http://${fullURL}`;
+  }
+
+  const parsedURL = URL.parse(fullURL);
   const protocol = _.get(parsedURL, 'protocol', '').replace(/\:$/, ''); // lib returns protocol as e.g. "https:"
   const port = parsedURL.port || (protocol === 'https' ? 443 : 80);
 
@@ -42,7 +47,7 @@ export function makeCheck(url, email, assertions) {
       'protocol': protocol,
       'verb': 'GET' // Always GET from Ferengi
     },
-    'name': `Http ${_.get(parsedURL, 'hostname', url)}`,
+    'name': `Http ${_.get(parsedURL, 'hostname', fullURL)}`,
     'notifications': [{
       type: 'email',
       value: email

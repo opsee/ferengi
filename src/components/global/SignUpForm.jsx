@@ -10,6 +10,9 @@ import style from './signUpForm.css';
 
 const SignUpForm = React.createClass({
   propTypes: {
+    data: PropTypes.shape({
+      email: PropTypes.string
+    }),
     onSubmit: PropTypes.func,
     status: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     buttonText: PropTypes.string,
@@ -20,6 +23,9 @@ const SignUpForm = React.createClass({
   },
   getDefaultProps(){
     return {
+      data: {
+        email: null
+      },
       buttonText: 'Sign up for Opsee',
       pendingText: 'Signing up...',
       successText: 'Welcome to Opsee!'
@@ -28,7 +34,7 @@ const SignUpForm = React.createClass({
   getInitialState() {
     return {
       data: {
-        email: null,
+        email: this.props.data.email,
         referrer: this.getReferrer()
       },
       validationError: null
