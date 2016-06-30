@@ -79,7 +79,7 @@ export default React.createClass({
                     </ul>
                   </Padding>
                   <Padding tb={1} className="text-center">
-                    <Button className={style.button} secondary disabled block>Coming in July!</Button>
+                    <Button className={style.button} secondary disabled block>Coming in July</Button>
                   </Padding>
                 </div>
               </Col>
@@ -105,7 +105,7 @@ export default React.createClass({
                     </ul>
                   </Padding>
                   <Padding tb={1} className="text-center">
-                    <Button className={style.button} secondary disabled block>Coming in September!</Button>
+                    <Button className={style.button} secondary disabled block>Coming in September</Button>
                   </Padding>
                 </div>
               </Col>
