@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import {Link, History} from 'react-router';
+import {Link} from 'react-router';
 import _ from 'lodash';
 
 import {ChevronRight} from 'emissary/src/js/components/icons';
@@ -8,7 +8,6 @@ import cx from 'classnames';
 import style from './button.css';
 
 const Button = React.createClass({
-  mixins: [History],
   propTypes: {
     secondary: PropTypes.bool,
     color: PropTypes.string,
@@ -26,6 +25,11 @@ const Button = React.createClass({
     style: PropTypes.object,
     block: PropTypes.bool
   },
+
+  contextTypes: {
+    router: PropTypes.object.isRequired
+  },
+
   getDefaultProps(){
     return {
       color: 'default',
@@ -55,7 +59,7 @@ const Button = React.createClass({
     if (!this.props.disabled && this.props.target && this.props.target === '_blank'){
       e.preventDefault();
       e.stopPropagation();
-      window.open(this.history.createHref(this.props.to));
+      window.open(this.context.router.createHref(this.props.to));
     }
   },
   renderChevron(){
