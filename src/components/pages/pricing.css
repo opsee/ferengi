@@ -31,12 +31,13 @@
   line-height: 4rem;
   font-family: var(--fontDisplay);
   padding: 1rem 0;
-  margin-left: -1.5rem;
+
 }
 
 .dollarSign {
   font-size: 3rem;
   vertical-align: top;
+  margin-left: -1.5rem;
 }
 
 .priceValue {

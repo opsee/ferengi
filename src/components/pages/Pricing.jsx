@@ -39,7 +39,7 @@ export default React.createClass({
                       <h3 className={style.tierName}>FREE</h3>
                     </Padding>
                     <Padding tb={1}>
-                      <div className={style.price}><span className={style.dollarSign}>&nbsp;&nbsp;&nbsp;</span><span className={style.priceValue}>1</span></div>
+                      <div className={style.price}><span className={style.priceValue}>1</span></div>
                       Check
                     </Padding>
                   </div>
@@ -48,7 +48,7 @@ export default React.createClass({
                     <ul className={style.features}>
                       <li>Global coverage from our 6 PoPs</li>
                       <li>AWS coverage with our EC2 Instance</li>
-                      <li>Muli-user access</li>
+                      <li>Multi-user access</li>
                       <li>Historical data</li>
                       <li>Uptime & performance reports</li>
                     </ul>
@@ -75,7 +75,7 @@ export default React.createClass({
                     <ul className={style.features}>
                       <li>Global coverage from our 6 PoPs</li>
                       <li>AWS coverage with <a href="/how">our EC2 Instance</a></li>
-                      <li className={style.featureDisabled}>Muli-user access</li>
+                      <li className={style.featureDisabled}>Multi-user access</li>
                       <li className={style.featureDisabled}>Historical data</li>
                       <li className={style.featureDisabled}>Uptime & performance reports</li>
                     </ul>
@@ -102,7 +102,7 @@ export default React.createClass({
                     <ul className={style.features}>
                       <li>Global coverage from our 6 PoPs</li>
                       <li>AWS coverage with <a href="/how">our EC2 Instance</a></li>
-                      <li>Muli-user access</li>
+                      <li>Multi-user access</li>
                       <li>Historical data</li>
                       <li>Uptime & performance reports</li>
                     </ul>
