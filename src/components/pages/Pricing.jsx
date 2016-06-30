@@ -16,6 +16,7 @@ import BaseSVG from '../images/BaseSVG';
 import taskSVG from '../images/icons/task.svg';
 import stopwatchSVG from '../images/icons/stopwatch.svg';
 import mailSVG from '../images/icons/mail.svg';
+import worldwideSVG from '../images/icons/worldwide.svg';
 
 export default React.createClass({
   render() {
@@ -131,27 +132,27 @@ export default React.createClass({
 
           <Grid fluid>
             <Row className="center-xs">
-              <Col xs={6} sm={3}>
+              <Col xs={6} sm={2}>
                 <div className={style.freeFeature}>
                   <BaseSVG svg={taskSVG} className={style.freeSVG} />
                   <span>Unlimited<br/>Assertions</span>
                 </div>
               </Col>
-              <Col xs={6} sm={3}>
+              <Col xs={6} sm={2}>
                 <div className={style.freeFeature}>
                   <BaseSVG svg={mailSVG} className={style.freeSVG} />
                   <span>Rich<br/>Notifications</span>
                 </div>
               </Col>
-              <Col xs={6} sm={3}>
+              <Col xs={6} sm={2}>
                 <div className={style.freeFeature}>
                   <BaseSVG svg={stopwatchSVG} className={style.freeSVG} />
                   <span>Latency<br/>Measurement</span>
                 </div>
               </Col>
-              <Col xs={6} sm={3}>
+              <Col xs={6} sm={2}>
                 <div className={style.freeFeature}>
-                  <BaseSVG svg={mailSVG} className={style.freeSVG} />
+                  <BaseSVG svg={worldwideSVG} className={style.freeSVG} />
                   <span>Global<br/>Coverage</span>
                 </div>
               </Col>
