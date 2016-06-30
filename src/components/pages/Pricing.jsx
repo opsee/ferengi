@@ -52,7 +52,7 @@ export default React.createClass({
                     </ul>
                   </Padding>
                   <Padding tb={1} className="text-center">
-                    <Button className={style.button} block>Try Opsee for FREE</Button>
+                    <Button href="#signup" className={style.button} block>Try Opsee for FREE</Button>
                   </Padding>
                 </div>
               </Col>
