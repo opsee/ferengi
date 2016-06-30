@@ -53,7 +53,7 @@ export default React.createClass({
                       <li>Uptime & performance reports</li>
                     </ul>
                   </Padding>
-                  <Padding tb={1} className="text-center">
+                  <Padding t={1} className="text-center">
                     <Button href="#signup" className={style.button} block>Try Opsee for FREE</Button>
                   </Padding>
                 </div>
@@ -80,7 +80,7 @@ export default React.createClass({
                       <li className={style.featureDisabled}>Uptime & performance reports</li>
                     </ul>
                   </Padding>
-                  <Padding tb={1} className="text-center">
+                  <Padding t={1} className="text-center">
                     <Button className={style.button} secondary disabled block>Coming in July</Button>
                   </Padding>
                 </div>
@@ -107,7 +107,7 @@ export default React.createClass({
                       <li>Uptime & performance reports</li>
                     </ul>
                   </Padding>
-                  <Padding tb={1} className="text-center">
+                  <Padding t={1} className="text-center">
                     <Button className={style.button} secondary disabled block>Coming in September</Button>
                   </Padding>
                 </div>
