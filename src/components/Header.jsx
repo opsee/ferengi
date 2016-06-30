@@ -30,7 +30,7 @@ module.exports = React.createClass({
           <div className={style.nav}>
             <ul className={style.navLinks}>
               <li><Link to="/features" activeClassName={style.activeLink}>Features</Link></li>
-              <li><Link to="/integrations" activeClassName={style.activeLink}>Integrations</Link></li>
+              <li><Link to="/pricing" activeClassName={style.activeLink}>Pricing</Link></li>
               <li><Link to="/how" activeClassName={style.activeLink}>How It Works</Link></li>
               <li><Link to="/about" activeClassName={style.activeLink}>About</Link></li>
               <li><Link to="http://blog.opsee.com/" target="_blank">Blog</Link></li>

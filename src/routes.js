@@ -6,6 +6,7 @@ import App from './components/App';
 import BetaTOS from './components/pages/BetaTOS';
 import Features from './components/pages/Features';
 import How from './components/pages/How';
+import Pricing from './components/pages/Pricing';
 import Index from './components/pages/Index';
 import Integrations from './components/pages/Integrations';
 import PrivacyPolicy from './components/pages/PrivacyPolicy';
@@ -43,6 +44,7 @@ module.exports = (
       <Route path="features" component={Features} />
       <Route path="how" component={How} />
       <Route path="about" component={About} />
+      <Route path="pricing" component={Pricing} />
       <Route path="integrations" component={Integrations} />
       <Route path="privacy" component={PrivacyPolicy} />
       <Route path="terms-of-use" component={TermsOfUse} />

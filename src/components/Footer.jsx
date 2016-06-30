@@ -15,6 +15,7 @@ export default React.createClass({
       <div>
         <div className={style.category}>Product</div>
         <ul className={style.nav}>
+          <li><Link to="/pricing">Pricing</Link></li>
           <li><Link to="/features">Features</Link></li>
           <li><Link to="/solutions">Solutions</Link></li>
           <li><Link to="/integrations">Integrations</Link></li>
