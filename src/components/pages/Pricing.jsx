@@ -46,16 +46,13 @@ export default React.createClass({
                   <Padding tb={1}>
                     <p><em>One check, zero limits</em></p>
                     <ul className={style.features}>
-                      <li>Global coverage from our 6 PoPs*</li>
-                      <li>AWS coverage with our EC2 Instance*</li>
-                      <li>Multi-user access*</li>
-                      <li>Historical data*</li>
-                      <li>Uptime & performance reports*</li>
+                      <li>Free forever</li>
+                      <li>Global coverage from our 6 PoPs</li>
+                      <li>AWS coverage with our EC2 Instance</li>
+                      <li className={style.featureDisabled}>Multi-user access</li>
+                      <li className={style.featureDisabled}>Historical data</li>
+                      <li className={style.featureDisabled}>Uptime & performance reports</li>
                     </ul>
-                    <em className={style.priceNotes}>* Free while you have one check</em>
-                  </Padding>
-                  <Padding t={1} className="text-center">
-                    <Button href="#signup" className={style.button} block>Try Opsee for FREE</Button>
                   </Padding>
                 </div>
               </Col>
@@ -74,15 +71,13 @@ export default React.createClass({
                   <Padding tb={1}>
                     <p><em>Coverage everywhere</em></p>
                     <ul className={style.features}>
+                      <li>14-day free trial</li>
                       <li>Global coverage from our 6 PoPs</li>
                       <li>AWS coverage with <a href="/how">our EC2 Instance</a></li>
                       <li className={style.featureDisabled}>Multi-user access</li>
                       <li className={style.featureDisabled}>Historical data</li>
                       <li className={style.featureDisabled}>Uptime & performance reports</li>
                     </ul>
-                  </Padding>
-                  <Padding t={1} className="text-center">
-                    <Button className={style.button} secondary disabled block>Coming in July</Button>
                   </Padding>
                 </div>
               </Col>
@@ -101,6 +96,7 @@ export default React.createClass({
                   <Padding tb={1}>
                     <p><em>Made for teams</em></p>
                     <ul className={style.features}>
+                      <li>14-day free trial</li>
                       <li>Global coverage from our 6 PoPs</li>
                       <li>AWS coverage with <a href="/how">our EC2 Instance</a></li>
                       <li>Multi-user access</li>
@@ -108,12 +104,13 @@ export default React.createClass({
                       <li>Uptime & performance reports</li>
                     </ul>
                   </Padding>
-                  <Padding t={1} className="text-center">
-                    <Button className={style.button} secondary disabled block>Coming in September</Button>
-                  </Padding>
                 </div>
               </Col>
             </Row>
+            <Padding t={1} b={3} className="text-center">
+              <Button href="#signup" className={style.button} block>Try Opsee for FREE</Button>
+            </Padding>
+
             <Row className="center-xs">
               <Col xs={12} sm={8}>
                 <Padding tb={2} className="text-center">
