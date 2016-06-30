@@ -33,6 +33,13 @@
   padding: 1rem 0;
 
 }
+.priceNotes {
+  display: block;
+  font-size: 87.5%;
+  margin-top: -1rem;
+  opacity: 0.65;
+  text-align: left;
+}
 
 .dollarSign {
   font-size: 3rem;

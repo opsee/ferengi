@@ -46,12 +46,13 @@ export default React.createClass({
                   <Padding tb={1}>
                     <p><em>One check, zero limits</em></p>
                     <ul className={style.features}>
-                      <li>Global coverage from our 6 PoPs</li>
-                      <li>AWS coverage with our EC2 Instance</li>
-                      <li>Multi-user access</li>
-                      <li>Historical data</li>
-                      <li>Uptime & performance reports</li>
+                      <li>Global coverage from our 6 PoPs*</li>
+                      <li>AWS coverage with our EC2 Instance*</li>
+                      <li>Multi-user access*</li>
+                      <li>Historical data*</li>
+                      <li>Uptime & performance reports*</li>
                     </ul>
+                    <em className={style.priceNotes}>* Free while you have one check</em>
                   </Padding>
                   <Padding t={1} className="text-center">
                     <Button href="#signup" className={style.button} block>Try Opsee for FREE</Button>
