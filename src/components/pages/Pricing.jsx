@@ -39,17 +39,18 @@ export default React.createClass({
                       <h3 className={style.tierName}>FREE</h3>
                     </Padding>
                     <Padding tb={1}>
-                      <div className={style.price}><span className={style.dollarSign}>&nbsp;&nbsp;</span><span className={style.priceValue}>1</span></div>
+                      <div className={style.price}><span className={style.dollarSign}>&nbsp;&nbsp;&nbsp;</span><span className={style.priceValue}>1</span></div>
                       Check
                     </Padding>
                   </div>
                   <Padding tb={1}>
+                    <p><em>One check, zero limits</em></p>
                     <ul className={style.features}>
                       <li>Global coverage from our 6 PoPs</li>
-                      <li className={style.featureDisabled}>AWS coverage with our EC2 Instance</li>
-                      <li className={style.featureDisabled}>Muli-user access</li>
-                      <li className={style.featureDisabled}>Historical data</li>
-                      <li className={style.featureDisabled}>Uptime & performance reports</li>
+                      <li>AWS coverage with our EC2 Instance</li>
+                      <li>Muli-user access</li>
+                      <li>Historical data</li>
+                      <li>Uptime & performance reports</li>
                     </ul>
                   </Padding>
                   <Padding tb={1} className="text-center">
@@ -70,6 +71,7 @@ export default React.createClass({
                     </Padding>
                   </div>
                   <Padding tb={1}>
+                    <p><em>Coverage everywhere</em></p>
                     <ul className={style.features}>
                       <li>Global coverage from our 6 PoPs</li>
                       <li>AWS coverage with <a href="/how">our EC2 Instance</a></li>
@@ -96,6 +98,7 @@ export default React.createClass({
                     </Padding>
                   </div>
                   <Padding tb={1}>
+                    <p><em>Made for teams</em></p>
                     <ul className={style.features}>
                       <li>Global coverage from our 6 PoPs</li>
                       <li>AWS coverage with <a href="/how">our EC2 Instance</a></li>
