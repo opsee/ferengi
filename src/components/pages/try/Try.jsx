@@ -1,16 +1,12 @@
 import React, { PropTypes } from 'react';
+import {connect} from 'react-redux';
 
 import StaticHeader from '../../panels/StaticHeader';
 import Panel from '../../panels/Panel';
 import WizardPanel from '../../panels/WizardPanel';
 
-export default React.createClass({
-  contextTypes: {
-    router: PropTypes.object.isRequired
-  },
+const Try = React.createClass({
   render() {
-    console.log(this.props.router);
-
     return (
       <div>
         <StaticHeader>
@@ -20,8 +16,15 @@ export default React.createClass({
           </div>
         </StaticHeader>
 
-        <WizardPanel />
+        <WizardPanel query={this.props.query} loadOnMount />
       </div>
     );
   }
 });
+
+
+const mapStateToProps = (state) => ({
+  query: state.router.location.query
+});
+
+export default connect(mapStateToProps, null)(Try);

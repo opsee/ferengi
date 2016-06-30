@@ -33,11 +33,21 @@ const WizardPanel = React.createClass({
         signupWithCheck: PropTypes.object
       }),
       checks: PropTypes.object
-    })
+    }),
+    query: PropTypes.shape({
+      url: PropTypes.string,
+      assertions: PropTypes.arrayOf(PropTypes.shape({
+        key: PropTypes.string,
+        relationship: PropTypes.string,
+        operand: PropTypes.string
+      })),
+      email: PropTypes.string
+    }),
+    loadOnMount: PropTypes.bool
   },
 
   getInitialState() {
-    return {
+    return _.assign({
       url: 'https://try.opsee.com',
       assertions: [{
         key: 'code',
@@ -46,7 +56,13 @@ const WizardPanel = React.createClass({
       }],
       email: '',
       referrer: null
-    };
+    }, this.props.query);
+  },
+
+  componentDidMount() {
+    if (this.props.loadOnMount) {
+      this.handleURLSubmit(this.state.url);
+    }
   },
 
   getResponse(formatHeaders) {
@@ -134,6 +150,8 @@ const WizardPanel = React.createClass({
   },
 
   render() {
+    console.log(this.props.query);
+
     return (
       <Panel>
         <Padding b={4} className="text-center">
