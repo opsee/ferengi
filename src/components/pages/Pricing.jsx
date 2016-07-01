@@ -44,7 +44,7 @@ export default React.createClass({
                     </Padding>
                   </div>
                   <Padding tb={1}>
-                    <p><em>One check, zero limits</em></p>
+                    <p><em>Try it out</em></p>
                     <ul className={style.features}>
                       <li>Free forever</li>
                       <li>Global coverage from our 6 PoPs</li>
@@ -69,7 +69,7 @@ export default React.createClass({
                     </Padding>
                   </div>
                   <Padding tb={1}>
-                    <p><em>Coverage everywhere</em></p>
+                    <p><em>Complete coverage</em></p>
                     <ul className={style.features}>
                       <li>14-day free trial</li>
                       <li>Global coverage from our 6 PoPs</li>
