@@ -5,7 +5,7 @@
 module.exports = {
   DEFAULT_META: {
     title: 'Opsee',
-    excerpt: 'Continuously test your services and deploy with confidence',
+    excerpt: 'We watch your APIs—Instant alerts for applications in distress',
     cover: 'https://s3-us-west-1.amazonaws.com/opsee-public-images/opsee_logo_blue_400px.png',
     twitter: '@GetOpsee'
   },

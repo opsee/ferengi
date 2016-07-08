@@ -23,8 +23,8 @@ export default React.createClass({
         <SplitContainer className={style.section}>
           <SplitPanel className={style.screenshotProsePanel}>
             <Padding tb={1}>
-              <h2><span className="text-accent">Health checks</span> cut through the noise</h2>
-              <h3>Continuously test your services and deploy with confidence</h3>
+              <h2><span className="text-accent">We watch</span> your APIs</h2>
+              <h3>Instant alerts for applications in distress</h3>
             </Padding>
             <p>Health checks tell you if your services are working as expected. Rich notifications and deep AWS integration help you find and fix problems effortlessly.</p>
 
