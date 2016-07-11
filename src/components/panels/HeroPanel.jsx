@@ -9,6 +9,7 @@ import BaseSVG from '../images/BaseSVG';
 import locMap from '../images/location-map.svg';
 import illustAWS from '../images/illust_aws-01.svg';
 import illustChecks from '../images/illust_checks-01.svg';
+import VideoPlayer from '../global/VideoPlayer';
 
 export default React.createClass({
   render() {
@@ -23,6 +24,8 @@ export default React.createClass({
               <div className={style.subHeader}>Instant alerts for applications in distress</div>
             </div>
           </div>
+
+          <VideoPlayer/>
 
           <Padding t={2} lr={2}>
             <div className={style.grid}>
