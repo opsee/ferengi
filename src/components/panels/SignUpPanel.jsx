@@ -46,6 +46,12 @@ const SignUpPanel = React.createClass({
       );
     }
 
+    if (this.getReferrer().match('/summit')) {
+      return (
+        <h1 className={style.heading}>Welcome, <span className="text-accent">AWS Summit</span>!</h1>
+      );
+    }
+
     return (
       <h1 className={style.heading}>Ready to <span className="text-accent">get Opsee?</span></h1>
     );
