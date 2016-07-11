@@ -74,6 +74,16 @@ function renderFullPage(path, html, initialState = {}) {
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
           })();
         </script>
+        <!-- Twitter universal website tag code -->
+        <script>
+          !function(e,n,u,a){e.twq||(a=e.twq=function(){a.exe?a.exe.apply(a,arguments):
+          a.queue.push(arguments);},a.version='1',a.queue=[],t=n.createElement(u),
+          t.async=!0,t.src='//static.ads-twitter.com/uwt.js',s=n.getElementsByTagName(u)[0],
+          s.parentNode.insertBefore(t,s))}(window,document,'script');
+          // Insert Twitter Pixel ID and Standard Event data below
+          twq('init','nv6al');
+          twq('track','PageView');
+        </script>
       </body>
     </html>
   `;
