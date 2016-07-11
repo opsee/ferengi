@@ -14,6 +14,7 @@ import Solutions from './components/pages/solutions/Solutions';
 import SolutionsStartup from './components/pages/solutions/SolutionsStartup';
 import SolutionsEnterprise from './components/pages/solutions/SolutionsEnterprise';
 import TermsOfUse from './components/pages/TermsOfUse';
+import Summit from './components/pages/Summit';
 import {
   Guides,
   GuidesDropwizardChecks,
@@ -49,6 +50,7 @@ module.exports = (
       <Route path="privacy" component={PrivacyPolicy} />
       <Route path="terms-of-use" component={TermsOfUse} />
       <Route path="beta-tos" component={BetaTOS} />
+      <Route path="summit" component={Summit} />
       <Route path="pingdom-alternative" component={TryPingdom} />
 
     { /* Guides */ }

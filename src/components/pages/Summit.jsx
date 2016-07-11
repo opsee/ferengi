@@ -27,14 +27,15 @@ export default React.createClass({
     return getReferrer(this.props.location);
   },
   renderTitle(){
-    if (this.getReferrer() === 'producthunt') {
+    if (this.getReferrer().match('/summit')) {
       return (
         <Padding className={style.referralbanner} tb={1} lr={2}>
-          <h2>Welcome Product Hunt!</h2>
-          <h3>Sign up today and get 2 extra weeks of free Opsee</h3>
+          <h2>Welcome AWS Summit!</h2>
+          <h3>Sign up from this page and get 2 extra weeks of free Opsee</h3>
         </Padding>
       );
     }
+
     return null;
   },
   render() {

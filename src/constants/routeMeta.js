@@ -45,6 +45,10 @@ module.exports = {
       title: 'Opsee / Beta TOS'
     },
 
+    '/summit': {
+      title: 'Opsee / AWS Summit'
+    },
+
     '/pingdom-alternative': {
       title: 'Opsee / Try a Better Alternative to Pingdom',
       excerpt: 'Be sure your sites, APIs and internal services respond the way you expect',
