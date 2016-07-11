@@ -26,7 +26,7 @@ const VideoPlayer = React.createClass({
   render() {
     return (
       <div className={style.outer}>
-        {!this.state.show && <Button onClick={this.handleButtonClick} className={style.button}>Learn How&nbsp;<Play fill="white" btn/></Button>}
+        {!this.state.show && <Button secondary="true" onClick={this.handleButtonClick} className={style.button}>Watch the video&nbsp;<Play btn/></Button>}
         <div className={cx(style.wrapper, this.state.show && style.show)}>
           <iframe src="https://player.vimeo.com/video/173789397?color=e53a35&title=0&byline=0&portrait=0" className={style.iframe} frameBorder="0" allowFullScreen id="video"></iframe>
         </div>
