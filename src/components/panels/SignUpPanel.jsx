@@ -29,9 +29,6 @@ const SignUpPanel = React.createClass({
   getStatus(){
     return this.props.redux.asyncActions.signupWithCheck.status;
   },
-  getReferrer(){
-    return getReferrer(this.props.location);
-  },
   onChange(data) {
     this.setState({ data });
   },
@@ -40,7 +37,8 @@ const SignUpPanel = React.createClass({
     return this.props.actions.signupWithCheck(data);
   },
   renderTitle(){
-    if (this.getReferrer() === 'producthunt') {
+    const ref = getReferrer();
+    if (ref === 'producthunt') {
       return (
         <div>
           <h1 className={style.heading}>Welcome, <span className="text-accent">Product Hunters!</span></h1>
@@ -48,7 +46,7 @@ const SignUpPanel = React.createClass({
         </div>
       );
     }
-    if (this.getReferrer() === 'betalist') {
+    if (ref === 'betalist') {
       return (
         <div>
           <h1 className={style.heading}>Welcome, <span className="text-accent">BetaList</span> community!</h1>
@@ -57,7 +55,7 @@ const SignUpPanel = React.createClass({
       );
     }
 
-    if (this.getReferrer().match('/summit')) {
+    if (ref.match('/summit')) {
       return (
         <div>
           <h1 className={style.heading}>Welcome, <span className="text-accent">AWS Summit!</span></h1>

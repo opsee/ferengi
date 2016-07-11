@@ -23,11 +23,8 @@ export default React.createClass({
   propTypes: {
     location: PropTypes.object
   },
-  getReferrer(){
-    return getReferrer(this.props.location);
-  },
   renderTitle(){
-    if (this.getReferrer().match('/summit')) {
+    if (getReferrer().match('/summit')) {
       return (
         <Padding className={style.referralbanner} tb={1} lr={2}>
           <h2>Welcome AWS Summit!</h2>
