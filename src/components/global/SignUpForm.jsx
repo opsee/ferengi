@@ -29,13 +29,13 @@ const SignUpForm = React.createClass({
     return {
       data: {
         email: null,
-        referrer: this.getReferrer()
+        referrer: getReferrer()
       },
       validationError: null
     };
   },
   getReferrer(){
-    return getReferrer(this.props.location);
+    return getReferrer();
   },
   getStatus(){
     return this.props.status;

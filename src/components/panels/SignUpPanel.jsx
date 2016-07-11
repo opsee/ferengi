@@ -29,9 +29,6 @@ const SignUpPanel = React.createClass({
   getStatus(){
     return this.props.redux.asyncActions.signupWithCheck.status;
   },
-  getReferrer(){
-    return getReferrer(this.props.location);
-  },
   onChange(data) {
     this.setState({ data });
   },
@@ -40,14 +37,38 @@ const SignUpPanel = React.createClass({
     return this.props.actions.signupWithCheck(data);
   },
   renderTitle(){
-    if (this.getReferrer() === 'betalist') {
+    const ref = getReferrer();
+    if (ref === 'producthunt') {
       return (
-        <h1 className={style.heading}>Welcome, <span className="text-accent">BetaList</span> community!</h1>
+        <div>
+          <h1 className={style.heading}>Welcome, <span className="text-accent">Product Hunters!</span></h1>
+          <div className={style.subheading}>As a hunter you&rsquo;ll get two extra weeks of free Opsee when you sign up today!</div>
+        </div>
+      );
+    }
+    if (ref === 'betalist') {
+      return (
+        <div>
+          <h1 className={style.heading}>Welcome, <span className="text-accent">BetaList</span> community!</h1>
+          <div className={style.subheading}>As a Betalist reader you&rsquo;ll get two extra weeks of free Opsee when you sign up today!</div>
+        </div>
+      );
+    }
+
+    if (ref.match('/summit')) {
+      return (
+        <div>
+          <h1 className={style.heading}>Welcome, <span className="text-accent">AWS Summit!</span></h1>
+          <div className={style.subheading}>We&rsquo;re wrapping up our private beta. As a Summit visitor you&rsquo;ll get two extra weeks of free Opsee when you sign up here.</div>
+        </div>
       );
     }
 
     return (
-      <h1 className={style.heading}>Ready to <span className="text-accent">get Opsee?</span></h1>
+      <div>
+        <h1 className={style.heading}>Ready to <span className="text-accent">get Opsee?</span></h1>
+        <div className={style.subheading}>Opsee is free during public beta. Join now by giving us your email address below, and we&rsquo;ll send you a link to your very own Opsee account.</div>
+      </div>
     );
   },
   render() {
@@ -58,7 +79,6 @@ const SignUpPanel = React.createClass({
 
             <Padding t={4} b={2} className="text-center">
               {this.renderTitle()}
-              <div className={style.subheading}>Opsee is free during public beta. Join now by giving us your email address below, and we&rsquo;ll send you a link to your very own Opsee account.</div>
             </Padding>
 
             <SignUpForm successText="Redirecting you to Opsee..." status={this.getStatus()} onChange={this.onChange} onSubmit={this.onSubmit} />
