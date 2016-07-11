@@ -18,7 +18,7 @@ const App = React.createClass({
 
   componentWillMount(){
     yeller.configure();
-    setReferrer(this.props.router.location);
+    setReferrer();
   },
 
   render() {
