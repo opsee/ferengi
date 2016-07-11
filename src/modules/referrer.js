@@ -6,10 +6,10 @@ export function getReferrer() {
   if (typeof window !== 'undefined'){
     const href = window.location.href;
     const query = parse(window.location.search);
-    const {referrer} = query;
+    const {referrer, ref} = query;
     let trumps = ['/summit'].map(str => !!href.match(str));
     const card = _.some(trumps) ? href : null;
-    return referrer || window.document.referrer || card || storage.getItem('referrer') || `(none) ${href}`;
+    return ref || referrer || window.document.referrer || card || storage.getItem('referrer') || `(none) ${href}`;
   }
   return '';
 }
