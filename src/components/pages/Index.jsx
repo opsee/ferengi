@@ -21,7 +21,6 @@ export default React.createClass({
     return (
       <div>
         <Header theme="dark"/>
-
         <HeroPanel />
         <SkewDivider />
 
