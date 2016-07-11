@@ -64,6 +64,7 @@ function renderFullPage(path, html, initialState = {}) {
           ga('create', 'UA-59205908-3', 'auto');
           ga('send', 'pageview');
         </script>
+        <script src="https://player.vimeo.com/api/player.js"></script>
         <script src="/bundle.js"></script>
         <script type="text/javascript">
           (function() {
