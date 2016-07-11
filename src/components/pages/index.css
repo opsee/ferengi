@@ -1,5 +1,8 @@
 .referralbanner {
-  background: #eee;
+  background: var(--colorWarm4);
   margin-top: 2rem;
   text-align: center;
+}
+.referralbanner h2, .referralbanner h3 {
+  color: white;
 }
