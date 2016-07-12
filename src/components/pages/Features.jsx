@@ -14,7 +14,7 @@ import Panel from '../panels/Panel';
 import BaseSVG from '../images/BaseSVG';
 // import checkDiagramSVG from '../images/product-checks.svg';
 import notificationsSVG from '../images/product-notifications.svg';
-import awsIntegrationsSVG from '../images/integrations-aws.svg';
+import awsIntegrationsSVG from '../images/integrations-aws2.svg';
 // import passingAssertionsSVG from '../images/passing-assertions.svg';
 import notificationLogosSVG from '../images/notification-logos.svg';
 // import securitySVG from '../images/security.svg';
