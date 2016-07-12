@@ -1,5 +1,6 @@
 const _ = require('lodash');
 const config = require('config');
+const fs = require('fs');
 
 module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
@@ -56,7 +57,11 @@ module.exports = function(grunt) {
     },
 
     webpack: {
-      build: require('./webpack/build.config'),
+      build: _.assign(require('./webpack/build.config'), {
+        profile: true,
+        json: true,
+        storeStatsTo: 'stats'
+      }),
       watch: _.assign({}, require('./webpack/build.config'), {
         watch: true,
         keepalive: true
@@ -80,7 +85,11 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('build', 'Builds the static site once (to dist/)', ['env', 'clean:dist', 'webpack:build']);
+  grunt.registerTask('saveWebpackStats', 'save em', function(){
+    fs.writeFileSync('stats.json', JSON.stringify(grunt.config.getRaw('stats')));
+  });
+
+  grunt.registerTask('build', 'Builds the static site once (to dist/)', ['env', 'clean:dist', 'webpack:build', 'saveWebpackStats']);
   grunt.registerTask('watch', 'Build the static site, rebuild on changes', ['env', 'clean:dist', 'webpack:watch']);
   grunt.registerTask('dev', 'Build the static site & put a devserver on it', ['env', 'build', 'webpack-dev-server:start']);
 
