@@ -9,7 +9,7 @@ import BaseSVG from '../images/BaseSVG';
 import locMap from '../images/location-map.svg';
 import illustAWS from '../images/illust_aws-02.svg';
 import illustChecks from '../images/illust_checks-01.svg';
-import VideoPlayer from '../global/VideoPlayer';
+import {VideoPlayer} from '../global';
 
 export default React.createClass({
   render() {
