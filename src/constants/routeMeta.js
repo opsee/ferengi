@@ -41,8 +41,8 @@ module.exports = {
       title: 'Opsee / Terms of Use'
     },
 
-    '/beta-tos': {
-      title: 'Opsee / Beta TOS'
+    '/tos': {
+      title: 'Opsee / User Agreement'
     },
 
     '/summit': {

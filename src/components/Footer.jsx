@@ -46,7 +46,7 @@ export default React.createClass({
         <div className={style.category}>Legal</div>
         <ul className={style.nav}>
           <li><Link to="/privacy">Privacy Policy</Link></li>
-          <li><Link to="/beta-tos">Terms of Service</Link></li>
+          <li><Link to="/tos">Terms of Service</Link></li>
           <li><Link to="/terms-of-use">Terms of Use</Link></li>
         </ul>
       </div>

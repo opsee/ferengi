@@ -113,7 +113,7 @@ const SignUpForm = React.createClass({
           <Button className={style.button} type="submit" disabled={this.isDisabled()}>{this.getButtonText()}</Button>
         </Padding>
 
-        <p className="small text-center">By proceeding to create your Opsee account, you are agreeing to Opsee's <a href="/beta-tos" target="_blank">Terms of Service</a> and <a href="/privacy">Privacy Policy</a>.</p>
+        <p className="small text-center">By proceeding to create your Opsee account, you are agreeing to Opsee's <a href="/tos" target="_blank">Terms of Service</a> and <a href="/privacy">Privacy Policy</a>.</p>
       </form>
     );
   }

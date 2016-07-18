@@ -1,9 +1,9 @@
 import React from 'react';
 
-import style from './betaTOS.css';
+import style from './TOS.css';
 import {Grid, Row, Col} from '../layout';
 
-const BetaTOS = React.createClass({
+const TOS = React.createClass({
   render() {
     return (
       <div>
@@ -32,4 +32,4 @@ const BetaTOS = React.createClass({
   }
 });
 
-export default BetaTOS;
+export default TOS;

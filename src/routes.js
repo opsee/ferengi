@@ -3,7 +3,7 @@ import { Router, Route, IndexRoute } from 'react-router';
 
 import About from './components/pages/About';
 import App from './components/App';
-import BetaTOS from './components/pages/BetaTOS';
+import TOS from './components/pages/TOS';
 import Features from './components/pages/Features';
 import How from './components/pages/How';
 import Pricing from './components/pages/Pricing';
@@ -49,7 +49,7 @@ module.exports = (
       <Route path="integrations" component={Integrations} />
       <Route path="privacy" component={PrivacyPolicy} />
       <Route path="terms-of-use" component={TermsOfUse} />
-      <Route path="beta-tos" component={BetaTOS} />
+      <Route path="tos" component={TOS} />
       <Route path="summit" component={Summit} />
       <Route path="pingdom-alternative" component={TryPingdom} />
 
