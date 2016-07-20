@@ -59,7 +59,7 @@ const SignUpPanel = React.createClass({
       return (
         <div>
           <h1 className={style.heading}>Welcome, <span className="text-accent">AWS Summit!</span></h1>
-          <div className={style.subheading}>We&rsquo;re wrapping up our private beta. As a Summit visitor you&rsquo;ll get two extra weeks of free Opsee when you sign up here.</div>
+          <div className={style.subheading}>We&rsquo;re wrapping up our beta. As a Summit visitor you&rsquo;ll get two extra weeks of free Opsee when you sign up here.</div>
         </div>
       );
     }
@@ -67,7 +67,7 @@ const SignUpPanel = React.createClass({
     return (
       <div>
         <h1 className={style.heading}>Ready to <span className="text-accent">get Opsee?</span></h1>
-        <div className={style.subheading}>Opsee is free during public beta. Join now by giving us your email address below, and we&rsquo;ll send you a link to your very own Opsee account.</div>
+        <div className={style.subheading}>Just enter your email address and we&rsquo;ll create your Opsee account.</div>
       </div>
     );
   },

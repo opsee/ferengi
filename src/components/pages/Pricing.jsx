@@ -25,7 +25,7 @@ export default React.createClass({
         <StaticHeader>
           <div className="text-center">
             <h1>Free to get started. <span className="text-accent-static">No credit card required</span></h1>
-            <h3>We&rsquo;re wrapping up our beta, and here is what you can expect soon.</h3>
+            <h3>Try Opsee with no limits for 14 days</h3>
           </div>
         </StaticHeader>
 
