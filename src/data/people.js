@@ -28,9 +28,5 @@ export default [
     name: 'Dan Compton',
     twitter: 'danc0mpton',
     linked: 'https://www.linkedin.com/in/daniel-compton-7428b2a3'
-  },
-  {
-    name: 'Sara Bee',
-    twitter: 'doeg'
   }
 ];
