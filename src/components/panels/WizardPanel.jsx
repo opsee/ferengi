@@ -14,7 +14,6 @@ import Padding from '../layout/Padding';
 import URLInput from '../check/URLInput';
 import CheckResponseSingle from '../check/CheckResponseSingle';
 import AssertionSelection from '../check/AssertionSelection';
-import SignUpForm from '../global/SignUpForm';
 
 import style from './wizardPanel.css';
 import mailSVG from '../images/icons/mail';
@@ -169,15 +168,6 @@ const WizardPanel = React.createClass({
             </Col>
           </Row>
 
-          <Row className={cx(style.row, 'between-xs')}>
-            <Col xs={12} sm={3}>
-              {this.renderStep(3)}
-            </Col>
-            <Col xs={12} sm={8}>
-              <p>Sign up with just your email address. We'll create your free Opsee account, create your first health check, and send you notifications whenever it fails.</p>
-              <SignUpForm status={this.getStatus()} onSubmit={this.handleSignUp} successText="Redirecting you to Opsee..." disabled={this.getStatus() === 'success'} />
-            </Col>
-          </Row>
         </Grid>
       </Panel>
     );
