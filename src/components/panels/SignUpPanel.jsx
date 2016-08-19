@@ -5,7 +5,6 @@ import {bindActionCreators} from 'redux';
 import { getReferrer } from '../../modules/referrer';
 import Panel from './Panel.jsx';
 import Padding from '../layout/Padding';
-import SignUpForm from '../global/SignUpForm';
 import * as actions from '../../actions/app';
 import style from './signUpPanel.css';
 
@@ -67,7 +66,6 @@ const SignUpPanel = React.createClass({
     return (
       <div>
         <h1 className={style.heading}>Ready to <span className="text-accent">get Opsee?</span></h1>
-        <div className={style.subheading}>Just enter your email address and we&rsquo;ll create your Opsee account.</div>
       </div>
     );
   },
@@ -80,8 +78,6 @@ const SignUpPanel = React.createClass({
             <Padding t={4} b={2} className="text-center">
               {this.renderTitle()}
             </Padding>
-
-            <SignUpForm successText="Redirecting you to Opsee..." status={this.getStatus()} onChange={this.onChange} onSubmit={this.onSubmit} />
           </div>
         </div>
       </Panel>
